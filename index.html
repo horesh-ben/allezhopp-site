@@ -8,303 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
-<style>
-/* Layout: a warm invitation. Two figures share a high-five in front of Lake Geneva and the Alps; opportunities follow as friendly cards, then the alert sign-up. */
-/* Palette "Léman": lake blue (c2, actions and "Hopp"), alpine green (c1, "Allez"), sunshine (acc, small accents). Font: Hanken Grotesk, a Swiss-style neo-grotesque. */
-:root {
-  --c1: #2E9472;        /* logo, illustration, fills */
-  --c1-text: #1F7A5C;   /* green for words on light backgrounds: 5.0:1 */
-  --c2: #1E5FA8;        /* primary actions, links: 6.2:1 */
-  --on-c2: #FFFFFF;
-  --acc: #F2B544;       /* small celebratory accents only */
-  --on-acc: #1B2733;
-  --c1-soft: #E3F3EC;
-  --c2-soft: #E5EEF9;
-  --acc-soft: #FFF3D6;
-  --c3: #A8396A;        /* music: 6.1:1 on white */
-  --c3-soft: #FBE7F0;
-
-  --bg: #F8FAFB;
-  --surface: #FFFFFF;
-  --ink: #1B2733;
-  --muted: #5A6775;
-  --line: #E1E7EC;
-  --focus: #1E5FA8;
-
-  --st-open: #1E7A4A;
-  --st-partial: #955700;
-  --st-soon: #1F6A88;
-  --st-closed: #5A6775;
-  --st-done: #7A8794;
-
-  --f-display: "Hanken Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --f-body: "Hanken Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --display-track: -.035em;
-
-  --radius: 22px;
-  --wrap: 1120px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --c1: #5FC9A2; --c1-text: #5FC9A2; --c2: #7FB2F0; --on-c2: #0F1A26; --acc: #F2B544; --on-acc: #0F1A26;
-    --c1-soft: #173229; --c2-soft: #162A42; --acc-soft: #33291E; --c3: #F09AC0; --c3-soft: #3A2133;
-    --bg: #0F1A26; --surface: #172433; --ink: #EEF3F7; --muted: #A9B6C3; --line: #263749; --focus: #7FB2F0;
-    --st-open: #66CC94; --st-partial: #F2B457; --st-soon: #7CC6E0; --st-closed: #A9B6C3; --st-done: #8E9BA8;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --c1: #5FC9A2; --c1-text: #5FC9A2; --c2: #7FB2F0; --on-c2: #0F1A26; --acc: #F2B544; --on-acc: #0F1A26;
-  --c1-soft: #173229; --c2-soft: #162A42; --acc-soft: #33291E; --c3: #F09AC0; --c3-soft: #3A2133;
-  --bg: #0F1A26; --surface: #172433; --ink: #EEF3F7; --muted: #A9B6C3; --line: #263749; --focus: #7FB2F0;
-  --st-open: #66CC94; --st-partial: #F2B457; --st-soon: #7CC6E0; --st-closed: #A9B6C3; --st-done: #8E9BA8;
-  color-scheme: dark;
-}
-
-* { box-sizing: border-box; }
-[hidden] { display: none !important; }
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  margin: 0; background: var(--bg); color: var(--ink);
-  font: 400 17px/1.6 var(--f-body);
-  padding-inline: 20px;
-  -webkit-font-smoothing: antialiased;
-}
-.wrap { max-width: var(--wrap); margin-inline: auto; }
-h1, h2, h3 { font-family: var(--f-display); margin: 0; line-height: 1.05; text-wrap: balance; letter-spacing: var(--display-track, -.02em); }
-p { margin: 0; }
-a { color: var(--c2); }
-:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 8px; }
-svg { display: block; }
-
-.eyebrow { font-weight: 700; font-size: 13.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--c1-text); }
-
-/* ---------- Header ---------- */
-.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand svg { width: 42px; height: 42px; }
-.wordmark { font-family: var(--f-display); font-weight: 800; font-size: 25px; letter-spacing: var(--display-track, -.02em); line-height: 1; }
-.wordmark .a { color: var(--c1); }
-.wordmark .h { color: var(--c2); }
-.top-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-.theme-switch { display: inline-flex; gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px; }
-.theme-switch button { width: 36px; height: 34px; display: grid; place-items: center; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; }
-.theme-switch button svg { width: 18px; height: 18px; }
-.theme-switch button[aria-pressed="true"] { background: var(--c2-soft); color: var(--c2); }
-.theme-switch button:hover { color: var(--ink); }
-.lang-select { position: relative; display: inline-flex; align-items: center; color: var(--ink); }
-.lang-select select {
-  appearance: none; -webkit-appearance: none; cursor: pointer;
-  font: 600 15px/1 var(--f-body); color: var(--ink); background: var(--surface);
-  border: 1px solid var(--line); border-radius: 999px; padding: 12px 38px 12px 40px;
-}
-.lang-select select:hover { border-color: var(--c2); }
-.lang-select svg { position: absolute; width: 18px; height: 18px; pointer-events: none; color: var(--muted); }
-.lang-select svg:first-child { left: 14px; }
-.lang-select svg.chev { right: 14px; width: 16px; height: 16px; }
-
-/* ---------- Buttons ---------- */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  font: 700 16px/1.2 var(--f-body); text-decoration: none; cursor: pointer;
-  padding: 15px 24px; border-radius: 999px; border: 2px solid transparent;
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.btn-primary { background: var(--c2); color: var(--on-c2); box-shadow: 0 6px 0 -2px color-mix(in srgb, var(--c2) 35%, transparent); }
-.btn-primary:hover { transform: translateY(-2px); }
-.btn-soft { background: var(--c1-soft); color: var(--ink); }
-.btn-soft:hover { transform: translateY(-2px); }
-
-/* ---------- Hero ---------- */
-.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 40px; align-items: center; padding-block: 36px 72px; }
-.hero-copy { display: grid; gap: 22px; min-width: 0; }
-.hero h1 { font-size: clamp(42px, 6.2vw, 76px); font-weight: 800; }
-.hero h1 .line2 { color: var(--c1-text); text-decoration: underline; text-decoration-color: var(--acc); text-decoration-thickness: .14em; text-underline-offset: .12em; text-decoration-skip-ink: none; }
-.lede { font-size: 19px; color: var(--muted); max-width: 33em; }
-.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
-.pilot { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; color: var(--muted); }
-.pilot .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 0 4px var(--acc-soft); flex: none; }
-
-.art { position: relative; min-width: 0; }
-.art svg { width: 100%; height: auto; max-width: 460px; margin-inline: auto; }
-.f-c1 { fill: var(--c1); } .s-c1 { stroke: var(--c1); }
-.f-c2 { fill: var(--c2); } .s-c2 { stroke: var(--c2); }
-.f-acc { fill: var(--acc); } .s-acc { stroke: var(--acc); }
-.f-sky { fill: var(--c2-soft); }
-.f-mtn-back { fill: color-mix(in srgb, var(--c2) 22%, var(--surface)); }
-.f-mtn { fill: color-mix(in srgb, var(--c2) 34%, var(--surface)); }
-.f-snow { fill: var(--surface); }
-.f-hill { fill: color-mix(in srgb, var(--c1) 22%, var(--surface)); }
-.f-lake { fill: color-mix(in srgb, var(--c2) 48%, var(--surface)); }
-.s-wave { stroke: var(--surface); opacity: .7; }
-.f-sun { fill: var(--acc); opacity: .9; }
-.postcard-frame { fill: none; stroke: var(--line); }
-.f-shadow { fill: var(--ink); opacity: .06; }
-.arm-l { transform-origin: 132px 142px; animation: armL 1.1s cubic-bezier(.34,1.56,.64,1) .2s both; }
-.arm-r { transform-origin: 188px 142px; animation: armR 1.1s cubic-bezier(.34,1.56,.64,1) .2s both; }
-.spark { transform-origin: 160px 52px; animation: spark .5s ease-out 1s both; }
-@keyframes armL { from { transform: rotate(-38deg); } to { transform: rotate(0); } }
-@keyframes armR { from { transform: rotate(38deg); } to { transform: rotate(0); } }
-@keyframes spark { from { transform: scale(.2); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { .arm-l, .arm-r, .spark { animation: none; } }
-.sticker {
-  position: absolute; display: inline-flex; align-items: center; gap: 8px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
-  padding: 8px 14px 8px 8px; font-weight: 700; font-size: 14.5px;
-  box-shadow: 0 10px 24px -14px rgba(42, 34, 56, .35);
-}
-.sticker .ic { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; }
-.sticker .ic svg { width: 17px; height: 17px; }
-.st-1 { top: 6%; left: 0; transform: rotate(-6deg); }
-.st-1 .ic { background: var(--c1-soft); color: var(--c1-text); }
-.st-2 { top: 40%; right: 0; transform: rotate(5deg); }
-.st-2 .ic { background: var(--c3-soft); color: var(--c3); }
-.st-3 { bottom: 6%; left: 8%; transform: rotate(-3deg); }
-.st-3 .ic { background: var(--acc-soft); color: var(--st-partial); }
-
-/* ---------- Sections ---------- */
-section { padding-block: 64px; }
-.section-head { display: grid; gap: 10px; margin-bottom: 30px; max-width: 44em; }
-.section-head h2 { font-size: clamp(32px, 4.2vw, 48px); font-weight: 800; }
-.section-head p { color: var(--muted); }
-
-/* ---------- Opportunities ---------- */
-.filters { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { font: 600 15px/1 var(--f-body); padding: 11px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
-.chip:hover { border-color: var(--c2); }
-.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
-.filter-right { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
-.toggle { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; cursor: pointer; }
-.toggle input { width: 19px; height: 19px; accent-color: var(--c2); margin: 0; }
-.canton-pick select { font: 600 15px/1 var(--f-body); color: var(--ink); background: var(--surface); border: 1.5px solid var(--line); border-radius: 999px; padding: 10px 14px; cursor: pointer; }
-.canton-pick select:hover { border-color: var(--c2); }
-.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.count { font-size: 14.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
-
-.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-@media (max-width: 980px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .cards { grid-template-columns: minmax(0, 1fr); } }
-.card {
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 20px; display: grid; gap: 14px; grid-template-rows: auto auto 1fr auto; min-width: 0;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.card:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -24px rgba(42, 34, 56, .4); }
-.card.is-past { background: transparent; }
-.card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-.cat { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; }
-.cat .ic { width: 34px; height: 34px; border-radius: 12px; display: grid; place-items: center; }
-.cat .ic svg { width: 19px; height: 19px; }
-.cat.sport .ic { background: var(--c1-soft); color: var(--c1-text); }
-.cat.music .ic { background: var(--c3-soft); color: var(--c3); }
-.cat.culture .ic { background: var(--c2-soft); color: var(--c2); }
-.cat.community .ic { background: var(--acc-soft); color: var(--st-partial); }
-.card h3 { font-size: 22px; font-weight: 700; line-height: 1.15; }
-.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15.5px; align-content: start; }
-.facts li { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 10px; align-items: start; }
-.facts svg { width: 18px; height: 18px; margin-top: 3px; color: var(--muted); }
-.facts .sub { color: var(--muted); }
-.status {
-  --c: var(--st-done);
-  display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14.5px; color: var(--c);
-  background: color-mix(in srgb, var(--c) 11%, transparent); border-radius: 12px; padding: 9px 12px; width: fit-content;
-}
-.status svg { width: 17px; height: 17px; flex: none; }
-.status.open { --c: var(--st-open); }
-.status.partially_full { --c: var(--st-partial); }
-.status.not_open { --c: var(--st-soon); }
-.status.closed { --c: var(--st-closed); }
-.status.finished { --c: var(--st-done); }
-.status.unknown { --c: var(--st-closed); }
-.card-foot { display: grid; gap: 10px; border-top: 1px dashed var(--line); padding-top: 14px; }
-.verified { font-size: 13.5px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
-.verified svg { width: 15px; height: 15px; color: var(--st-open); }
-.act {
-  font: 700 15px/1.25 var(--f-body); text-align: center; text-decoration: none; cursor: pointer;
-  padding: 12px 14px; border-radius: 14px; border: 1.5px solid var(--line); background: transparent; color: var(--ink);
-}
-.act:hover { border-color: var(--c2); color: var(--c2); }
-.act.main { background: var(--c2); border-color: var(--c2); color: var(--on-c2); }
-.act.main:hover { color: var(--on-c2); filter: brightness(1.06); }
-.demo-note { font-size: 13.5px; color: var(--muted); background: var(--acc-soft); border-radius: 10px; padding: 8px 10px; }
-.empty { padding: 26px; border: 1.5px dashed var(--line); border-radius: var(--radius); color: var(--muted); }
-.sample-note { margin-top: 16px; font-size: 14px; color: var(--muted); }
-
-/* ---------- Steps ---------- */
-.steps-band { background: var(--c2-soft); border-radius: 32px; padding: 44px clamp(20px, 4vw, 48px); }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-.step { display: grid; gap: 10px; align-content: start; }
-.step-num {
-  width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center;
-  font: 800 24px/1 var(--f-display); background: var(--surface); color: var(--c2);
-  box-shadow: inset 0 0 0 2px var(--c2);
-}
-.step:nth-child(2) .step-num { color: var(--c1-text); box-shadow: inset 0 0 0 2px var(--c1); }
-.step:nth-child(3) .step-num { background: var(--acc); color: var(--on-acc); box-shadow: none; }
-.step h3 { font-size: 22px; font-weight: 700; }
-.step p { color: var(--muted); }
-@media (max-width: 760px) { .steps { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Why ---------- */
-.why { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
-.why-item { display: grid; gap: 10px; align-content: start; }
-.why-item .ic { width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center; }
-.why-item .ic svg { width: 24px; height: 24px; }
-.why-item:nth-child(1) .ic { background: var(--c1-soft); color: var(--c1-text); }
-.why-item:nth-child(2) .ic { background: var(--c2-soft); color: var(--c2); }
-.why-item:nth-child(3) .ic { background: var(--acc-soft); color: var(--st-partial); }
-.why-item:nth-child(4) .ic { background: color-mix(in srgb, var(--st-open) 12%, transparent); color: var(--st-open); }
-.why-item h3 { font-size: 20px; font-weight: 700; }
-.why-item p { color: var(--muted); font-size: 16px; }
-@media (max-width: 900px) { .why { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; } }
-@media (max-width: 480px) { .why { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Alerts ---------- */
-.alerts { background: var(--surface); border: 1px solid var(--line); border-radius: 32px; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 40px; position: relative; overflow: hidden; }
-.alerts::before { content: ""; position: absolute; width: 280px; height: 280px; border-radius: 50%; background: var(--c1-soft); top: -120px; left: -100px; }
-.alerts > * { position: relative; }
-.alerts-copy { display: grid; gap: 14px; align-content: start; }
-.alerts-copy h2 { font-size: clamp(32px, 4.4vw, 52px); font-weight: 800; }
-.alerts-copy p { color: var(--muted); }
-form { display: grid; gap: 18px; }
-.field { display: grid; gap: 8px; }
-.field > label, legend { font-weight: 700; font-size: 15px; }
-input[type="email"], input[type="text"], input[type="url"], textarea, select {
-  font: 400 16px/1.2 var(--f-body); color: var(--ink); background: var(--bg);
-  border: 1.5px solid var(--line); border-radius: 14px; padding: 14px 16px; width: 100%;
-}
-input[type="email"]:focus, input[type="text"]:focus, input[type="url"]:focus, textarea:focus, select:focus { border-color: var(--c2); outline: none; box-shadow: 0 0 0 4px color-mix(in srgb, var(--c2) 22%, transparent); }
-fieldset { border: 0; padding: 0; margin: 0; }
-legend { padding: 0; margin-bottom: 10px; }
-.pills { display: flex; flex-wrap: wrap; gap: 8px; }
-.pick { position: relative; }
-.pick input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
-.pick span { display: inline-block; padding: 11px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--bg); font-weight: 600; font-size: 15px; }
-.pick input:checked + span { background: var(--c2-soft); border-color: var(--c2); color: var(--ink); }
-.pick input:checked + span::before { content: "✓ "; color: var(--c2); }
-.pick input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
-.form-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
-.fine { font-size: 14px; color: var(--muted); max-width: 26em; }
-.form-msg { border-radius: 14px; padding: 14px 16px; font-size: 15px; background: color-mix(in srgb, var(--st-open) 11%, transparent); }
-.form-msg.err { background: var(--c1-soft); }
-textarea { min-height: 96px; resize: vertical; line-height: 1.45; }
-.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-@media (max-width: 560px) { .row2 { grid-template-columns: minmax(0, 1fr); } }
-.suggest::before { background: var(--c2-soft); left: auto; right: -110px; top: auto; bottom: -130px; }
-.suggest-link { font-weight: 700; color: var(--c2); }
-#proposer { margin-top: 32px; }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-
-@media (max-width: 860px) {
-  .hero { grid-template-columns: minmax(0, 1fr); gap: 12px; padding-block: 16px 48px; }
-  .art { max-width: 460px; width: 100%; margin-inline: auto; }
-  .alerts { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-}
-
-footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: 14.5px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 32px; }
-</style>
+<link rel="stylesheet" href="/assets/site.css?v=3">
 <!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
      Language, Filter, Apply click, Alert signup, Suggest event. Add them as goals in Plausible, and add the properties:
      language, source, previous, browser_language, email_language, region, interests, category, open_only, canton, volunteers, organizer. -->
@@ -460,7 +164,7 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
       <p class="empty" id="load-msg" role="status">Chargement des missions…</p>
       <p class="empty" id="empty" hidden data-i18n="empty">Aucune mission pour ces filtres.</p>
       <p class="sample-note"><span data-i18n="sampleNote">Informations vérifiées auprès des organisateurs. Les inscriptions se font toujours sur leur site.</span>
-        <a class="suggest-link" href="#proposer" data-i18n="sgLink">Un événement manque ? Proposez-le</a></p>
+        <a class="suggest-link" href="/proposer/" data-i18n="sgLink">Un événement manque ? Proposez-le</a></p>
     </section>
 
     <section aria-labelledby="how-title">
@@ -500,7 +204,7 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
         <form id="alert-form" novalidate>
           <div class="field">
             <label for="email" data-i18n="fEmail">Votre e-mail</label>
-            <input type="email" id="email" name="email" autocomplete="email" required placeholder="prenom@exemple.ch">
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="prenom@exemple.ch" data-i18n-ph="emailPh">
           </div>
           <div class="field">
             <label for="region" data-i18n="fRegion">Où ?</label>
@@ -544,366 +248,26 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
       </div>
     </section>
 
-    <section id="proposer" aria-labelledby="suggest-title">
-      <div class="alerts suggest">
-        <div class="alerts-copy">
-          <p class="eyebrow" data-i18n="sgEyebrow">Proposer un événement</p>
-          <h2 id="suggest-title" data-i18n="sgTitle">Un événement manque ?</h2>
-          <p data-i18n="sgText">Vous organisez un événement ou en connaissez un qui cherche des bénévoles ? Dites-le-nous. Nous vérifions auprès de l'organisateur avant de le publier.</p>
-        </div>
-        <form id="suggest-form" novalidate>
-          <div class="row2">
-            <div class="field">
-              <label for="sg-name" data-i18n="sgName">Nom de l'événement</label>
-              <input type="text" id="sg-name" name="event_name" required maxlength="200" autocomplete="off">
-            </div>
-            <div class="field">
-              <label for="sg-place" data-i18n="sgPlace">Lieu (commune)</label>
-              <input type="text" id="sg-place" name="place" required maxlength="120" autocomplete="off">
-            </div>
-          </div>
-          <div class="row2">
-            <div class="field">
-              <label for="sg-dates" data-i18n="sgDates">Dates (facultatif)</label>
-              <input type="text" id="sg-dates" name="dates" maxlength="120" autocomplete="off">
-            </div>
-            <div class="field">
-              <label for="sg-url" data-i18n="sgUrl">Site de l'événement (facultatif)</label>
-              <input type="url" id="sg-url" name="event_url" maxlength="500" placeholder="https://" autocomplete="off">
-            </div>
-          </div>
-          <div class="field">
-            <label for="sg-volunteers" data-i18n="sgVol">Cherche-t-il des bénévoles ?</label>
-            <select id="sg-volunteers" name="volunteers">
-              <option value="unknown" data-i18n="sgVolUnknown">Je ne sais pas</option>
-              <option value="yes" data-i18n="sgVolYes">Oui</option>
-              <option value="no" data-i18n="sgVolNo">Non</option>
-            </select>
-          </div>
-          <label class="toggle"><input type="checkbox" id="sg-organizer" name="is_organizer"><span data-i18n="sgOrg">Je fais partie de l'organisation</span></label>
-          <div class="row2">
-            <div class="field">
-              <label for="sg-contact-name" data-i18n="sgContactName">Votre nom (facultatif)</label>
-              <input type="text" id="sg-contact-name" name="contact_name" maxlength="120" autocomplete="name">
-            </div>
-            <div class="field">
-              <label for="sg-contact-email" data-i18n="sgContactEmail">Votre e-mail (facultatif)</label>
-              <input type="email" id="sg-contact-email" name="contact_email" maxlength="254" autocomplete="email">
-            </div>
-          </div>
-          <div class="field">
-            <label for="sg-message" data-i18n="sgMessage">Message (facultatif)</label>
-            <textarea id="sg-message" name="message" maxlength="2000"></textarea>
-          </div>
-          <div class="hp" aria-hidden="true"><label for="sg-website">Website</label><input type="text" id="sg-website" name="website" tabindex="-1" autocomplete="off"></div>
-          <div class="form-foot">
-            <p class="fine" data-i18n="sgFine">Vos coordonnées servent uniquement à vous recontacter au sujet de cette proposition. Elles sont effacées après 6 mois.</p>
-            <button class="btn btn-primary" type="submit" id="sg-submit" data-i18n="sgSubmit">Envoyer la suggestion</button>
-          </div>
-          <p class="form-msg" id="sg-msg" role="status" hidden></p>
-        </form>
-      </div>
-    </section>
   </main>
 
   <footer>
     <span data-i18n="footer">AllezHopp · Fait en Suisse · 2026</span>
     <span data-i18n="footer2">Les inscriptions se font toujours sur le site de l'organisateur.</span>
+    <a href="/proposer/" data-i18n="sgLink">Un événement manque ? Proposez-le</a>
   </footer>
 </div>
 
 
 
+<script src="/assets/i18n.js?v=3"></script>
+<script src="/assets/common.js?v=3"></script>
 <script>
-/* ---------------------------------------------------------------
-   VISITOR FORMS
-   Both forms call database functions in Supabase (migration 20261003000005_visitor_forms.sql):
-   subscribe_alert() for alerts and suggest_event() for missing events. Visitors can only call
-   these functions; they can never read the stored addresses or suggestions.
----------------------------------------------------------------- */
-
-/* ---------------------------------------------------------------
-   ANALYTICS (anonymous, no cookies, no registration)
-   Works with Plausible Analytics once its script is added to the page
-   (see the comment in <head> of index.html). Until then, track() does nothing.
-   Never send e-mail addresses or other personal data here.
----------------------------------------------------------------- */
-const LANGS = ["fr", "de", "it", "en"];
-const BROWSER_LANG = (navigator.language || "").slice(0, 2).toLowerCase() || "unknown";
-function track(name, props) {
-  try { if (typeof window.plausible === "function") window.plausible(name, { props }); } catch (e) {}
-}
-
-const T = {
-  fr: {
-    eyebrow: "Bénévolat événementiel en Suisse romande",
-    h1: 'Donnez un coup de main. <span class="line2">Vivez l\'événement.</span>',
-    lede: "Trouvez un événement auquel donner un coup de main. AllezHopp rassemble les missions bénévoles du sport, de la musique, de la culture et de la vie locale, avec des informations vérifiées : lieu, dates des missions et état des inscriptions.",
-    ctaPrimary: "Découvrir les missions", ctaSecondary: "Être averti à l'ouverture des inscriptions",
-    pilot: "En Suisse romande : Genève, Vaud et Valais, puis Fribourg, Neuchâtel et le Jura.",
-    catSport: "Sport", catMusic: "Musique", catCulture: "Culture", catCommunity: "Vie locale",
-    oppEyebrow: "Missions bénévoles", oppTitle: "Des missions près de chez vous",
-    oppIntro: "Chaque fiche indique le lieu, les dates des missions et l'état des inscriptions, vérifié auprès de l'organisateur.",
-    filterAll: "Tout", filterOpen: "Inscriptions ouvertes uniquement",
-    count: n => n === 1 ? "1 mission" : n + " missions",
-    empty: "Aucune mission pour ces filtres. Élargissez la recherche ou activez une alerte.",
-    sampleNote: "Informations vérifiées auprès des organisateurs. Les inscriptions se font toujours sur leur site.",
-    st: { open: "Inscriptions ouvertes", partially_full: "Certaines missions encore disponibles", not_open: "Inscriptions pas encore ouvertes", closed: "Inscriptions closes", finished: "Missions terminées", unknown: "Statut non confirmé" },
-    duty: "Missions :", event: "Événement :", dutyUnknown: "dates des missions non confirmées",
-    verified: d => "Vérifié le " + d,
-    apply: "Postuler sur le site de l'organisateur", notify: "Être averti à l'ouverture", follow: "Suivre les prochaines éditions",
-    loading: "Chargement des missions…", loadError: "Les missions n'ont pas pu être chargées. Réessayez dans un instant.", siteLink: "Voir le site de l'événement",
-    via: n => "Inscription via " + n, approx: "env.", datesTbc: "Dates à confirmer", openingSoon: "Ouverture des inscriptions annoncée par l'organisateur",
-    howEyebrow: "Comment ça marche", howTitle: "Trois étapes, et vous y êtes.",
-    s1t: "Cherchez", s1p: "Par lieu, par dates et par catégorie, sans créer de compte.",
-    s2t: "Vérifiez", s2p: "L'état des inscriptions, les dates des missions et ce que l'organisateur demande.",
-    s3t: "Postulez chez l'organisateur", s3p: "AllezHopp vous envoie vers son site officiel. C'est lui qui choisit les bénévoles et organise les missions.",
-    whyEyebrow: "Pourquoi AllezHopp", whyTitle: "Votre aide compte. On vous aide à la placer.",
-    w1t: "Vivre l'événement autrement", w1p: "Faire partie de l'équipe qui le rend possible.",
-    w2t: "Rencontrer du monde", w2p: "Partager un moment avec d'autres bénévoles et le public.",
-    w3t: "Être utile près de chez vous", w3p: "Sport, festival de musique ou fête de quartier : à vous de choisir.",
-    w4t: "Des infos fiables", w4p: "Chaque statut est vérifié et daté. Vous savez à quoi vous fier.",
-    alEyebrow: "Alertes", alTitle: "Ne ratez plus une ouverture.",
-    alText: "Recevez un e-mail quand les inscriptions ouvrent pour les missions qui vous intéressent. Gratuit, sans compte.",
-    fEmail: "Votre e-mail", fRegion: "Où ?", fInterests: "Ce qui vous intéresse", fMailLang: "Langue des e-mails",
-    r1: "Genève", r2: "Vaud – Lausanne et environs", r3: "Vaud – La Côte", r4: "Vaud – Riviera et Chablais", r5: "Vaud – Nord vaudois et Broye", r6: "Valais", r7: "Fribourg", r8: "Neuchâtel", r9: "Jura et Jura bernois",
-    cantons: {all: "Tous les cantons", GE: "Genève", VD: "Vaud", VS: "Valais", FR: "Fribourg", NE: "Neuchâtel", JU: "Jura", BE: "Berne"}, cantonLabel: "Canton",
-    fFine: "Vous confirmerez votre adresse par e-mail avant la première alerte. Désinscription en un clic.", fSubmit: "M'avertir",
-    emailPh: "prenom@exemple.ch",
-    errEmail: "Cette adresse e-mail semble incomplète. Vérifiez-la et réessayez.",
-    errSend: "L'envoi n'a pas fonctionné. Réessayez dans un instant.",
-    ok: "Merci ! C'est noté. Avant la première alerte, nous vous enverrons un e-mail pour confirmer votre adresse.",
-    errRate: "Trop d'envois en peu de temps. Réessayez dans une heure.",
-    sgLink: "Un événement manque ? Proposez-le",
-    sgEyebrow: "Proposer un événement",
-    sgTitle: "Un événement manque ?",
-    sgText: "Vous organisez un événement ou en connaissez un qui cherche des bénévoles ? Dites-le-nous. Nous vérifions auprès de l'organisateur avant de le publier.",
-    sgName: "Nom de l'événement",
-    sgPlace: "Lieu (commune)",
-    sgDates: "Dates (facultatif)",
-    sgDatesPh: "p. ex. 12–14 juin 2027",
-    sgUrl: "Site de l'événement (facultatif)",
-    sgVol: "Cherche-t-il des bénévoles ?",
-    sgVolYes: "Oui",
-    sgVolNo: "Non",
-    sgVolUnknown: "Je ne sais pas",
-    sgOrg: "Je fais partie de l'organisation",
-    sgContactName: "Votre nom (facultatif)",
-    sgContactEmail: "Votre e-mail (facultatif)",
-    sgMessage: "Message (facultatif)",
-    sgFine: "Vos coordonnées servent uniquement à vous recontacter au sujet de cette proposition. Elles sont effacées après 6 mois.",
-    sgSubmit: "Envoyer la suggestion",
-    sgOk: "Merci ! Nous vérifions l'événement auprès de l'organisateur avant de le publier.",
-    sgErrName: "Indiquez le nom de l'événement.",
-    sgErrPlace: "Indiquez le lieu de l'événement.",
-    sgErrUrl: "Le lien doit commencer par http:// ou https://.",
-    themeGroup: "Thème d'affichage", themeAuto: "Automatique (selon votre appareil)", themeLight: "Clair", themeDark: "Sombre",
-    footer: "AllezHopp · Fait en Suisse · 2026", footer2: "Les inscriptions se font toujours sur le site de l'organisateur."
-  },
-  de: {
-    eyebrow: "Freiwilligenarbeit an Anlässen in der Westschweiz",
-    h1: 'Packen Sie mit an. <span class="line2">Erleben Sie den Anlass.</span>',
-    lede: "Finden Sie einen Anlass, bei dem Ihre Hilfe zählt. AllezHopp sammelt Freiwilligeneinsätze aus Sport, Musik, Kultur und lokalem Leben, mit geprüften Angaben: Ort, Einsatzdaten und Stand der Anmeldung.",
-    ctaPrimary: "Einsätze entdecken", ctaSecondary: "Benachrichtigen, wenn die Anmeldung öffnet",
-    pilot: "In der Westschweiz: Genf, Waadt und Wallis, danach Freiburg, Neuenburg und Jura.",
-    catSport: "Sport", catMusic: "Musik", catCulture: "Kultur", catCommunity: "Lokales Leben",
-    oppEyebrow: "Freiwilligeneinsätze", oppTitle: "Einsätze in Ihrer Nähe",
-    oppIntro: "Jeder Eintrag zeigt Ort, Einsatzdaten und Stand der Anmeldung, geprüft beim Veranstalter.",
-    filterAll: "Alle", filterOpen: "Nur offene Anmeldungen",
-    count: n => n === 1 ? "1 Einsatz" : n + " Einsätze",
-    empty: "Keine Einsätze für diese Filter. Erweitern Sie die Suche oder aktivieren Sie eine Benachrichtigung.",
-    sampleNote: "Angaben beim Veranstalter geprüft. Die Anmeldung erfolgt immer auf dessen Website.",
-    st: { open: "Anmeldung offen", partially_full: "Einige Einsätze noch frei", not_open: "Anmeldung noch nicht offen", closed: "Anmeldung geschlossen", finished: "Einsätze abgeschlossen", unknown: "Status unbestätigt" },
-    duty: "Einsatz:", event: "Anlass:", dutyUnknown: "Einsatzdaten noch nicht bestätigt",
-    verified: d => "Geprüft am " + d,
-    apply: "Beim Veranstalter bewerben", notify: "Bei Öffnung benachrichtigen", follow: "Nächste Ausgaben verfolgen",
-    loading: "Einsätze werden geladen…", loadError: "Die Einsätze konnten nicht geladen werden. Bitte gleich nochmals versuchen.", siteLink: "Website des Anlasses",
-    via: n => "Anmeldung über " + n, approx: "ca.", datesTbc: "Daten folgen", openingSoon: "Öffnung der Anmeldung vom Veranstalter angekündigt",
-    howEyebrow: "So funktioniert's", howTitle: "Drei Schritte, und Sie sind dabei.",
-    s1t: "Suchen", s1p: "Nach Ort, Datum und Kategorie, ohne Konto.",
-    s2t: "Prüfen", s2p: "Stand der Anmeldung, Einsatzdaten und was der Veranstalter verlangt.",
-    s3t: "Beim Veranstalter bewerben", s3p: "AllezHopp leitet Sie auf seine offizielle Website weiter. Der Veranstalter wählt die Freiwilligen aus und organisiert die Einsätze.",
-    whyEyebrow: "Warum AllezHopp", whyTitle: "Ihre Hilfe zählt. Wir zeigen Ihnen, wo.",
-    w1t: "Anlässe anders erleben", w1p: "Teil des Teams sein, das sie möglich macht.",
-    w2t: "Menschen treffen", w2p: "Einen Moment mit anderen Freiwilligen und dem Publikum teilen.",
-    w3t: "In Ihrer Nähe helfen", w3p: "Sport, Musikfestival oder Quartierfest: Sie haben die Wahl.",
-    w4t: "Verlässliche Angaben", w4p: "Jeder Status ist geprüft und datiert. Sie wissen, worauf Sie sich verlassen können.",
-    alEyebrow: "Benachrichtigungen", alTitle: "Keine Öffnung mehr verpassen.",
-    alText: "Erhalten Sie eine E-Mail, sobald die Anmeldung für passende Einsätze öffnet. Kostenlos, ohne Konto.",
-    fEmail: "Ihre E-Mail", fRegion: "Wo?", fInterests: "Was Sie interessiert", fMailLang: "Sprache der E-Mails",
-    r1: "Genf", r2: "Waadt – Lausanne und Umgebung", r3: "Waadt – La Côte", r4: "Waadt – Riviera und Chablais", r5: "Waadt – Nordwaadt und Broye", r6: "Wallis", r7: "Freiburg", r8: "Neuenburg", r9: "Jura und Berner Jura",
-    cantons: {all: "Alle Kantone", GE: "Genf", VD: "Waadt", VS: "Wallis", FR: "Freiburg", NE: "Neuenburg", JU: "Jura", BE: "Bern"}, cantonLabel: "Kanton",
-    fFine: "Vor der ersten Benachrichtigung bestätigen Sie Ihre Adresse per E-Mail. Abmeldung mit einem Klick.", fSubmit: "Benachrichtigen",
-    emailPh: "vorname@beispiel.ch",
-    errEmail: "Diese E-Mail-Adresse scheint unvollständig. Bitte prüfen und erneut versuchen.",
-    errSend: "Das Senden hat nicht geklappt. Bitte versuchen Sie es gleich noch einmal.",
-    ok: "Danke! Ihre Anmeldung ist eingegangen. Vor der ersten Benachrichtigung senden wir Ihnen eine E-Mail, um Ihre Adresse zu bestätigen.",
-    errRate: "Zu viele Anfragen in kurzer Zeit. Bitte versuchen Sie es in einer Stunde erneut.",
-    sgLink: "Fehlt ein Anlass? Schlagen Sie ihn vor",
-    sgEyebrow: "Anlass vorschlagen",
-    sgTitle: "Fehlt ein Anlass?",
-    sgText: "Sie organisieren einen Anlass oder kennen einen, der Freiwillige sucht? Sagen Sie es uns. Wir prüfen die Angaben beim Veranstalter, bevor wir sie veröffentlichen.",
-    sgName: "Name des Anlasses",
-    sgPlace: "Ort (Gemeinde)",
-    sgDates: "Daten (optional)",
-    sgDatesPh: "z. B. 12.–14. Juni 2027",
-    sgUrl: "Website des Anlasses (optional)",
-    sgVol: "Werden Freiwillige gesucht?",
-    sgVolYes: "Ja",
-    sgVolNo: "Nein",
-    sgVolUnknown: "Weiss ich nicht",
-    sgOrg: "Ich gehöre zum Organisationsteam",
-    sgContactName: "Ihr Name (optional)",
-    sgContactEmail: "Ihre E-Mail (optional)",
-    sgMessage: "Nachricht (optional)",
-    sgFine: "Ihre Kontaktangaben nutzen wir nur für Rückfragen zu diesem Vorschlag. Sie werden nach 6 Monaten gelöscht.",
-    sgSubmit: "Vorschlag senden",
-    sgOk: "Danke! Wir prüfen den Anlass beim Veranstalter, bevor wir ihn veröffentlichen.",
-    sgErrName: "Bitte geben Sie den Namen des Anlasses an.",
-    sgErrPlace: "Bitte geben Sie den Ort an.",
-    sgErrUrl: "Der Link muss mit http:// oder https:// beginnen.",
-    themeGroup: "Darstellung", themeAuto: "Automatisch (wie Ihr Gerät)", themeLight: "Hell", themeDark: "Dunkel",
-    footer: "AllezHopp · Gemacht in der Schweiz · 2026", footer2: "Die Anmeldung erfolgt immer auf der Website des Veranstalters."
-  },
-  it: {
-    eyebrow: "Volontariato agli eventi in Svizzera romanda",
-    h1: 'Dai una mano. <span class="line2">Vivi l\'evento.</span>',
-    lede: "Trova un evento dove il tuo aiuto fa la differenza. AllezHopp raccoglie le opportunità di volontariato nello sport, nella musica, nella cultura e nella vita locale, con informazioni verificate: luogo, date delle attività e stato delle iscrizioni.",
-    ctaPrimary: "Scopri le opportunità", ctaSecondary: "Avvisami all'apertura delle iscrizioni",
-    pilot: "In Svizzera romanda: Ginevra, Vaud e Vallese, poi Friburgo, Neuchâtel e Giura.",
-    catSport: "Sport", catMusic: "Musica", catCulture: "Cultura", catCommunity: "Vita locale",
-    oppEyebrow: "Volontariato", oppTitle: "Opportunità vicino a te",
-    oppIntro: "Ogni scheda indica il luogo, le date delle attività e lo stato delle iscrizioni, verificato presso l'organizzatore.",
-    filterAll: "Tutto", filterOpen: "Solo iscrizioni aperte",
-    count: n => n === 1 ? "1 opportunità" : n + " opportunità",
-    empty: "Nessuna opportunità per questi filtri. Amplia la ricerca o attiva un avviso.",
-    sampleNote: "Informazioni verificate presso gli organizzatori. Le candidature avvengono sempre sul loro sito.",
-    st: { open: "Iscrizioni aperte", partially_full: "Alcuni ruoli ancora disponibili", not_open: "Iscrizioni non ancora aperte", closed: "Iscrizioni chiuse", finished: "Attività concluse", unknown: "Stato non confermato" },
-    duty: "Volontariato:", event: "Evento:", dutyUnknown: "date del volontariato non confermate",
-    verified: d => "Verificato il " + d,
-    apply: "Candidati sul sito dell'organizzatore", notify: "Avvisami all'apertura", follow: "Segui le prossime edizioni",
-    loading: "Caricamento delle opportunità…", loadError: "Non è stato possibile caricare le opportunità. Riprova tra un momento.", siteLink: "Vai al sito dell'evento",
-    via: n => "Iscrizione tramite " + n, approx: "ca.", datesTbc: "Date da confermare", openingSoon: "Apertura delle iscrizioni annunciata dall'organizzatore",
-    howEyebrow: "Come funziona", howTitle: "Tre passi e ci sei.",
-    s1t: "Cerca", s1p: "Per luogo, date e categoria, senza creare un account.",
-    s2t: "Verifica", s2p: "Lo stato delle iscrizioni, le date delle attività e cosa chiede l'organizzatore.",
-    s3t: "Candidati presso l'organizzatore", s3p: "AllezHopp ti indirizza al suo sito ufficiale. È l'organizzatore a scegliere i volontari e a organizzare le attività.",
-    whyEyebrow: "Perché AllezHopp", whyTitle: "Il tuo aiuto conta. Ti aiutiamo a trovare dove.",
-    w1t: "Vivere l'evento da dentro", w1p: "Far parte della squadra che lo rende possibile.",
-    w2t: "Conoscere persone", w2p: "Condividere un momento con altri volontari e con il pubblico.",
-    w3t: "Essere utile vicino a casa", w3p: "Sport, festival musicale o festa di quartiere: scegli tu.",
-    w4t: "Informazioni affidabili", w4p: "Ogni stato è verificato e datato. Sai di cosa fidarti.",
-    alEyebrow: "Avvisi", alTitle: "Non perdere più un'apertura.",
-    alText: "Ricevi un'e-mail quando si aprono le iscrizioni per le opportunità che ti interessano. Gratis, senza account.",
-    fEmail: "La tua e-mail", fRegion: "Dove?", fInterests: "Cosa ti interessa", fMailLang: "Lingua delle e-mail",
-    r1: "Ginevra", r2: "Vaud – Losanna e dintorni", r3: "Vaud – La Côte", r4: "Vaud – Riviera e Chablais", r5: "Vaud – Nord vodese e Broye", r6: "Vallese", r7: "Friburgo", r8: "Neuchâtel", r9: "Giura e Giura bernese",
-    cantons: {all: "Tutti i cantoni", GE: "Ginevra", VD: "Vaud", VS: "Vallese", FR: "Friburgo", NE: "Neuchâtel", JU: "Giura", BE: "Berna"}, cantonLabel: "Cantone",
-    fFine: "Prima del primo avviso confermerai il tuo indirizzo via e-mail. Disiscrizione con un clic.", fSubmit: "Avvisami",
-    emailPh: "nome@esempio.ch",
-    errEmail: "Questo indirizzo e-mail sembra incompleto. Controllalo e riprova.",
-    errSend: "L'invio non è riuscito. Riprova tra un momento.",
-    ok: "Grazie! Abbiamo registrato la tua richiesta. Prima del primo avviso ti invieremo un'e-mail per confermare il tuo indirizzo.",
-    errRate: "Troppi invii in poco tempo. Riprova tra un'ora.",
-    sgLink: "Manca un evento? Proponilo",
-    sgEyebrow: "Proponi un evento",
-    sgTitle: "Manca un evento?",
-    sgText: "Organizzi un evento o ne conosci uno che cerca volontari? Faccelo sapere. Verifichiamo con l'organizzatore prima di pubblicarlo.",
-    sgName: "Nome dell'evento",
-    sgPlace: "Luogo (comune)",
-    sgDates: "Date (facoltativo)",
-    sgDatesPh: "es. 12–14 giugno 2027",
-    sgUrl: "Sito dell'evento (facoltativo)",
-    sgVol: "Cerca volontari?",
-    sgVolYes: "Sì",
-    sgVolNo: "No",
-    sgVolUnknown: "Non so",
-    sgOrg: "Faccio parte dell'organizzazione",
-    sgContactName: "Il tuo nome (facoltativo)",
-    sgContactEmail: "La tua e-mail (facoltativo)",
-    sgMessage: "Messaggio (facoltativo)",
-    sgFine: "I tuoi dati servono solo a ricontattarti su questa proposta. Vengono cancellati dopo 6 mesi.",
-    sgSubmit: "Invia la proposta",
-    sgOk: "Grazie! Verifichiamo l'evento con l'organizzatore prima di pubblicarlo.",
-    sgErrName: "Indica il nome dell'evento.",
-    sgErrPlace: "Indica il luogo dell'evento.",
-    sgErrUrl: "Il link deve iniziare con http:// o https://.",
-    themeGroup: "Tema di visualizzazione", themeAuto: "Automatico (come il tuo dispositivo)", themeLight: "Chiaro", themeDark: "Scuro",
-    footer: "AllezHopp · Fatto in Svizzera · 2026", footer2: "Le candidature avvengono sempre sul sito dell'organizzatore."
-  },
-  en: {
-    eyebrow: "Event volunteering in French-speaking Switzerland",
-    h1: 'Lend a hand. <span class="line2">Experience the event.</span>',
-    lede: "Find an event where your help makes a difference. AllezHopp brings together volunteer opportunities in sport, music, culture and community life, with verified information: place, volunteer dates and recruitment status.",
-    ctaPrimary: "Discover opportunities", ctaSecondary: "Notify me when recruitment opens",
-    pilot: "Across French-speaking Switzerland: Geneva, Vaud and Valais, then Fribourg, Neuchâtel and Jura.",
-    catSport: "Sport", catMusic: "Music", catCulture: "Culture", catCommunity: "Community",
-    oppEyebrow: "Volunteer opportunities", oppTitle: "Opportunities near you",
-    oppIntro: "Each listing shows the place, the volunteer dates and the recruitment status, verified with the organizer.",
-    filterAll: "All", filterOpen: "Open recruitment only",
-    count: n => n === 1 ? "1 opportunity" : n + " opportunities",
-    empty: "No opportunities match these filters. Widen your search or set up an alert.",
-    sampleNote: "Information verified with organizers. Applications always happen on their website.",
-    st: { open: "Recruitment open", partially_full: "Some roles still available", not_open: "Recruitment not yet open", closed: "Recruitment closed", finished: "Volunteer activity finished", unknown: "Unconfirmed status" },
-    duty: "Volunteering:", event: "Event:", dutyUnknown: "volunteer dates unconfirmed",
-    verified: d => "Verified " + d,
-    apply: "Apply on the organizer's website", notify: "Notify me when it opens", follow: "Follow future editions",
-    loading: "Loading opportunities…", loadError: "Opportunities couldn't be loaded. Please try again in a moment.", siteLink: "Visit the event website",
-    via: n => "Registration via " + n, approx: "approx.", datesTbc: "Dates to be confirmed", openingSoon: "Organizer has announced when recruitment opens",
-    howEyebrow: "How it works", howTitle: "Three steps and you're in.",
-    s1t: "Search", s1p: "By place, dates and category, no account needed.",
-    s2t: "Check", s2p: "Recruitment status, volunteer dates and what the organizer asks for.",
-    s3t: "Apply with the organizer", s3p: "AllezHopp sends you to their official website. The organizer selects volunteers and runs the roles.",
-    whyEyebrow: "Why AllezHopp", whyTitle: "Your help matters. We help you find where.",
-    w1t: "See events differently", w1p: "Be part of the team that makes it happen.",
-    w2t: "Meet people", w2p: "Share the moment with other volunteers and the public.",
-    w3t: "Help close to home", w3p: "Sport, a music festival or a neighbourhood party: your choice.",
-    w4t: "Reliable information", w4p: "Every status is verified and dated, so you know what to trust.",
-    alEyebrow: "Alerts", alTitle: "Never miss an opening.",
-    alText: "Get an email when recruitment opens for the opportunities you care about. Free, no account.",
-    fEmail: "Your email", fRegion: "Where?", fInterests: "What interests you", fMailLang: "Email language",
-    r1: "Geneva", r2: "Vaud – Lausanne area", r3: "Vaud – La Côte", r4: "Vaud – Riviera and Chablais", r5: "Vaud – Northern Vaud and Broye", r6: "Valais", r7: "Fribourg", r8: "Neuchâtel", r9: "Jura and Bernese Jura",
-    cantons: {all: "All cantons", GE: "Geneva", VD: "Vaud", VS: "Valais", FR: "Fribourg", NE: "Neuchâtel", JU: "Jura", BE: "Bern"}, cantonLabel: "Canton",
-    fFine: "You'll confirm your address by email before the first alert. Unsubscribe in one click.", fSubmit: "Notify me",
-    emailPh: "name@example.ch",
-    errEmail: "This email address looks incomplete. Check it and try again.",
-    errSend: "Sending didn't work. Please try again in a moment.",
-    ok: "Thank you! You're on the list. Before the first alert, we'll email you to confirm your address.",
-    errRate: "Too many attempts in a short time. Please try again in an hour.",
-    sgLink: "Missing an event? Suggest it",
-    sgEyebrow: "Suggest an event",
-    sgTitle: "Missing an event?",
-    sgText: "Organizing an event, or know one that needs volunteers? Tell us. We check with the organizer before publishing it.",
-    sgName: "Event name",
-    sgPlace: "Place (town)",
-    sgDates: "Dates (optional)",
-    sgDatesPh: "e.g. 12–14 June 2027",
-    sgUrl: "Event website (optional)",
-    sgVol: "Is it looking for volunteers?",
-    sgVolYes: "Yes",
-    sgVolNo: "No",
-    sgVolUnknown: "I don't know",
-    sgOrg: "I'm part of the organizing team",
-    sgContactName: "Your name (optional)",
-    sgContactEmail: "Your email (optional)",
-    sgMessage: "Message (optional)",
-    sgFine: "We only use your contact details to follow up on this suggestion. They are deleted after 6 months.",
-    sgSubmit: "Send suggestion",
-    sgOk: "Thank you! We'll check the event with the organizer before publishing it.",
-    sgErrName: "Please enter the event name.",
-    sgErrPlace: "Please enter where the event takes place.",
-    sgErrUrl: "The link must start with http:// or https://.",
-    themeGroup: "Display theme", themeAuto: "Automatic (follows your device)", themeLight: "Light", themeDark: "Dark",
-    footer: "AllezHopp · Made in Switzerland · 2026", footer2: "Applications always happen on the organizer's website."
-  }
-};
-
+/* Home page: the live list of opportunities and the alert sign-up. Shared code is in /assets/. */
 /* ---------------------------------------------------------------
    LIVE DATA from Supabase (view `current_opportunities`).
    The publishable key is meant to be public: Row Level Security
    only lets it read published, current opportunities.
 ---------------------------------------------------------------- */
-const SUPABASE_URL = "https://rnwecpchtrzkbrnkdhvt.supabase.co";
-const SUPABASE_KEY = "sb_publishable_6Q8Q7x40ZbCXVplznFJ0hw_TAh4R7fr";
 const FIELDS = "campaign_id,canonical_name,category,municipality,canton,event_url,event_start,event_end,event_date_precision,duty_start,duty_end,display_status,application_url,registration_via,announced_opening,last_verified_at,sort_date";
 let OPPS = null;      // null = loading, [] = none, array = loaded
 let loadFailed = false;
@@ -924,13 +288,9 @@ async function loadOpportunities() {
 
 const ST_ICON = { open: "i-check", partially_full: "i-half", not_open: "i-clock", closed: "i-lock", finished: "i-flag", unknown: "i-clock" };
 const CAT_ICON = { sport: "i-sport", music: "i-music", culture: "i-culture", community: "i-community" };
-const LOCALE = { fr: "fr-CH", de: "de-CH", it: "it-CH", en: "en-GB" };
 
-let lang = "fr";
 let cat = "all";
 let canton = "all";
-const $ = s => document.querySelector(s);
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const safeUrl = u => (typeof u === "string" && /^https:\/\//.test(u)) ? u : null;
 
 function fmtRange(start, end) {
@@ -1024,29 +384,12 @@ document.addEventListener("click", e => {
   if (a) track("Apply click", { language: lang, category: a.dataset.apply, canton: a.dataset.canton || "unknown" });
 });
 
-function setLang(l) {
-  lang = l;
-  const t = T[l];
-  document.documentElement.lang = l;
-  document.querySelectorAll("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
-  document.querySelectorAll("[data-i18n-html]").forEach(el => { const v = t[el.dataset.i18nHtml]; if (typeof v === "string") el.innerHTML = v; });
-  $("#email").placeholder = t.emailPh;
-  $("#sg-dates").placeholder = t.sgDatesPh;
-  document.querySelectorAll("#theme-switch [data-tlabel]").forEach(b => { b.setAttribute("aria-label", t[b.dataset.tlabel]); b.title = t[b.dataset.tlabel]; });
-  $("#theme-switch").setAttribute("aria-label", t.themeGroup);
-  const ml = document.getElementById("ml-" + l); if (ml) ml.checked = true;
-  $("#lang-select").value = l;
+function onLangChange(t) {
+  const ml = document.getElementById("ml-" + lang); if (ml) ml.checked = true;
   $("#form-msg").hidden = true;
-  $("#sg-msg").hidden = true;
   renderCards();
-  try { localStorage.setItem("allezhopp-lang", l); } catch (e) {}
 }
 
-$("#lang-select").addEventListener("change", e => {
-  const from = lang;
-  setLang(e.target.value);
-  track("Language", { language: lang, source: "switch", previous: from, browser_language: BROWSER_LANG });
-});
 document.querySelectorAll("#chips .chip").forEach(b => b.addEventListener("click", () => {
   cat = b.dataset.cat;
   document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", String(c === b)));
@@ -1058,21 +401,6 @@ $("#canton-filter").addEventListener("change", e => {
   track("Filter", { language: lang, canton });
 });
 $("#only-open").addEventListener("change", () => { renderCards(); track("Filter", { language: lang, open_only: String($("#only-open").checked) }); });
-
-/* Calls a Supabase database function. Errors come back as HTTP 400 with { message: "invalid_email" } etc. */
-async function callRpc(fn, body) {
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fn}`, {
-    method: "POST",
-    headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Accept: "application/json" },
-    body: JSON.stringify(body)
-  });
-  if (res.ok) return;
-  let code = "send_failed";
-  try { code = (await res.json()).message || code; } catch (e) {}
-  throw new Error(code);
-}
-function showMsg(el, text, isErr) { el.textContent = text; el.classList.toggle("err", !!isErr); el.hidden = false; }
-const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
 
 $("#alert-form").addEventListener("submit", async ev => {
   ev.preventDefault();
@@ -1095,56 +423,9 @@ $("#alert-form").addEventListener("submit", async ev => {
   } finally { btn.disabled = false; }
 });
 
-$("#suggest-form").addEventListener("submit", async ev => {
-  ev.preventDefault();
-  const t = T[lang];
-  const msg = $("#sg-msg");
-  const v = id => $(id).value.trim();
-  const name = v("#sg-name"), place = v("#sg-place"), url = v("#sg-url"), contactEmail = v("#sg-contact-email");
-  if (name.length < 2) { showMsg(msg, t.sgErrName, true); $("#sg-name").focus(); return; }
-  if (place.length < 2) { showMsg(msg, t.sgErrPlace, true); $("#sg-place").focus(); return; }
-  if (url && !/^https?:\/\/\S+\.\S+$/.test(url)) { showMsg(msg, t.sgErrUrl, true); $("#sg-url").focus(); return; }
-  if (contactEmail && !isEmail(contactEmail)) { showMsg(msg, t.errEmail, true); $("#sg-contact-email").focus(); return; }
-  if ($("#sg-website").value) { showMsg(msg, t.sgOk); return; }    // bot trap
-  const volunteers = $("#sg-volunteers").value, organizer = $("#sg-organizer").checked;
-  const btn = $("#sg-submit"); btn.disabled = true;
-  try {
-    await callRpc("suggest_event", {
-      p_locale: lang, p_event_name: name, p_place: place, p_dates: v("#sg-dates") || null, p_event_url: url || null,
-      p_volunteers: volunteers, p_is_organizer: organizer,
-      p_contact_name: v("#sg-contact-name") || null, p_contact_email: contactEmail || null, p_message: v("#sg-message") || null
-    });
-    showMsg(msg, t.sgOk);
-    track("Suggest event", { language: lang, volunteers, organizer: String(organizer) });
-    ev.target.reset();
-  } catch (e) {
-    const m = { invalid_name: t.sgErrName, invalid_place: t.sgErrPlace, invalid_url: t.sgErrUrl, invalid_email: t.errEmail, rate_limited: t.errRate };
-    showMsg(msg, m[e.message] || t.errSend, true);
-  } finally { btn.disabled = false; }
-});
-
-/* ---------- Theme: Auto (follows the device), Light or Dark ---------- */
-const root = document.documentElement;
-function setTheme(v, save) {
-  if (v === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", v);
-  document.querySelectorAll("#theme-switch button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.themeopt === v)));
-  if (save) { try { localStorage.setItem("allezhopp-theme", v); } catch (e) {} }
-}
-document.querySelectorAll("#theme-switch button").forEach(b => b.addEventListener("click", () => setTheme(b.dataset.themeopt, true)));
-(function () {
-  let v = null;
-  try { v = localStorage.getItem("allezhopp-theme"); } catch (e) {}
-  setTheme(v === "light" || v === "dark" ? v : "auto", false);
-})();
-
 (function init() {
-  let l = null, source = "default";
-  try { l = localStorage.getItem("allezhopp-lang"); } catch (e) {}
-  if (LANGS.includes(l)) source = "saved";
-  else if (LANGS.includes(BROWSER_LANG)) { l = BROWSER_LANG; source = "browser"; }
-  else l = "fr";
-  setLang(l);
-  track("Language", { language: l, source, browser_language: BROWSER_LANG });
+  const { language, source } = initLang();
+  track("Language", { language, source, browser_language: BROWSER_LANG });
   loadOpportunities();
 })();
 </script>

@@ -211,6 +211,7 @@ section { padding-block: 64px; }
 .status.not_open { --c: var(--st-soon); }
 .status.closed { --c: var(--st-closed); }
 .status.finished { --c: var(--st-done); }
+.status.unknown { --c: var(--st-closed); }
 .card-foot { display: grid; gap: 10px; border-top: 1px dashed var(--line); padding-top: 14px; }
 .verified { font-size: 13.5px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
 .verified svg { width: 15px; height: 15px; color: var(--st-open); }
@@ -438,9 +439,10 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
         </div>
       </div>
 
-      <div class="cards" id="cards"></div>
+      <div class="cards" id="cards" aria-busy="true"></div>
+      <p class="empty" id="load-msg" role="status">Chargement des missions…</p>
       <p class="empty" id="empty" hidden data-i18n="empty">Aucune mission pour ces filtres.</p>
-      <p class="sample-note" data-i18n="sampleNote">Exemples fictifs pour illustrer la plateforme.</p>
+      <p class="sample-note" data-i18n="sampleNote">Informations vérifiées auprès des organisateurs. Les inscriptions se font toujours sur leur site.</p>
     </section>
 
     <section aria-labelledby="how-title">
@@ -564,12 +566,13 @@ const T = {
     filterAll: "Tout", filterOpen: "Inscriptions ouvertes uniquement",
     count: n => n === 1 ? "1 mission" : n + " missions",
     empty: "Aucune mission pour ces filtres. Élargissez la recherche ou activez une alerte.",
-    sampleNote: "Exemples fictifs pour illustrer la plateforme. Les vraies missions arrivent au lancement.",
-    st: { open: "Inscriptions ouvertes", partially_full: "Certaines missions encore disponibles", not_open: "Inscriptions pas encore ouvertes", closed: "Inscriptions closes", finished: "Missions terminées" },
+    sampleNote: "Informations vérifiées auprès des organisateurs. Les inscriptions se font toujours sur leur site.",
+    st: { open: "Inscriptions ouvertes", partially_full: "Certaines missions encore disponibles", not_open: "Inscriptions pas encore ouvertes", closed: "Inscriptions closes", finished: "Missions terminées", unknown: "Statut non confirmé" },
     duty: "Missions :", event: "Événement :", dutyUnknown: "dates des missions non confirmées",
     verified: d => "Vérifié le " + d,
     apply: "Postuler sur le site de l'organisateur", notify: "Être averti à l'ouverture", follow: "Suivre les prochaines éditions",
-    demo: "Exemple fictif : sur la plateforme, ce bouton ouvre le site officiel de l'organisateur.",
+    loading: "Chargement des missions…", loadError: "Les missions n'ont pas pu être chargées. Réessayez dans un instant.", siteLink: "Voir le site de l'événement",
+    via: n => "Inscription via " + n, approx: "env.", datesTbc: "Dates à confirmer", openingSoon: "Ouverture des inscriptions annoncée par l'organisateur",
     howEyebrow: "Comment ça marche", howTitle: "Trois étapes, et vous y êtes.",
     s1t: "Cherchez", s1p: "Par lieu, par dates et par catégorie, sans créer de compte.",
     s2t: "Vérifiez", s2p: "L'état des inscriptions, les dates des missions et ce que l'organisateur demande.",
@@ -604,12 +607,13 @@ const T = {
     filterAll: "Alle", filterOpen: "Nur offene Anmeldungen",
     count: n => n === 1 ? "1 Einsatz" : n + " Einsätze",
     empty: "Keine Einsätze für diese Filter. Erweitern Sie die Suche oder aktivieren Sie eine Benachrichtigung.",
-    sampleNote: "Erfundene Beispiele zur Veranschaulichung. Echte Einsätze folgen zum Start.",
-    st: { open: "Anmeldung offen", partially_full: "Einige Einsätze noch frei", not_open: "Anmeldung noch nicht offen", closed: "Anmeldung geschlossen", finished: "Einsätze abgeschlossen" },
+    sampleNote: "Angaben beim Veranstalter geprüft. Die Anmeldung erfolgt immer auf dessen Website.",
+    st: { open: "Anmeldung offen", partially_full: "Einige Einsätze noch frei", not_open: "Anmeldung noch nicht offen", closed: "Anmeldung geschlossen", finished: "Einsätze abgeschlossen", unknown: "Status unbestätigt" },
     duty: "Einsatz:", event: "Anlass:", dutyUnknown: "Einsatzdaten noch nicht bestätigt",
     verified: d => "Geprüft am " + d,
     apply: "Beim Veranstalter bewerben", notify: "Bei Öffnung benachrichtigen", follow: "Nächste Ausgaben verfolgen",
-    demo: "Erfundenes Beispiel: Auf der Plattform öffnet dieser Knopf die offizielle Website des Veranstalters.",
+    loading: "Einsätze werden geladen…", loadError: "Die Einsätze konnten nicht geladen werden. Bitte gleich nochmals versuchen.", siteLink: "Website des Anlasses",
+    via: n => "Anmeldung über " + n, approx: "ca.", datesTbc: "Daten folgen", openingSoon: "Öffnung der Anmeldung vom Veranstalter angekündigt",
     howEyebrow: "So funktioniert's", howTitle: "Drei Schritte, und Sie sind dabei.",
     s1t: "Suchen", s1p: "Nach Ort, Datum und Kategorie, ohne Konto.",
     s2t: "Prüfen", s2p: "Stand der Anmeldung, Einsatzdaten und was der Veranstalter verlangt.",
@@ -644,12 +648,13 @@ const T = {
     filterAll: "Tutto", filterOpen: "Solo iscrizioni aperte",
     count: n => n === 1 ? "1 opportunità" : n + " opportunità",
     empty: "Nessuna opportunità per questi filtri. Amplia la ricerca o attiva un avviso.",
-    sampleNote: "Esempi fittizi per illustrare la piattaforma. Le vere opportunità arriveranno al lancio.",
-    st: { open: "Iscrizioni aperte", partially_full: "Alcuni ruoli ancora disponibili", not_open: "Iscrizioni non ancora aperte", closed: "Iscrizioni chiuse", finished: "Attività concluse" },
+    sampleNote: "Informazioni verificate presso gli organizzatori. Le candidature avvengono sempre sul loro sito.",
+    st: { open: "Iscrizioni aperte", partially_full: "Alcuni ruoli ancora disponibili", not_open: "Iscrizioni non ancora aperte", closed: "Iscrizioni chiuse", finished: "Attività concluse", unknown: "Stato non confermato" },
     duty: "Volontariato:", event: "Evento:", dutyUnknown: "date del volontariato non confermate",
     verified: d => "Verificato il " + d,
     apply: "Candidati sul sito dell'organizzatore", notify: "Avvisami all'apertura", follow: "Segui le prossime edizioni",
-    demo: "Esempio fittizio: sulla piattaforma, questo pulsante apre il sito ufficiale dell'organizzatore.",
+    loading: "Caricamento delle opportunità…", loadError: "Non è stato possibile caricare le opportunità. Riprova tra un momento.", siteLink: "Vai al sito dell'evento",
+    via: n => "Iscrizione tramite " + n, approx: "ca.", datesTbc: "Date da confermare", openingSoon: "Apertura delle iscrizioni annunciata dall'organizzatore",
     howEyebrow: "Come funziona", howTitle: "Tre passi e ci sei.",
     s1t: "Cerca", s1p: "Per luogo, date e categoria, senza creare un account.",
     s2t: "Verifica", s2p: "Lo stato delle iscrizioni, le date delle attività e cosa chiede l'organizzatore.",
@@ -684,12 +689,13 @@ const T = {
     filterAll: "All", filterOpen: "Open recruitment only",
     count: n => n === 1 ? "1 opportunity" : n + " opportunities",
     empty: "No opportunities match these filters. Widen your search or set up an alert.",
-    sampleNote: "Fictional examples to illustrate the platform. Real opportunities arrive at launch.",
-    st: { open: "Recruitment open", partially_full: "Some roles still available", not_open: "Recruitment not yet open", closed: "Recruitment closed", finished: "Volunteer activity finished" },
+    sampleNote: "Information verified with organizers. Applications always happen on their website.",
+    st: { open: "Recruitment open", partially_full: "Some roles still available", not_open: "Recruitment not yet open", closed: "Recruitment closed", finished: "Volunteer activity finished", unknown: "Unconfirmed status" },
     duty: "Volunteering:", event: "Event:", dutyUnknown: "volunteer dates unconfirmed",
     verified: d => "Verified " + d,
     apply: "Apply on the organizer's website", notify: "Notify me when it opens", follow: "Follow future editions",
-    demo: "Fictional example: on the platform, this button opens the organizer's official website.",
+    loading: "Loading opportunities…", loadError: "Opportunities couldn't be loaded. Please try again in a moment.", siteLink: "Visit the event website",
+    via: n => "Registration via " + n, approx: "approx.", datesTbc: "Dates to be confirmed", openingSoon: "Organizer has announced when recruitment opens",
     howEyebrow: "How it works", howTitle: "Three steps and you're in.",
     s1t: "Search", s1p: "By place, dates and category, no account needed.",
     s2t: "Check", s2p: "Recruitment status, volunteer dates and what the organizer asks for.",
@@ -714,78 +720,118 @@ const T = {
   }
 };
 
-/* Fictional sample opportunities (Vaud pilot) */
-const OPPS = [
-  { cat: "sport", status: "open", name: "Trail des Crêtes du Jorat", place: "Le Mont-sur-Lausanne",
-    duty: { fr: "16–17 avr. 2027", de: "16.–17. Apr. 2027", it: "16–17 apr. 2027", en: "16–17 Apr 2027" }, roles: { fr: "Ravitaillement, balisage du parcours", de: "Verpflegungsposten, Streckenmarkierung", it: "Punti di ristoro, segnaletica del percorso", en: "Refreshment stations, course marking" }, verified: { fr: "1 oct. 2026", de: "1. Okt. 2026", it: "1 ott. 2026", en: "1 Oct 2026" } },
-  { cat: "community", status: "partially_full", name: "Marché de Noël solidaire", place: "Morges",
-    duty: { fr: "28 nov. – 21 déc. 2026", de: "28. Nov. – 21. Dez. 2026", it: "28 nov. – 21 dic. 2026", en: "28 Nov – 21 Dec 2026" }, roles: { fr: "Accueil encore disponible ; stands complets", de: "Empfang noch frei; Stände voll", it: "Accoglienza ancora disponibile; stand al completo", en: "Welcome desk available; stalls full" }, verified: { fr: "30 sept. 2026", de: "30. Sept. 2026", it: "30 set. 2026", en: "30 Sep 2026" } },
-  { cat: "culture", status: "open", name: "Nuit des contes", place: "Vevey",
-    duty: { fr: "11 déc. 2026", de: "11. Dez. 2026", it: "11 dic. 2026", en: "11 Dec 2026" }, roles: { fr: "Accueil du public, montage", de: "Publikumsempfang, Aufbau", it: "Accoglienza del pubblico, allestimento", en: "Visitor welcome, set-up" }, verified: { fr: "2 oct. 2026", de: "2. Okt. 2026", it: "2 ott. 2026", en: "2 Oct 2026" } },
-  { cat: "culture", status: "not_open", name: "Festival des Roseaux", place: "Yverdon-les-Bains",
-    event: { fr: "9–11 juil. 2027", de: "9.–11. Juli 2027", it: "9–11 lug. 2027", en: "9–11 Jul 2027" }, roles: { fr: "Ouverture annoncée par l'organisateur pour février 2027", de: "Öffnung vom Veranstalter für Februar 2027 angekündigt", it: "Apertura annunciata dall'organizzatore per febbraio 2027", en: "Organizer announced opening for February 2027" }, verified: { fr: "28 sept. 2026", de: "28. Sept. 2026", it: "28 set. 2026", en: "28 Sep 2026" } },
-  { cat: "sport", status: "closed", name: "Semi-marathon des Rives", place: "Nyon",
-    duty: { fr: "25 oct. 2026", de: "25. Okt. 2026", it: "25 ott. 2026", en: "25 Oct 2026" }, roles: { fr: "Toutes les missions sont attribuées", de: "Alle Einsätze sind vergeben", it: "Tutti i ruoli sono stati assegnati", en: "All roles have been filled" }, verified: { fr: "29 sept. 2026", de: "29. Sept. 2026", it: "29 set. 2026", en: "29 Sep 2026" } },
-  { cat: "community", status: "finished", name: "Fête de quartier des Saules", place: "Lausanne",
-    duty: { fr: "12–13 sept. 2026", de: "12.–13. Sept. 2026", it: "12–13 set. 2026", en: "12–13 Sep 2026" }, roles: { fr: "Merci aux 64 bénévoles de cette édition", de: "Danke an die 64 Freiwilligen dieser Ausgabe", it: "Grazie ai 64 volontari di questa edizione", en: "Thanks to this edition's 64 volunteers" }, verified: { fr: "15 sept. 2026", de: "15. Sept. 2026", it: "15 set. 2026", en: "15 Sep 2026" } }
-];
-const ST_ICON = { open: "i-check", partially_full: "i-half", not_open: "i-clock", closed: "i-lock", finished: "i-flag" };
+/* ---------------------------------------------------------------
+   LIVE DATA from Supabase (view `current_opportunities`).
+   The publishable key is meant to be public: Row Level Security
+   only lets it read published, current opportunities.
+---------------------------------------------------------------- */
+const SUPABASE_URL = "https://rnwecpchtrzkbrnkdhvt.supabase.co";
+const SUPABASE_KEY = "sb_publishable_6Q8Q7x40ZbCXVplznFJ0hw_TAh4R7fr";
+const FIELDS = "campaign_id,canonical_name,category,municipality,canton,event_url,event_start,event_end,event_date_precision,duty_start,duty_end,display_status,application_url,registration_via,announced_opening,last_verified_at,sort_date";
+let OPPS = null;      // null = loading, [] = none, array = loaded
+let loadFailed = false;
+
+async function loadOpportunities() {
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/current_opportunities?select=${FIELDS}&order=sort_date.asc.nullslast,canonical_name.asc`,
+      { headers: { apikey: SUPABASE_KEY, Accept: "application/json" } });
+    if (!res.ok) throw new Error(res.status);
+    OPPS = await res.json();
+    loadFailed = false;
+  } catch (e) {
+    OPPS = [];
+    loadFailed = true;
+  }
+  renderCards();
+}
+
+const ST_ICON = { open: "i-check", partially_full: "i-half", not_open: "i-clock", closed: "i-lock", finished: "i-flag", unknown: "i-clock" };
 const CAT_ICON = { sport: "i-sport", culture: "i-culture", community: "i-community" };
+const LOCALE = { fr: "fr-CH", de: "de-CH", it: "it-CH", en: "en-GB" };
 
 let lang = "fr";
 let cat = "all";
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const safeUrl = u => (typeof u === "string" && /^https:\/\//.test(u)) ? u : null;
+
+function fmtRange(start, end) {
+  if (!start) return null;
+  const opt = { day: "numeric", month: "short", year: "numeric", timeZone: "Europe/Zurich" };
+  const f = new Intl.DateTimeFormat(LOCALE[lang], opt);
+  const d1 = new Date(start + "T12:00:00Z"), d2 = new Date((end || start) + "T12:00:00Z");
+  if (!end || end === start) return f.format(d1);
+  return typeof f.formatRange === "function" ? f.formatRange(d1, d2) : f.format(d1) + " – " + f.format(d2);
+}
+function fmtDay(ts) {
+  if (!ts) return "";
+  return new Intl.DateTimeFormat(LOCALE[lang], { day: "numeric", month: "short", year: "numeric", timeZone: "Europe/Zurich" }).format(new Date(ts));
+}
 
 function renderCards() {
   const t = T[lang];
+  const msg = $("#load-msg");
+  if (OPPS === null) { msg.textContent = t.loading; msg.hidden = false; $("#empty").hidden = true; $("#count").textContent = ""; return; }
+  $("#cards").setAttribute("aria-busy", "false");
+  if (loadFailed) { msg.textContent = t.loadError; msg.hidden = false; } else { msg.hidden = true; }
   const onlyOpen = $("#only-open").checked;
   const catLabel = { sport: t.catSport, culture: t.catCulture, community: t.catCommunity };
-  const list = OPPS.filter(o => (cat === "all" || o.cat === cat) && (!onlyOpen || o.status === "open" || o.status === "partially_full"));
-  $("#cards").innerHTML = list.map((o, i) => {
-    const dateLine = o.duty
-      ? `<li><svg><use href="#i-cal"/></svg><span>${t.duty} ${esc(o.duty[lang])}</span></li>`
-      : `<li><svg><use href="#i-cal"/></svg><span>${t.event} ${esc(o.event[lang])}<br><span class="sub">${t.dutyUnknown}</span></span></li>`;
-    let action;
-    if (o.status === "open" || o.status === "partially_full") {
-      const k = OPPS.indexOf(o);
-      action = `<button type="button" class="act main" data-demo="${k}">${t.apply} ↗</button><p class="demo-note" id="demo-${k}" hidden>${t.demo}</p>`;
-    } else if (o.status === "not_open") {
-      action = `<a class="act" href="#alertes">${t.notify}</a>`;
+  const list = OPPS.filter(o => (cat === "all" || o.category === cat) &&
+    (!onlyOpen || o.display_status === "open" || o.display_status === "partially_full"));
+  $("#cards").innerHTML = list.map(o => {
+    const st = t.st[o.display_status] ? o.display_status : "unknown";
+    const approx = (o.event_date_precision === "approximate") ? t.approx + " " : "";
+    let dateLine;
+    if (o.duty_start) {
+      dateLine = `<li><svg><use href="#i-cal"/></svg><span>${t.duty} ${esc(fmtRange(o.duty_start, o.duty_end))}</span></li>`;
+    } else if (o.event_start) {
+      dateLine = `<li><svg><use href="#i-cal"/></svg><span>${t.event} ${approx}${esc(fmtRange(o.event_start, o.event_end))}<br><span class="sub">${t.dutyUnknown}</span></span></li>`;
     } else {
-      action = `<a class="act" href="#alertes">${t.follow}</a>`;
+      dateLine = `<li><svg><use href="#i-cal"/></svg><span>${t.datesTbc}</span></li>`;
     }
-    const past = o.status === "closed" || o.status === "finished";
-    return `<article class="card${past ? " is-past" : ""}">
+    const extra = o.registration_via
+      ? `<li><svg><use href="#i-hand"/></svg><span>${esc(t.via(o.registration_via))}</span></li>`
+      : (st === "not_open" && o.announced_opening
+          ? `<li><svg><use href="#i-hand"/></svg><span>${lang === "fr" ? esc(o.announced_opening) : t.openingSoon}</span></li>` : "");
+    const link = safeUrl(o.application_url) || safeUrl(o.event_url);
+    let action = "";
+    if ((st === "open" || st === "partially_full") && link) {
+      action = `<a class="act main" href="${esc(link)}" target="_blank" rel="noopener" data-apply="${esc(o.category)}">${t.apply} ↗</a>`;
+    } else if (st === "not_open") {
+      action = `<a class="act" href="#alertes">${t.notify}</a>` + (link ? `<a class="act" href="${esc(link)}" target="_blank" rel="noopener">${t.siteLink} ↗</a>` : "");
+    } else if (link) {
+      action = `<a class="act" href="${esc(link)}" target="_blank" rel="noopener">${t.siteLink} ↗</a>`;
+    } else {
+      action = `<a class="act" href="#alertes">${t.notify}</a>`;
+    }
+    const place = [o.municipality, o.canton].filter(Boolean).map(esc).join(" · ");
+    const icon = CAT_ICON[o.category] || "i-community";
+    return `<article class="card">
       <div class="card-top">
-        <span class="cat ${o.cat}"><span class="ic"><svg><use href="#${CAT_ICON[o.cat]}"/></svg></span>${catLabel[o.cat]}</span>
+        <span class="cat ${esc(o.category)}"><span class="ic"><svg><use href="#${icon}"/></svg></span>${catLabel[o.category] || ""}</span>
       </div>
       <div style="display:grid;gap:10px">
-        <h3>${esc(o.name)}</h3>
-        <span class="status ${o.status}"><svg><use href="#${ST_ICON[o.status]}"/></svg>${t.st[o.status]}</span>
+        <h3>${esc(o.canonical_name)}</h3>
+        <span class="status ${st}"><svg><use href="#${ST_ICON[st]}"/></svg>${t.st[st]}</span>
       </div>
       <ul class="facts">
-        <li><svg><use href="#i-pin"/></svg><span>${esc(o.place)} · VD</span></li>
+        ${place ? `<li><svg><use href="#i-pin"/></svg><span>${place}</span></li>` : ""}
         ${dateLine}
-        <li><svg><use href="#i-hand"/></svg><span>${esc(o.roles[lang])}</span></li>
+        ${extra}
       </ul>
       <div class="card-foot">
-        <span class="verified"><svg><use href="#i-check"/></svg>${t.verified(esc(o.verified[lang]))}</span>
+        ${o.last_verified_at ? `<span class="verified"><svg><use href="#i-check"/></svg>${t.verified(esc(fmtDay(o.last_verified_at)))}</span>` : ""}
         ${action}
       </div>
     </article>`;
   }).join("");
-  $("#empty").hidden = list.length > 0;
-  $("#count").textContent = t.count(list.length);
+  $("#empty").hidden = list.length > 0 || loadFailed;
+  $("#count").textContent = loadFailed ? "" : t.count(list.length);
 }
 
 document.addEventListener("click", e => {
-  const b = e.target.closest("[data-demo]");
-  if (b) {
-    const n = document.getElementById("demo-" + b.dataset.demo); if (n) n.hidden = !n.hidden;
-    const o = OPPS[+b.dataset.demo];
-    if (o) track("Apply click", { language: lang, category: o.cat, canton: "VD" });
-  }
+  const a = e.target.closest("[data-apply]");
+  if (a) track("Apply click", { language: lang, category: a.dataset.apply, canton: "VD" });
 });
 
 function setLang(l) {
@@ -862,6 +908,7 @@ document.querySelectorAll("#theme-switch button").forEach(b => b.addEventListene
   else l = "fr";
   setLang(l);
   track("Language", { language: l, source, browser_language: BROWSER_LANG });
+  loadOpportunities();
 })();
 </script>
 </body>

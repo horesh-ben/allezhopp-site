@@ -176,6 +176,9 @@ section { padding-block: 64px; }
 .filter-right { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
 .toggle { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; cursor: pointer; }
 .toggle input { width: 19px; height: 19px; accent-color: var(--c2); margin: 0; }
+.canton-pick select { font: 600 15px/1 var(--f-body); color: var(--ink); background: var(--surface); border: 1.5px solid var(--line); border-radius: 999px; padding: 10px 14px; cursor: pointer; }
+.canton-pick select:hover { border-color: var(--c2); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .count { font-size: 14.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
@@ -373,7 +376,7 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
           <a class="btn btn-primary" href="#missions" data-i18n="ctaPrimary">Découvrir les missions</a>
           <a class="btn btn-soft" href="#alertes" data-i18n="ctaSecondary">Être averti à l'ouverture des inscriptions</a>
         </div>
-        <p class="pilot"><span class="dot"></span><span data-i18n="pilot">Pilote dans le canton de Vaud.</span></p>
+        <p class="pilot"><span class="dot"></span><span data-i18n="pilot">En Suisse romande : Genève, Vaud et Valais, puis Fribourg, Neuchâtel et le Jura.</span></p>
       </div>
 
       <div class="art" aria-hidden="true">
@@ -434,6 +437,9 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
           <button type="button" class="chip" id="chip-community" data-cat="community" aria-pressed="false" data-i18n="catCommunity">Vie locale</button>
         </div>
         <div class="filter-right">
+          <label class="canton-pick"><span class="sr" data-i18n="cantonLabel">Canton</span>
+            <select id="canton-filter" aria-label="Canton"><option value="all">Tous les cantons</option></select>
+          </label>
           <label class="toggle"><input type="checkbox" id="only-open"><span data-i18n="filterOpen">Inscriptions ouvertes uniquement</span></label>
           <span class="count" id="count" aria-live="polite"></span>
         </div>
@@ -487,12 +493,15 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
           <div class="field">
             <label for="region" data-i18n="fRegion">Où ?</label>
             <select id="region" name="region">
-              <option value="lausanne" data-i18n="r1">Lausanne et environs</option>
-              <option value="lacote" data-i18n="r2">La Côte</option>
-              <option value="riviera" data-i18n="r3">Riviera et Chablais</option>
-              <option value="nord" data-i18n="r4">Nord vaudois</option>
-              <option value="broye" data-i18n="r5">Broye et Gros-de-Vaud</option>
-              <option value="romandie" data-i18n="r6">Ailleurs en Suisse romande</option>
+              <option value="ge" data-i18n="r1">Genève</option>
+              <option value="vd-lausanne" data-i18n="r2">Vaud – Lausanne et environs</option>
+              <option value="vd-lacote" data-i18n="r3">Vaud – La Côte</option>
+              <option value="vd-riviera" data-i18n="r4">Vaud – Riviera et Chablais</option>
+              <option value="vd-nord" data-i18n="r5">Vaud – Nord vaudois et Broye</option>
+              <option value="vs" data-i18n="r6">Valais</option>
+              <option value="fr" data-i18n="r7">Fribourg</option>
+              <option value="ne" data-i18n="r8">Neuchâtel</option>
+              <option value="ju" data-i18n="r9">Jura et Jura bernois</option>
             </select>
           </div>
           <fieldset>
@@ -559,7 +568,7 @@ const T = {
     h1: 'Donnez un coup de main. <span class="line2">Vivez l\'événement.</span>',
     lede: "Trouvez un événement auquel donner un coup de main. AllezHopp rassemble les missions bénévoles du sport, de la culture et de la vie locale, avec des informations vérifiées : lieu, dates des missions et état des inscriptions.",
     ctaPrimary: "Découvrir les missions", ctaSecondary: "Être averti à l'ouverture des inscriptions",
-    pilot: "Pilote dans le canton de Vaud, puis en Romandie.",
+    pilot: "En Suisse romande : Genève, Vaud et Valais, puis Fribourg, Neuchâtel et le Jura.",
     catSport: "Sport", catCulture: "Culture", catCommunity: "Vie locale",
     oppEyebrow: "Missions bénévoles", oppTitle: "Des missions près de chez vous",
     oppIntro: "Chaque fiche indique le lieu, les dates des missions et l'état des inscriptions, vérifié auprès de l'organisateur.",
@@ -585,7 +594,8 @@ const T = {
     alEyebrow: "Alertes", alTitle: "Ne ratez plus une ouverture.",
     alText: "Recevez un e-mail quand les inscriptions ouvrent pour les missions qui vous intéressent. Gratuit, sans compte.",
     fEmail: "Votre e-mail", fRegion: "Où ?", fInterests: "Ce qui vous intéresse", fMailLang: "Langue des e-mails",
-    r1: "Lausanne et environs", r2: "La Côte", r3: "Riviera et Chablais", r4: "Nord vaudois", r5: "Broye et Gros-de-Vaud", r6: "Ailleurs en Suisse romande",
+    r1: "Genève", r2: "Vaud – Lausanne et environs", r3: "Vaud – La Côte", r4: "Vaud – Riviera et Chablais", r5: "Vaud – Nord vaudois et Broye", r6: "Valais", r7: "Fribourg", r8: "Neuchâtel", r9: "Jura et Jura bernois",
+    cantons: {all: "Tous les cantons", GE: "Genève", VD: "Vaud", VS: "Valais", FR: "Fribourg", NE: "Neuchâtel", JU: "Jura", BE: "Berne"}, cantonLabel: "Canton",
     fFine: "Vous confirmez votre adresse par e-mail. Désinscription en un clic.", fSubmit: "M'avertir",
     emailPh: "prenom@exemple.ch",
     errEmail: "Cette adresse e-mail semble incomplète. Vérifiez-la et réessayez.",
@@ -596,11 +606,11 @@ const T = {
     footer: "AllezHopp · Fait en Suisse · 2026", footer2: "Les inscriptions se font toujours sur le site de l'organisateur."
   },
   de: {
-    eyebrow: "Freiwilligenarbeit an Anlässen in der Schweiz",
+    eyebrow: "Freiwilligenarbeit an Anlässen in der Westschweiz",
     h1: 'Packen Sie mit an. <span class="line2">Erleben Sie den Anlass.</span>',
     lede: "Finden Sie einen Anlass, bei dem Ihre Hilfe zählt. AllezHopp sammelt Freiwilligeneinsätze aus Sport, Kultur und lokalem Leben, mit geprüften Angaben: Ort, Einsatzdaten und Stand der Anmeldung.",
     ctaPrimary: "Einsätze entdecken", ctaSecondary: "Benachrichtigen, wenn die Anmeldung öffnet",
-    pilot: "Pilotphase im Kanton Waadt, danach in der ganzen Romandie.",
+    pilot: "In der Westschweiz: Genf, Waadt und Wallis, danach Freiburg, Neuenburg und Jura.",
     catSport: "Sport", catCulture: "Kultur", catCommunity: "Lokales Leben",
     oppEyebrow: "Freiwilligeneinsätze", oppTitle: "Einsätze in Ihrer Nähe",
     oppIntro: "Jeder Eintrag zeigt Ort, Einsatzdaten und Stand der Anmeldung, geprüft beim Veranstalter.",
@@ -626,7 +636,8 @@ const T = {
     alEyebrow: "Benachrichtigungen", alTitle: "Keine Öffnung mehr verpassen.",
     alText: "Erhalten Sie eine E-Mail, sobald die Anmeldung für passende Einsätze öffnet. Kostenlos, ohne Konto.",
     fEmail: "Ihre E-Mail", fRegion: "Wo?", fInterests: "Was Sie interessiert", fMailLang: "Sprache der E-Mails",
-    r1: "Lausanne und Umgebung", r2: "La Côte", r3: "Riviera und Chablais", r4: "Nordwaadt", r5: "Broye und Gros-de-Vaud", r6: "Anderswo in der Romandie",
+    r1: "Genf", r2: "Waadt – Lausanne und Umgebung", r3: "Waadt – La Côte", r4: "Waadt – Riviera und Chablais", r5: "Waadt – Nordwaadt und Broye", r6: "Wallis", r7: "Freiburg", r8: "Neuenburg", r9: "Jura und Berner Jura",
+    cantons: {all: "Alle Kantone", GE: "Genf", VD: "Waadt", VS: "Wallis", FR: "Freiburg", NE: "Neuenburg", JU: "Jura", BE: "Bern"}, cantonLabel: "Kanton",
     fFine: "Sie bestätigen Ihre Adresse per E-Mail. Abmeldung mit einem Klick.", fSubmit: "Benachrichtigen",
     emailPh: "vorname@beispiel.ch",
     errEmail: "Diese E-Mail-Adresse scheint unvollständig. Bitte prüfen und erneut versuchen.",
@@ -637,11 +648,11 @@ const T = {
     footer: "AllezHopp · Gemacht in der Schweiz · 2026", footer2: "Die Anmeldung erfolgt immer auf der Website des Veranstalters."
   },
   it: {
-    eyebrow: "Volontariato agli eventi in Svizzera",
+    eyebrow: "Volontariato agli eventi in Svizzera romanda",
     h1: 'Dai una mano. <span class="line2">Vivi l\'evento.</span>',
     lede: "Trova un evento dove il tuo aiuto fa la differenza. AllezHopp raccoglie le opportunità di volontariato nello sport, nella cultura e nella vita locale, con informazioni verificate: luogo, date delle attività e stato delle iscrizioni.",
     ctaPrimary: "Scopri le opportunità", ctaSecondary: "Avvisami all'apertura delle iscrizioni",
-    pilot: "Fase pilota nel Canton Vaud, poi in tutta la Romandia.",
+    pilot: "In Svizzera romanda: Ginevra, Vaud e Vallese, poi Friburgo, Neuchâtel e Giura.",
     catSport: "Sport", catCulture: "Cultura", catCommunity: "Vita locale",
     oppEyebrow: "Volontariato", oppTitle: "Opportunità vicino a te",
     oppIntro: "Ogni scheda indica il luogo, le date delle attività e lo stato delle iscrizioni, verificato presso l'organizzatore.",
@@ -667,7 +678,8 @@ const T = {
     alEyebrow: "Avvisi", alTitle: "Non perdere più un'apertura.",
     alText: "Ricevi un'e-mail quando si aprono le iscrizioni per le opportunità che ti interessano. Gratis, senza account.",
     fEmail: "La tua e-mail", fRegion: "Dove?", fInterests: "Cosa ti interessa", fMailLang: "Lingua delle e-mail",
-    r1: "Losanna e dintorni", r2: "La Côte", r3: "Riviera e Chablais", r4: "Nord vodese", r5: "Broye e Gros-de-Vaud", r6: "Altrove in Romandia",
+    r1: "Ginevra", r2: "Vaud – Losanna e dintorni", r3: "Vaud – La Côte", r4: "Vaud – Riviera e Chablais", r5: "Vaud – Nord vodese e Broye", r6: "Vallese", r7: "Friburgo", r8: "Neuchâtel", r9: "Giura e Giura bernese",
+    cantons: {all: "Tutti i cantoni", GE: "Ginevra", VD: "Vaud", VS: "Vallese", FR: "Friburgo", NE: "Neuchâtel", JU: "Giura", BE: "Berna"}, cantonLabel: "Cantone",
     fFine: "Confermerai il tuo indirizzo via e-mail. Disiscrizione con un clic.", fSubmit: "Avvisami",
     emailPh: "nome@esempio.ch",
     errEmail: "Questo indirizzo e-mail sembra incompleto. Controllalo e riprova.",
@@ -678,11 +690,11 @@ const T = {
     footer: "AllezHopp · Fatto in Svizzera · 2026", footer2: "Le candidature avvengono sempre sul sito dell'organizzatore."
   },
   en: {
-    eyebrow: "Event volunteering in Switzerland",
+    eyebrow: "Event volunteering in French-speaking Switzerland",
     h1: 'Lend a hand. <span class="line2">Experience the event.</span>',
     lede: "Find an event where your help makes a difference. AllezHopp brings together volunteer opportunities in sport, culture and community life, with verified information: place, volunteer dates and recruitment status.",
     ctaPrimary: "Discover opportunities", ctaSecondary: "Notify me when recruitment opens",
-    pilot: "Piloting in the canton of Vaud, then across Romandie.",
+    pilot: "Across French-speaking Switzerland: Geneva, Vaud and Valais, then Fribourg, Neuchâtel and Jura.",
     catSport: "Sport", catCulture: "Culture", catCommunity: "Community",
     oppEyebrow: "Volunteer opportunities", oppTitle: "Opportunities near you",
     oppIntro: "Each listing shows the place, the volunteer dates and the recruitment status, verified with the organizer.",
@@ -708,7 +720,8 @@ const T = {
     alEyebrow: "Alerts", alTitle: "Never miss an opening.",
     alText: "Get an email when recruitment opens for the opportunities you care about. Free, no account.",
     fEmail: "Your email", fRegion: "Where?", fInterests: "What interests you", fMailLang: "Email language",
-    r1: "Lausanne area", r2: "La Côte", r3: "Riviera and Chablais", r4: "Northern Vaud", r5: "Broye and Gros-de-Vaud", r6: "Elsewhere in Romandie",
+    r1: "Geneva", r2: "Vaud – Lausanne area", r3: "Vaud – La Côte", r4: "Vaud – Riviera and Chablais", r5: "Vaud – Northern Vaud and Broye", r6: "Valais", r7: "Fribourg", r8: "Neuchâtel", r9: "Jura and Bernese Jura",
+    cantons: {all: "All cantons", GE: "Geneva", VD: "Vaud", VS: "Valais", FR: "Fribourg", NE: "Neuchâtel", JU: "Jura", BE: "Bern"}, cantonLabel: "Canton",
     fFine: "You'll confirm your address by email. Unsubscribe in one click.", fSubmit: "Notify me",
     emailPh: "name@example.ch",
     errEmail: "This email address looks incomplete. Check it and try again.",
@@ -751,6 +764,7 @@ const LOCALE = { fr: "fr-CH", de: "de-CH", it: "it-CH", en: "en-GB" };
 
 let lang = "fr";
 let cat = "all";
+let canton = "all";
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const safeUrl = u => (typeof u === "string" && /^https:\/\//.test(u)) ? u : null;
@@ -768,6 +782,17 @@ function fmtDay(ts) {
   return new Intl.DateTimeFormat(LOCALE[lang], { day: "numeric", month: "short", year: "numeric", timeZone: "Europe/Zurich" }).format(new Date(ts));
 }
 
+function fillCantons() {
+  const t = T[lang], sel = $("#canton-filter");
+  const present = [...new Set((OPPS || []).map(o => o.canton).filter(Boolean))]
+    .sort((a, b) => (t.cantons[a] || a).localeCompare(t.cantons[b] || b, LOCALE[lang]));
+  sel.innerHTML = `<option value="all">${t.cantons.all}</option>` +
+    present.map(c => `<option value="${esc(c)}">${esc(t.cantons[c] || c)}</option>`).join("");
+  if (canton !== "all" && !present.includes(canton)) canton = "all";
+  sel.value = canton;
+  sel.setAttribute("aria-label", t.cantonLabel);
+}
+
 function renderCards() {
   const t = T[lang];
   const msg = $("#load-msg");
@@ -776,7 +801,8 @@ function renderCards() {
   if (loadFailed) { msg.textContent = t.loadError; msg.hidden = false; } else { msg.hidden = true; }
   const onlyOpen = $("#only-open").checked;
   const catLabel = { sport: t.catSport, culture: t.catCulture, community: t.catCommunity };
-  const list = OPPS.filter(o => (cat === "all" || o.category === cat) &&
+  fillCantons();
+  const list = OPPS.filter(o => (cat === "all" || o.category === cat) && (canton === "all" || o.canton === canton) &&
     (!onlyOpen || o.display_status === "open" || o.display_status === "partially_full"));
   $("#cards").innerHTML = list.map(o => {
     const st = t.st[o.display_status] ? o.display_status : "unknown";
@@ -861,6 +887,10 @@ document.querySelectorAll("#chips .chip").forEach(b => b.addEventListener("click
   renderCards();
   track("Filter", { language: lang, category: cat });
 }));
+$("#canton-filter").addEventListener("change", e => {
+  canton = e.target.value; renderCards();
+  track("Filter", { language: lang, canton });
+});
 $("#only-open").addEventListener("change", () => { renderCards(); track("Filter", { language: lang, open_only: String($("#only-open").checked) }); });
 
 $("#alert-form").addEventListener("submit", async ev => {

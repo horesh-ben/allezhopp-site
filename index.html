@@ -292,9 +292,14 @@ legend { padding: 0; margin-bottom: 10px; }
 
 footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: 14.5px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 32px; }
 </style>
-<!-- ANALYTICS: create the site "allezhopp.ch" in Plausible (plausible.io), then paste the script snippet it gives you here.
-     Enable "Custom events" and "Custom properties" in Plausible, and add the properties: language, source, previous,
-     browser_language, email_language, region, interests, category, open_only, canton. No cookies are used. -->
+<!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
+     Language, Filter, Apply click, Alert signup. Add them as goals in Plausible, and add the properties:
+     language, source, previous, browser_language, email_language, region, interests, category, open_only, canton. -->
+<script async src="https://plausible.io/js/pa-P58nfjIZrJJJbde2f0R66.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 </head>
 <body>
 

@@ -268,11 +268,11 @@ section { padding-block: 64px; }
 form { display: grid; gap: 18px; }
 .field { display: grid; gap: 8px; }
 .field > label, legend { font-weight: 700; font-size: 15px; }
-input[type="email"], select {
+input[type="email"], input[type="text"], input[type="url"], textarea, select {
   font: 400 16px/1.2 var(--f-body); color: var(--ink); background: var(--bg);
   border: 1.5px solid var(--line); border-radius: 14px; padding: 14px 16px; width: 100%;
 }
-input[type="email"]:focus, select:focus { border-color: var(--c2); outline: none; box-shadow: 0 0 0 4px color-mix(in srgb, var(--c2) 22%, transparent); }
+input[type="email"]:focus, input[type="text"]:focus, input[type="url"]:focus, textarea:focus, select:focus { border-color: var(--c2); outline: none; box-shadow: 0 0 0 4px color-mix(in srgb, var(--c2) 22%, transparent); }
 fieldset { border: 0; padding: 0; margin: 0; }
 legend { padding: 0; margin-bottom: 10px; }
 .pills { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -286,6 +286,12 @@ legend { padding: 0; margin-bottom: 10px; }
 .fine { font-size: 14px; color: var(--muted); max-width: 26em; }
 .form-msg { border-radius: 14px; padding: 14px 16px; font-size: 15px; background: color-mix(in srgb, var(--st-open) 11%, transparent); }
 .form-msg.err { background: var(--c1-soft); }
+textarea { min-height: 96px; resize: vertical; line-height: 1.45; }
+.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+@media (max-width: 560px) { .row2 { grid-template-columns: minmax(0, 1fr); } }
+.suggest::before { background: var(--c2-soft); left: auto; right: -110px; top: auto; bottom: -130px; }
+.suggest-link { font-weight: 700; color: var(--c2); }
+#proposer { margin-top: 32px; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 @media (max-width: 860px) {
@@ -297,8 +303,8 @@ legend { padding: 0; margin-bottom: 10px; }
 footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: 14.5px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 32px; }
 </style>
 <!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
-     Language, Filter, Apply click, Alert signup. Add them as goals in Plausible, and add the properties:
-     language, source, previous, browser_language, email_language, region, interests, category, open_only, canton. -->
+     Language, Filter, Apply click, Alert signup, Suggest event. Add them as goals in Plausible, and add the properties:
+     language, source, previous, browser_language, email_language, region, interests, category, open_only, canton, volunteers, organizer. -->
 <script async src="https://plausible.io/js/pa-P58nfjIZrJJJbde2f0R66.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
@@ -448,7 +454,8 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
       <div class="cards" id="cards" aria-busy="true"></div>
       <p class="empty" id="load-msg" role="status">Chargement des missions…</p>
       <p class="empty" id="empty" hidden data-i18n="empty">Aucune mission pour ces filtres.</p>
-      <p class="sample-note" data-i18n="sampleNote">Informations vérifiées auprès des organisateurs. Les inscriptions se font toujours sur leur site.</p>
+      <p class="sample-note"><span data-i18n="sampleNote">Informations vérifiées auprès des organisateurs. Les inscriptions se font toujours sur leur site.</span>
+        <a class="suggest-link" href="#proposer" data-i18n="sgLink">Un événement manque ? Proposez-le</a></p>
     </section>
 
     <section aria-labelledby="how-title">
@@ -530,6 +537,67 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
         </form>
       </div>
     </section>
+
+    <section id="proposer" aria-labelledby="suggest-title">
+      <div class="alerts suggest">
+        <div class="alerts-copy">
+          <p class="eyebrow" data-i18n="sgEyebrow">Proposer un événement</p>
+          <h2 id="suggest-title" data-i18n="sgTitle">Un événement manque ?</h2>
+          <p data-i18n="sgText">Vous organisez un événement ou en connaissez un qui cherche des bénévoles ? Dites-le-nous. Nous vérifions auprès de l'organisateur avant de le publier.</p>
+        </div>
+        <form id="suggest-form" novalidate>
+          <div class="row2">
+            <div class="field">
+              <label for="sg-name" data-i18n="sgName">Nom de l'événement</label>
+              <input type="text" id="sg-name" name="event_name" required maxlength="200" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="sg-place" data-i18n="sgPlace">Lieu (commune)</label>
+              <input type="text" id="sg-place" name="place" required maxlength="120" autocomplete="off">
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="sg-dates" data-i18n="sgDates">Dates (facultatif)</label>
+              <input type="text" id="sg-dates" name="dates" maxlength="120" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="sg-url" data-i18n="sgUrl">Site de l'événement (facultatif)</label>
+              <input type="url" id="sg-url" name="event_url" maxlength="500" placeholder="https://" autocomplete="off">
+            </div>
+          </div>
+          <div class="field">
+            <label for="sg-volunteers" data-i18n="sgVol">Cherche-t-il des bénévoles ?</label>
+            <select id="sg-volunteers" name="volunteers">
+              <option value="unknown" data-i18n="sgVolUnknown">Je ne sais pas</option>
+              <option value="yes" data-i18n="sgVolYes">Oui</option>
+              <option value="no" data-i18n="sgVolNo">Non</option>
+            </select>
+          </div>
+          <label class="toggle"><input type="checkbox" id="sg-organizer" name="is_organizer"><span data-i18n="sgOrg">Je fais partie de l'organisation</span></label>
+          <div class="row2">
+            <div class="field">
+              <label for="sg-contact-name" data-i18n="sgContactName">Votre nom (facultatif)</label>
+              <input type="text" id="sg-contact-name" name="contact_name" maxlength="120" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="sg-contact-email" data-i18n="sgContactEmail">Votre e-mail (facultatif)</label>
+              <input type="email" id="sg-contact-email" name="contact_email" maxlength="254" autocomplete="email">
+            </div>
+          </div>
+          <div class="field">
+            <label for="sg-message" data-i18n="sgMessage">Message (facultatif)</label>
+            <textarea id="sg-message" name="message" maxlength="2000"></textarea>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="sg-website">Website</label><input type="text" id="sg-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="form-foot">
+            <p class="fine" data-i18n="sgFine">Vos coordonnées servent uniquement à vous recontacter au sujet de cette proposition. Elles sont effacées après 6 mois.</p>
+            <button class="btn btn-primary" type="submit" id="sg-submit" data-i18n="sgSubmit">Envoyer la suggestion</button>
+          </div>
+          <p class="form-msg" id="sg-msg" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -542,13 +610,11 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
 
 <script>
 /* ---------------------------------------------------------------
-   ALERT FORM SETUP
-   A static host (e.g. GitHub Pages) cannot receive form data.
-   Create a free form at formspree.io (or similar) and paste its URL:
-   const FORM_ENDPOINT = "https://formspree.io/f/abcd1234";
-   While it is empty, the form only shows a preview message.
+   VISITOR FORMS
+   Both forms call database functions in Supabase (migration 20261003000005_visitor_forms.sql):
+   subscribe_alert() for alerts and suggest_event() for missing events. Visitors can only call
+   these functions; they can never read the stored addresses or suggestions.
 ---------------------------------------------------------------- */
-const FORM_ENDPOINT = "";
 
 /* ---------------------------------------------------------------
    ANALYTICS (anonymous, no cookies, no registration)
@@ -596,12 +662,35 @@ const T = {
     fEmail: "Votre e-mail", fRegion: "Où ?", fInterests: "Ce qui vous intéresse", fMailLang: "Langue des e-mails",
     r1: "Genève", r2: "Vaud – Lausanne et environs", r3: "Vaud – La Côte", r4: "Vaud – Riviera et Chablais", r5: "Vaud – Nord vaudois et Broye", r6: "Valais", r7: "Fribourg", r8: "Neuchâtel", r9: "Jura et Jura bernois",
     cantons: {all: "Tous les cantons", GE: "Genève", VD: "Vaud", VS: "Valais", FR: "Fribourg", NE: "Neuchâtel", JU: "Jura", BE: "Berne"}, cantonLabel: "Canton",
-    fFine: "Vous confirmez votre adresse par e-mail. Désinscription en un clic.", fSubmit: "M'avertir",
+    fFine: "Vous confirmerez votre adresse par e-mail avant la première alerte. Désinscription en un clic.", fSubmit: "M'avertir",
     emailPh: "prenom@exemple.ch",
     errEmail: "Cette adresse e-mail semble incomplète. Vérifiez-la et réessayez.",
     errSend: "L'envoi n'a pas fonctionné. Réessayez dans un instant.",
-    ok: "Merci ! Un e-mail de confirmation vient de partir. Cliquez sur le lien pour activer vos alertes.",
-    preview: "Aperçu : le formulaire n'est pas encore relié, rien n'a été envoyé.",
+    ok: "Merci ! C'est noté. Avant la première alerte, nous vous enverrons un e-mail pour confirmer votre adresse.",
+    errRate: "Trop d'envois en peu de temps. Réessayez dans une heure.",
+    sgLink: "Un événement manque ? Proposez-le",
+    sgEyebrow: "Proposer un événement",
+    sgTitle: "Un événement manque ?",
+    sgText: "Vous organisez un événement ou en connaissez un qui cherche des bénévoles ? Dites-le-nous. Nous vérifions auprès de l'organisateur avant de le publier.",
+    sgName: "Nom de l'événement",
+    sgPlace: "Lieu (commune)",
+    sgDates: "Dates (facultatif)",
+    sgDatesPh: "p. ex. 12–14 juin 2027",
+    sgUrl: "Site de l'événement (facultatif)",
+    sgVol: "Cherche-t-il des bénévoles ?",
+    sgVolYes: "Oui",
+    sgVolNo: "Non",
+    sgVolUnknown: "Je ne sais pas",
+    sgOrg: "Je fais partie de l'organisation",
+    sgContactName: "Votre nom (facultatif)",
+    sgContactEmail: "Votre e-mail (facultatif)",
+    sgMessage: "Message (facultatif)",
+    sgFine: "Vos coordonnées servent uniquement à vous recontacter au sujet de cette proposition. Elles sont effacées après 6 mois.",
+    sgSubmit: "Envoyer la suggestion",
+    sgOk: "Merci ! Nous vérifions l'événement auprès de l'organisateur avant de le publier.",
+    sgErrName: "Indiquez le nom de l'événement.",
+    sgErrPlace: "Indiquez le lieu de l'événement.",
+    sgErrUrl: "Le lien doit commencer par http:// ou https://.",
     themeGroup: "Thème d'affichage", themeAuto: "Automatique (selon votre appareil)", themeLight: "Clair", themeDark: "Sombre",
     footer: "AllezHopp · Fait en Suisse · 2026", footer2: "Les inscriptions se font toujours sur le site de l'organisateur."
   },
@@ -638,12 +727,35 @@ const T = {
     fEmail: "Ihre E-Mail", fRegion: "Wo?", fInterests: "Was Sie interessiert", fMailLang: "Sprache der E-Mails",
     r1: "Genf", r2: "Waadt – Lausanne und Umgebung", r3: "Waadt – La Côte", r4: "Waadt – Riviera und Chablais", r5: "Waadt – Nordwaadt und Broye", r6: "Wallis", r7: "Freiburg", r8: "Neuenburg", r9: "Jura und Berner Jura",
     cantons: {all: "Alle Kantone", GE: "Genf", VD: "Waadt", VS: "Wallis", FR: "Freiburg", NE: "Neuenburg", JU: "Jura", BE: "Bern"}, cantonLabel: "Kanton",
-    fFine: "Sie bestätigen Ihre Adresse per E-Mail. Abmeldung mit einem Klick.", fSubmit: "Benachrichtigen",
+    fFine: "Vor der ersten Benachrichtigung bestätigen Sie Ihre Adresse per E-Mail. Abmeldung mit einem Klick.", fSubmit: "Benachrichtigen",
     emailPh: "vorname@beispiel.ch",
     errEmail: "Diese E-Mail-Adresse scheint unvollständig. Bitte prüfen und erneut versuchen.",
     errSend: "Das Senden hat nicht geklappt. Bitte versuchen Sie es gleich noch einmal.",
-    ok: "Danke! Eine Bestätigungs-E-Mail ist unterwegs. Klicken Sie auf den Link, um Ihre Benachrichtigungen zu aktivieren.",
-    preview: "Vorschau: Das Formular ist noch nicht verbunden, es wurde nichts gesendet.",
+    ok: "Danke! Ihre Anmeldung ist eingegangen. Vor der ersten Benachrichtigung senden wir Ihnen eine E-Mail, um Ihre Adresse zu bestätigen.",
+    errRate: "Zu viele Anfragen in kurzer Zeit. Bitte versuchen Sie es in einer Stunde erneut.",
+    sgLink: "Fehlt ein Anlass? Schlagen Sie ihn vor",
+    sgEyebrow: "Anlass vorschlagen",
+    sgTitle: "Fehlt ein Anlass?",
+    sgText: "Sie organisieren einen Anlass oder kennen einen, der Freiwillige sucht? Sagen Sie es uns. Wir prüfen die Angaben beim Veranstalter, bevor wir sie veröffentlichen.",
+    sgName: "Name des Anlasses",
+    sgPlace: "Ort (Gemeinde)",
+    sgDates: "Daten (optional)",
+    sgDatesPh: "z. B. 12.–14. Juni 2027",
+    sgUrl: "Website des Anlasses (optional)",
+    sgVol: "Werden Freiwillige gesucht?",
+    sgVolYes: "Ja",
+    sgVolNo: "Nein",
+    sgVolUnknown: "Weiss ich nicht",
+    sgOrg: "Ich gehöre zum Organisationsteam",
+    sgContactName: "Ihr Name (optional)",
+    sgContactEmail: "Ihre E-Mail (optional)",
+    sgMessage: "Nachricht (optional)",
+    sgFine: "Ihre Kontaktangaben nutzen wir nur für Rückfragen zu diesem Vorschlag. Sie werden nach 6 Monaten gelöscht.",
+    sgSubmit: "Vorschlag senden",
+    sgOk: "Danke! Wir prüfen den Anlass beim Veranstalter, bevor wir ihn veröffentlichen.",
+    sgErrName: "Bitte geben Sie den Namen des Anlasses an.",
+    sgErrPlace: "Bitte geben Sie den Ort an.",
+    sgErrUrl: "Der Link muss mit http:// oder https:// beginnen.",
     themeGroup: "Darstellung", themeAuto: "Automatisch (wie Ihr Gerät)", themeLight: "Hell", themeDark: "Dunkel",
     footer: "AllezHopp · Gemacht in der Schweiz · 2026", footer2: "Die Anmeldung erfolgt immer auf der Website des Veranstalters."
   },
@@ -680,12 +792,35 @@ const T = {
     fEmail: "La tua e-mail", fRegion: "Dove?", fInterests: "Cosa ti interessa", fMailLang: "Lingua delle e-mail",
     r1: "Ginevra", r2: "Vaud – Losanna e dintorni", r3: "Vaud – La Côte", r4: "Vaud – Riviera e Chablais", r5: "Vaud – Nord vodese e Broye", r6: "Vallese", r7: "Friburgo", r8: "Neuchâtel", r9: "Giura e Giura bernese",
     cantons: {all: "Tutti i cantoni", GE: "Ginevra", VD: "Vaud", VS: "Vallese", FR: "Friburgo", NE: "Neuchâtel", JU: "Giura", BE: "Berna"}, cantonLabel: "Cantone",
-    fFine: "Confermerai il tuo indirizzo via e-mail. Disiscrizione con un clic.", fSubmit: "Avvisami",
+    fFine: "Prima del primo avviso confermerai il tuo indirizzo via e-mail. Disiscrizione con un clic.", fSubmit: "Avvisami",
     emailPh: "nome@esempio.ch",
     errEmail: "Questo indirizzo e-mail sembra incompleto. Controllalo e riprova.",
     errSend: "L'invio non è riuscito. Riprova tra un momento.",
-    ok: "Grazie! Ti abbiamo inviato un'e-mail di conferma. Clicca sul link per attivare i tuoi avvisi.",
-    preview: "Anteprima: il modulo non è ancora collegato, non è stato inviato nulla.",
+    ok: "Grazie! Abbiamo registrato la tua richiesta. Prima del primo avviso ti invieremo un'e-mail per confermare il tuo indirizzo.",
+    errRate: "Troppi invii in poco tempo. Riprova tra un'ora.",
+    sgLink: "Manca un evento? Proponilo",
+    sgEyebrow: "Proponi un evento",
+    sgTitle: "Manca un evento?",
+    sgText: "Organizzi un evento o ne conosci uno che cerca volontari? Faccelo sapere. Verifichiamo con l'organizzatore prima di pubblicarlo.",
+    sgName: "Nome dell'evento",
+    sgPlace: "Luogo (comune)",
+    sgDates: "Date (facoltativo)",
+    sgDatesPh: "es. 12–14 giugno 2027",
+    sgUrl: "Sito dell'evento (facoltativo)",
+    sgVol: "Cerca volontari?",
+    sgVolYes: "Sì",
+    sgVolNo: "No",
+    sgVolUnknown: "Non so",
+    sgOrg: "Faccio parte dell'organizzazione",
+    sgContactName: "Il tuo nome (facoltativo)",
+    sgContactEmail: "La tua e-mail (facoltativo)",
+    sgMessage: "Messaggio (facoltativo)",
+    sgFine: "I tuoi dati servono solo a ricontattarti su questa proposta. Vengono cancellati dopo 6 mesi.",
+    sgSubmit: "Invia la proposta",
+    sgOk: "Grazie! Verifichiamo l'evento con l'organizzatore prima di pubblicarlo.",
+    sgErrName: "Indica il nome dell'evento.",
+    sgErrPlace: "Indica il luogo dell'evento.",
+    sgErrUrl: "Il link deve iniziare con http:// o https://.",
     themeGroup: "Tema di visualizzazione", themeAuto: "Automatico (come il tuo dispositivo)", themeLight: "Chiaro", themeDark: "Scuro",
     footer: "AllezHopp · Fatto in Svizzera · 2026", footer2: "Le candidature avvengono sempre sul sito dell'organizzatore."
   },
@@ -722,12 +857,35 @@ const T = {
     fEmail: "Your email", fRegion: "Where?", fInterests: "What interests you", fMailLang: "Email language",
     r1: "Geneva", r2: "Vaud – Lausanne area", r3: "Vaud – La Côte", r4: "Vaud – Riviera and Chablais", r5: "Vaud – Northern Vaud and Broye", r6: "Valais", r7: "Fribourg", r8: "Neuchâtel", r9: "Jura and Bernese Jura",
     cantons: {all: "All cantons", GE: "Geneva", VD: "Vaud", VS: "Valais", FR: "Fribourg", NE: "Neuchâtel", JU: "Jura", BE: "Bern"}, cantonLabel: "Canton",
-    fFine: "You'll confirm your address by email. Unsubscribe in one click.", fSubmit: "Notify me",
+    fFine: "You'll confirm your address by email before the first alert. Unsubscribe in one click.", fSubmit: "Notify me",
     emailPh: "name@example.ch",
     errEmail: "This email address looks incomplete. Check it and try again.",
     errSend: "Sending didn't work. Please try again in a moment.",
-    ok: "Thank you! A confirmation email is on its way. Click the link inside to activate your alerts.",
-    preview: "Preview: the form isn't connected yet, nothing was sent.",
+    ok: "Thank you! You're on the list. Before the first alert, we'll email you to confirm your address.",
+    errRate: "Too many attempts in a short time. Please try again in an hour.",
+    sgLink: "Missing an event? Suggest it",
+    sgEyebrow: "Suggest an event",
+    sgTitle: "Missing an event?",
+    sgText: "Organizing an event, or know one that needs volunteers? Tell us. We check with the organizer before publishing it.",
+    sgName: "Event name",
+    sgPlace: "Place (town)",
+    sgDates: "Dates (optional)",
+    sgDatesPh: "e.g. 12–14 June 2027",
+    sgUrl: "Event website (optional)",
+    sgVol: "Is it looking for volunteers?",
+    sgVolYes: "Yes",
+    sgVolNo: "No",
+    sgVolUnknown: "I don't know",
+    sgOrg: "I'm part of the organizing team",
+    sgContactName: "Your name (optional)",
+    sgContactEmail: "Your email (optional)",
+    sgMessage: "Message (optional)",
+    sgFine: "We only use your contact details to follow up on this suggestion. They are deleted after 6 months.",
+    sgSubmit: "Send suggestion",
+    sgOk: "Thank you! We'll check the event with the organizer before publishing it.",
+    sgErrName: "Please enter the event name.",
+    sgErrPlace: "Please enter where the event takes place.",
+    sgErrUrl: "The link must start with http:// or https://.",
     themeGroup: "Display theme", themeAuto: "Automatic (follows your device)", themeLight: "Light", themeDark: "Dark",
     footer: "AllezHopp · Made in Switzerland · 2026", footer2: "Applications always happen on the organizer's website."
   }
@@ -822,7 +980,7 @@ function renderCards() {
     const link = safeUrl(o.application_url) || safeUrl(o.event_url);
     let action = "";
     if ((st === "open" || st === "partially_full") && link) {
-      action = `<a class="act main" href="${esc(link)}" target="_blank" rel="noopener" data-apply="${esc(o.category)}">${t.apply} ↗</a>`;
+      action = `<a class="act main" href="${esc(link)}" target="_blank" rel="noopener" data-apply="${esc(o.category)}" data-canton="${esc(o.canton || "")}">${t.apply} ↗</a>`;
     } else if (st === "not_open") {
       action = `<a class="act" href="#alertes">${t.notify}</a>` + (link ? `<a class="act" href="${esc(link)}" target="_blank" rel="noopener">${t.siteLink} ↗</a>` : "");
     } else if (link) {
@@ -857,7 +1015,7 @@ function renderCards() {
 
 document.addEventListener("click", e => {
   const a = e.target.closest("[data-apply]");
-  if (a) track("Apply click", { language: lang, category: a.dataset.apply, canton: "VD" });
+  if (a) track("Apply click", { language: lang, category: a.dataset.apply, canton: a.dataset.canton || "unknown" });
 });
 
 function setLang(l) {
@@ -867,11 +1025,13 @@ function setLang(l) {
   document.querySelectorAll("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
   document.querySelectorAll("[data-i18n-html]").forEach(el => { const v = t[el.dataset.i18nHtml]; if (typeof v === "string") el.innerHTML = v; });
   $("#email").placeholder = t.emailPh;
+  $("#sg-dates").placeholder = t.sgDatesPh;
   document.querySelectorAll("#theme-switch [data-tlabel]").forEach(b => { b.setAttribute("aria-label", t[b.dataset.tlabel]); b.title = t[b.dataset.tlabel]; });
   $("#theme-switch").setAttribute("aria-label", t.themeGroup);
   const ml = document.getElementById("ml-" + l); if (ml) ml.checked = true;
   $("#lang-select").value = l;
   $("#form-msg").hidden = true;
+  $("#sg-msg").hidden = true;
   renderCards();
   try { localStorage.setItem("allezhopp-lang", l); } catch (e) {}
 }
@@ -893,27 +1053,68 @@ $("#canton-filter").addEventListener("change", e => {
 });
 $("#only-open").addEventListener("change", () => { renderCards(); track("Filter", { language: lang, open_only: String($("#only-open").checked) }); });
 
+/* Calls a Supabase database function. Errors come back as HTTP 400 with { message: "invalid_email" } etc. */
+async function callRpc(fn, body) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fn}`, {
+    method: "POST",
+    headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Accept: "application/json" },
+    body: JSON.stringify(body)
+  });
+  if (res.ok) return;
+  let code = "send_failed";
+  try { code = (await res.json()).message || code; } catch (e) {}
+  throw new Error(code);
+}
+function showMsg(el, text, isErr) { el.textContent = text; el.classList.toggle("err", !!isErr); el.hidden = false; }
+const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+
 $("#alert-form").addEventListener("submit", async ev => {
   ev.preventDefault();
   const t = T[lang];
   const msg = $("#form-msg");
   const email = $("#email").value.trim();
-  msg.classList.remove("err");
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = t.errEmail; msg.classList.add("err"); msg.hidden = false; $("#email").focus(); return; }
-  if ($("#website").value) return;
-  if (!FORM_ENDPOINT) { msg.textContent = t.preview; msg.hidden = false; return; }
-  const interests = [...document.querySelectorAll('input[name="interests"]:checked')].map(i => i.value).join(", ");
+  if (!isEmail(email)) { showMsg(msg, t.errEmail, true); $("#email").focus(); return; }
+  if ($("#website").value) { showMsg(msg, t.ok); return; }          // bot trap: pretend it worked
+  const interests = [...document.querySelectorAll('input[name="interests"]:checked')].map(i => i.value);
   const mailLang = (document.querySelector('input[name="mail_lang"]:checked') || {}).value || lang;
+  const region = $("#region").value;
   const btn = $("#submit"); btn.disabled = true;
   try {
-    const res = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({ email, region: $("#region").value, interests, email_language: mailLang }) });
-    if (!res.ok) throw new Error(res.status);
-    msg.textContent = t.ok;
-    track("Alert signup", { language: lang, email_language: mailLang, region: $("#region").value, interests });
+    await callRpc("subscribe_alert", { p_email: email, p_locale: mailLang, p_regions: [region], p_categories: interests, p_consent: t.fFine });
+    showMsg(msg, t.ok);
+    track("Alert signup", { language: lang, email_language: mailLang, region, interests: interests.join(", ") || "none" });
+    $("#email").value = "";
+  } catch (e) {
+    showMsg(msg, e.message === "invalid_email" ? t.errEmail : e.message === "rate_limited" ? t.errRate : t.errSend, true);
+  } finally { btn.disabled = false; }
+});
+
+$("#suggest-form").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const t = T[lang];
+  const msg = $("#sg-msg");
+  const v = id => $(id).value.trim();
+  const name = v("#sg-name"), place = v("#sg-place"), url = v("#sg-url"), contactEmail = v("#sg-contact-email");
+  if (name.length < 2) { showMsg(msg, t.sgErrName, true); $("#sg-name").focus(); return; }
+  if (place.length < 2) { showMsg(msg, t.sgErrPlace, true); $("#sg-place").focus(); return; }
+  if (url && !/^https?:\/\/\S+\.\S+$/.test(url)) { showMsg(msg, t.sgErrUrl, true); $("#sg-url").focus(); return; }
+  if (contactEmail && !isEmail(contactEmail)) { showMsg(msg, t.errEmail, true); $("#sg-contact-email").focus(); return; }
+  if ($("#sg-website").value) { showMsg(msg, t.sgOk); return; }    // bot trap
+  const volunteers = $("#sg-volunteers").value, organizer = $("#sg-organizer").checked;
+  const btn = $("#sg-submit"); btn.disabled = true;
+  try {
+    await callRpc("suggest_event", {
+      p_locale: lang, p_event_name: name, p_place: place, p_dates: v("#sg-dates") || null, p_event_url: url || null,
+      p_volunteers: volunteers, p_is_organizer: organizer,
+      p_contact_name: v("#sg-contact-name") || null, p_contact_email: contactEmail || null, p_message: v("#sg-message") || null
+    });
+    showMsg(msg, t.sgOk);
+    track("Suggest event", { language: lang, volunteers, organizer: String(organizer) });
     ev.target.reset();
-  } catch (e) { msg.textContent = t.errSend; msg.classList.add("err"); }
-  finally { msg.hidden = false; btn.disabled = false; }
+  } catch (e) {
+    const m = { invalid_name: t.sgErrName, invalid_place: t.sgErrPlace, invalid_url: t.sgErrUrl, invalid_email: t.errEmail, rate_limited: t.errRate };
+    showMsg(msg, m[e.message] || t.errSend, true);
+  } finally { btn.disabled = false; }
 });
 
 /* ---------- Theme: Auto (follows the device), Light or Dark ---------- */

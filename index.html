@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AllezHopp</title>
-<meta name="description" content="AllezHopp rassemble les missions bénévoles du sport, de la culture et de la vie locale, avec des informations vérifiées.">
+<meta name="description" content="AllezHopp rassemble les missions bénévoles du sport, de la musique, de la culture et de la vie locale, avec des informations vérifiées.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
@@ -21,6 +21,8 @@
   --c1-soft: #E3F3EC;
   --c2-soft: #E5EEF9;
   --acc-soft: #FFF3D6;
+  --c3: #A8396A;        /* music: 6.1:1 on white */
+  --c3-soft: #FBE7F0;
 
   --bg: #F8FAFB;
   --surface: #FFFFFF;
@@ -45,7 +47,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --c1: #5FC9A2; --c1-text: #5FC9A2; --c2: #7FB2F0; --on-c2: #0F1A26; --acc: #F2B544; --on-acc: #0F1A26;
-    --c1-soft: #173229; --c2-soft: #162A42; --acc-soft: #33291E;
+    --c1-soft: #173229; --c2-soft: #162A42; --acc-soft: #33291E; --c3: #F09AC0; --c3-soft: #3A2133;
     --bg: #0F1A26; --surface: #172433; --ink: #EEF3F7; --muted: #A9B6C3; --line: #263749; --focus: #7FB2F0;
     --st-open: #66CC94; --st-partial: #F2B457; --st-soon: #7CC6E0; --st-closed: #A9B6C3; --st-done: #8E9BA8;
     color-scheme: dark;
@@ -53,7 +55,7 @@
 }
 :root[data-theme="dark"] {
   --c1: #5FC9A2; --c1-text: #5FC9A2; --c2: #7FB2F0; --on-c2: #0F1A26; --acc: #F2B544; --on-acc: #0F1A26;
-  --c1-soft: #173229; --c2-soft: #162A42; --acc-soft: #33291E;
+  --c1-soft: #173229; --c2-soft: #162A42; --acc-soft: #33291E; --c3: #F09AC0; --c3-soft: #3A2133;
   --bg: #0F1A26; --surface: #172433; --ink: #EEF3F7; --muted: #A9B6C3; --line: #263749; --focus: #7FB2F0;
   --st-open: #66CC94; --st-partial: #F2B457; --st-soon: #7CC6E0; --st-closed: #A9B6C3; --st-done: #8E9BA8;
   color-scheme: dark;
@@ -157,7 +159,7 @@ svg { display: block; }
 .st-1 { top: 6%; left: 0; transform: rotate(-6deg); }
 .st-1 .ic { background: var(--c1-soft); color: var(--c1-text); }
 .st-2 { top: 40%; right: 0; transform: rotate(5deg); }
-.st-2 .ic { background: var(--c2-soft); color: var(--c2); }
+.st-2 .ic { background: var(--c3-soft); color: var(--c3); }
 .st-3 { bottom: 6%; left: 8%; transform: rotate(-3deg); }
 .st-3 .ic { background: var(--acc-soft); color: var(--st-partial); }
 
@@ -196,6 +198,7 @@ section { padding-block: 64px; }
 .cat .ic { width: 34px; height: 34px; border-radius: 12px; display: grid; place-items: center; }
 .cat .ic svg { width: 19px; height: 19px; }
 .cat.sport .ic { background: var(--c1-soft); color: var(--c1-text); }
+.cat.music .ic { background: var(--c3-soft); color: var(--c3); }
 .cat.culture .ic { background: var(--c2-soft); color: var(--c2); }
 .cat.community .ic { background: var(--acc-soft); color: var(--st-partial); }
 .card h3 { font-size: 22px; font-weight: 700; line-height: 1.15; }
@@ -316,7 +319,8 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-sport" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="6"/><path d="M8.5 3.5 12 9l3.5-5.5"/><path d="M12 12.5v5"/></symbol>
-    <symbol id="i-culture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></symbol>
+    <symbol id="i-culture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11h.01"/><path d="M14 6h.01"/><path d="M18 6h.01"/><path d="M6.5 13.1h.01"/><path d="M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3"/><path d="M17.4 9.9c-.8.8-2 .8-2.8 0"/><path d="M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7"/><path d="M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4"/></symbol>
     <symbol id="i-community" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.1c2.6.5 4.5 2.9 4.5 5.9"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
     <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
@@ -423,7 +427,7 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
           </g>
         </svg>
         <span class="sticker st-1"><span class="ic"><svg><use href="#i-sport"/></svg></span><span data-i18n="catSport">Sport</span></span>
-        <span class="sticker st-2"><span class="ic"><svg><use href="#i-culture"/></svg></span><span data-i18n="catCulture">Culture</span></span>
+        <span class="sticker st-2"><span class="ic"><svg><use href="#i-music"/></svg></span><span data-i18n="catMusic">Musique</span></span>
         <span class="sticker st-3"><span class="ic"><svg><use href="#i-community"/></svg></span><span data-i18n="catCommunity">Vie locale</span></span>
       </div>
     </div>
@@ -439,6 +443,7 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
         <div class="chips" role="group" aria-label="Catégorie" id="chips">
           <button type="button" class="chip" id="chip-all" data-cat="all" aria-pressed="true" data-i18n="filterAll">Tout</button>
           <button type="button" class="chip" id="chip-sport" data-cat="sport" aria-pressed="false" data-i18n="catSport">Sport</button>
+          <button type="button" class="chip" id="chip-music" data-cat="music" aria-pressed="false" data-i18n="catMusic">Musique</button>
           <button type="button" class="chip" id="chip-culture" data-cat="culture" aria-pressed="false" data-i18n="catCulture">Culture</button>
           <button type="button" class="chip" id="chip-community" data-cat="community" aria-pressed="false" data-i18n="catCommunity">Vie locale</button>
         </div>
@@ -480,7 +485,7 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
       <div class="why">
         <div class="why-item"><span class="ic"><svg><use href="#i-star"/></svg></span><h3 data-i18n="w1t">Vivre l'événement autrement</h3><p data-i18n="w1p">Faire partie de l'équipe qui le rend possible.</p></div>
         <div class="why-item"><span class="ic"><svg><use href="#i-community"/></svg></span><h3 data-i18n="w2t">Rencontrer du monde</h3><p data-i18n="w2p">Partager un moment avec d'autres bénévoles et le public.</p></div>
-        <div class="why-item"><span class="ic"><svg><use href="#i-heart"/></svg></span><h3 data-i18n="w3t">Être utile près de chez vous</h3><p data-i18n="w3p">Sport, culture ou fête de quartier : à vous de choisir.</p></div>
+        <div class="why-item"><span class="ic"><svg><use href="#i-heart"/></svg></span><h3 data-i18n="w3t">Être utile près de chez vous</h3><p data-i18n="w3p">Sport, festival de musique ou fête de quartier : à vous de choisir.</p></div>
         <div class="why-item"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3 data-i18n="w4t">Des infos fiables</h3><p data-i18n="w4p">Chaque statut est vérifié et daté. Vous savez à quoi vous fier.</p></div>
       </div>
     </section>
@@ -515,6 +520,7 @@ footer { padding-block: 32px 44px; display: flex; flex-wrap: wrap; justify-conte
             <legend data-i18n="fInterests">Ce qui vous intéresse</legend>
             <div class="pills">
               <label class="pick"><input type="checkbox" id="int-sport" name="interests" value="sport" checked><span data-i18n="catSport">Sport</span></label>
+              <label class="pick"><input type="checkbox" id="int-music" name="interests" value="music" checked><span data-i18n="catMusic">Musique</span></label>
               <label class="pick"><input type="checkbox" id="int-culture" name="interests" value="culture" checked><span data-i18n="catCulture">Culture</span></label>
               <label class="pick"><input type="checkbox" id="int-community" name="interests" value="community"><span data-i18n="catCommunity">Vie locale</span></label>
             </div>
@@ -632,10 +638,10 @@ const T = {
   fr: {
     eyebrow: "Bénévolat événementiel en Suisse romande",
     h1: 'Donnez un coup de main. <span class="line2">Vivez l\'événement.</span>',
-    lede: "Trouvez un événement auquel donner un coup de main. AllezHopp rassemble les missions bénévoles du sport, de la culture et de la vie locale, avec des informations vérifiées : lieu, dates des missions et état des inscriptions.",
+    lede: "Trouvez un événement auquel donner un coup de main. AllezHopp rassemble les missions bénévoles du sport, de la musique, de la culture et de la vie locale, avec des informations vérifiées : lieu, dates des missions et état des inscriptions.",
     ctaPrimary: "Découvrir les missions", ctaSecondary: "Être averti à l'ouverture des inscriptions",
     pilot: "En Suisse romande : Genève, Vaud et Valais, puis Fribourg, Neuchâtel et le Jura.",
-    catSport: "Sport", catCulture: "Culture", catCommunity: "Vie locale",
+    catSport: "Sport", catMusic: "Musique", catCulture: "Culture", catCommunity: "Vie locale",
     oppEyebrow: "Missions bénévoles", oppTitle: "Des missions près de chez vous",
     oppIntro: "Chaque fiche indique le lieu, les dates des missions et l'état des inscriptions, vérifié auprès de l'organisateur.",
     filterAll: "Tout", filterOpen: "Inscriptions ouvertes uniquement",
@@ -655,7 +661,7 @@ const T = {
     whyEyebrow: "Pourquoi AllezHopp", whyTitle: "Votre aide compte. On vous aide à la placer.",
     w1t: "Vivre l'événement autrement", w1p: "Faire partie de l'équipe qui le rend possible.",
     w2t: "Rencontrer du monde", w2p: "Partager un moment avec d'autres bénévoles et le public.",
-    w3t: "Être utile près de chez vous", w3p: "Sport, culture ou fête de quartier : à vous de choisir.",
+    w3t: "Être utile près de chez vous", w3p: "Sport, festival de musique ou fête de quartier : à vous de choisir.",
     w4t: "Des infos fiables", w4p: "Chaque statut est vérifié et daté. Vous savez à quoi vous fier.",
     alEyebrow: "Alertes", alTitle: "Ne ratez plus une ouverture.",
     alText: "Recevez un e-mail quand les inscriptions ouvrent pour les missions qui vous intéressent. Gratuit, sans compte.",
@@ -697,10 +703,10 @@ const T = {
   de: {
     eyebrow: "Freiwilligenarbeit an Anlässen in der Westschweiz",
     h1: 'Packen Sie mit an. <span class="line2">Erleben Sie den Anlass.</span>',
-    lede: "Finden Sie einen Anlass, bei dem Ihre Hilfe zählt. AllezHopp sammelt Freiwilligeneinsätze aus Sport, Kultur und lokalem Leben, mit geprüften Angaben: Ort, Einsatzdaten und Stand der Anmeldung.",
+    lede: "Finden Sie einen Anlass, bei dem Ihre Hilfe zählt. AllezHopp sammelt Freiwilligeneinsätze aus Sport, Musik, Kultur und lokalem Leben, mit geprüften Angaben: Ort, Einsatzdaten und Stand der Anmeldung.",
     ctaPrimary: "Einsätze entdecken", ctaSecondary: "Benachrichtigen, wenn die Anmeldung öffnet",
     pilot: "In der Westschweiz: Genf, Waadt und Wallis, danach Freiburg, Neuenburg und Jura.",
-    catSport: "Sport", catCulture: "Kultur", catCommunity: "Lokales Leben",
+    catSport: "Sport", catMusic: "Musik", catCulture: "Kultur", catCommunity: "Lokales Leben",
     oppEyebrow: "Freiwilligeneinsätze", oppTitle: "Einsätze in Ihrer Nähe",
     oppIntro: "Jeder Eintrag zeigt Ort, Einsatzdaten und Stand der Anmeldung, geprüft beim Veranstalter.",
     filterAll: "Alle", filterOpen: "Nur offene Anmeldungen",
@@ -720,7 +726,7 @@ const T = {
     whyEyebrow: "Warum AllezHopp", whyTitle: "Ihre Hilfe zählt. Wir zeigen Ihnen, wo.",
     w1t: "Anlässe anders erleben", w1p: "Teil des Teams sein, das sie möglich macht.",
     w2t: "Menschen treffen", w2p: "Einen Moment mit anderen Freiwilligen und dem Publikum teilen.",
-    w3t: "In Ihrer Nähe helfen", w3p: "Sport, Kultur oder Quartierfest: Sie haben die Wahl.",
+    w3t: "In Ihrer Nähe helfen", w3p: "Sport, Musikfestival oder Quartierfest: Sie haben die Wahl.",
     w4t: "Verlässliche Angaben", w4p: "Jeder Status ist geprüft und datiert. Sie wissen, worauf Sie sich verlassen können.",
     alEyebrow: "Benachrichtigungen", alTitle: "Keine Öffnung mehr verpassen.",
     alText: "Erhalten Sie eine E-Mail, sobald die Anmeldung für passende Einsätze öffnet. Kostenlos, ohne Konto.",
@@ -762,10 +768,10 @@ const T = {
   it: {
     eyebrow: "Volontariato agli eventi in Svizzera romanda",
     h1: 'Dai una mano. <span class="line2">Vivi l\'evento.</span>',
-    lede: "Trova un evento dove il tuo aiuto fa la differenza. AllezHopp raccoglie le opportunità di volontariato nello sport, nella cultura e nella vita locale, con informazioni verificate: luogo, date delle attività e stato delle iscrizioni.",
+    lede: "Trova un evento dove il tuo aiuto fa la differenza. AllezHopp raccoglie le opportunità di volontariato nello sport, nella musica, nella cultura e nella vita locale, con informazioni verificate: luogo, date delle attività e stato delle iscrizioni.",
     ctaPrimary: "Scopri le opportunità", ctaSecondary: "Avvisami all'apertura delle iscrizioni",
     pilot: "In Svizzera romanda: Ginevra, Vaud e Vallese, poi Friburgo, Neuchâtel e Giura.",
-    catSport: "Sport", catCulture: "Cultura", catCommunity: "Vita locale",
+    catSport: "Sport", catMusic: "Musica", catCulture: "Cultura", catCommunity: "Vita locale",
     oppEyebrow: "Volontariato", oppTitle: "Opportunità vicino a te",
     oppIntro: "Ogni scheda indica il luogo, le date delle attività e lo stato delle iscrizioni, verificato presso l'organizzatore.",
     filterAll: "Tutto", filterOpen: "Solo iscrizioni aperte",
@@ -785,7 +791,7 @@ const T = {
     whyEyebrow: "Perché AllezHopp", whyTitle: "Il tuo aiuto conta. Ti aiutiamo a trovare dove.",
     w1t: "Vivere l'evento da dentro", w1p: "Far parte della squadra che lo rende possibile.",
     w2t: "Conoscere persone", w2p: "Condividere un momento con altri volontari e con il pubblico.",
-    w3t: "Essere utile vicino a casa", w3p: "Sport, cultura o festa di quartiere: scegli tu.",
+    w3t: "Essere utile vicino a casa", w3p: "Sport, festival musicale o festa di quartiere: scegli tu.",
     w4t: "Informazioni affidabili", w4p: "Ogni stato è verificato e datato. Sai di cosa fidarti.",
     alEyebrow: "Avvisi", alTitle: "Non perdere più un'apertura.",
     alText: "Ricevi un'e-mail quando si aprono le iscrizioni per le opportunità che ti interessano. Gratis, senza account.",
@@ -827,10 +833,10 @@ const T = {
   en: {
     eyebrow: "Event volunteering in French-speaking Switzerland",
     h1: 'Lend a hand. <span class="line2">Experience the event.</span>',
-    lede: "Find an event where your help makes a difference. AllezHopp brings together volunteer opportunities in sport, culture and community life, with verified information: place, volunteer dates and recruitment status.",
+    lede: "Find an event where your help makes a difference. AllezHopp brings together volunteer opportunities in sport, music, culture and community life, with verified information: place, volunteer dates and recruitment status.",
     ctaPrimary: "Discover opportunities", ctaSecondary: "Notify me when recruitment opens",
     pilot: "Across French-speaking Switzerland: Geneva, Vaud and Valais, then Fribourg, Neuchâtel and Jura.",
-    catSport: "Sport", catCulture: "Culture", catCommunity: "Community",
+    catSport: "Sport", catMusic: "Music", catCulture: "Culture", catCommunity: "Community",
     oppEyebrow: "Volunteer opportunities", oppTitle: "Opportunities near you",
     oppIntro: "Each listing shows the place, the volunteer dates and the recruitment status, verified with the organizer.",
     filterAll: "All", filterOpen: "Open recruitment only",
@@ -850,7 +856,7 @@ const T = {
     whyEyebrow: "Why AllezHopp", whyTitle: "Your help matters. We help you find where.",
     w1t: "See events differently", w1p: "Be part of the team that makes it happen.",
     w2t: "Meet people", w2p: "Share the moment with other volunteers and the public.",
-    w3t: "Help close to home", w3p: "Sport, culture or a neighbourhood party: your choice.",
+    w3t: "Help close to home", w3p: "Sport, a music festival or a neighbourhood party: your choice.",
     w4t: "Reliable information", w4p: "Every status is verified and dated, so you know what to trust.",
     alEyebrow: "Alerts", alTitle: "Never miss an opening.",
     alText: "Get an email when recruitment opens for the opportunities you care about. Free, no account.",
@@ -917,7 +923,7 @@ async function loadOpportunities() {
 }
 
 const ST_ICON = { open: "i-check", partially_full: "i-half", not_open: "i-clock", closed: "i-lock", finished: "i-flag", unknown: "i-clock" };
-const CAT_ICON = { sport: "i-sport", culture: "i-culture", community: "i-community" };
+const CAT_ICON = { sport: "i-sport", music: "i-music", culture: "i-culture", community: "i-community" };
 const LOCALE = { fr: "fr-CH", de: "de-CH", it: "it-CH", en: "en-GB" };
 
 let lang = "fr";
@@ -958,7 +964,7 @@ function renderCards() {
   $("#cards").setAttribute("aria-busy", "false");
   if (loadFailed) { msg.textContent = t.loadError; msg.hidden = false; } else { msg.hidden = true; }
   const onlyOpen = $("#only-open").checked;
-  const catLabel = { sport: t.catSport, culture: t.catCulture, community: t.catCommunity };
+  const catLabel = { sport: t.catSport, music: t.catMusic, culture: t.catCulture, community: t.catCommunity };
   fillCantons();
   const list = OPPS.filter(o => (cat === "all" || o.category === cat) && (canton === "all" || o.canton === canton) &&
     (!onlyOpen || o.display_status === "open" || o.display_status === "partially_full"));

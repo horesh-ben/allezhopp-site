@@ -177,11 +177,25 @@ section { padding-block: 64px; }
 @media (max-width: 640px) { .cards { grid-template-columns: minmax(0, 1fr); } }
 .card {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 20px; display: grid; gap: 14px; grid-template-rows: auto auto 1fr auto; min-width: 0;
+  padding: 20px; display: grid; gap: 14px; grid-template-rows: auto auto auto 1fr auto; min-width: 0; overflow: hidden;
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .card:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -24px rgba(42, 34, 56, .4); }
 .card.is-past { background: transparent; }
+/* Picture at the top of each card: organizer photo (cover), logo or poster (contain), or a category tile */
+.card-media { position: relative; margin: -20px -20px 0; aspect-ratio: 16 / 9; overflow: hidden; display: grid; place-items: center; }
+.card-media.sport { background: var(--c1-soft); color: var(--c1-text); }
+.card-media.music { background: var(--c3-soft); color: var(--c3); }
+.card-media.culture { background: var(--c2-soft); color: var(--c2); }
+.card-media.community { background: var(--acc-soft); color: var(--st-partial); }
+.card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.card-media.contain img { object-fit: contain; padding: 22px 28px; }
+.card-media.contain.has-img { background: #F3F5F7; }   /* logos and posters stay legible in dark mode too */
+.card-media .tile { width: 64px; height: 64px; opacity: .55; }
+.card-media.has-img .tile { display: none; }
+.card-media .credit { position: absolute; right: 8px; bottom: 8px; max-width: calc(100% - 16px); font-size: 11.5px; line-height: 1.3; padding: 3px 8px; border-radius: 999px;
+  background: rgba(15, 26, 38, .62); color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-media.contain .credit { background: rgba(15, 26, 38, .45); }
 .card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 .cat { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; }
 .cat .ic { width: 34px; height: 34px; border-radius: 12px; display: grid; place-items: center; }

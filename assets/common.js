@@ -17,6 +17,13 @@ function track(name, props) {
    Row Level Security only lets it read published opportunities and
    call the two visitor-form functions (subscribe_alert, suggest_event).
 ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------
+   CONTACT. Leave empty until the AllezHopp mailbox exists; every element with
+   data-contact then points visitors to the suggestion form. Set it once, e.g.
+   const CONTACT_EMAIL = "hello@allezhopp.ch";  and all pages show the address.
+---------------------------------------------------------------- */
+const CONTACT_EMAIL = "";
+
 const SUPABASE_URL = "https://rnwecpchtrzkbrnkdhvt.supabase.co";
 const SUPABASE_KEY = "sb_publishable_6Q8Q7x40ZbCXVplznFJ0hw_TAh4R7fr";
 
@@ -47,6 +54,9 @@ function setLang(l) {
   document.documentElement.lang = l;
   document.querySelectorAll("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
   document.querySelectorAll("[data-i18n-html]").forEach(el => { const v = t[el.dataset.i18nHtml]; if (typeof v === "string") el.innerHTML = v; });
+  document.querySelectorAll("[data-contact]").forEach(el => {
+    el.innerHTML = CONTACT_EMAIL ? t.contactEmail.replace(/\{email\}/g, esc(CONTACT_EMAIL)) : t.contactForm;
+  });
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { const v = t[el.dataset.i18nPh]; if (typeof v === "string") el.placeholder = v; });
   const titleKey = document.body.dataset.titleKey;
   if (titleKey && t[titleKey]) document.title = t[titleKey];

@@ -329,3 +329,10 @@ footer a { color: inherit; font-weight: 600; }
 .about-sign { border-top: 1px dashed var(--line); margin-top: 30px; padding-top: 18px; }
 .about-sign p { font-size: 15px; margin-bottom: 6px; }
 .foot-links a { color: inherit; font-weight: 600; }
+
+/* ---------- Privacy and terms page ---------- */
+.legal section { margin: 0; padding: 0; }
+.legal ul { margin: 0 0 14px; padding-left: 20px; display: grid; gap: 8px; color: var(--muted); font-size: 16.5px; line-height: 1.55; max-width: 64ch; }
+.legal strong { color: var(--ink); }
+.legal a, .about-sign a { color: var(--c2); font-weight: 600; }
+.fine-link { color: inherit; font-weight: 600; white-space: nowrap; }

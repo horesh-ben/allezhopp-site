@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Proposer un événement · AllezHopp</title>
-<meta name="description" content="Un événement qui cherche des bénévoles manque sur AllezHopp ? Proposez-le : nous vérifions auprès de l'organisateur avant de le publier.">
+<title>Confidentialité et conditions · AllezHopp</title>
+<meta name="description" content="D'où viennent les informations publiées sur AllezHopp, quelles données nous traitons et à quelles conditions utiliser le site.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
@@ -18,7 +18,7 @@
   plausible.init()
 </script>
 </head>
-<body data-title-key="sgPageTitle">
+<body data-title-key="pvPageTitle">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -80,111 +80,59 @@
     </div>
   </header>
 
-  <main>
+  <main class="about page-main">
     <a class="back" href="/" data-i18n="backHome">← Retour aux missions</a>
-    <section id="proposer" class="page-main" aria-labelledby="suggest-title">
-      <div class="alerts suggest">
-        <div class="alerts-copy">
-          <p class="eyebrow" data-i18n="sgEyebrow">Proposer un événement</p>
-          <h2 id="suggest-title" data-i18n="sgTitle">Un événement manque ?</h2>
-          <p data-i18n="sgText">Vous organisez un événement ou en connaissez un qui cherche des bénévoles ? Dites-le-nous. Nous vérifions auprès de l'organisateur avant de le publier.</p>
-        </div>
-        <form id="suggest-form" novalidate>
-          <div class="row2">
-            <div class="field">
-              <label for="sg-name" data-i18n="sgName">Nom de l'événement</label>
-              <input type="text" id="sg-name" name="event_name" required maxlength="200" autocomplete="off">
-            </div>
-            <div class="field">
-              <label for="sg-place" data-i18n="sgPlace">Lieu (commune)</label>
-              <input type="text" id="sg-place" name="place" required maxlength="120" autocomplete="off">
-            </div>
-          </div>
-          <div class="row2">
-            <div class="field">
-              <label for="sg-dates" data-i18n="sgDates">Dates (facultatif)</label>
-              <input type="text" id="sg-dates" name="dates" maxlength="120" autocomplete="off" data-i18n-ph="sgDatesPh">
-            </div>
-            <div class="field">
-              <label for="sg-url" data-i18n="sgUrl">Site de l'événement (facultatif)</label>
-              <input type="url" id="sg-url" name="event_url" maxlength="500" placeholder="https://" autocomplete="off">
-            </div>
-          </div>
-          <div class="field">
-            <label for="sg-volunteers" data-i18n="sgVol">Cherche-t-il des bénévoles ?</label>
-            <select id="sg-volunteers" name="volunteers">
-              <option value="unknown" data-i18n="sgVolUnknown">Je ne sais pas</option>
-              <option value="yes" data-i18n="sgVolYes">Oui</option>
-              <option value="no" data-i18n="sgVolNo">Non</option>
-            </select>
-          </div>
-          <label class="toggle"><input type="checkbox" id="sg-organizer" name="is_organizer"><span data-i18n="sgOrg">Je fais partie de l'organisation</span></label>
-          <div class="row2">
-            <div class="field">
-              <label for="sg-contact-name" data-i18n="sgContactName">Votre nom (facultatif)</label>
-              <input type="text" id="sg-contact-name" name="contact_name" maxlength="120" autocomplete="name">
-            </div>
-            <div class="field">
-              <label for="sg-contact-email" data-i18n="sgContactEmail">Votre e-mail (facultatif)</label>
-              <input type="email" id="sg-contact-email" name="contact_email" maxlength="254" autocomplete="email">
-            </div>
-          </div>
-          <div class="field">
-            <label for="sg-message" data-i18n="sgMessage">Message (facultatif)</label>
-            <textarea id="sg-message" name="message" maxlength="2000"></textarea>
-          </div>
-          <div class="hp" aria-hidden="true"><label for="sg-website">Website</label><input type="text" id="sg-website" name="website" tabindex="-1" autocomplete="off"></div>
-          <div class="form-foot">
-            <p class="fine"><span data-i18n="sgFine">Vos coordonnées servent uniquement à vous recontacter au sujet de cette proposition. Elles sont effacées après 6 mois.</span> <a class="fine-link" href="/confidentialite/" data-i18n="pvLink">Confidentialité</a></p>
-            <button class="btn btn-primary" type="submit" id="sg-submit" data-i18n="sgSubmit">Envoyer la suggestion</button>
-          </div>
-          <p class="form-msg" id="sg-msg" role="status" hidden></p>
-        </form>
-      </div>
-    </section>
+    <article class="about-card legal">
+      <header class="about-head">
+        <p class="eyebrow" data-i18n="pvUpdated">Dernière mise à jour : 4 octobre 2026</p>
+        <h1 data-i18n="pvTitle">Confidentialité et conditions d'utilisation</h1>
+      </header>
+      <p class="about-lede" data-i18n="pvIntro">AllezHopp aide à découvrir des occasions de bénévolat lors d'événements en Suisse romande. Cette page explique d'où viennent les informations publiées, quelles données nous traitons et à quelles conditions le site peut être utilisé.</p>
+
+      <section>
+        <h2 data-i18n="pvS1h">Qui est responsable</h2>
+        <div data-i18n-html="pvS1"><p>AllezHopp est un projet indépendant de Horesh Ben Shitrit, Échichens (Vaud), Suisse. Il n'est lié à aucun des organisateurs mentionnés.</p><p data-contact></p></div>
+      </section>
+
+      <section>
+        <h2 data-i18n="pvS2h">D'où viennent les informations</h2>
+        <div data-i18n-html="pvS2"><p>Les fiches sont rédigées par AllezHopp à partir d'informations publiques : sites des organisateurs, agendas officiels des communes, des cantons et des offices du tourisme, et plateformes de bénévolat. Nous vérifions l'état des inscriptions sur le site de l'organisateur et indiquons la date de la dernière vérification.</p><ul><li>Les informations peuvent changer à tout moment : seul le site de l'organisateur fait foi.</li><li>Les candidatures se font toujours auprès de l'organisateur. AllezHopp ne sélectionne pas les bénévoles, n'organise pas les missions et n'est pas partie aux engagements entre bénévoles et organisateurs (horaires, assurances, défraiements).</li><li>Les noms, logos et images appartiennent à leurs titulaires. Les images des fiches proviennent des sites des organisateurs ou d'offices du tourisme ; elles sont affichées depuis ces sites, avec mention de la source.</li><li>Vous êtes organisateur ? Vous pouvez demander à tout moment une correction, une meilleure image ou le retrait de votre événement via le <a href="/proposer/">formulaire</a>. Nous y donnons suite rapidement.</li></ul></div>
+      </section>
+
+      <section>
+        <h2 data-i18n="pvS3h">Vos données</h2>
+        <div data-i18n-html="pvS3"><p>Consulter AllezHopp ne demande ni compte ni cookie.</p><ul><li><strong>Statistiques de visite</strong> : nous utilisons Plausible Analytics, un outil sans cookies hébergé dans l'Union européenne. Il compte les visites de façon agrégée, sans identifier les personnes ; votre adresse IP n'est pas conservée.</li><li><strong>Préférences</strong> : la langue et le thème choisis sont enregistrés dans votre navigateur (stockage local), pas chez nous.</li><li><strong>Alertes par e-mail</strong> : nous enregistrons votre adresse e-mail, la langue des e-mails, la région et les thèmes choisis, ainsi que la date de votre accord. Ces données servent uniquement à vous envoyer les alertes demandées. Aucune alerte n'est envoyée avant la confirmation de votre adresse ; les inscriptions non confirmées sont effacées après 12 mois. Chaque e-mail permettra de se désinscrire en un clic.</li><li><strong>Proposition d'événement</strong> : nous enregistrons les informations sur l'événement. Votre nom et votre e-mail sont facultatifs, conservés à part et effacés après 6 mois.</li><li><strong>Protection contre les abus</strong> : pour limiter les envois automatiques, nous gardons au plus 24 heures une empreinte non réversible (hachage) de l'adresse IP, jamais l'adresse elle-même.</li></ul><p>Nous ne vendons ni ne partageons vos données. Seul le responsable du projet y a accès.</p></div>
+      </section>
+
+      <section>
+        <h2 data-i18n="pvS4h">Prestataires techniques</h2>
+        <div data-i18n-html="pvS4"><ul><li>GitHub Pages (GitHub, États-Unis) : hébergement du site.</li><li>Supabase : base de données des fiches et des formulaires.</li><li>Plausible Analytics (Union européenne) : statistiques sans cookies.</li><li>Google Fonts (Google, États-Unis) : police de caractères du site.</li><li>Sites des organisateurs et des offices du tourisme : images des fiches.</li></ul><p>En affichant une page, votre navigateur contacte ces serveurs, qui voient votre adresse IP comme pour tout site web. Certains se trouvent hors de Suisse, notamment aux États-Unis.</p></div>
+      </section>
+
+      <section>
+        <h2 data-i18n="pvS5h">Vos droits</h2>
+        <div data-i18n-html="pvS5"><p>Vous pouvez demander à consulter, corriger ou effacer vos données, et vous désinscrire des alertes à tout moment.</p><p data-contact></p><p>Ces traitements suivent la loi fédérale sur la protection des données (LPD).</p></div>
+      </section>
+
+      <section>
+        <h2 data-i18n="pvS6h">Conditions d'utilisation</h2>
+        <div data-i18n-html="pvS6"><ul><li>AllezHopp est gratuit et fourni tel quel. Nous faisons de notre mieux pour publier des informations exactes et à jour, sans pouvoir le garantir.</li><li>AllezHopp n'est pas responsable du contenu des sites externes vers lesquels il renvoie, ni du déroulement des événements et des missions.</li><li>Les textes et la présentation d'AllezHopp ne peuvent pas être repris de façon systématique (copie en masse, extraction automatisée) sans notre accord.</li><li>Nous pouvons faire évoluer le site et cette page ; la date de la dernière mise à jour figure en haut.</li><li>Le droit suisse s'applique.</li></ul></div>
+      </section>
+    </article>
   </main>
 
   <footer>
     <span data-i18n="footer">AllezHopp · Fait en Suisse · 2026</span>
     <span data-i18n="footer2">Les inscriptions se font toujours sur le site de l'organisateur.</span>
-    <span class="foot-links"><a href="/a-propos/" data-i18n="abLink">À propos</a> · <a href="/confidentialite/" data-i18n="pvLink">Confidentialité</a></span>
+    <span class="foot-links"><a href="/a-propos/" data-i18n="abLink">À propos</a> · <a href="/proposer/" data-i18n="sgLink">Un événement manque ? Proposez-le</a></span>
   </footer>
 </div>
 
 <script src="/assets/i18n.js?v=6"></script>
+<script src="/assets/i18n-legal.js?v=6"></script>
 <script src="/assets/common.js?v=6"></script>
 <script>
-/* Suggestion page: "Un événement manque ?" form, calls suggest_event() in Supabase. Shared code is in /assets/. */
-function onLangChange(t) { $("#sg-msg").hidden = true; }
-
-$("#suggest-form").addEventListener("submit", async ev => {
-  ev.preventDefault();
-  const t = T[lang];
-  const msg = $("#sg-msg");
-  const v = id => $(id).value.trim();
-  const name = v("#sg-name"), place = v("#sg-place"), url = v("#sg-url"), contactEmail = v("#sg-contact-email");
-  if (name.length < 2) { showMsg(msg, t.sgErrName, true); $("#sg-name").focus(); return; }
-  if (place.length < 2) { showMsg(msg, t.sgErrPlace, true); $("#sg-place").focus(); return; }
-  if (url && !/^https?:\/\/\S+\.\S+$/.test(url)) { showMsg(msg, t.sgErrUrl, true); $("#sg-url").focus(); return; }
-  if (contactEmail && !isEmail(contactEmail)) { showMsg(msg, t.errEmail, true); $("#sg-contact-email").focus(); return; }
-  if ($("#sg-website").value) { showMsg(msg, t.sgOk); return; }    // bot trap
-  const volunteers = $("#sg-volunteers").value, organizer = $("#sg-organizer").checked;
-  const btn = $("#sg-submit"); btn.disabled = true;
-  try {
-    await callRpc("suggest_event", {
-      p_locale: lang, p_event_name: name, p_place: place, p_dates: v("#sg-dates") || null, p_event_url: url || null,
-      p_volunteers: volunteers, p_is_organizer: organizer,
-      p_contact_name: v("#sg-contact-name") || null, p_contact_email: contactEmail || null, p_message: v("#sg-message") || null
-    });
-    showMsg(msg, t.sgOk);
-    track("Suggest event", { language: lang, volunteers, organizer: String(organizer) });
-    ev.target.reset();
-  } catch (e) {
-    const m = { invalid_name: t.sgErrName, invalid_place: t.sgErrPlace, invalid_url: t.sgErrUrl, invalid_email: t.errEmail, rate_limited: t.errRate };
-    showMsg(msg, m[e.message] || t.errSend, true);
-  } finally { btn.disabled = false; }
-});
-
+/* Privacy and terms page: text in /assets/i18n-legal.js. */
 initLang();
 </script>
 </body>

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=6">
+<link rel="stylesheet" href="/assets/site.css?v=7">
 <!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
      Language, Filter, Apply click, Alert signup, Suggest event. Add them as goals in Plausible, and add the properties:
      language, source, previous, browser_language, email_language, region, interests, category, open_only, canton, volunteers, organizer. -->
@@ -360,7 +360,7 @@ function renderCards() {
     const place = [o.municipality, o.canton].filter(Boolean).map(esc).join(" · ");
     const icon = CAT_ICON[o.category] || "i-community";
     const img = safeUrl(o.image_url);
-    const fit = o.image_fit === "contain" ? "contain" : "cover";
+    const fit = o.image_fit === "contain" ? "contain" : o.image_fit === "contain_dark" ? "contain dark" : "cover";
     const media = `<div class="card-media ${esc(o.category)} ${fit}${img ? " has-img" : ""}">
         <svg class="tile" aria-hidden="true"><use href="#${icon}"/></svg>
         ${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">

@@ -191,6 +191,7 @@ section { padding-block: 64px; }
 .card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
 .card-media.contain img { object-fit: contain; padding: 22px 28px; }
 .card-media.contain.has-img { background: #F3F5F7; }   /* logos and posters stay legible in dark mode too */
+.card-media.contain.dark.has-img { background: #14202B; }   /* light-coloured logos (yellow, white) */
 .card-media .tile { width: 64px; height: 64px; opacity: .55; }
 .card-media.has-img .tile { display: none; }
 .card-media .credit { position: absolute; right: 8px; bottom: 8px; max-width: calc(100% - 16px); font-size: 11.5px; line-height: 1.3; padding: 3px 8px; border-radius: 999px;

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=7">
+<link rel="stylesheet" href="/assets/site.css?v=8">
 <!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
      Language, Filter, Apply click, Alert signup, Suggest event. Add them as goals in Plausible, and add the properties:
      language, source, previous, browser_language, email_language, region, interests, category, open_only, canton, volunteers, organizer. -->
@@ -143,6 +143,24 @@
         <p data-i18n="oppIntro">Chaque fiche indique le lieu, les dates des missions et l'état des inscriptions, vérifié auprès de l'organisateur.</p>
       </div>
 
+      <form class="search" id="search" role="search" aria-label="Recherche" novalidate>
+        <div class="sf sf-place">
+          <label for="q-place" data-i18n="srPlace">Lieu</label>
+          <div class="sf-box"><svg aria-hidden="true"><use href="#i-pin"/></svg>
+            <input id="q-place" type="text" inputmode="search" autocomplete="off" spellcheck="false" list="place-list" placeholder="Ville ou NPA" data-i18n-ph="srPlacePh">
+            <datalist id="place-list"></datalist>
+          </div>
+        </div>
+        <div class="sf sf-km">
+          <label for="q-km" data-i18n="srKm">Rayon</label>
+          <select id="q-km"><option value="10">10 km</option><option value="25" selected>25 km</option><option value="50">50 km</option><option value="100">100 km</option></select>
+        </div>
+        <div class="sf sf-date"><label for="q-from" data-i18n="srFrom">Du</label><input id="q-from" type="date"></div>
+        <div class="sf sf-date"><label for="q-to" data-i18n="srTo">Au</label><input id="q-to" type="date"></div>
+        <button type="button" class="sf-reset" id="q-reset" data-i18n="srReset">Réinitialiser</button>
+      </form>
+      <p class="search-note" id="search-note" role="status" hidden></p>
+
       <div class="filters">
         <div class="chips" role="group" aria-label="Catégorie" id="chips">
           <button type="button" class="chip" id="chip-all" data-cat="all" aria-pressed="true" data-i18n="filterAll">Tout</button>
@@ -163,6 +181,7 @@
       <div class="cards" id="cards" aria-busy="true"></div>
       <p class="empty" id="load-msg" role="status">Chargement des missions…</p>
       <p class="empty" id="empty" hidden data-i18n="empty">Aucune mission pour ces filtres.</p>
+      <p class="later" id="later" hidden><span id="later-text"></span> <button type="button" class="later-btn" id="later-btn" data-i18n="laterBtn">Les afficher</button></p>
       <p class="sample-note"><span data-i18n="sampleNote">Informations vérifiées auprès des organisateurs. Les inscriptions se font toujours sur leur site.</span>
         <a class="suggest-link" href="/proposer/" data-i18n="sgLink">Un événement manque ? Proposez-le</a></p>
     </section>
@@ -259,7 +278,7 @@
 
 
 
-<script src="/assets/i18n.js?v=6"></script>
+<script src="/assets/i18n.js?v=7"></script>
 <script src="/assets/common.js?v=6"></script>
 <script>
 /* Home page: the live list of opportunities and the alert sign-up. Shared code is in /assets/. */
@@ -268,7 +287,7 @@
    The publishable key is meant to be public: Row Level Security
    only lets it read published, current opportunities.
 ---------------------------------------------------------------- */
-const BASE_FIELDS = "campaign_id,canonical_name,category,municipality,canton,event_url,event_start,event_end,event_date_precision,duty_start,duty_end,display_status,application_url,registration_via,announced_opening,last_verified_at,sort_date";
+const BASE_FIELDS = "campaign_id,canonical_name,category,municipality,canton,event_url,event_start,event_end,event_date_precision,duty_start,duty_end,display_status,application_url,registration_via,announced_opening,last_verified_at,sort_date,latitude,longitude,location_precision";
 const IMAGE_FIELDS = ",image_url,image_credit,image_fit";   // needs migration 20261004000008_event_images.sql
 let OPPS = null;      // null = loading, [] = none, array = loaded
 let loadFailed = false;
@@ -294,6 +313,103 @@ const CAT_ICON = { sport: "i-sport", music: "i-music", culture: "i-culture", com
 
 let cat = "all";
 let canton = "all";
+
+/* ---------------------------------------------------------------
+   SEARCH by place and dates (plan D3). Places come from a static
+   file of Swiss postcodes (GeoNames, CC BY 4.0) loaded on first use:
+   what visitors type never leaves their browser.
+---------------------------------------------------------------- */
+const isoDay = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+const TODAY = isoDay(new Date());
+const DEFAULT_TO = (() => { const d = new Date(); d.setMonth(d.getMonth() + 3); return isoDay(d); })();
+const S = { from: TODAY, to: DEFAULT_TO, km: 25, placeText: "", place: null, placeMissing: false };
+let PLACES = null, placesLoading = null;
+const norm = x => (x || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[-'’.,()]/g, " ").replace(/\s+/g, " ").trim();
+function loadPlaces() {
+  if (!placesLoading) placesLoading = fetch("/assets/places-ch.json?v=1").then(r => r.json())
+    .then(rows => { PLACES = rows.map(([pc, name, ct, lat, lon]) => ({ pc, name, ct, lat, lon, n: norm(name).replace(/ \d+$/, "") })); })
+    .catch(() => { PLACES = []; });
+  return placesLoading;
+}
+const centre = list => ({ lat: list.reduce((a, p) => a + p.lat, 0) / list.length, lon: list.reduce((a, p) => a + p.lon, 0) / list.length, canton: list[0].ct });
+function resolvePlace(text) {
+  const q = (text || "").trim();
+  if (!q || !PLACES) return null;
+  let m = q.match(/^(\d{4})(?:\s+(.*))?$/);
+  if (m) {
+    const hits = PLACES.filter(p => p.pc === m[1]);
+    const named = m[2] ? hits.filter(p => p.n === norm(m[2]).replace(/ \d+$/, "")) : [];
+    return (named.length || hits.length) ? centre(named.length ? named : hits) : null;
+  }
+  m = q.match(/^(.*?),\s*([A-Za-z]{2})$/);                    // "Lausanne, VD" from the suggestions
+  const name = norm(m ? m[1] : q), ct = m ? m[2].toUpperCase() : null;
+  let hits = PLACES.filter(p => p.n === name && (!ct || p.ct === ct));
+  if (!hits.length) hits = PLACES.filter(p => p.n.startsWith(name) && (!ct || p.ct === ct));
+  if (!hits.length) return null;
+  const first = hits[0];                                        // same name in two cantons: keep the first canton's places
+  return centre(hits.filter(p => p.n === first.n && p.ct === first.ct));
+}
+function suggestPlaces(text) {
+  const q = (text || "").trim(), dl = $("#place-list");
+  if (!PLACES || q.length < 2) { dl.innerHTML = ""; return; }
+  const out = [], seen = new Set();
+  if (/^\d+$/.test(q)) {
+    for (const p of PLACES) if (p.pc.startsWith(q)) { const v = `${p.pc} ${p.name}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
+  } else {
+    const n = norm(q);
+    for (const p of PLACES) if (p.n.startsWith(n)) { const v = `${p.name.replace(/ \d+$/, "")}, ${p.ct}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
+  }
+  dl.innerHTML = out.map(v => `<option value="${esc(v)}">`).join("");
+}
+function distKm(a, b) {
+  const R = 6371, rad = Math.PI / 180, dLat = (b.lat - a.lat) * rad, dLon = (b.lon - a.lon) * rad;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+const cantonWide = o => o.latitude == null && o.location_precision !== "venue" && o.location_precision !== "municipality_centroid";
+/* Dates used for the search: volunteer dates when known, otherwise event dates (estimated ones included). */
+function span(o) {
+  if (o.duty_start) return [o.duty_start, o.duty_end || o.duty_start];
+  if (o.event_start) return [o.event_start, o.event_end || o.event_start];
+  return null;
+}
+const inWindow = o => { const r = span(o); if (!r) return true; return r[1] >= (S.from || TODAY) && (!S.to || r[0] <= S.to); };
+const isLater = o => { const r = span(o); return !!(S.to && r && r[0] > S.to); };
+function placeKm(o) {
+  if (!S.place || o.latitude == null) return null;
+  return distKm(S.place, { lat: +o.latitude, lon: +o.longitude });
+}
+const inPlace = o => !S.place || (cantonWide(o) ? o.canton === S.place.canton : (placeKm(o) ?? Infinity) <= S.km);
+
+function syncUrl() {
+  const u = new URL(location.href), q = u.searchParams;
+  const set = (k, v, dflt) => (v && v !== dflt) ? q.set(k, v) : q.delete(k);
+  set("lieu", S.placeText); set("km", S.place ? String(S.km) : "", "25");
+  set("du", S.from, TODAY); set("au", S.to === "" ? "tout" : S.to, DEFAULT_TO);
+  set("cat", cat, "all"); set("canton", canton, "all"); set("ouvert", $("#only-open").checked ? "1" : "");
+  history.replaceState(null, "", u.pathname + (q.toString() ? "?" + q : "") + u.hash);
+}
+function readUrl() {
+  const q = new URLSearchParams(location.search);
+  const d = v => /^\d{4}-\d{2}-\d{2}$/.test(v || "") ? v : null;
+  S.from = d(q.get("du")) || TODAY;
+  S.to = q.get("au") === "tout" ? "" : (d(q.get("au")) || DEFAULT_TO);
+  S.km = [10, 25, 50, 100].includes(+q.get("km")) ? +q.get("km") : 25;
+  S.placeText = (q.get("lieu") || "").slice(0, 60);
+  if (["sport", "music", "culture", "community"].includes(q.get("cat"))) cat = q.get("cat");
+  if (/^[A-Z]{2}$/.test(q.get("canton") || "")) canton = q.get("canton");
+  $("#only-open").checked = q.get("ouvert") === "1";
+  $("#q-from").value = S.from; $("#q-to").value = S.to; $("#q-km").value = String(S.km); $("#q-place").value = S.placeText;
+  document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.cat === cat)));
+}
+async function applyPlace() {
+  S.placeText = $("#q-place").value.trim();
+  if (!S.placeText) { S.place = null; S.placeMissing = false; renderCards(); syncUrl(); return; }
+  if (!PLACES) { const note = $("#search-note"); note.textContent = T[lang].srLoading; note.hidden = false; await loadPlaces(); }
+  S.place = resolvePlace(S.placeText);
+  S.placeMissing = !S.place;
+  renderCards(); syncUrl();
+}
 const safeUrl = u => (typeof u === "string" && /^https:\/\//.test(u)) ? u : null;
 
 function fmtRange(start, end) {
@@ -329,8 +445,13 @@ function renderCards() {
   const onlyOpen = $("#only-open").checked;
   const catLabel = { sport: t.catSport, music: t.catMusic, culture: t.catCulture, community: t.catCommunity };
   fillCantons();
-  const list = OPPS.filter(o => (cat === "all" || o.category === cat) && (canton === "all" || o.canton === canton) &&
-    (!onlyOpen || o.display_status === "open" || o.display_status === "partially_full"));
+  const isOpen = o => o.display_status === "open" || o.display_status === "partially_full";
+  const base = OPPS.filter(o => (cat === "all" || o.category === cat) && (canton === "all" || o.canton === canton) && inPlace(o));
+  const list = base.filter(o => inWindow(o) && (!onlyOpen || isOpen(o)));
+  const laterOpen = base.filter(o => isOpen(o) && isLater(o)).length;
+  const note = $("#search-note");
+  note.hidden = !S.placeMissing; if (S.placeMissing) note.textContent = t.srNoPlace(S.placeText);
+  $("#later").hidden = !laterOpen || loadFailed; $("#later-text").textContent = laterOpen ? t.later(laterOpen) : "";
   $("#cards").innerHTML = list.map(o => {
     const st = t.st[o.display_status] ? o.display_status : "unknown";
     const approx = (o.event_date_precision === "approximate") ? t.approx + " " : "";
@@ -338,7 +459,7 @@ function renderCards() {
     if (o.duty_start) {
       dateLine = `<li><svg><use href="#i-cal"/></svg><span>${t.duty} ${esc(fmtRange(o.duty_start, o.duty_end))}</span></li>`;
     } else if (o.event_start) {
-      dateLine = `<li><svg><use href="#i-cal"/></svg><span>${t.event} ${approx}${esc(fmtRange(o.event_start, o.event_end))}<br><span class="sub">${t.dutyUnknown}</span></span></li>`;
+      dateLine = `<li><svg><use href="#i-cal"/></svg><span>${t.event} ${approx}${esc(fmtRange(o.event_start, o.event_end))}<br><span class="sub">${approx ? t.estimated : t.dutyUnknown}</span></span></li>`;
     } else {
       dateLine = `<li><svg><use href="#i-cal"/></svg><span>${t.datesTbc}</span></li>`;
     }
@@ -357,7 +478,9 @@ function renderCards() {
     } else {
       action = `<a class="act" href="#alertes">${t.notify}</a>`;
     }
-    const place = [o.municipality, o.canton].filter(Boolean).map(esc).join(" · ");
+    const km = placeKm(o);
+    const place = (cantonWide(o) ? [t.wholeCanton, o.canton] : [o.municipality, o.canton]).filter(Boolean).map(esc).join(" · ")
+      + (km != null ? ` <span class="dist">· ${esc(t.kmAway(km < 1 ? "<1" : Math.round(km)))}</span>` : "");
     const icon = CAT_ICON[o.category] || "i-community";
     const img = safeUrl(o.image_url);
     const fit = o.image_fit === "contain" ? "contain" : o.image_fit === "contain_dark" ? "contain dark" : "cover";
@@ -407,20 +530,45 @@ document.addEventListener("click", e => {
 function onLangChange(t) {
   const ml = document.getElementById("ml-" + lang); if (ml) ml.checked = true;
   $("#form-msg").hidden = true;
+  $("#search").setAttribute("aria-label", t.srLabel);
   renderCards();
 }
 
 document.querySelectorAll("#chips .chip").forEach(b => b.addEventListener("click", () => {
   cat = b.dataset.cat;
   document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", String(c === b)));
-  renderCards();
+  renderCards(); syncUrl();
   track("Filter", { language: lang, category: cat });
 }));
 $("#canton-filter").addEventListener("change", e => {
-  canton = e.target.value; renderCards();
+  canton = e.target.value; renderCards(); syncUrl();
   track("Filter", { language: lang, canton });
 });
-$("#only-open").addEventListener("change", () => { renderCards(); track("Filter", { language: lang, open_only: String($("#only-open").checked) }); });
+$("#only-open").addEventListener("change", () => { renderCards(); syncUrl(); track("Filter", { language: lang, open_only: String($("#only-open").checked) }); });
+$("#search").addEventListener("submit", e => { e.preventDefault(); applyPlace(); });
+$("#q-place").addEventListener("focus", () => { loadPlaces(); }, { once: true });
+let placeTimer = null;
+$("#q-place").addEventListener("input", e => {
+  if (PLACES) suggestPlaces(e.target.value); else loadPlaces().then(() => suggestPlaces(e.target.value));
+  clearTimeout(placeTimer); placeTimer = setTimeout(applyPlace, 450);
+});
+$("#q-place").addEventListener("change", () => { clearTimeout(placeTimer); applyPlace(); track("Search", { language: lang, place: S.place ? "set" : "none", km: String(S.km) }); });
+$("#q-km").addEventListener("change", e => { S.km = +e.target.value; renderCards(); syncUrl(); track("Search", { language: lang, km: String(S.km) }); });
+$("#q-from").addEventListener("change", e => {
+  S.from = e.target.value || TODAY; if (S.from < TODAY) S.from = TODAY;
+  if (S.to && S.to < S.from) { S.to = S.from; $("#q-to").value = S.to; }
+  e.target.value = S.from; renderCards(); syncUrl(); track("Search", { language: lang, dates: "changed" });
+});
+$("#q-to").addEventListener("change", e => {
+  S.to = e.target.value; if (S.to && S.to < S.from) { S.to = S.from; e.target.value = S.to; }
+  renderCards(); syncUrl(); track("Search", { language: lang, dates: "changed" });
+});
+$("#later-btn").addEventListener("click", () => { S.to = ""; $("#q-to").value = ""; renderCards(); syncUrl(); track("Search", { language: lang, dates: "all later" }); });
+$("#q-reset").addEventListener("click", () => {
+  Object.assign(S, { from: TODAY, to: DEFAULT_TO, km: 25, placeText: "", place: null, placeMissing: false });
+  $("#q-place").value = ""; $("#q-km").value = "25"; $("#q-from").value = TODAY; $("#q-to").value = DEFAULT_TO;
+  renderCards(); syncUrl();
+});
 
 $("#alert-form").addEventListener("submit", async ev => {
   ev.preventDefault();
@@ -446,6 +594,9 @@ $("#alert-form").addEventListener("submit", async ev => {
 (function init() {
   const { language, source } = initLang();
   track("Language", { language, source, browser_language: BROWSER_LANG });
+  $("#q-from").min = TODAY; $("#q-to").min = TODAY;
+  readUrl();
+  if (S.placeText) loadPlaces().then(() => { S.place = resolvePlace(S.placeText); S.placeMissing = !S.place; renderCards(); });
   loadOpportunities();
 })();
 </script>

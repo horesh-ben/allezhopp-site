@@ -287,6 +287,7 @@
 
 <script src="/assets/i18n.js?v=9"></script>
 <script src="/assets/common.js?v=6"></script>
+<script src="/assets/place-names.js?v=1"></script>
 <script>
 /* Home page: the live list of opportunities and the alert sign-up. Shared code is in /assets/. */
 /* ---------------------------------------------------------------
@@ -333,9 +334,12 @@ const S = { from: TODAY, to: DEFAULT_TO, km: 25, placeText: "", place: null, pla
 let PLACES = null, placesLoading = null;
 const norm = x => (x || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[-'’.,()]/g, " ").replace(/\s+/g, " ").trim();
 function loadPlaces() {
-  if (!placesLoading) placesLoading = fetch("/assets/places-ch.json?v=2").then(r => r.json())
+  if (!placesLoading) placesLoading = fetch("/assets/places-ch.json?v=3").then(r => r.json())
     .then(rows => {
-      PLACES = rows.map(([pc, name, ct, lat, lon]) => ({ pc, name, ct, lat, lon, n: norm(name).replace(/ \d+$/, "") }));
+      PLACES = rows.map(([pc, name, ct, lat, lon]) => {
+        const base = name.replace(/ \d+$/, ""), tr = PLACE_NAMES[base];
+        return { pc, name: base, ct, lat, lon, n: norm(base), alt: tr ? [...new Set(Object.values(tr).map(norm))] : [] };
+      });
       const size = {}; PLACES.forEach(p => { size[p.n + "|" + p.ct] = (size[p.n + "|" + p.ct] || 0) + 1; });
       PLACES.forEach(p => { p.size = size[p.n + "|" + p.ct]; });
     })
@@ -345,6 +349,10 @@ function loadPlaces() {
 /* Partial names: prefer the cantons we cover, then bigger towns (more postcodes), so "Lau" gives Lausanne. */
 const CT_RANK = { GE: 0, VD: 0, VS: 0, FR: 1, NE: 1, JU: 1, BE: 2 };
 const better = (a, b) => ((CT_RANK[a.ct] ?? 3) - (CT_RANK[b.ct] ?? 3)) || (b.size - a.size) || a.n.localeCompare(b.n);
+/* Town names in the visitor's language (Genève / Genf / Ginevra / Geneva); search accepts any of them. */
+const locName = name => (PLACE_NAMES[name] && PLACE_NAMES[name][lang]) || name;
+const named = (p, x) => p.n === x || p.alt.includes(x);
+const starts = (p, x) => p.n.startsWith(x) || p.alt.some(a => a.startsWith(x));
 const centre = list => ({ lat: list.reduce((a, p) => a + p.lat, 0) / list.length, lon: list.reduce((a, p) => a + p.lon, 0) / list.length, canton: list[0].ct });
 function resolvePlace(text) {
   const q = (text || "").trim();
@@ -352,13 +360,13 @@ function resolvePlace(text) {
   let m = q.match(/^(\d{4})(?:\s+(.*))?$/);
   if (m) {
     const hits = PLACES.filter(p => p.pc === m[1]);
-    const named = m[2] ? hits.filter(p => p.n === norm(m[2]).replace(/ \d+$/, "")) : [];
-    return (named.length || hits.length) ? centre(named.length ? named : hits) : null;
+    const withName = m[2] ? hits.filter(p => named(p, norm(m[2]).replace(/ \d+$/, ""))) : [];
+    return (withName.length || hits.length) ? centre(withName.length ? withName : hits) : null;
   }
   m = q.match(/^(.*?),\s*([A-Za-z]{2})$/);                    // "Lausanne, VD" from the suggestions
   const name = norm(m ? m[1] : q), ct = m ? m[2].toUpperCase() : null;
-  let hits = PLACES.filter(p => p.n === name && (!ct || p.ct === ct));
-  if (!hits.length) hits = PLACES.filter(p => p.n.startsWith(name) && (!ct || p.ct === ct));
+  let hits = PLACES.filter(p => named(p, name) && (!ct || p.ct === ct));
+  if (!hits.length) hits = PLACES.filter(p => starts(p, name) && (!ct || p.ct === ct));
   if (!hits.length) return null;
   const first = hits.slice().sort(better)[0];                                        // same name in two cantons: keep the first canton's places
   return centre(hits.filter(p => p.n === first.n && p.ct === first.ct));
@@ -368,10 +376,10 @@ function suggestPlaces(text) {
   if (!PLACES || q.length < 2) { dl.innerHTML = ""; return; }
   const out = [], seen = new Set();
   if (/^\d+$/.test(q)) {
-    for (const p of PLACES) if (p.pc.startsWith(q)) { const v = `${p.pc} ${p.name}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
+    for (const p of PLACES) if (p.pc.startsWith(q)) { const v = `${p.pc} ${locName(p.name)}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
   } else {
     const n = norm(q);
-    for (const p of PLACES.filter(p => p.n.startsWith(n)).sort(better)) { const v = `${p.name.replace(/ \d+$/, "")}, ${p.ct}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
+    for (const p of PLACES.filter(p => starts(p, n)).sort(better)) { const v = `${locName(p.name)}, ${p.ct}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
   }
   dl.innerHTML = out.map(v => `<option value="${esc(v)}">`).join("");
 }
@@ -519,7 +527,7 @@ function renderCards() {
       action = `<a class="act" href="#alertes">${t.notify}</a>`;
     }
     const km = placeKm(o);
-    const place = (cantonWide(o) ? [t.wholeCanton, o.canton] : [o.municipality, o.canton]).filter(Boolean).map(esc).join(" · ")
+    const place = (cantonWide(o) ? [t.wholeCanton, o.canton] : [locName(o.municipality), o.canton]).filter(Boolean).map(esc).join(" · ")
       + (km != null ? ` <span class="dist">· ${esc(t.kmAway(km < 1 ? "<1" : Math.round(km)))}</span>` : "");
     const icon = CAT_ICON[o.category] || "i-community";
     const img = safeUrl(o.image_url);

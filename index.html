@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=8">
+<link rel="stylesheet" href="/assets/site.css?v=9">
 <!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
      Language, Filter, Apply click, Alert signup, Suggest event. Add them as goals in Plausible, and add the properties:
      language, source, previous, browser_language, email_language, region, interests, category, open_only, canton, volunteers, organizer. -->
@@ -155,8 +155,14 @@
           <label for="q-km" data-i18n="srKm">Rayon</label>
           <select id="q-km"><option value="10">10 km</option><option value="25" selected>25 km</option><option value="50">50 km</option><option value="100">100 km</option></select>
         </div>
-        <div class="sf sf-date"><label for="q-from" data-i18n="srFrom">Du</label><input id="q-from" type="date"></div>
-        <div class="sf sf-date"><label for="q-to" data-i18n="srTo">Au</label><input id="q-to" type="date"></div>
+        <div class="sf sf-date"><label for="q-from-t" data-i18n="srFrom">Du</label>
+          <div class="sf-box sf-datebox"><input id="q-from-t" class="dtext" type="text" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="jj/mm/aaaa" data-i18n-ph="srDatePh" data-native="q-from">
+            <button type="button" class="cal" data-for="q-from" data-i18n-label="srPick"><svg aria-hidden="true"><use href="#i-cal"/></svg></button>
+            <input id="q-from" class="native" type="date" tabindex="-1" aria-hidden="true"></div></div>
+        <div class="sf sf-date"><label for="q-to-t" data-i18n="srTo">Au</label>
+          <div class="sf-box sf-datebox"><input id="q-to-t" class="dtext" type="text" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="jj/mm/aaaa" data-i18n-ph="srDatePh" data-native="q-to">
+            <button type="button" class="cal" data-for="q-to" data-i18n-label="srPick"><svg aria-hidden="true"><use href="#i-cal"/></svg></button>
+            <input id="q-to" class="native" type="date" tabindex="-1" aria-hidden="true"></div></div>
         <button type="button" class="sf-reset" id="q-reset" data-i18n="srReset">Réinitialiser</button>
       </form>
       <p class="search-note" id="search-note" role="status" hidden></p>
@@ -278,7 +284,7 @@
 
 
 
-<script src="/assets/i18n.js?v=7"></script>
+<script src="/assets/i18n.js?v=8"></script>
 <script src="/assets/common.js?v=6"></script>
 <script>
 /* Home page: the live list of opportunities and the alert sign-up. Shared code is in /assets/. */
@@ -388,6 +394,20 @@ function syncUrl() {
   set("du", S.from, TODAY); set("au", S.to === "" ? "tout" : S.to, DEFAULT_TO);
   set("cat", cat, "all"); set("canton", canton, "all"); set("ouvert", $("#only-open").checked ? "1" : "");
   history.replaceState(null, "", u.pathname + (q.toString() ? "?" + q : "") + u.hash);
+}
+/* Dates are typed and shown as day/month/year (dd/mm/yyyy) whatever the browser's language;
+   the calendar button opens the browser's own date picker on a hidden date field. */
+const toDmy = iso => iso ? iso.slice(8, 10) + "/" + iso.slice(5, 7) + "/" + iso.slice(0, 4) : "";
+function fromDmy(text) {
+  const m = (text || "").trim().match(/^(\d{1,2})[\/.\-](\d{1,2})[\/.\-](\d{2}|\d{4})$/);
+  if (!m) return null;
+  const y = m[3].length === 2 ? 2000 + +m[3] : +m[3], mo = +m[2], d = +m[1];
+  const dt = new Date(Date.UTC(y, mo - 1, d));
+  if (dt.getUTCFullYear() !== y || dt.getUTCMonth() !== mo - 1 || dt.getUTCDate() !== d) return null;
+  return dt.toISOString().slice(0, 10);
+}
+function showDates() {
+  document.querySelectorAll(".dtext").forEach(tx => { if (document.activeElement !== tx) tx.value = toDmy($("#" + tx.dataset.native).value); });
 }
 function readUrl() {
   const q = new URLSearchParams(location.search);
@@ -511,6 +531,7 @@ function renderCards() {
   }).join("");
   $("#empty").hidden = list.length > 0 || loadFailed;
   $("#count").textContent = loadFailed ? "" : t.count(list.length);
+  showDates();
 }
 
 /* A picture that fails to load (moved, blocked by the host) gives way to the category tile. */
@@ -531,6 +552,7 @@ function onLangChange(t) {
   const ml = document.getElementById("ml-" + lang); if (ml) ml.checked = true;
   $("#form-msg").hidden = true;
   $("#search").setAttribute("aria-label", t.srLabel);
+  document.querySelectorAll("[data-i18n-label]").forEach(b => { b.setAttribute("aria-label", t[b.dataset.i18nLabel]); b.title = t[b.dataset.i18nLabel]; });
   renderCards();
 }
 
@@ -563,6 +585,22 @@ $("#q-to").addEventListener("change", e => {
   S.to = e.target.value; if (S.to && S.to < S.from) { S.to = S.from; e.target.value = S.to; }
   renderCards(); syncUrl(); track("Search", { language: lang, dates: "changed" });
 });
+document.querySelectorAll(".dtext").forEach(tx => {
+  const native = $("#" + tx.dataset.native);
+  const commit = () => {
+    const v = tx.value.trim();
+    if (!v && native.id === "q-to") native.value = "";
+    else { const iso = fromDmy(v); if (!iso) { tx.value = toDmy(native.value); return; } native.value = iso; }
+    native.dispatchEvent(new Event("change"));
+  };
+  tx.addEventListener("change", commit);
+  tx.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); commit(); } });
+  tx.addEventListener("blur", () => { tx.value = toDmy(native.value); });
+});
+document.querySelectorAll(".cal").forEach(b => b.addEventListener("click", () => {
+  const native = $("#" + b.dataset.for);
+  try { native.showPicker(); } catch (e) { native.focus(); native.click(); }
+}));
 $("#later-btn").addEventListener("click", () => { S.to = ""; $("#q-to").value = ""; renderCards(); syncUrl(); track("Search", { language: lang, dates: "all later" }); });
 $("#q-reset").addEventListener("click", () => {
   Object.assign(S, { from: TODAY, to: DEFAULT_TO, km: 25, placeText: "", place: null, placeMissing: false });

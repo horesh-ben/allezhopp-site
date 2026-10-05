@@ -179,6 +179,10 @@ section { padding-block: 64px; }
 .sf .sf-box input::-webkit-calendar-picker-indicator { display: none !important; }   /* hide the datalist arrow: suggestions appear while typing */
 .sf-reset { font: 600 14.5px/1 var(--f-body); color: var(--muted); background: transparent; border: 0; height: 46px; padding: 0 6px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .sf-reset:hover { color: var(--ink); }
+.jump { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 40;
+  font: 700 15.5px/1 var(--f-body); color: var(--on-c2, #fff); background: var(--c2); border: 0; border-radius: 999px; padding: 15px 22px;
+  box-shadow: 0 14px 30px -12px rgba(15, 26, 38, .55); cursor: pointer; white-space: nowrap; }
+.jump[hidden] { display: none; }
 .search-note { margin: -4px 0 14px; font-size: 14.5px; color: var(--st-partial); }
 .later { margin: 18px 0 0; font-size: 15px; color: var(--muted); }
 .later-btn { font: 700 15px/1 var(--f-body); color: var(--c2); background: none; border: 0; padding: 4px 2px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }

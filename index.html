@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=9">
+<link rel="stylesheet" href="/assets/site.css?v=10">
 <!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
      Language, Filter, Apply click, Alert signup, Suggest event. Add them as goals in Plausible, and add the properties:
      language, source, previous, browser_language, email_language, region, interests, category, open_only, canton, volunteers, organizer. -->
@@ -166,6 +166,7 @@
         <button type="button" class="sf-reset" id="q-reset" data-i18n="srReset">Réinitialiser</button>
       </form>
       <p class="search-note" id="search-note" role="status" hidden></p>
+      <button type="button" class="jump" id="jump" hidden></button>
 
       <div class="filters">
         <div class="chips" role="group" aria-label="Catégorie" id="chips">
@@ -284,7 +285,7 @@
 
 
 
-<script src="/assets/i18n.js?v=8"></script>
+<script src="/assets/i18n.js?v=9"></script>
 <script src="/assets/common.js?v=6"></script>
 <script>
 /* Home page: the live list of opportunities and the alert sign-up. Shared code is in /assets/. */
@@ -332,11 +333,18 @@ const S = { from: TODAY, to: DEFAULT_TO, km: 25, placeText: "", place: null, pla
 let PLACES = null, placesLoading = null;
 const norm = x => (x || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[-'’.,()]/g, " ").replace(/\s+/g, " ").trim();
 function loadPlaces() {
-  if (!placesLoading) placesLoading = fetch("/assets/places-ch.json?v=1").then(r => r.json())
-    .then(rows => { PLACES = rows.map(([pc, name, ct, lat, lon]) => ({ pc, name, ct, lat, lon, n: norm(name).replace(/ \d+$/, "") })); })
+  if (!placesLoading) placesLoading = fetch("/assets/places-ch.json?v=2").then(r => r.json())
+    .then(rows => {
+      PLACES = rows.map(([pc, name, ct, lat, lon]) => ({ pc, name, ct, lat, lon, n: norm(name).replace(/ \d+$/, "") }));
+      const size = {}; PLACES.forEach(p => { size[p.n + "|" + p.ct] = (size[p.n + "|" + p.ct] || 0) + 1; });
+      PLACES.forEach(p => { p.size = size[p.n + "|" + p.ct]; });
+    })
     .catch(() => { PLACES = []; });
   return placesLoading;
 }
+/* Partial names: prefer the cantons we cover, then bigger towns (more postcodes), so "Lau" gives Lausanne. */
+const CT_RANK = { GE: 0, VD: 0, VS: 0, FR: 1, NE: 1, JU: 1, BE: 2 };
+const better = (a, b) => ((CT_RANK[a.ct] ?? 3) - (CT_RANK[b.ct] ?? 3)) || (b.size - a.size) || a.n.localeCompare(b.n);
 const centre = list => ({ lat: list.reduce((a, p) => a + p.lat, 0) / list.length, lon: list.reduce((a, p) => a + p.lon, 0) / list.length, canton: list[0].ct });
 function resolvePlace(text) {
   const q = (text || "").trim();
@@ -352,7 +360,7 @@ function resolvePlace(text) {
   let hits = PLACES.filter(p => p.n === name && (!ct || p.ct === ct));
   if (!hits.length) hits = PLACES.filter(p => p.n.startsWith(name) && (!ct || p.ct === ct));
   if (!hits.length) return null;
-  const first = hits[0];                                        // same name in two cantons: keep the first canton's places
+  const first = hits.slice().sort(better)[0];                                        // same name in two cantons: keep the first canton's places
   return centre(hits.filter(p => p.n === first.n && p.ct === first.ct));
 }
 function suggestPlaces(text) {
@@ -363,7 +371,7 @@ function suggestPlaces(text) {
     for (const p of PLACES) if (p.pc.startsWith(q)) { const v = `${p.pc} ${p.name}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
   } else {
     const n = norm(q);
-    for (const p of PLACES) if (p.n.startsWith(n)) { const v = `${p.name.replace(/ \d+$/, "")}, ${p.ct}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
+    for (const p of PLACES.filter(p => p.n.startsWith(n)).sort(better)) { const v = `${p.name.replace(/ \d+$/, "")}, ${p.ct}`; if (!seen.has(v)) { seen.add(v); out.push(v); } if (out.length >= 8) break; }
   }
   dl.innerHTML = out.map(v => `<option value="${esc(v)}">`).join("");
 }
@@ -421,6 +429,18 @@ function readUrl() {
   $("#only-open").checked = q.get("ouvert") === "1";
   $("#q-from").value = S.from; $("#q-to").value = S.to; $("#q-km").value = String(S.km); $("#q-place").value = S.placeText;
   document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.cat === cat)));
+}
+/* Phones: after a change, a floating "See N opportunities" button leads down to the results,
+   which are often below the search box or under the keyboard. It hides once the results are in view. */
+const SMALL = window.matchMedia("(max-width: 640px)");
+let jumpTimer = null, cardsVisible = false;
+function nudge() {
+  const btn = $("#jump");
+  if (!SMALL.matches || !OPPS) return;
+  const n = document.querySelectorAll("#cards .card").length;
+  btn.textContent = T[lang].seeN(n) + " ↓";
+  btn.hidden = cardsVisible;
+  clearTimeout(jumpTimer); jumpTimer = setTimeout(() => { btn.hidden = true; }, 8000);
 }
 async function applyPlace() {
   S.placeText = $("#q-place").value.trim();
@@ -559,31 +579,38 @@ function onLangChange(t) {
 document.querySelectorAll("#chips .chip").forEach(b => b.addEventListener("click", () => {
   cat = b.dataset.cat;
   document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", String(c === b)));
-  renderCards(); syncUrl();
+  renderCards(); syncUrl(); nudge();
   track("Filter", { language: lang, category: cat });
 }));
 $("#canton-filter").addEventListener("change", e => {
-  canton = e.target.value; renderCards(); syncUrl();
+  canton = e.target.value; renderCards(); syncUrl(); nudge();
   track("Filter", { language: lang, canton });
 });
-$("#only-open").addEventListener("change", () => { renderCards(); syncUrl(); track("Filter", { language: lang, open_only: String($("#only-open").checked) }); });
-$("#search").addEventListener("submit", e => { e.preventDefault(); applyPlace(); });
+$("#only-open").addEventListener("change", () => { renderCards(); syncUrl(); nudge(); track("Filter", { language: lang, open_only: String($("#only-open").checked) }); });
+/* The place is applied once it is complete: a suggestion picked, Enter, leaving the field, or the field emptied.
+   While typing, only the suggestions change, so the list does not jump on half a word. */
+async function commitPlace() {
+  if ($("#q-place").value.trim() === S.placeText && (S.place || S.placeMissing || !S.placeText)) return;
+  await applyPlace(); nudge();
+  track("Search", { language: lang, place: S.place ? "set" : "none", km: String(S.km) });
+}
+$("#search").addEventListener("submit", e => { e.preventDefault(); $("#q-place").blur(); commitPlace(); });
 $("#q-place").addEventListener("focus", () => { loadPlaces(); }, { once: true });
-let placeTimer = null;
 $("#q-place").addEventListener("input", e => {
-  if (PLACES) suggestPlaces(e.target.value); else loadPlaces().then(() => suggestPlaces(e.target.value));
-  clearTimeout(placeTimer); placeTimer = setTimeout(applyPlace, 450);
+  const v = e.target.value;
+  if (PLACES) suggestPlaces(v); else loadPlaces().then(() => suggestPlaces(v));
+  if (!v.trim() || e.inputType === "insertReplacementText" || e.inputType === undefined) commitPlace();   // emptied, or a suggestion picked
 });
-$("#q-place").addEventListener("change", () => { clearTimeout(placeTimer); applyPlace(); track("Search", { language: lang, place: S.place ? "set" : "none", km: String(S.km) }); });
-$("#q-km").addEventListener("change", e => { S.km = +e.target.value; renderCards(); syncUrl(); track("Search", { language: lang, km: String(S.km) }); });
+$("#q-place").addEventListener("change", commitPlace);
+$("#q-km").addEventListener("change", e => { S.km = +e.target.value; renderCards(); syncUrl(); nudge(); track("Search", { language: lang, km: String(S.km) }); });
 $("#q-from").addEventListener("change", e => {
   S.from = e.target.value || TODAY; if (S.from < TODAY) S.from = TODAY;
   if (S.to && S.to < S.from) { S.to = S.from; $("#q-to").value = S.to; }
-  e.target.value = S.from; renderCards(); syncUrl(); track("Search", { language: lang, dates: "changed" });
+  e.target.value = S.from; renderCards(); syncUrl(); nudge(); track("Search", { language: lang, dates: "changed" });
 });
 $("#q-to").addEventListener("change", e => {
   S.to = e.target.value; if (S.to && S.to < S.from) { S.to = S.from; e.target.value = S.to; }
-  renderCards(); syncUrl(); track("Search", { language: lang, dates: "changed" });
+  renderCards(); syncUrl(); nudge(); track("Search", { language: lang, dates: "changed" });
 });
 document.querySelectorAll(".dtext").forEach(tx => {
   const native = $("#" + tx.dataset.native);
@@ -601,6 +628,15 @@ document.querySelectorAll(".cal").forEach(b => b.addEventListener("click", () =>
   const native = $("#" + b.dataset.for);
   try { native.showPicker(); } catch (e) { native.focus(); native.click(); }
 }));
+$("#jump").addEventListener("click", () => {
+  $("#jump").hidden = true;
+  const top = $(".filters").getBoundingClientRect().top + window.scrollY - 12;
+  window.scrollTo({ top, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+});
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(es => { cardsVisible = es.some(e => e.isIntersecting); if (cardsVisible) $("#jump").hidden = true; },
+    { rootMargin: "0px 0px -35% 0px" }).observe($("#cards"));
+}
 $("#later-btn").addEventListener("click", () => { S.to = ""; $("#q-to").value = ""; renderCards(); syncUrl(); track("Search", { language: lang, dates: "all later" }); });
 $("#q-reset").addEventListener("click", () => {
   Object.assign(S, { from: TODAY, to: DEFAULT_TO, km: 25, placeText: "", place: null, placeMissing: false });

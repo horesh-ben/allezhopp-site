@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=10">
+<link rel="stylesheet" href="/assets/site.css?v=11">
 <!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
      Language, Filter, Apply click, Alert signup, Suggest event. Add them as goals in Plausible, and add the properties:
      language, source, previous, browser_language, email_language, region, interests, category, open_only, canton, volunteers, organizer. -->
@@ -279,15 +279,16 @@
   <footer>
     <span data-i18n="footer">AllezHopp · Fait en Suisse · 2026</span>
     <span data-i18n="footer2">Les inscriptions se font toujours sur le site de l'organisateur.</span>
-    <span class="foot-links"><a href="/a-propos/" data-i18n="abLink">À propos</a> · <a href="/confidentialite/" data-i18n="pvLink">Confidentialité</a> · <a href="/proposer/" data-i18n="sgLink">Un événement manque ? Proposez-le</a></span>
+    <span class="foot-links"><a href="/evenements/" data-i18n="allEvents">Tous les événements</a> · <a href="/a-propos/" data-i18n="abLink">À propos</a> · <a href="/confidentialite/" data-i18n="pvLink">Confidentialité</a> · <a href="/proposer/" data-i18n="sgLink">Un événement manque ? Proposez-le</a></span>
   </footer>
 </div>
 
 
 
-<script src="/assets/i18n.js?v=9"></script>
+<script src="/assets/i18n.js?v=10"></script>
 <script src="/assets/common.js?v=6"></script>
 <script src="/assets/place-names.js?v=1"></script>
+<script src="/assets/event-pages.js?v=1"></script>
 <script>
 /* Home page: the live list of opportunities and the alert sign-up. Shared code is in /assets/. */
 /* ---------------------------------------------------------------
@@ -295,7 +296,7 @@
    The publishable key is meant to be public: Row Level Security
    only lets it read published, current opportunities.
 ---------------------------------------------------------------- */
-const BASE_FIELDS = "campaign_id,canonical_name,category,municipality,canton,event_url,event_start,event_end,event_date_precision,duty_start,duty_end,display_status,application_url,registration_via,announced_opening,last_verified_at,sort_date,latitude,longitude,location_precision";
+const BASE_FIELDS = "campaign_id,event_id,canonical_name,category,municipality,canton,event_url,event_start,event_end,event_date_precision,duty_start,duty_end,display_status,application_url,registration_via,announced_opening,last_verified_at,sort_date,latitude,longitude,location_precision";
 const IMAGE_FIELDS = ",image_url,image_credit,image_fit";   // needs migration 20261004000008_event_images.sql
 let OPPS = null;      // null = loading, [] = none, array = loaded
 let loadFailed = false;
@@ -526,6 +527,7 @@ function renderCards() {
     } else {
       action = `<a class="act" href="#alertes">${t.notify}</a>`;
     }
+    const page = (typeof EVENT_PAGES !== "undefined" && EVENT_PAGES[o.event_id]) || null;
     const km = placeKm(o);
     const place = (cantonWide(o) ? [t.wholeCanton, o.canton] : [locName(o.municipality), o.canton]).filter(Boolean).map(esc).join(" · ")
       + (km != null ? ` <span class="dist">· ${esc(t.kmAway(km < 1 ? "<1" : Math.round(km)))}</span>` : "");
@@ -543,7 +545,7 @@ function renderCards() {
         <span class="cat ${esc(o.category)}"><span class="ic"><svg><use href="#${icon}"/></svg></span>${catLabel[o.category] || ""}</span>
       </div>
       <div style="display:grid;gap:10px">
-        <h3>${esc(o.canonical_name)}</h3>
+        <h3>${page ? `<a href="${esc(page)}">${esc(o.canonical_name)}</a>` : esc(o.canonical_name)}</h3>
         <span class="status ${st}"><svg><use href="#${ST_ICON[st]}"/></svg>${t.st[st]}</span>
       </div>
       <ul class="facts">
@@ -553,6 +555,7 @@ function renderCards() {
       </ul>
       <div class="card-foot">
         ${o.last_verified_at ? `<span class="verified"><svg><use href="#i-check"/></svg>${t.verified(esc(fmtDay(o.last_verified_at)))}</span>` : ""}
+        ${page ? `<a class="more" href="${esc(page)}">${esc(t.more)} →</a>` : ""}
         ${action}
       </div>
     </article>`;

@@ -474,3 +474,14 @@ footer a { color: inherit; font-weight: 600; }
   .ev-dl dd { margin-bottom: 10px; }
   .ev-actions .btn { width: 100%; }
 }
+
+/* ---------- 404 ---------- */
+.nf { display: grid; place-items: center; min-height: 52vh; padding-block: 24px 48px; }
+.nf-card { max-width: 620px; text-align: center; display: grid; gap: 16px; justify-items: center; }
+.nf-code { margin: 0; font: 800 clamp(84px, 16vw, 150px)/.9 var(--f-display); letter-spacing: -.04em;
+  background: linear-gradient(90deg, var(--c1), var(--c2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nf-card h1 { font-size: clamp(28px, 4.4vw, 42px); font-weight: 800; }
+.nf-text { margin: 0; font-size: 18px; color: var(--muted); }
+.nf-maybe { margin: 0; font-size: 17px; }
+.nf-maybe a { color: var(--c2); font-weight: 700; }
+.nf-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 6px; }

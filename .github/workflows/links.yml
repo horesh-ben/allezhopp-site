@@ -1,0 +1,45 @@
+# Checks every link on the site (internal pages, organizer websites, pictures) once a week and on demand.
+# Runs on GitHub's servers. A failed run means at least one link is broken: open the run, read "Summary".
+# 403 and 429 answers are accepted: some organizer sites refuse automated visitors but work in a browser.
+name: Link check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * 1"   # Mondays 05:17 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --root-dir ${{ github.workspace }}
+            --accept 200..=299,403,429
+            --max-retries 3 --retry-wait-time 5 --timeout 30
+            --max-concurrency 8
+            --user-agent "Mozilla/5.0 (compatible; AllezHopp link check; +https://allezhopp.ch)"
+            --exclude "^https://(www\.)?google\.com/maps"
+            --exclude "^https://fonts\.(googleapis|gstatic)\.com"
+            --exclude "^https://plausible\.io"
+            --exclude "^https://rnwecpchtrzkbrnkdhvt\.supabase\.co"
+            --exclude "^https://allezhopp\.ch"
+            "./**/*.html"
+          output: lychee-report.md
+          format: markdown
+          jobSummary: true
+          fail: true
+      - name: Keep the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-report
+          path: lychee-report.md

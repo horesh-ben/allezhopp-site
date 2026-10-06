@@ -27,7 +27,7 @@ const T_EVENT = {
       unknown: "L'appel aux bénévoles pour cette édition n'est pas encore confirmé par l'organisateur. Consultez son site ou activez une alerte."
     },
     evNoun: { sport: "un événement sportif", music: "un événement de musique", culture: "un événement culturel", community: "un événement de la vie locale" },
-    evSummary: o => `${o.name} est ${o.noun} ${o.wide ? "dans tout le canton de " + o.cantonName : "à " + o.town + " (" + o.canton + ")"}.`
+    evSummary: o => `${o.name} est ${o.noun} ${o.wide ? "dans tout le canton de " + o.cantonName : o.town.replace(/^Les /, "aux ").replace(/^Le /, "au ").replace(/^(?!au |aux )/, "à ") + " (" + o.canton + ")"}.`
       + (o.dates ? ` Prochaine édition : ${o.dates}${o.est ? " (dates estimées d'après l'édition précédente)" : ""}.` : "") + ` Organisation : ${o.org}.`,
     evIdxPageTitle: "Tous les événements qui cherchent des bénévoles · AllezHopp", evIdxEyebrow: "Annuaire", evIdxTitle: "Tous les événements",
     evIdxCount: n => n === 1 ? "1 événement" : `${n} événements`,

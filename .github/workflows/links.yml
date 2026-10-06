@@ -1,5 +1,6 @@
 # Checks every link on the site (internal pages, organizer websites, pictures) once a week and on demand.
-# Runs on GitHub's servers. A failed run means at least one link is broken: open the run, read "Summary".
+# Runs on GitHub's servers. When links are broken, the run fails and an issue "Broken links" lists them
+# (updated each week, closed automatically once everything works again).
 # 403 and 429 answers are accepted: some organizer sites refuse automated visitors but work in a browser.
 name: Link check
 
@@ -10,6 +11,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   links:
@@ -36,10 +38,17 @@ jobs:
           output: lychee-report.md
           format: markdown
           jobSummary: true
-          fail: true
-      - name: Keep the report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: link-report
-          path: lychee-report.md
+          fail: false
+      - name: Open, update or close the "Broken links" issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh issue list --state open --label broken-links --json number --jq '.[0].number // empty')
+          if [ "${{ steps.lychee.outputs.exit_code }}" != "0" ]; then
+            gh label create broken-links --color B60205 --description "Found by the weekly link check" --force
+            if [ -n "$n" ]; then gh issue edit "$n" --body-file lychee-report.md
+            else gh issue create --title "Broken links found by the weekly check" --label broken-links --body-file lychee-report.md; fi
+            exit 1
+          elif [ -n "$n" ]; then
+            gh issue close "$n" --comment "All links work again ($(date -u +%F))."
+          fi

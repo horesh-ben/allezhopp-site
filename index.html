@@ -557,7 +557,7 @@ function renderCards() {
         ${extra}
       </ul>
       <div class="card-foot">
-        ${o.last_verified_at ? `<span class="verified"><svg><use href="#i-check"/></svg>${t.verified(esc(fmtDay(o.last_verified_at)))}</span>` : ""}
+        ${!page && o.last_verified_at ? `<span class="verified"><svg><use href="#i-check"/></svg>${t.verified(esc(fmtDay(o.last_verified_at)))}</span>` : ""}
         ${action}
       </div>
     </article>`;

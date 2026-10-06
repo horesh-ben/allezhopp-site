@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=11">
+<link rel="stylesheet" href="/assets/site.css?v=12">
 <!-- Privacy-friendly analytics by Plausible (no cookies). Custom events sent by the page:
      Language, Filter, Apply click, Alert signup, Suggest event. Add them as goals in Plausible, and add the properties:
      language, source, previous, browser_language, email_language, region, interests, category, open_only, canton, volunteers, organizer. -->
@@ -285,7 +285,7 @@
 
 
 
-<script src="/assets/i18n.js?v=10"></script>
+<script src="/assets/i18n.js?v=11"></script>
 <script src="/assets/common.js?v=6"></script>
 <script src="/assets/place-names.js?v=1"></script>
 <script src="/assets/event-pages.js?v=1"></script>
@@ -517,8 +517,12 @@ function renderCards() {
       : (st === "not_open" && o.announced_opening
           ? `<li><svg><use href="#i-hand"/></svg><span>${lang === "fr" ? esc(o.announced_opening) : t.openingSoon}</span></li>` : "");
     const link = safeUrl(o.application_url) || safeUrl(o.event_url);
+    const page = (typeof EVENT_PAGES !== "undefined" && EVENT_PAGES[o.event_id]) || null;
     let action = "";
-    if ((st === "open" || st === "partially_full") && link) {
+    if (page) {
+      // The whole card opens the event page (title link stretched over the card); this is its visual button.
+      action = `<span class="act${st === "open" || st === "partially_full" ? " main" : ""}" aria-hidden="true">${t.seeMission} →</span>`;
+    } else if ((st === "open" || st === "partially_full") && link) {
       action = `<a class="act main" href="${esc(link)}" target="_blank" rel="noopener" data-apply="${esc(o.category)}" data-canton="${esc(o.canton || "")}">${t.apply} ↗</a>`;
     } else if (st === "not_open") {
       action = `<a class="act" href="#alertes">${t.notify}</a>` + (link ? `<a class="act" href="${esc(link)}" target="_blank" rel="noopener">${t.siteLink} ↗</a>` : "");
@@ -527,7 +531,6 @@ function renderCards() {
     } else {
       action = `<a class="act" href="#alertes">${t.notify}</a>`;
     }
-    const page = (typeof EVENT_PAGES !== "undefined" && EVENT_PAGES[o.event_id]) || null;
     const km = placeKm(o);
     const place = (cantonWide(o) ? [t.wholeCanton, o.canton] : [locName(o.municipality), o.canton]).filter(Boolean).map(esc).join(" · ")
       + (km != null ? ` <span class="dist">· ${esc(t.kmAway(km < 1 ? "<1" : Math.round(km)))}</span>` : "");
@@ -539,13 +542,13 @@ function renderCards() {
         ${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">
         ${o.image_credit ? `<span class="credit">${esc(t.imgCredit)}${esc(o.image_credit)}</span>` : ""}` : ""}
       </div>`;
-    return `<article class="card">
+    return `<article class="card${page ? " linked" : ""}">
       ${media}
       <div class="card-top">
         <span class="cat ${esc(o.category)}"><span class="ic"><svg><use href="#${icon}"/></svg></span>${catLabel[o.category] || ""}</span>
       </div>
       <div style="display:grid;gap:10px">
-        <h3>${page ? `<a href="${esc(page)}">${esc(o.canonical_name)}</a>` : esc(o.canonical_name)}</h3>
+        <h3>${page ? `<a class="card-link" href="${esc(page)}" data-page="${esc(o.category)}">${esc(o.canonical_name)}</a>` : esc(o.canonical_name)}</h3>
         <span class="status ${st}"><svg><use href="#${ST_ICON[st]}"/></svg>${t.st[st]}</span>
       </div>
       <ul class="facts">
@@ -555,7 +558,6 @@ function renderCards() {
       </ul>
       <div class="card-foot">
         ${o.last_verified_at ? `<span class="verified"><svg><use href="#i-check"/></svg>${t.verified(esc(fmtDay(o.last_verified_at)))}</span>` : ""}
-        ${page ? `<a class="more" href="${esc(page)}">${esc(t.more)} →</a>` : ""}
         ${action}
       </div>
     </article>`;
@@ -577,6 +579,8 @@ document.addEventListener("error", e => {
 document.addEventListener("click", e => {
   const a = e.target.closest("[data-apply]");
   if (a) track("Apply click", { language: lang, category: a.dataset.apply, canton: a.dataset.canton || "unknown" });
+  const p = e.target.closest(".card-link");
+  if (p) track("Open event page", { language: lang, category: p.dataset.page });
 });
 
 function onLangChange(t) {

@@ -3,10 +3,6 @@
    This script shows them in the visitor's language and, on an event page, replaces the status with the live one
    from the database, so the page never shows a stale "open". */
 
-/* Partner programmes (affiliate links). Leave an id empty and the link stays a plain external link.
-   When an id is set, the link carries it and is labelled as a partner link (plan B5). */
-const PARTNERS = { booking: { param: "aid", id: "" } };
-
 const EV = (() => { const el = document.getElementById("ev-data"); return el ? JSON.parse(el.textContent) : null; })();
 let LIVE = null;           // live row from the database; { gone: true } when the edition is no longer listed
 const ST_ICON = { open: "i-check", partially_full: "i-half", not_open: "i-clock", closed: "i-lock", finished: "i-flag", unknown: "i-clock" };
@@ -74,16 +70,6 @@ function renderEvent() {
     name: EV.name, noun: t.evNoun[EV.category], wide: EV.area === "canton", town: locName(EV.municipality), canton: EV.canton,
     cantonName: t.cantons[EV.canton] || EV.canton, dates: EV.start ? fmtRange(EV.start, EV.end, EV.date_precision) : "", est, org: EV.organizer
   });
-  // accommodation link: town in the visitor's language, partner id when configured
-  document.querySelectorAll(".stay a").forEach(link => {
-    const li = link.closest(".stay"), p = PARTNERS.booking;
-    const u = new URL(link.href);
-    if (p.id) u.searchParams.set(p.param, p.id);
-    link.href = u.toString();
-    link.innerHTML = `<span>${esc(t.evStay)}</span> (${esc(locName(li.dataset.town))}) ↗`;
-    if (p.id) link.title = t.evPartner;
-  });
-  if (PARTNERS.booking.id && document.querySelector(".stay")) $("#ev-extra-note").textContent = t.evPartner;
 }
 
 /* Dates for the calendar file: volunteer dates when known, else event dates; only exact days. */

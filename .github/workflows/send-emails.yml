@@ -1,0 +1,22 @@
+# Safety net for AllezHopp e-mails: asks the Supabase function "send-emails" to send whatever is waiting
+# (confirmation e-mails whose immediate send from the sign-up form did not happen, retries after an error).
+# The function takes no input and only sends what the database has queued, so the public key is enough.
+name: Send waiting e-mails
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+permissions: {}
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Call send-emails
+        run: |
+          code=$(curl -sS -o out.json -w '%{http_code}' -X POST \
+            -H "apikey: sb_publishable_6Q8Q7x40ZbCXVplznFJ0hw_TAh4R7fr" -H "Content-Type: application/json" \
+            -d '{}' https://rnwecpchtrzkbrnkdhvt.supabase.co/functions/v1/send-emails)
+          echo "HTTP $code: $(cat out.json)"
+          # 404 = function not deployed yet; anything else non-200 is a real problem worth a red mark.
+          [ "$code" = "200" ] || [ "$code" = "404" ]

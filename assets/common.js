@@ -22,7 +22,7 @@ function track(name, props) {
    data-contact then points visitors to the suggestion form. Set it once, e.g.
    const CONTACT_EMAIL = "hello@allezhopp.ch";  and all pages show the address.
 ---------------------------------------------------------------- */
-const CONTACT_EMAIL = "";
+const CONTACT_EMAIL = "hello@allezhopp.ch";
 
 const SUPABASE_URL = "https://rnwecpchtrzkbrnkdhvt.supabase.co";
 const SUPABASE_KEY = "sb_publishable_6Q8Q7x40ZbCXVplznFJ0hw_TAh4R7fr";

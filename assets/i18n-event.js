@@ -2,6 +2,7 @@
 const T_EVENT = {
   fr: {
     evTitle: n => `${n} : devenir bénévole · AllezHopp`,
+    evReport: "Une information est fausse ou dépassée ? Écrivez-nous",
     evCrumbHome: "Missions", evVolTitle: "Devenir bénévole", evHowTitle: "Comment postuler",
     evHow1: "Ouvrez la page de l'organisateur avec le bouton ci-dessus.",
     evHow2: "Inscrivez-vous avec son formulaire ou par e-mail, comme il l'indique.",
@@ -35,6 +36,7 @@ const T_EVENT = {
   },
   de: {
     evTitle: n => `${n}: Freiwillig mithelfen · AllezHopp`,
+    evReport: "Ist eine Angabe falsch oder veraltet? Schreiben Sie uns",
     evCrumbHome: "Einsätze", evVolTitle: "Freiwillig mithelfen", evHowTitle: "So bewerben Sie sich",
     evHow1: "Öffnen Sie mit der Schaltfläche oben die Seite des Veranstalters.",
     evHow2: "Melden Sie sich über sein Formular oder per E-Mail an, wie dort angegeben.",
@@ -68,6 +70,7 @@ const T_EVENT = {
   },
   it: {
     evTitle: n => `${n}: diventare volontari · AllezHopp`,
+    evReport: "Un'informazione è errata o superata? Scriveteci",
     evCrumbHome: "Opportunità", evVolTitle: "Diventare volontari", evHowTitle: "Come candidarsi",
     evHow1: "Aprite la pagina dell'organizzatore con il pulsante qui sopra.",
     evHow2: "Iscrivetevi con il suo modulo o per e-mail, come indicato.",
@@ -101,6 +104,7 @@ const T_EVENT = {
   },
   en: {
     evTitle: n => `${n}: volunteer · AllezHopp`,
+    evReport: "Is something wrong or out of date? Tell us",
     evCrumbHome: "Opportunities", evVolTitle: "Volunteer", evHowTitle: "How to apply",
     evHow1: "Open the organizer's page with the button above.",
     evHow2: "Sign up with their form or by e-mail, as they explain.",

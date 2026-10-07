@@ -485,3 +485,6 @@ footer a { color: inherit; font-weight: 600; }
 .nf-maybe { margin: 0; font-size: 17px; }
 .nf-maybe a { color: var(--c2); font-weight: 700; }
 .nf-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 6px; }
+.ev-report { font-size: 14.5px; }
+.ev-report a { color: var(--c2); font-weight: 600; text-decoration: none; }
+.ev-report a:hover { text-decoration: underline; }

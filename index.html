@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AllezHopp – Bénévolat événementiel en Suisse romande</title>
-<meta name="description" content="Trouvez un événement qui cherche des bénévoles à Genève, Vaud et Valais : sport, musique, culture et vie locale. Dates, lieux et inscriptions vérifiés.">
+<meta name="description" content="Trouvez un événement qui cherche des bénévoles à Genève, Vaud, Valais, Neuchâtel et Berne : sport, musique, culture et vie locale. Dates, lieux et inscriptions vérifiés.">
 <link rel="canonical" href="https://allezhopp.ch/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="AllezHopp">
 <meta property="og:locale" content="fr_CH">
 <meta property="og:title" content="AllezHopp – Bénévolat événementiel en Suisse romande">
-<meta property="og:description" content="Trouvez un événement qui cherche des bénévoles à Genève, Vaud et Valais : sport, musique, culture et vie locale. Dates, lieux et inscriptions vérifiés.">
+<meta property="og:description" content="Trouvez un événement qui cherche des bénévoles à Genève, Vaud, Valais, Neuchâtel et Berne : sport, musique, culture et vie locale. Dates, lieux et inscriptions vérifiés.">
 <meta property="og:url" content="https://allezhopp.ch/">
 <meta property="og:image" content="https://allezhopp.ch/assets/share.png">
 <meta property="og:image:width" content="1200">
@@ -105,7 +105,7 @@
           <a class="btn btn-primary" href="#missions" data-i18n="ctaPrimary">Découvrir les missions</a>
           <a class="btn btn-soft" href="#alertes" data-i18n="ctaSecondary">Être averti à l'ouverture des inscriptions</a>
         </div>
-        <p class="pilot"><span class="dot"></span><span data-i18n="pilot">En Suisse romande : Genève, Vaud et Valais, puis Fribourg, Neuchâtel et le Jura.</span></p>
+        <p class="pilot"><span class="dot"></span><span data-i18n="pilot">Genève, Vaud, Valais, Neuchâtel et Berne, puis Fribourg et le Jura.</span></p>
       </div>
 
       <div class="art" aria-hidden="true">
@@ -259,6 +259,8 @@
               <option value="fr" data-i18n="r7">Fribourg</option>
               <option value="ne" data-i18n="r8">Neuchâtel</option>
               <option value="ju" data-i18n="r9">Jura et Jura bernois</option>
+              <option value="be-biel" data-i18n="r10">Bienne et Seeland</option>
+              <option value="be" data-i18n="r11">Berne et reste du canton</option>
             </select>
           </div>
           <fieldset>
@@ -363,7 +365,7 @@ function loadPlaces() {
   return placesLoading;
 }
 /* Partial names: prefer the cantons we cover, then bigger towns (more postcodes), so "Lau" gives Lausanne. */
-const CT_RANK = { GE: 0, VD: 0, VS: 0, FR: 1, NE: 1, JU: 1, BE: 2 };
+const CT_RANK = { GE: 0, VD: 0, VS: 0, NE: 0, BE: 0, FR: 1, JU: 1 };
 const better = (a, b) => ((CT_RANK[a.ct] ?? 3) - (CT_RANK[b.ct] ?? 3)) || (b.size - a.size) || a.n.localeCompare(b.n);
 /* Town names in the visitor's language (Genève / Genf / Ginevra / Geneva); search accepts any of them. */
 const locName = name => (PLACE_NAMES[name] && PLACE_NAMES[name][lang]) || name;

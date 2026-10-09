@@ -365,7 +365,7 @@ function loadPlaces() {
   return placesLoading;
 }
 /* Partial names: prefer the cantons we cover, then bigger towns (more postcodes), so "Lau" gives Lausanne. */
-const CT_RANK = { GE: 0, VD: 0, VS: 0, NE: 0, BE: 0, JU: 0, SO: 0, FR: 1 };
+const CT_RANK = { GE: 0, VD: 0, VS: 0, NE: 0, BE: 0, JU: 0, SO: 0, FR: 0 };
 const better = (a, b) => ((CT_RANK[a.ct] ?? 3) - (CT_RANK[b.ct] ?? 3)) || (b.size - a.size) || a.n.localeCompare(b.n);
 /* Town names in the visitor's language (Genève / Genf / Ginevra / Geneva); search accepts any of them. */
 const locName = name => (PLACE_NAMES[name] && PLACE_NAMES[name][lang]) || name;
@@ -419,7 +419,17 @@ function placeKm(o) {
   if (!S.place || o.latitude == null) return null;
   return distKm(S.place, { lat: +o.latitude, lon: +o.longitude });
 }
-const inPlace = o => !S.place || (cantonWide(o) ? o.canton === S.place.canton : (placeKm(o) ?? Infinity) <= S.km);
+/* Events held across a whole canton (Nez Rouge, Samedi du partage…) match when any town of that canton is within the radius,
+   not only when the searched place is in the same canton: Biel finds Nez Rouge Neuchâtel, Lausanne finds Nez Rouge Fribourg. */
+const cantonNear = {};
+function cantonWithin(ct) {
+  const key = `${S.place.lat},${S.place.lon},${S.km},${ct}`;
+  if (key in cantonNear) return cantonNear[key];
+  let ok = false;
+  for (const p of (PLACES || [])) { if (p.ct === ct && distKm(S.place, p) <= S.km) { ok = true; break; } }
+  return (cantonNear[key] = ok);
+}
+const inPlace = o => !S.place || (cantonWide(o) ? (o.canton === S.place.canton || cantonWithin(o.canton)) : (placeKm(o) ?? Infinity) <= S.km);
 
 function syncUrl() {
   const u = new URL(location.href), q = u.searchParams;

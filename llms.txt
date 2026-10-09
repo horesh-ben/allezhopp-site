@@ -4,7 +4,7 @@
 > starting with French-speaking Switzerland and Bern. Each listing says whether volunteer registration is open, not yet
 > open, closed or not confirmed, checked on the organizer's own website. People always apply on the organizer's site.
 
-Coverage on 2026-10-09: 201 current or upcoming opportunities in the cantons BE, FR, GE, JU, NE, SO, VD, VS; 96 open at the last build.
+Coverage on 2026-10-09: 202 current or upcoming opportunities in the cantons BE, FR, GE, JU, NE, SO, VD, VS; 96 open at the last build.
 The site is in French, German, Italian and English. Brand: AllezHopp (capital A and H, no space).
 
 ## How to read the statuses

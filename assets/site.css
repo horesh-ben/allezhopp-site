@@ -220,7 +220,7 @@ section { padding-block: 64px; }
 .card-media.community { background: var(--acc-soft); color: var(--st-partial); }
 .card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
 .card-media.contain img { object-fit: contain; padding: 22px 28px; }
-.card-media.left img { object-position: 22% 50%; }   /* wide banners whose right end carries text (image_fit cover_left) */
+.card-media.left img { object-position: 5% 50%; }   /* wide banners whose right end carries text (image_fit cover_left) */
 .card-media.contain.has-img { background: #F3F5F7; }   /* logos and posters stay legible in dark mode too */
 .card-media.contain.dark.has-img { background: #14202B; }   /* light-coloured logos (yellow, white) */
 .card-media .tile { width: 64px; height: 64px; opacity: .55; }

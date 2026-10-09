@@ -168,7 +168,7 @@
         </div>
         <div class="sf sf-km">
           <label for="q-km" data-i18n="srKm">Rayon</label>
-          <select id="q-km"><option value="10">10 km</option><option value="25" selected>25 km</option><option value="50">50 km</option><option value="100">100 km</option></select>
+          <select id="q-km"><option value="10">10 km</option><option value="25">25 km</option><option value="50" selected>50 km</option><option value="100">100 km</option></select>
         </div>
         <div class="sf sf-date"><label for="q-from-t" data-i18n="srFrom">Du</label>
           <div class="sf-box sf-datebox"><input id="q-from-t" class="dtext" type="text" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="jj/mm/aaaa" data-i18n-ph="srDatePh" data-native="q-from">
@@ -347,8 +347,8 @@ let canton = "all";
 ---------------------------------------------------------------- */
 const isoDay = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
 const TODAY = isoDay(new Date());
-const DEFAULT_TO = (() => { const d = new Date(); d.setMonth(d.getMonth() + 3); return isoDay(d); })();
-const S = { from: TODAY, to: DEFAULT_TO, km: 25, placeText: "", place: null, placeMissing: false };
+const DEFAULT_TO = "";   /* no end date by default (founder, 9 Oct 2026): show everything, visitors narrow it down */
+const S = { from: TODAY, to: DEFAULT_TO, km: 50, placeText: "", place: null, placeMissing: false };
 let PLACES = null, placesLoading = null;
 const norm = x => (x || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[-'’.,()]/g, " ").replace(/\s+/g, " ").trim();
 function loadPlaces() {
@@ -434,8 +434,8 @@ const inPlace = o => !S.place || (cantonWide(o) ? (o.canton === S.place.canton |
 function syncUrl() {
   const u = new URL(location.href), q = u.searchParams;
   const set = (k, v, dflt) => (v && v !== dflt) ? q.set(k, v) : q.delete(k);
-  set("lieu", S.placeText); set("km", S.place ? String(S.km) : "", "25");
-  set("du", S.from, TODAY); set("au", S.to === "" ? "tout" : S.to, DEFAULT_TO);
+  set("lieu", S.placeText); set("km", S.place ? String(S.km) : "", "50");
+  set("du", S.from, TODAY); set("au", S.to, DEFAULT_TO);
   set("cat", cat, "all"); set("canton", canton, "all"); set("ouvert", $("#only-open").checked ? "1" : "");
   history.replaceState(null, "", u.pathname + (q.toString() ? "?" + q : "") + u.hash);
 }
@@ -458,7 +458,7 @@ function readUrl() {
   const d = v => /^\d{4}-\d{2}-\d{2}$/.test(v || "") ? v : null;
   S.from = d(q.get("du")) || TODAY;
   S.to = q.get("au") === "tout" ? "" : (d(q.get("au")) || DEFAULT_TO);
-  S.km = [10, 25, 50, 100].includes(+q.get("km")) ? +q.get("km") : 25;
+  S.km = [10, 25, 50, 100].includes(+q.get("km")) ? +q.get("km") : 50;
   S.placeText = (q.get("lieu") || "").slice(0, 60);
   if (["sport", "music", "culture", "community"].includes(q.get("cat"))) cat = q.get("cat");
   if (/^[A-Z]{2}$/.test(q.get("canton") || "")) canton = q.get("canton");
@@ -681,8 +681,8 @@ if ("IntersectionObserver" in window) {
 }
 $("#later-btn").addEventListener("click", () => { S.to = ""; $("#q-to").value = ""; renderCards(); syncUrl(); track("Search", { language: lang, dates: "all later" }); });
 $("#q-reset").addEventListener("click", () => {
-  Object.assign(S, { from: TODAY, to: DEFAULT_TO, km: 25, placeText: "", place: null, placeMissing: false });
-  $("#q-place").value = ""; $("#q-km").value = "25"; $("#q-from").value = TODAY; $("#q-to").value = DEFAULT_TO;
+  Object.assign(S, { from: TODAY, to: DEFAULT_TO, km: 50, placeText: "", place: null, placeMissing: false });
+  $("#q-place").value = ""; $("#q-km").value = "50"; $("#q-from").value = TODAY; $("#q-to").value = DEFAULT_TO;
   renderCards(); syncUrl();
 });
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AllezHopp – Bénévolat événementiel en Suisse romande</title>
-<meta name="description" content="Trouvez un événement qui cherche des bénévoles à Genève, Vaud, Valais, Neuchâtel et Berne : sport, musique, culture et vie locale. Dates, lieux et inscriptions vérifiés.">
+<meta name="description" content="Trouvez un événement qui cherche des bénévoles en Suisse romande et ailleurs en Suisse : sport, musique, culture et vie locale. Dates, lieux et inscriptions vérifiés.">
 <link rel="canonical" href="https://allezhopp.ch/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="AllezHopp">
 <meta property="og:locale" content="fr_CH">
 <meta property="og:title" content="AllezHopp – Bénévolat événementiel en Suisse romande">
-<meta property="og:description" content="Trouvez un événement qui cherche des bénévoles à Genève, Vaud, Valais, Neuchâtel et Berne : sport, musique, culture et vie locale. Dates, lieux et inscriptions vérifiés.">
+<meta property="og:description" content="Trouvez un événement qui cherche des bénévoles en Suisse romande et ailleurs en Suisse : sport, musique, culture et vie locale. Dates, lieux et inscriptions vérifiés.">
 <meta property="og:url" content="https://allezhopp.ch/">
 <meta property="og:image" content="https://allezhopp.ch/assets/share.png">
 <meta property="og:image:width" content="1200">
@@ -365,7 +365,7 @@ function loadPlaces() {
   return placesLoading;
 }
 /* Partial names: prefer the cantons we cover, then bigger towns (more postcodes), so "Lau" gives Lausanne. */
-const CT_RANK = { GE: 0, VD: 0, VS: 0, NE: 0, BE: 0, FR: 1, JU: 1 };
+const CT_RANK = { GE: 0, VD: 0, VS: 0, NE: 0, BE: 0, JU: 0, SO: 0, FR: 1 };
 const better = (a, b) => ((CT_RANK[a.ct] ?? 3) - (CT_RANK[b.ct] ?? 3)) || (b.size - a.size) || a.n.localeCompare(b.n);
 /* Town names in the visitor's language (Genève / Genf / Ginevra / Geneva); search accepts any of them. */
 const locName = name => (PLACE_NAMES[name] && PLACE_NAMES[name][lang]) || name;

@@ -553,7 +553,7 @@ function renderCards() {
       + (km != null ? ` <span class="dist">· ${esc(t.kmAway(km < 1 ? "<1" : Math.round(km)))}</span>` : "");
     const icon = CAT_ICON[o.category] || "i-community";
     const img = safeUrl(o.image_url);
-    const fit = o.image_fit === "contain" ? "contain" : o.image_fit === "contain_dark" ? "contain dark" : "cover";
+    const fit = o.image_fit === "contain" ? "contain" : o.image_fit === "contain_dark" ? "contain dark" : o.image_fit === "cover_left" ? "cover left" : "cover";
     const media = `<div class="card-media ${esc(o.category)} ${fit}${img ? " has-img" : ""}">
         <svg class="tile" aria-hidden="true"><use href="#${icon}"/></svg>
         ${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">

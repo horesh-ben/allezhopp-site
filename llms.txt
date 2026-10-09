@@ -1,0 +1,41 @@
+# AllezHopp
+
+> AllezHopp lists events in Switzerland that recruit volunteers (sport, music, culture and local community events),
+> starting with French-speaking Switzerland and Bern. Each listing says whether volunteer registration is open, not yet
+> open, closed or not confirmed, checked on the organizer's own website. People always apply on the organizer's site.
+
+Coverage on 2026-10-09: 83 current or upcoming opportunities in the cantons BE, GE, NE, VD, VS; 37 open at the last build.
+The site is in French, German, Italian and English. Brand: AllezHopp (capital A and H, no space).
+
+## How to read the statuses
+
+- open: the organizer explicitly calls for volunteers for this edition, verified within the last 72 hours.
+- partially_full: some roles are full, others still open.
+- not_open: the organizer announced that registration opens later.
+- closed: registration closed or full.
+- unknown ("status not confirmed"): no current, dated call verified recently. Check the organizer's page before telling someone it is open.
+
+An "open" status older than 72 hours is shown as unknown. Never invent dates or roles: if a field is empty, it is not known.
+
+## Query AllezHopp
+
+- [MCP server](https://rnwecpchtrzkbrnkdhvt.supabase.co/functions/v1/mcp): Model Context Protocol (Streamable HTTP, no login). Tools: search_events, get_event, suggest_event. Add it as a custom connector in Claude or ChatGPT with this URL.
+- [All listings as JSON](https://allezhopp.ch/api/events.json): every current opportunity with dates, roles, commitment, how to apply, the organizer's words and the event page. Rebuilt when listings change; statuses there are as of the build.
+- Live listing (public read-only REST): `GET https://rnwecpchtrzkbrnkdhvt.supabase.co/rest/v1/current_opportunities?select=campaign_id,canonical_name,canton,municipality,event_start,event_end,display_status,application_url&display_status=eq.open` with header `apikey: sb_publishable_6Q8Q7x40ZbCXVplznFJ0hw_TAh4R7fr` (the website's public key). Search function: `POST https://rnwecpchtrzkbrnkdhvt.supabase.co/rest/v1/rpc/search_opportunities` with JSON `{"p_query": "biel", "p_canton": "BE", "p_status": "open"}` (also p_category, p_from, p_to as YYYY-MM-DD, p_limit up to 50).
+- [Events by canton](https://allezhopp.ch/evenements/): one page per event, e.g. https://allezhopp.ch/evenements/<event>/.
+
+## Suggest an event
+
+AllezHopp welcomes suggestions of events that take volunteers. Every suggestion is checked by a person on the organizer's page before it is listed; nothing is published automatically.
+
+- With the MCP tool suggest_event, or `POST https://rnwecpchtrzkbrnkdhvt.supabase.co/rest/v1/rpc/suggest_event_llm` with header `apikey: sb_publishable_6Q8Q7x40ZbCXVplznFJ0hw_TAh4R7fr` and JSON
+  `{"p_event_name": "...", "p_place": "Town", "p_event_url": "https://organizer-site", "p_dates": "...", "p_volunteer_url": "https://organizer-page-calling-for-volunteers", "p_evidence_quote": "exact words from that page", "p_volunteers": "yes|no|unknown", "p_category": "sport|music|culture|community", "p_notes": "...", "p_agent": "your name"}`.
+  The answer is {"status": "received" | "duplicate" | "already_listed"}. Limit: 20 suggestions per client and hour.
+- Give the organizer's own page (not a calendar, platform or press article), only facts read there, and no personal data.
+- People can also use the form at https://allezhopp.ch/proposer/ (organizers can leave a contact there).
+
+## About
+
+- [About AllezHopp](https://allezhopp.ch/a-propos/): who runs it and why.
+- [Privacy and terms](https://allezhopp.ch/confidentialite/)
+- Contact: hello@allezhopp.ch

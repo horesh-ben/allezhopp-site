@@ -8,9 +8,10 @@ Public website of AllezHopp, served by GitHub Pages at https://allezhopp.ch.
 | `a-propos/index.html` | About page (allezhopp.ch/a-propos/) |
 | `confidentialite/index.html` | Privacy and terms of use (allezhopp.ch/confidentialite/); text in `assets/i18n-legal.js` |
 | `proposer/index.html` | "Un événement manque ?" page (allezhopp.ch/proposer/) to suggest a missing event |
-| `assets/site.css` | Styles shared by all pages (Léman palette, Hanken Grotesk, light/dark) |
+| `assets/site.css` | Styles shared by all pages (warm palette, evening-navy photo band and dark theme, Hanken Grotesk, light/dark) |
+| `assets/hero/` | Home-page photo (illustrative, AI-generated scene from the design hand-off) in WebP sizes and a JPEG fallback |
 | `assets/i18n.js` | Interface text in French, German, Italian and English |
-| `assets/common.js` | Shared code: language, theme, Plausible events, Supabase calls |
+| `assets/common.js` | Shared code: navigation (added to generated pages that lack it), language, theme, Plausible events, Supabase calls |
 
 When you change a shared file, raise the `?v=` number in the `<script>`/`<link>` tags of both pages so browsers fetch the new version.
 

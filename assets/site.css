@@ -204,13 +204,14 @@ svg { display: block; }
 .stage-photo { position: absolute; top: 0; left: 0; right: 0; height: max(calc(100vw * 809 / 1942), 76%); z-index: -2; display: block; }
 .stage-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 85% top; }
 .stage-photo::after { content: ""; position: absolute; inset: auto 0 0; height: 34%; background: linear-gradient(0deg, var(--night), rgba(12, 27, 39, 0)); }
-/* Left-to-right evening shade so the words read over the mountains; a lighter shade at the top for the header
-   and at the bottom for the search panel. The photo itself stays untouched on the right (people, lake, sun). */
+/* Warm ink shade behind the words (the illustration is detailed: snow patches, trees), clearing by mid-width so the
+   scene stays vivid on the right; a light shade at the top for the header and a navy fade at the bottom for the panel. */
 .stage::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(12, 27, 39, .84) 0%, rgba(12, 27, 39, .66) 30%, rgba(12, 27, 39, .18) 54%, rgba(12, 27, 39, 0) 66%),
-    linear-gradient(180deg, rgba(12, 27, 39, .5) 0, rgba(12, 27, 39, 0) 110px),
-    linear-gradient(0deg, rgba(12, 27, 39, .78) 0, rgba(12, 27, 39, .2) 34%, rgba(12, 27, 39, 0) 52%); }
+    radial-gradient(ellipse 46% 62% at 20% 42%, rgba(20, 22, 30, .42), rgba(20, 22, 30, 0) 70%),
+    linear-gradient(90deg, rgba(20, 22, 30, .82) 0%, rgba(22, 26, 36, .7) 30%, rgba(26, 30, 40, .32) 48%, rgba(26, 30, 40, 0) 60%),
+    linear-gradient(180deg, rgba(20, 22, 30, .42) 0, rgba(20, 22, 30, 0) 100px),
+    linear-gradient(0deg, rgba(12, 27, 39, .8) 0, rgba(12, 27, 39, .18) 30%, rgba(12, 27, 39, 0) 46%); }
 .hero-copy { display: grid; gap: 14px; justify-items: start; }
 .lede { max-width: 600px; }
 .hero-copy .eyebrow { color: var(--mint); font-size: 12px; letter-spacing: .11em; text-shadow: 0 1px 10px rgba(0, 0, 0, .3); }
@@ -318,7 +319,7 @@ svg { display: block; }
   .stage-photo { position: relative; inset: auto; z-index: 0; height: clamp(270px, 44vw, 380px); }
   .stage-photo img { object-position: 72% center; }
   .stage-photo::after { content: ""; position: absolute; inset: 0;
-    height: auto; background: linear-gradient(180deg, rgba(12, 27, 39, .6) 0, rgba(12, 27, 39, 0) 90px), linear-gradient(0deg, var(--night) 0, rgba(12, 27, 39, 0) 70px); }
+    height: auto; background: linear-gradient(180deg, rgba(12, 27, 39, .78) 0, rgba(12, 27, 39, .35) 70px, rgba(12, 27, 39, 0) 120px), linear-gradient(0deg, var(--night) 0, rgba(12, 27, 39, 0) 70px); }
   .stage-inner { margin-top: -6px; position: relative; }
   .hero-copy { gap: 14px; }
   .hero-copy h1 { font-size: clamp(36px, 6vw, 48px); line-height: 1.04; }

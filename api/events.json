@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09",
+ "generated": "2026-10-10",
  "source": "https://allezhopp.ch",
  "about": "Events in Switzerland that recruit volunteers, checked on the organizers' own pages. status_at_build is the status when this file was built; 'open' is only reliable for 72 hours after verified_at. Live status: MCP server https://rnwecpchtrzkbrnkdhvt.supabase.co/functions/v1/mcp or https://allezhopp.ch/llms.txt. People apply on apply_url (the organizer's site).",
  "count": 202,

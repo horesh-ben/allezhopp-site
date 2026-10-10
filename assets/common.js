@@ -46,6 +46,45 @@ const LOCALE = { fr: "fr-CH", de: "de-CH", it: "it-CH", en: "en-GB" };
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+/* ---------- Site navigation ----------
+   The home page has the navigation in its HTML; other pages (many are generated) get the same links here,
+   so the header is the same everywhere without editing every page. On phones the links sit behind a menu button. */
+(function initNav() {
+  const top = document.querySelector("header.top");
+  if (!top) return;
+  let nav = top.querySelector(".nav");
+  if (!nav) {
+    nav = document.createElement("nav");
+    nav.className = "nav"; nav.id = "site-nav"; nav.dataset.i18nAria = "navLabel"; nav.setAttribute("aria-label", "Navigation");
+    nav.innerHTML = '<a href="/" data-nav="home" data-i18n="navEvents">Événements</a>'
+      + '<a href="/a-propos/" data-nav="about" data-i18n="abLink">À propos</a>'
+      + '<a href="/proposer/" data-nav="organizers" data-i18n="navOrg">Organisateurs</a>';
+    top.querySelector(".brand").after(nav);
+  }
+  let btn = top.querySelector(".nav-toggle");
+  if (!btn) {
+    btn = document.createElement("button");
+    btn.type = "button"; btn.className = "nav-toggle"; btn.dataset.i18nLabel = "navMenu";
+    btn.setAttribute("aria-label", "Menu"); btn.setAttribute("aria-expanded", "false"); btn.setAttribute("aria-controls", "site-nav");
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg>';
+    top.appendChild(btn);
+  }
+  /* Current section: event pages belong to "Events", the suggestion page to "Organizers". */
+  const path = location.pathname;
+  const here = path === "/" || path === "/index.html" || path.startsWith("/evenements/") ? "home"
+    : path.startsWith("/a-propos") ? "about" : path.startsWith("/proposer") ? "organizers" : "";
+  nav.querySelectorAll("a").forEach(a => {
+    const on = a.dataset.nav === here;
+    a.classList.toggle("is-current", on);
+    if (on && (a.getAttribute("href") === path)) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+  });
+  const setOpen = open => { top.classList.toggle("menu-open", open); btn.setAttribute("aria-expanded", String(open)); };
+  btn.addEventListener("click", () => setOpen(btn.getAttribute("aria-expanded") !== "true"));
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && top.classList.contains("menu-open")) { setOpen(false); btn.focus(); } });
+  document.addEventListener("click", e => { if (top.classList.contains("menu-open") && !top.contains(e.target)) setOpen(false); });
+  nav.addEventListener("click", e => { if (e.target.closest("a")) setOpen(false); });
+})();
+
 /* ---------- Language ---------- */
 let lang = "fr";
 function setLang(l) {
@@ -58,6 +97,8 @@ function setLang(l) {
     el.innerHTML = CONTACT_EMAIL ? t.contactEmail.replace(/\{email\}/g, esc(CONTACT_EMAIL)) : t.contactForm;
   });
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { const v = t[el.dataset.i18nPh]; if (typeof v === "string") el.placeholder = v; });
+  document.querySelectorAll("[data-i18n-aria]").forEach(el => { const v = t[el.dataset.i18nAria]; if (typeof v === "string") el.setAttribute("aria-label", v); });
+  document.querySelectorAll(".nav-toggle[data-i18n-label]").forEach(el => { const v = t[el.dataset.i18nLabel]; if (typeof v === "string") el.setAttribute("aria-label", v); });
   const titleKey = document.body.dataset.titleKey;
   if (titleKey && t[titleKey]) document.title = t[titleKey];
   document.querySelectorAll("#theme-switch [data-tlabel]").forEach(b => { b.setAttribute("aria-label", t[b.dataset.tlabel]); b.title = t[b.dataset.tlabel]; });

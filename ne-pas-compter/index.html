@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Statistiques – ne pas compter ce navigateur · AllezHopp</title>
+<style>body{font-family:system-ui,sans-serif;max-width:34rem;margin:4rem auto;padding:0 1rem;line-height:1.5}button{font:inherit;padding:.5rem 1rem;margin-right:.5rem;cursor:pointer}</style>
+</head>
+<body>
+<h1>Statistiques de visite</h1>
+<p>Cette page sert à l'équipe AllezHopp : elle permet de ne pas compter ses propres visites dans les statistiques (Umami). Le réglage est enregistré dans ce navigateur seulement.</p>
+<p id="state"></p>
+<button id="off">Ne pas compter ce navigateur</button>
+<button id="on">Compter à nouveau</button>
+<p><a href="/">Retour à AllezHopp</a></p>
+<script>
+  function show(){var off=false;try{off=!!localStorage.getItem("umami.disabled")}catch(e){}
+    document.getElementById("state").textContent=off?"✅ Ce navigateur n'est pas compté.":"Ce navigateur est compté.";}
+  document.getElementById("off").onclick=function(){try{localStorage.setItem("umami.disabled","1")}catch(e){}show()};
+  document.getElementById("on").onclick=function(){try{localStorage.removeItem("umami.disabled")}catch(e){}show()};
+  show();
+</script>
+</body>
+</html>

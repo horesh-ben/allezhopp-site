@@ -3,13 +3,14 @@
    onLangChange(t) to update its own content when the language changes. */
 
 /* ---------------------------------------------------------------
-   ANALYTICS (anonymous, no cookies, no registration) – Plausible.
+   ANALYTICS (anonymous, no cookies, no registration) – Umami Cloud, EU region.
+   To leave your own visits out of the counts, open /ne-pas-compter/ once in each browser you use.
    Never send e-mail addresses or other personal data here.
 ---------------------------------------------------------------- */
 const LANGS = ["fr", "de", "it", "en"];
 const BROWSER_LANG = (navigator.language || "").slice(0, 2).toLowerCase() || "unknown";
 function track(name, props) {
-  try { if (typeof window.plausible === "function") window.plausible(name, { props }); } catch (e) {}
+  try { if (window.umami && typeof window.umami.track === "function") window.umami.track(name, props || {}); } catch (e) {}
 }
 
 /* ---------------------------------------------------------------

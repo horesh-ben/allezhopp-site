@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-11",
+ "generated": "2026-11-12",
  "source": "https://allezhopp.ch",
  "about": "Events in Switzerland that recruit volunteers, checked on the organizers' own pages. status_at_build is the status when this file was built; 'open' is only reliable for 72 hours after verified_at. Live status: MCP server https://rnwecpchtrzkbrnkdhvt.supabase.co/functions/v1/mcp or https://allezhopp.ch/llms.txt. People apply on apply_url (the organizer's site).",
- "count": 205,
+ "count": 204,
  "events": [
   {
    "id": "1f3e7ec7-10d9-54f2-b204-0ac2fb51f633",
@@ -63,36 +63,6 @@
    "evidence_quote": "Participez à un projet solidaire en rejoignant nos équipes bénévoles !",
    "evidence_url": "https://www.benevol-jobs.ch/fr/annonce/recherche-benevoles-pour-la-vente-de-chocolat-conditionnement-stands",
    "page_url": "https://allezhopp.ch/evenements/vente-de-chocolat-solidaire-des-galetas-du-csp-vaud/"
-  },
-  {
-   "id": "a5448945-5114-5ce2-a70a-e31c6c09a13b",
-   "event_id": "c1cb3d5b-aeb3-5e8a-b4af-45fd1f7e93de",
-   "name": "Queersicht – Queer Film Festival Bern",
-   "category": "culture",
-   "canton": "BE",
-   "town": "Bern",
-   "venue": "divers cinémas, Berne",
-   "edition": "2026 (30e)",
-   "event_start": "2026-11-05",
-   "event_end": "2026-11-11",
-   "date_precision": "day",
-   "volunteer_start": null,
-   "volunteer_end": null,
-   "application_deadline": null,
-   "status_at_build": "unknown",
-   "verified_at": "2026-10-09T20:00:00+02:00",
-   "announced_opening": null,
-   "apply_url": "https://www.queersicht.ch/de/unterstuetzen",
-   "registration_via": null,
-   "roles": "check-in cinéma, bar/lounge, soirées, traduction de sous-titres",
-   "commitment": null,
-   "min_age": null,
-   "organizer": "Queersicht",
-   "organizer_url": "https://www.queersicht.ch/",
-   "event_url": "https://www.queersicht.ch/de",
-   "evidence_quote": "Du kannst dich online in einen Schichtplan einschreiben.",
-   "evidence_url": "https://www.queersicht.ch/de/unterstuetzen",
-   "page_url": "https://allezhopp.ch/evenements/queersicht-queer-film-festival-bern/"
   },
   {
    "id": "f7e0f42d-2d74-5438-8908-0405a3f87757",

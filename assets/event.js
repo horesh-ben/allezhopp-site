@@ -60,7 +60,7 @@ function renderEvent() {
   if ((st === "open" || st === "partially_full") && app && !(LIVE && LIVE.gone))
     a.push(`<a class="btn btn-primary act-apply" href="${esc(app)}" target="_blank" rel="noopener">${esc(t.apply)} ↗</a>`);
   else if (site) a.push(`<a class="btn btn-soft" href="${esc(site)}" target="_blank" rel="noopener">${esc(t.siteLink)} ↗</a>`);
-  if (st !== "open" && st !== "partially_full") a.push(`<a class="btn btn-soft" href="/#alertes">${esc(t.notify)}</a>`);
+  if (st !== "open" && st !== "partially_full") a.push(`<a class="btn btn-soft" href="${pageHref("/#alertes")}">${esc(t.notify)}</a>`);
   a.push(`<button type="button" class="btn btn-ghost act-share"><svg aria-hidden="true"><use href="#i-share"/></svg><span>${esc(t.evShare)}</span></button>`);
   if (calDates()) a.push(`<button type="button" class="btn btn-ghost act-cal"><svg aria-hidden="true"><use href="#i-plus"/></svg><span>${esc(t.evCal)}</span></button>`);
   $("#ev-actions").innerHTML = a.join("");

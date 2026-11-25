@@ -32,7 +32,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://andermattsedrundisentis.swissvolunteers.ch/discover-events/link/6386d908d1e1079994ee6ee96a2505a76ccc6e9f",
-   "page_url": "https://allezhopp.ch/evenements/volunteer-pool-region-andermatt-sedrun-disentis/"
+   "page_url": "https://allezhopp.ch/fr/evenements/volunteer-pool-region-andermatt-sedrun-disentis/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/volunteer-pool-region-andermatt-sedrun-disentis/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/volunteer-pool-region-andermatt-sedrun-disentis/",
+    "it": "https://allezhopp.ch/it/eventi/volunteer-pool-region-andermatt-sedrun-disentis/",
+    "en": "https://allezhopp.ch/en/events/volunteer-pool-region-andermatt-sedrun-disentis/"
+   }
   },
   {
    "id": "1ab1637b-24eb-50e8-96f7-581c6fd33473",
@@ -62,7 +68,13 @@
    "event_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/benevolat",
    "evidence_quote": "Union Neuchâtel Basket recherche des personnes motivées pour rejoindre son équipe",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/benevolat",
-   "page_url": "https://allezhopp.ch/evenements/union-neuchatel-basket-benevoles-de-match/"
+   "page_url": "https://allezhopp.ch/fr/evenements/union-neuchatel-basket-benevoles-de-match/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/union-neuchatel-basket-benevoles-de-match/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/union-neuchatel-basket-benevoles-de-match/",
+    "it": "https://allezhopp.ch/it/eventi/union-neuchatel-basket-benevoles-de-match/",
+    "en": "https://allezhopp.ch/en/events/union-neuchatel-basket-benevoles-de-match/"
+   }
   },
   {
    "id": "7a9922ce-9daa-50a5-811a-bc83fcf38bad",
@@ -92,7 +104,13 @@
    "event_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/freiwillige-mitarbeitende-fur-be-my-angel-tonight-gesucht",
    "evidence_quote": "suchen wir motivierte Freiwillige für Einsätze an Events",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/freiwillige-mitarbeitende-fur-be-my-angel-tonight-gesucht",
-   "page_url": "https://allezhopp.ch/evenements/be-my-angel-tonight-blaues-kreuz-appenzell-ausserrhoden/"
+   "page_url": "https://allezhopp.ch/fr/evenements/be-my-angel-tonight-blaues-kreuz-appenzell-ausserrhoden/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/be-my-angel-tonight-blaues-kreuz-appenzell-ausserrhoden/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/be-my-angel-tonight-blaues-kreuz-appenzell-ausserrhoden/",
+    "it": "https://allezhopp.ch/it/eventi/be-my-angel-tonight-blaues-kreuz-appenzell-ausserrhoden/",
+    "en": "https://allezhopp.ch/en/events/be-my-angel-tonight-blaues-kreuz-appenzell-ausserrhoden/"
+   }
   },
   {
    "id": "3054498c-e274-570c-913e-cc995df6a7e1",
@@ -122,7 +140,13 @@
    "event_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/freiwillige-mitarbeitende-fur-be-my-angel-tonight-gesucht",
    "evidence_quote": "suchen wir motivierte Freiwillige für Einsätze an Events",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/freiwillige-mitarbeitende-fur-be-my-angel-tonight-gesucht",
-   "page_url": "https://allezhopp.ch/evenements/be-my-angel-tonight-blaues-kreuz-appenzell-innerrhoden/"
+   "page_url": "https://allezhopp.ch/fr/evenements/be-my-angel-tonight-blaues-kreuz-appenzell-innerrhoden/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/be-my-angel-tonight-blaues-kreuz-appenzell-innerrhoden/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/be-my-angel-tonight-blaues-kreuz-appenzell-innerrhoden/",
+    "it": "https://allezhopp.ch/it/eventi/be-my-angel-tonight-blaues-kreuz-appenzell-innerrhoden/",
+    "en": "https://allezhopp.ch/en/events/be-my-angel-tonight-blaues-kreuz-appenzell-innerrhoden/"
+   }
   },
   {
    "id": "f70825ab-af2a-5734-a76e-d3bd09f45a74",
@@ -152,7 +176,13 @@
    "event_url": "https://www.benevol-jobs.ch/fr/annonce/recherche-benevoles-pour-la-vente-de-chocolat-conditionnement-stands",
    "evidence_quote": "Participez à un projet solidaire en rejoignant nos équipes bénévoles !",
    "evidence_url": "https://www.benevol-jobs.ch/fr/annonce/recherche-benevoles-pour-la-vente-de-chocolat-conditionnement-stands",
-   "page_url": "https://allezhopp.ch/evenements/vente-de-chocolat-solidaire-des-galetas-du-csp-vaud/"
+   "page_url": "https://allezhopp.ch/fr/evenements/vente-de-chocolat-solidaire-des-galetas-du-csp-vaud/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/vente-de-chocolat-solidaire-des-galetas-du-csp-vaud/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/vente-de-chocolat-solidaire-des-galetas-du-csp-vaud/",
+    "it": "https://allezhopp.ch/it/eventi/vente-de-chocolat-solidaire-des-galetas-du-csp-vaud/",
+    "en": "https://allezhopp.ch/en/events/vente-de-chocolat-solidaire-des-galetas-du-csp-vaud/"
+   }
   },
   {
    "id": "82193988-6fcd-5761-8f07-f3d1cf6b887a",
@@ -182,7 +212,13 @@
    "event_url": "https://lovetherapyzero.com/fr/equipe-angels-designers/",
    "evidence_quote": "L'association recherche une dizaine de bénévoles pour participer à ce projet.",
    "evidence_url": "https://www.chuv.ch/fr/eras/eras-home/liste-des-actualites/detail/news/64898-recherche-de-benevoles-pour-noel-pour-decorer-lhopital-des-enfants",
-   "page_url": "https://allezhopp.ch/evenements/decorations-de-noel-a-l-hopital-des-enfants-chuv/"
+   "page_url": "https://allezhopp.ch/fr/evenements/decorations-de-noel-a-l-hopital-des-enfants-chuv/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/decorations-de-noel-a-l-hopital-des-enfants-chuv/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/decorations-de-noel-a-l-hopital-des-enfants-chuv/",
+    "it": "https://allezhopp.ch/it/eventi/decorations-de-noel-a-l-hopital-des-enfants-chuv/",
+    "en": "https://allezhopp.ch/en/events/decorations-de-noel-a-l-hopital-des-enfants-chuv/"
+   }
   },
   {
    "id": "3e6a1a84-c5b5-56b5-90eb-ae429e36fd8e",
@@ -212,7 +248,13 @@
    "event_url": null,
    "evidence_quote": "wir freuen uns über jede helfende Hand",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/mithilfe-beim-kerzenziehen-12-nov-bis-4-dez-2019",
-   "page_url": "https://allezhopp.ch/evenements/kerzenziehen-im-viva-frauenfeld/"
+   "page_url": "https://allezhopp.ch/fr/evenements/kerzenziehen-im-viva-frauenfeld/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/kerzenziehen-im-viva-frauenfeld/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/kerzenziehen-im-viva-frauenfeld/",
+    "it": "https://allezhopp.ch/it/eventi/kerzenziehen-im-viva-frauenfeld/",
+    "en": "https://allezhopp.ch/en/events/kerzenziehen-im-viva-frauenfeld/"
+   }
   },
   {
    "id": "37e9a5fe-4f0d-5ed9-b17b-186a2d88e47a",
@@ -242,7 +284,13 @@
    "event_url": "https://www.tdh.ch/",
    "evidence_quote": "Für die Freiwilligengruppe Zug suchen wir motivierte Personen",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/mithilfe-aktionen-sensibilisierung-mittelbeschaffung-der-region-zug",
-   "page_url": "https://allezhopp.ch/evenements/terre-des-hommes-freiwilligengruppe-zug/"
+   "page_url": "https://allezhopp.ch/fr/evenements/terre-des-hommes-freiwilligengruppe-zug/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/terre-des-hommes-freiwilligengruppe-zug/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/terre-des-hommes-freiwilligengruppe-zug/",
+    "it": "https://allezhopp.ch/it/eventi/terre-des-hommes-freiwilligengruppe-zug/",
+    "en": "https://allezhopp.ch/en/events/terre-des-hommes-freiwilligengruppe-zug/"
+   }
   },
   {
    "id": "040b9ea3-bf8b-58f8-a32f-fca7aed4afc5",
@@ -272,7 +320,13 @@
    "event_url": "https://action-education-suisse.org/",
    "evidence_quote": "Cette annonce n’est plus disponible",
    "evidence_url": "https://www.benevolatgeneve.ch/annonce/actioneducation/emballage-cadeaux-solidaire-a-la-fnac-cornavin_1765",
-   "page_url": "https://allezhopp.ch/evenements/emballage-cadeaux-solidaire-fnac-cornavin/"
+   "page_url": "https://allezhopp.ch/fr/evenements/emballage-cadeaux-solidaire-fnac-cornavin/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/emballage-cadeaux-solidaire-fnac-cornavin/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/emballage-cadeaux-solidaire-fnac-cornavin/",
+    "it": "https://allezhopp.ch/it/eventi/emballage-cadeaux-solidaire-fnac-cornavin/",
+    "en": "https://allezhopp.ch/en/events/emballage-cadeaux-solidaire-fnac-cornavin/"
+   }
   },
   {
    "id": "c742b555-5eec-5ec4-8ae2-83b6224055e2",
@@ -302,7 +356,13 @@
    "event_url": null,
    "evidence_quote": "Wir suchen Freiwillige, welche uns beim Verkauf unterstützen.",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/hilf-mit-am-stand-von-terre-des-hommes-der-zuercher-weihnachtsallee",
-   "page_url": "https://allezhopp.ch/evenements/terre-des-hommes-stand-a-la-zurcher-weihnachtsallee/"
+   "page_url": "https://allezhopp.ch/fr/evenements/terre-des-hommes-stand-a-la-zurcher-weihnachtsallee/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/terre-des-hommes-stand-a-la-zurcher-weihnachtsallee/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/terre-des-hommes-stand-a-la-zurcher-weihnachtsallee/",
+    "it": "https://allezhopp.ch/it/eventi/terre-des-hommes-stand-a-la-zurcher-weihnachtsallee/",
+    "en": "https://allezhopp.ch/en/events/terre-des-hommes-stand-a-la-zurcher-weihnachtsallee/"
+   }
   },
   {
    "id": "a326632f-021a-5b9f-9219-05ef929c3d60",
@@ -332,7 +392,13 @@
    "event_url": "https://www.fide.com/salesforce-fide-world-championship-match-2026-schedule-format-and-prize-fund-confirmed/",
    "evidence_quote": "une équipe de bénévoles est recherchée",
    "evidence_url": "https://fge-echecs.ch/devenez-benevole-du-championnat-du-monde-dechecs-2026-a-geneve/",
-   "page_url": "https://allezhopp.ch/evenements/championnat-du-monde-d-echecs-fide-2026/"
+   "page_url": "https://allezhopp.ch/fr/evenements/championnat-du-monde-d-echecs-fide-2026/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/championnat-du-monde-d-echecs-fide-2026/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/championnat-du-monde-d-echecs-fide-2026/",
+    "it": "https://allezhopp.ch/it/eventi/championnat-du-monde-d-echecs-fide-2026/",
+    "en": "https://allezhopp.ch/en/events/championnat-du-monde-d-echecs-fide-2026/"
+   }
   },
   {
    "id": "826c0c9f-2774-5ac4-9d14-06baa39972ad",
@@ -362,7 +428,13 @@
    "event_url": null,
    "evidence_quote": "Damit unser Markt ein voller Erfolg wird, sind wir auf die Unterstützung von Freiwilligen angewiesen!",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/helfende-haende-fuer-auf-abbau-chlaus-maeaert-adliswil-gesucht",
-   "page_url": "https://allezhopp.ch/evenements/chlaus-maart-adliswil/"
+   "page_url": "https://allezhopp.ch/fr/evenements/chlaus-maart-adliswil/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/chlaus-maart-adliswil/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/chlaus-maart-adliswil/",
+    "it": "https://allezhopp.ch/it/eventi/chlaus-maart-adliswil/",
+    "en": "https://allezhopp.ch/en/events/chlaus-maart-adliswil/"
+   }
   },
   {
    "id": "750c6854-43a1-56f5-a52c-03d5b27b5829",
@@ -392,7 +464,13 @@
    "event_url": "https://www.gaia-festival.com/",
    "evidence_quote": "board and lodging on the days you volunteer to help",
    "evidence_url": "https://www.gaia-festival.com/en/friends-and-partners/volunteers",
-   "page_url": "https://allezhopp.ch/evenements/gaia-musikfestival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/gaia-musikfestival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/gaia-musikfestival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/gaia-musikfestival/",
+    "it": "https://allezhopp.ch/it/eventi/gaia-musikfestival/",
+    "en": "https://allezhopp.ch/en/events/gaia-musikfestival/"
+   }
   },
   {
    "id": "116d9467-cbb7-5142-8106-76ad6cfcfb0a",
@@ -422,7 +500,13 @@
    "event_url": "https://www.nezrougeaargau.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Aargau/Nez-Rouge-Aargau.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-aargau/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-aargau/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-aargau/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-aargau/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-aargau/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-aargau/"
+   }
   },
   {
    "id": "c31b0125-c0da-51fa-8fec-f526bd0c6fd4",
@@ -452,7 +536,13 @@
    "event_url": "https://www.nezrougezuerich.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Zurich/Nez-Rouge-Zurich.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-zurich/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-zurich/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-zurich/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-zurich/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-zurich/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-zurich/"
+   }
   },
   {
    "id": "696a94c3-f08e-5b11-872f-cdbc1350c812",
@@ -482,7 +572,13 @@
    "event_url": "https://www.nezrougebasel.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/beider-Basel/Nez-Rouge-beider-Basel.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-beider-basel/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-beider-basel/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-beider-basel/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-beider-basel/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-beider-basel/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-beider-basel/"
+   }
   },
   {
    "id": "69c06dce-2fcd-5f09-8023-5659e0a82529",
@@ -512,7 +608,13 @@
    "event_url": "https://www.nezrougebasel.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/beider-Basel/Nez-Rouge-beider-Basel.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-beider-basel-baselland/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-beider-basel-baselland/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-beider-basel-baselland/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-beider-basel-baselland/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-beider-basel-baselland/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-beider-basel-baselland/"
+   }
   },
   {
    "id": "1d425297-36a2-53a2-8a4c-c9de06d53c31",
@@ -542,7 +644,13 @@
    "event_url": null,
    "evidence_quote": "Freiwillige fürs Aarauer Kerzenziehen 2026",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/freiwillige-fuers-kerzenziehen-aarau",
-   "page_url": "https://allezhopp.ch/evenements/aarauer-kerzenziehen/"
+   "page_url": "https://allezhopp.ch/fr/evenements/aarauer-kerzenziehen/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/aarauer-kerzenziehen/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/aarauer-kerzenziehen/",
+    "it": "https://allezhopp.ch/it/eventi/aarauer-kerzenziehen/",
+    "en": "https://allezhopp.ch/en/events/aarauer-kerzenziehen/"
+   }
   },
   {
    "id": "fbb4a942-d664-50cf-b2f8-df85e87709fc",
@@ -572,7 +680,13 @@
    "event_url": "https://nezrouge-bielbienne.ch/fr/",
    "evidence_quote": "Tu souhaites rejoindre Nez Rouge Biel/Bienne en tant que bénévole ? Inscrits-toi maintenant !",
    "evidence_url": "https://nezrouge-bielbienne.ch/fr/rejoignez-nous/inscription",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-biel-bienne-seeland/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-biel-bienne-seeland/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-biel-bienne-seeland/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-biel-bienne-seeland/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-biel-bienne-seeland/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-biel-bienne-seeland/"
+   }
   },
   {
    "id": "771b0bae-8969-5ecb-93b4-5ee0e425365f",
@@ -602,7 +716,13 @@
    "event_url": "https://www.nezrouge-graubuenden.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Graubunden/Nez-Rouge-Graubuenden.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-graubunden/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-graubunden/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-graubunden/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-graubunden/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-graubunden/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-graubunden/"
+   }
   },
   {
    "id": "7b1ad55b-133f-5013-ba5f-2e0467faa9f8",
@@ -632,7 +752,13 @@
    "event_url": "https://www.nezrouge-linth-glarus.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Linth-Glarus/Nez-Rouge-Linth-Glarus.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-linth-glarus/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-linth-glarus/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-linth-glarus/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-linth-glarus/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-linth-glarus/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-linth-glarus/"
+   }
   },
   {
    "id": "a1b0d32a-e6ab-5323-a8d5-3581b800a8eb",
@@ -662,7 +788,13 @@
    "event_url": "https://www.nezrouge-luzern.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Luzern/Nez-Rouge-Luzern.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-luzern/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-luzern/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-luzern/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-luzern/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-luzern/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-luzern/"
+   }
   },
   {
    "id": "a67a07d8-4fdf-5e43-a00a-9ec25245e9fa",
@@ -692,7 +824,13 @@
    "event_url": "https://www.nezrougesolothurn.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Solothurn/Nez-Rouge-Solothurn.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-solothurn/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-solothurn/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-solothurn/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-solothurn/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-solothurn/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-solothurn/"
+   }
   },
   {
    "id": "2bbe07d3-7127-5b4c-a82e-6dc02645539e",
@@ -722,7 +860,13 @@
    "event_url": "https://www.nezrouge-zug.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Zug-Innerschwyz/Nez-Rouge-Zug-Innerschwyz.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-zug-innerschwyz/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-zug-innerschwyz/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-zug-innerschwyz/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-zug-innerschwyz/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-zug-innerschwyz/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-zug-innerschwyz/"
+   }
   },
   {
    "id": "c1808a65-c332-5d9c-8787-fa15c72f405c",
@@ -752,7 +896,13 @@
    "event_url": "https://www.nezrouge-zug.ch/",
    "evidence_quote": "Zeit und Dauer der Aktion 2026",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Zug-Innerschwyz/Nez-Rouge-Zug-Innerschwyz.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-zug-innerschwyz-innerschwyz/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-zug-innerschwyz-innerschwyz/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-zug-innerschwyz-innerschwyz/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-zug-innerschwyz-innerschwyz/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-zug-innerschwyz-innerschwyz/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-zug-innerschwyz-innerschwyz/"
+   }
   },
   {
    "id": "0fef2319-353f-519b-9bff-4860fa915155",
@@ -782,7 +932,13 @@
    "event_url": "https://samedidupartage.ch/fribourg/",
    "evidence_quote": "Les inscriptions sont ouvertes.",
    "evidence_url": "https://samedidupartage.ch/fribourg/",
-   "page_url": "https://allezhopp.ch/evenements/samedi-du-partage-fribourg/"
+   "page_url": "https://allezhopp.ch/fr/evenements/samedi-du-partage-fribourg/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/samedi-du-partage-fribourg/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/samedi-du-partage-fribourg/",
+    "it": "https://allezhopp.ch/it/eventi/samedi-du-partage-fribourg/",
+    "en": "https://allezhopp.ch/en/events/samedi-du-partage-fribourg/"
+   }
   },
   {
    "id": "2e839ae2-f8ec-5a1e-a161-dca2e319672d",
@@ -812,7 +968,13 @@
    "event_url": "https://samedidupartage.ch/geneve/",
    "evidence_quote": "Les prochaines éditions auront lieu les 27-28 novembre 2026 et les 4-5 juin 2027",
    "evidence_url": "https://www.partage.ch/fr/engagement/devenir-benevole/samedi-partage/",
-   "page_url": "https://allezhopp.ch/evenements/samedi-du-partage-geneve/"
+   "page_url": "https://allezhopp.ch/fr/evenements/samedi-du-partage-geneve/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/samedi-du-partage-geneve/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/samedi-du-partage-geneve/",
+    "it": "https://allezhopp.ch/it/eventi/samedi-du-partage-geneve/",
+    "en": "https://allezhopp.ch/en/events/samedi-du-partage-geneve/"
+   }
   },
   {
    "id": "98492a6c-d8a9-5756-93f0-f987ad00c1e7",
@@ -842,7 +1004,13 @@
    "event_url": "https://samedidupartage.ch/vaud/",
    "evidence_quote": "Prochaine édition : 27 et 28 novembre !",
    "evidence_url": "https://samedidupartage.ch/vaud/actions/",
-   "page_url": "https://allezhopp.ch/evenements/samedi-du-partage-vaud/"
+   "page_url": "https://allezhopp.ch/fr/evenements/samedi-du-partage-vaud/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/samedi-du-partage-vaud/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/samedi-du-partage-vaud/",
+    "it": "https://allezhopp.ch/it/eventi/samedi-du-partage-vaud/",
+    "en": "https://allezhopp.ch/en/events/samedi-du-partage-vaud/"
+   }
   },
   {
    "id": "71582e10-a7b0-59b9-88cb-97435fcacf15",
@@ -872,7 +1040,13 @@
    "event_url": "https://www.restosducoeur-sion.ch/",
    "evidence_quote": "On recherche des chauffeurs pour les journées de collecte (+ 1 organisateur de la tournée)",
    "evidence_url": "https://www.benevoles-vs.ch/valais/recherche-chauffeurs-pour-journees-collecte-2450.html",
-   "page_url": "https://allezhopp.ch/evenements/journee-de-collecte-des-restos-du-cur-sion/"
+   "page_url": "https://allezhopp.ch/fr/evenements/journee-de-collecte-des-restos-du-cur-sion/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/journee-de-collecte-des-restos-du-cur-sion/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/journee-de-collecte-des-restos-du-cur-sion/",
+    "it": "https://allezhopp.ch/it/eventi/journee-de-collecte-des-restos-du-cur-sion/",
+    "en": "https://allezhopp.ch/en/events/journee-de-collecte-des-restos-du-cur-sion/"
+   }
   },
   {
    "id": "46a5f050-cad0-5bdb-826b-58770eea23dd",
@@ -902,7 +1076,13 @@
    "event_url": null,
    "evidence_quote": "DER WARTELISTE BEITRETEN",
    "evidence_url": "https://events.wwf.ch/de/natur-verbindet-wir-pflanzen-einen-wald-der-zukunft-4a6vVj1tX7/overview",
-   "page_url": "https://allezhopp.ch/evenements/natureinsatz-egnach-wir-pflanzen-einen-wald-der-zukunft-wwf/"
+   "page_url": "https://allezhopp.ch/fr/evenements/natureinsatz-egnach-wir-pflanzen-einen-wald-der-zukunft-wwf/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/natureinsatz-egnach-wir-pflanzen-einen-wald-der-zukunft-wwf/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/natureinsatz-egnach-wir-pflanzen-einen-wald-der-zukunft-wwf/",
+    "it": "https://allezhopp.ch/it/eventi/natureinsatz-egnach-wir-pflanzen-einen-wald-der-zukunft-wwf/",
+    "en": "https://allezhopp.ch/en/events/natureinsatz-egnach-wir-pflanzen-einen-wald-der-zukunft-wwf/"
+   }
   },
   {
    "id": "006d6833-3f43-562d-925f-bb899a15a98c",
@@ -932,7 +1112,13 @@
    "event_url": "https://www.benevol-jobs.ch/de/einsatz/plantation-dun-jardin-foret-belprahon-ju-le-2811",
    "evidence_quote": "Nous planterons un jardin-forêt sur cette parcelle agricole.",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/plantation-dun-jardin-foret-belprahon-ju-le-2811",
-   "page_url": "https://allezhopp.ch/evenements/plantation-d-un-jardin-foret-a-belprahon-wwf-connexions-naturelles/"
+   "page_url": "https://allezhopp.ch/fr/evenements/plantation-d-un-jardin-foret-a-belprahon-wwf-connexions-naturelles/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/plantation-d-un-jardin-foret-a-belprahon-wwf-connexions-naturelles/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/plantation-d-un-jardin-foret-a-belprahon-wwf-connexions-naturelles/",
+    "it": "https://allezhopp.ch/it/eventi/plantation-d-un-jardin-foret-a-belprahon-wwf-connexions-naturelles/",
+    "en": "https://allezhopp.ch/en/events/plantation-d-un-jardin-foret-a-belprahon-wwf-connexions-naturelles/"
+   }
   },
   {
    "id": "761bd62f-11c9-5480-a47d-fb1a5b581820",
@@ -962,7 +1148,13 @@
    "event_url": null,
    "evidence_quote": "UND Generationentandem organisiert jährlich das Kerzenziehen am Weihnachtsmarkt in Thun",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/freiwilligenarbeit-beim-kerzenziehen",
-   "page_url": "https://allezhopp.ch/evenements/kerzenziehen-und-generationentandem-thun-et-berne/"
+   "page_url": "https://allezhopp.ch/fr/evenements/kerzenziehen-und-generationentandem-thun-et-berne/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/kerzenziehen-und-generationentandem-thun-et-berne/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/kerzenziehen-und-generationentandem-thun-et-berne/",
+    "it": "https://allezhopp.ch/it/eventi/kerzenziehen-und-generationentandem-thun-et-berne/",
+    "en": "https://allezhopp.ch/en/events/kerzenziehen-und-generationentandem-thun-et-berne/"
+   }
   },
   {
    "id": "e8f23c5f-486d-5f06-bbd5-3a94a1227c88",
@@ -992,7 +1184,13 @@
    "event_url": "https://association-freego.ch/",
    "evidence_quote": "La magie de Noël a besoin de renfort !",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/recherche-des-lutins-de-noel",
-   "page_url": "https://allezhopp.ch/evenements/lutins-de-noel-emballage-cadeaux-free-go/"
+   "page_url": "https://allezhopp.ch/fr/evenements/lutins-de-noel-emballage-cadeaux-free-go/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/lutins-de-noel-emballage-cadeaux-free-go/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/lutins-de-noel-emballage-cadeaux-free-go/",
+    "it": "https://allezhopp.ch/it/eventi/lutins-de-noel-emballage-cadeaux-free-go/",
+    "en": "https://allezhopp.ch/en/events/lutins-de-noel-emballage-cadeaux-free-go/"
+   }
   },
   {
    "id": "fe430193-23a7-5730-9fb4-4330363a1b04",
@@ -1022,7 +1220,13 @@
    "event_url": "https://www.nezrougebern.ch/",
    "evidence_quote": "Einsatznacht Fr., 11.12.26",
    "evidence_url": "https://portal.helfereinsatz.ch/nez-rouge-bern-city/de/browse/open",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-bern/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-bern/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-bern/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-bern/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-bern/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-bern/"
+   }
   },
   {
    "id": "7dd83e08-f5dc-5175-a34e-4b458988674c",
@@ -1052,7 +1256,13 @@
    "event_url": "https://www.nezrougebeo.ch/",
    "evidence_quote": "Ich will Freiwillige(r) sein",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Berner-Oberland/Nez-Rouge-Berner-Oberland.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-berner-oberland/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-berner-oberland/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-berner-oberland/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-berner-oberland/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-berner-oberland/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-berner-oberland/"
+   }
   },
   {
    "id": "1a6eee53-6dc5-53c3-9a10-c822b7831236",
@@ -1082,7 +1292,13 @@
    "event_url": "https://www.nezrouge-fr.ch/",
    "evidence_quote": "préparer la prochaine « Opération Nez Rouge » de décembre 2026",
    "evidence_url": "https://www.nezrouge-fr.ch/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-fribourg/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-fribourg/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-fribourg/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-fribourg/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-fribourg/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-fribourg/"
+   }
   },
   {
    "id": "710bbbfa-a116-5880-bf10-d27dba60741c",
@@ -1112,7 +1328,13 @@
    "event_url": "https://nezrouge-geneve.ch/",
    "evidence_quote": "Nez Rouge recherche toujours des bénévoles tout au long de l'année",
    "evidence_url": "https://nezrouge-geneve.ch/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-geneve/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-geneve/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-geneve/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-geneve/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-geneve/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-geneve/"
+   }
   },
   {
    "id": "5ad5329e-954c-5314-90f9-dcb446d887e6",
@@ -1142,7 +1364,13 @@
    "event_url": "https://www.nezrouge-jurabernois.ch/",
    "evidence_quote": "Vous pouvez dès à présent vous inscrire",
    "evidence_url": "https://www.nezrouge-jurabernois.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-jura-bernois/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-jura-bernois/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-jura-bernois/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-jura-bernois/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-jura-bernois/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-jura-bernois/"
+   }
   },
   {
    "id": "9d27dcc5-d0d3-5500-9492-ed4dd4586557",
@@ -1172,7 +1400,13 @@
    "event_url": "https://www.nezrouge-valais.ch/",
    "evidence_quote": "Opération Nez Rouge Valais 2026",
    "evidence_url": "https://nezrouge-valais.ch/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-valais/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-valais/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-valais/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-valais/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-valais/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-valais/"
+   }
   },
   {
    "id": "2cf3ca07-8a57-5e98-a570-11d8e1513ede",
@@ -1202,7 +1436,13 @@
    "event_url": "https://escalade.ch/",
    "evidence_quote": "Jusqu'au 02 décembre 2026",
    "evidence_url": "https://www.benevolatgeneve.ch/annonce/cde/48eme-edition-de-la-course-de-l-escalade_1767",
-   "page_url": "https://allezhopp.ch/evenements/course-de-l-escalade/"
+   "page_url": "https://allezhopp.ch/fr/evenements/course-de-l-escalade/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/course-de-l-escalade/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/course-de-l-escalade/",
+    "it": "https://allezhopp.ch/it/eventi/course-de-l-escalade/",
+    "en": "https://allezhopp.ch/en/events/course-de-l-escalade/"
+   }
   },
   {
    "id": "3d96c296-8ee9-582d-a266-5d171b8552e4",
@@ -1232,7 +1472,13 @@
    "event_url": "https://www.humorfestival.swiss/",
    "evidence_quote": "Mithelfen und geniessen am Arosa Humorfestival",
    "evidence_url": "https://www.humorfestival.swiss/unterstuetzung/voluntari",
-   "page_url": "https://allezhopp.ch/evenements/arosa-humorfestival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/arosa-humorfestival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/arosa-humorfestival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/arosa-humorfestival/",
+    "it": "https://allezhopp.ch/it/eventi/arosa-humorfestival/",
+    "en": "https://allezhopp.ch/en/events/arosa-humorfestival/"
+   }
   },
   {
    "id": "f239596e-b023-5a75-8bc1-04188ae05421",
@@ -1262,7 +1508,13 @@
    "event_url": "https://www.course-a-travers-avenches.com/",
    "evidence_quote": "J'offre un peu de mon temps le vendredi 4 décembre 2026",
    "evidence_url": "https://forms.gle/b1rVMPodm8PcTuoCA",
-   "page_url": "https://allezhopp.ch/evenements/course-a-travers-avenches/"
+   "page_url": "https://allezhopp.ch/fr/evenements/course-a-travers-avenches/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/course-a-travers-avenches/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/course-a-travers-avenches/",
+    "it": "https://allezhopp.ch/it/eventi/course-a-travers-avenches/",
+    "en": "https://allezhopp.ch/en/events/course-a-travers-avenches/"
+   }
   },
   {
    "id": "5ec49d66-0055-512a-bab7-a9bf2bc48b9b",
@@ -1292,7 +1544,13 @@
    "event_url": "https://www.nezrouge-jura.ch/",
    "evidence_quote": "Clique ICI pour t’inscrire",
    "evidence_url": "https://nezrouge-jura.ch/inscriptions-delemont/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-jura/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-jura/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-jura/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-jura/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-jura/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-jura/"
+   }
   },
   {
    "id": "897662e9-8cf9-5125-a95f-5504bab9b1af",
@@ -1322,7 +1580,13 @@
    "event_url": "https://www.nezrouge-ne.ch/",
    "evidence_quote": "Tu trouveras ci-dessous, les dates où nous avons besoin de monde.",
    "evidence_url": "https://www.nezrouge-ne.ch/bene/bene-dates.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-neuchatel/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-neuchatel/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-neuchatel/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-neuchatel/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-neuchatel/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-neuchatel/"
+   }
   },
   {
    "id": "e9a70368-74f2-5c46-916c-0baecdb09b2f",
@@ -1352,7 +1616,13 @@
    "event_url": "https://nezrouge-les-bains.ch/",
    "evidence_quote": "Le bonheur se partage : devenez bénévole",
    "evidence_url": "https://nezrouge-les-bains.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-nord-vaudois/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-nord-vaudois/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-nord-vaudois/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-nord-vaudois/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-nord-vaudois/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-nord-vaudois/"
+   }
   },
   {
    "id": "6d6058d8-d848-583f-b2ff-565547238300",
@@ -1382,7 +1652,13 @@
    "event_url": "https://www.nezrougeticino.ch/",
    "evidence_quote": "Iscrizione dei volontari",
    "evidence_url": "https://www.nezrouge.ch/de/In-Ihrer-Region/Ticino/Nez-Rouge-Ticino.html",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-ticino/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-ticino/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-ticino/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-ticino/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-ticino/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-ticino/"
+   }
   },
   {
    "id": "c66ee216-ebdb-5af0-87c4-9e294f125192",
@@ -1412,7 +1688,13 @@
    "event_url": null,
    "evidence_quote": "Zwischen 11.00 Uhr und 20.00 Uhr arbeiten die Freiwilligen jeweils für eine Stunde",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/mit-herz-und-hand-am-christchindlimaert",
-   "page_url": "https://allezhopp.ch/evenements/christchindlimart-mannedorf-stand-de-la-paroisse-reformee/"
+   "page_url": "https://allezhopp.ch/fr/evenements/christchindlimart-mannedorf-stand-de-la-paroisse-reformee/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/christchindlimart-mannedorf-stand-de-la-paroisse-reformee/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/christchindlimart-mannedorf-stand-de-la-paroisse-reformee/",
+    "it": "https://allezhopp.ch/it/eventi/christchindlimart-mannedorf-stand-de-la-paroisse-reformee/",
+    "en": "https://allezhopp.ch/en/events/christchindlimart-mannedorf-stand-de-la-paroisse-reformee/"
+   }
   },
   {
    "id": "e005c6a7-9b53-53af-9eae-18737218c093",
@@ -1442,7 +1724,13 @@
    "event_url": null,
    "evidence_quote": "Mach mit und schaffe mit uns wertvolle Lebensräume für Wiesel.",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/natur-verbindet-heckenpflanzung",
-   "page_url": "https://allezhopp.ch/evenements/natureinsatz-cham-heckenpflanzung-wwf/"
+   "page_url": "https://allezhopp.ch/fr/evenements/natureinsatz-cham-heckenpflanzung-wwf/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/natureinsatz-cham-heckenpflanzung-wwf/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/natureinsatz-cham-heckenpflanzung-wwf/",
+    "it": "https://allezhopp.ch/it/eventi/natureinsatz-cham-heckenpflanzung-wwf/",
+    "en": "https://allezhopp.ch/en/events/natureinsatz-cham-heckenpflanzung-wwf/"
+   }
   },
   {
    "id": "a0c7d82e-bd51-57ae-9dc9-6e6783b99698",
@@ -1472,7 +1760,13 @@
    "event_url": null,
    "evidence_quote": "Mach mit und gestalte mit uns Lebensräume nach dem Vorbild des Bibers.",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/natur-verbindet-gemeinsam-biberdamme-bauen",
-   "page_url": "https://allezhopp.ch/evenements/natureinsatz-schongau-biberdamme-bauen-wwf/"
+   "page_url": "https://allezhopp.ch/fr/evenements/natureinsatz-schongau-biberdamme-bauen-wwf/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/natureinsatz-schongau-biberdamme-bauen-wwf/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/natureinsatz-schongau-biberdamme-bauen-wwf/",
+    "it": "https://allezhopp.ch/it/eventi/natureinsatz-schongau-biberdamme-bauen-wwf/",
+    "en": "https://allezhopp.ch/en/events/natureinsatz-schongau-biberdamme-bauen-wwf/"
+   }
   },
   {
    "id": "aa1d61e4-0f32-55f7-8964-849dc885db28",
@@ -1502,7 +1796,13 @@
    "event_url": "https://www.chi-geneve.ch/",
    "evidence_quote": "LES INSCRIPTIONS 2026 SONT TERMINÉES",
    "evidence_url": "https://www.chi-geneve.ch/fr/QuickLinks/Benevoles/Benevoles.html",
-   "page_url": "https://allezhopp.ch/evenements/chi-de-geneve/"
+   "page_url": "https://allezhopp.ch/fr/evenements/chi-de-geneve/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/chi-de-geneve/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/chi-de-geneve/",
+    "it": "https://allezhopp.ch/it/eventi/chi-de-geneve/",
+    "en": "https://allezhopp.ch/en/events/chi-de-geneve/"
+   }
   },
   {
    "id": "bdbba2de-1262-59bc-b34a-4d087fdd10de",
@@ -1532,7 +1832,13 @@
    "event_url": null,
    "evidence_quote": "Je m'intéresse à cette activité bénévole",
    "evidence_url": "https://www.benevoles-vs.ch/valais/sapin-coeur-2026-2503.html",
-   "page_url": "https://allezhopp.ch/evenements/sapin-du-cur/"
+   "page_url": "https://allezhopp.ch/fr/evenements/sapin-du-cur/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/sapin-du-cur/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/sapin-du-cur/",
+    "it": "https://allezhopp.ch/it/eventi/sapin-du-cur/",
+    "en": "https://allezhopp.ch/en/events/sapin-du-cur/"
+   }
   },
   {
    "id": "b4c7725f-b891-54bd-9e2d-ba42f525fc67",
@@ -1562,7 +1868,13 @@
    "event_url": "https://geneva-indoors.com/fr/",
    "evidence_quote": "Inscription Jusqu'au 08 décembre 2026",
    "evidence_url": "https://www.benevolatgeneve.ch/annonce/tgi/tournoi-international-tchoukball-geneva-indoors_1631",
-   "page_url": "https://allezhopp.ch/evenements/tchoukball-geneva-indoors/"
+   "page_url": "https://allezhopp.ch/fr/evenements/tchoukball-geneva-indoors/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/tchoukball-geneva-indoors/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/tchoukball-geneva-indoors/",
+    "it": "https://allezhopp.ch/it/eventi/tchoukball-geneva-indoors/",
+    "en": "https://allezhopp.ch/en/events/tchoukball-geneva-indoors/"
+   }
   },
   {
    "id": "0d9b7c5d-3870-5880-9f88-41e5a8cd5a42",
@@ -1592,7 +1904,13 @@
    "event_url": "https://nezrouge-ostschweiz.ch/",
    "evidence_quote": "deckt das ganze Gebiet der Kantone Thurgau, beider Appenzell, grosse Teile St.",
    "evidence_url": "https://nezrouge-ostschweiz.ch/aktion-nez-rouge/einsatzgebiet/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-ostschweiz-appenzell-ausserrhoden/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-ostschweiz-appenzell-ausserrhoden/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-ostschweiz-appenzell-ausserrhoden/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-ostschweiz-appenzell-ausserrhoden/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-ostschweiz-appenzell-ausserrhoden/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-ostschweiz-appenzell-ausserrhoden/"
+   }
   },
   {
    "id": "fb9a4143-b71c-5c36-8198-70279c739b98",
@@ -1622,7 +1940,13 @@
    "event_url": "https://nezrouge-ostschweiz.ch/",
    "evidence_quote": "deckt das ganze Gebiet der Kantone Thurgau, beider Appenzell, grosse Teile St.",
    "evidence_url": "https://nezrouge-ostschweiz.ch/aktion-nez-rouge/einsatzgebiet/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-ostschweiz-appenzell-innerrhoden/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-ostschweiz-appenzell-innerrhoden/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-ostschweiz-appenzell-innerrhoden/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-ostschweiz-appenzell-innerrhoden/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-ostschweiz-appenzell-innerrhoden/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-ostschweiz-appenzell-innerrhoden/"
+   }
   },
   {
    "id": "153ee574-6e12-54b0-a2e5-18be6c4d4199",
@@ -1652,7 +1976,13 @@
    "event_url": "https://nezrouge-ostschweiz.ch/",
    "evidence_quote": "deckt das ganze Gebiet der Kantone Thurgau, beider Appenzell, grosse Teile St.",
    "evidence_url": "https://nezrouge-ostschweiz.ch/aktion-nez-rouge/einsatzgebiet/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-ostschweiz-st-gallen/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-ostschweiz-st-gallen/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-ostschweiz-st-gallen/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-ostschweiz-st-gallen/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-ostschweiz-st-gallen/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-ostschweiz-st-gallen/"
+   }
   },
   {
    "id": "848d6f46-0211-5289-a4ef-583ee76c492b",
@@ -1682,7 +2012,13 @@
    "event_url": "https://nezrouge-ostschweiz.ch/",
    "evidence_quote": "deckt das ganze Gebiet der Kantone Thurgau, beider Appenzell, grosse Teile St.",
    "evidence_url": "https://nezrouge-ostschweiz.ch/aktion-nez-rouge/einsatzgebiet/",
-   "page_url": "https://allezhopp.ch/evenements/nez-rouge-ostschweiz-thurgau/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nez-rouge-ostschweiz-thurgau/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nez-rouge-ostschweiz-thurgau/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nez-rouge-ostschweiz-thurgau/",
+    "it": "https://allezhopp.ch/it/eventi/nez-rouge-ostschweiz-thurgau/",
+    "en": "https://allezhopp.ch/en/events/nez-rouge-ostschweiz-thurgau/"
+   }
   },
   {
    "id": "f6bae4aa-c04b-5ced-9396-60ea7df2657a",
@@ -1712,7 +2048,13 @@
    "event_url": "https://christmasrun.ch/",
    "evidence_quote": "Christmas Run 12/12/2026 Pl. des Pionnières",
    "evidence_url": "https://volontairesdusportlausannois.ch/manifestations/",
-   "page_url": "https://allezhopp.ch/evenements/christmas-run-lausanne/"
+   "page_url": "https://allezhopp.ch/fr/evenements/christmas-run-lausanne/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/christmas-run-lausanne/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/christmas-run-lausanne/",
+    "it": "https://allezhopp.ch/it/eventi/christmas-run-lausanne/",
+    "en": "https://allezhopp.ch/en/events/christmas-run-lausanne/"
+   }
   },
   {
    "id": "30b06eb7-abf5-599e-8a35-14c33fb69e19",
@@ -1742,7 +2084,13 @@
    "event_url": "https://www.coursedenoel.ch/",
    "evidence_quote": "S'inscrire comme bénévole",
    "evidence_url": "https://www.coursedenoel.ch/benevoles",
-   "page_url": "https://allezhopp.ch/evenements/course-de-noel-de-sion/"
+   "page_url": "https://allezhopp.ch/fr/evenements/course-de-noel-de-sion/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/course-de-noel-de-sion/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/course-de-noel-de-sion/",
+    "it": "https://allezhopp.ch/it/eventi/course-de-noel-de-sion/",
+    "en": "https://allezhopp.ch/en/events/course-de-noel-de-sion/"
+   }
   },
   {
    "id": "f88f1a5a-6147-5a6c-9ca9-5a8bfd2a063c",
@@ -1772,7 +2120,13 @@
    "event_url": "https://www.latrotteusetissot.ch/",
    "evidence_quote": "Vous avez la possibilité de vous inscrire grâce au formulaire ci-dessous",
    "evidence_url": "https://www.latrotteusetissot.ch/benevoles.php",
-   "page_url": "https://allezhopp.ch/evenements/la-trotteuse-tissot/"
+   "page_url": "https://allezhopp.ch/fr/evenements/la-trotteuse-tissot/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/la-trotteuse-tissot/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/la-trotteuse-tissot/",
+    "it": "https://allezhopp.ch/it/eventi/la-trotteuse-tissot/",
+    "en": "https://allezhopp.ch/en/events/la-trotteuse-tissot/"
+   }
   },
   {
    "id": "20b00624-7100-56ee-bbd8-35bf711b8c0d",
@@ -1802,7 +2156,13 @@
    "event_url": "https://www.silvesterlauf.ch/",
    "evidence_quote": "Ihr könnt euch ab sofort für unseren Jubiläumslauf – den 50. Zürcher Silvesterlauf – anmelden.",
    "evidence_url": "https://portal.helfereinsatz.ch/zuercher-silvesterlauf/de/browse/open",
-   "page_url": "https://allezhopp.ch/evenements/zurcher-silvesterlauf/"
+   "page_url": "https://allezhopp.ch/fr/evenements/zurcher-silvesterlauf/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/zurcher-silvesterlauf/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/zurcher-silvesterlauf/",
+    "it": "https://allezhopp.ch/it/eventi/zurcher-silvesterlauf/",
+    "en": "https://allezhopp.ch/en/events/zurcher-silvesterlauf/"
+   }
   },
   {
    "id": "b352302c-78d6-518e-a7c6-4654a371fc2e",
@@ -1832,7 +2192,13 @@
    "event_url": "https://www.weltcup-engelberg.ch/",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/ae21a75e11a2e87da9c70726adab4041cbb0d1d7?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/fis-weltcup-skispringen-engelberg/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fis-weltcup-skispringen-engelberg/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fis-weltcup-skispringen-engelberg/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fis-weltcup-skispringen-engelberg/",
+    "it": "https://allezhopp.ch/it/eventi/fis-weltcup-skispringen-engelberg/",
+    "en": "https://allezhopp.ch/en/events/fis-weltcup-skispringen-engelberg/"
+   }
   },
   {
    "id": "c419c2ee-5800-5610-a902-d91cc7c4b014",
@@ -1862,7 +2228,13 @@
    "event_url": null,
    "evidence_quote": "cerchiamo volontari e volontarie per l'impacchettamento regali al FoxTown",
    "evidence_url": "https://www.volontariato-ticino.ch/Cerchiamo-volontari-per-impacchetare-regali-al-FoxTown-99514400",
-   "page_url": "https://allezhopp.ch/evenements/terre-des-hommes-impacchettamento-regali-al-foxtown/"
+   "page_url": "https://allezhopp.ch/fr/evenements/terre-des-hommes-impacchettamento-regali-al-foxtown/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/terre-des-hommes-impacchettamento-regali-al-foxtown/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/terre-des-hommes-impacchettamento-regali-al-foxtown/",
+    "it": "https://allezhopp.ch/it/eventi/terre-des-hommes-impacchettamento-regali-al-foxtown/",
+    "en": "https://allezhopp.ch/en/events/terre-des-hommes-impacchettamento-regali-al-foxtown/"
+   }
   },
   {
    "id": "b087297e-eef4-5f53-9b4b-6dc9a6c23de5",
@@ -1892,7 +2264,13 @@
    "event_url": "https://www.coursedeslutins.ch/",
    "evidence_quote": "Inscrivez-vous dès maintenant et venez vivre une journée unique",
    "evidence_url": "https://www.coursedeslutins.ch/benevoles.html",
-   "page_url": "https://allezhopp.ch/evenements/course-des-lutins/"
+   "page_url": "https://allezhopp.ch/fr/evenements/course-des-lutins/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/course-des-lutins/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/course-des-lutins/",
+    "it": "https://allezhopp.ch/it/eventi/course-des-lutins/",
+    "en": "https://allezhopp.ch/en/events/course-des-lutins/"
+   }
   },
   {
    "id": "4905f744-aff2-563b-9bf7-d77b5fc45f57",
@@ -1922,7 +2300,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/b148bbd3056fd7d62b75002e72fa873bbbe40684?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/fis-alpin-snowboard-world-cup-davos/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fis-alpin-snowboard-world-cup-davos/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fis-alpin-snowboard-world-cup-davos/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fis-alpin-snowboard-world-cup-davos/",
+    "it": "https://allezhopp.ch/it/eventi/fis-alpin-snowboard-world-cup-davos/",
+    "en": "https://allezhopp.ch/en/events/fis-alpin-snowboard-world-cup-davos/"
+   }
   },
   {
    "id": "f7ce3b72-9169-522d-b8f5-cc0802da5fcd",
@@ -1952,7 +2336,13 @@
    "event_url": "https://www.janteloppet.ch/",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/f38a02ea8d83fd4dcdf463955b5ac0e274a2c105?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/janteloppet-schweiz/"
+   "page_url": "https://allezhopp.ch/fr/evenements/janteloppet-schweiz/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/janteloppet-schweiz/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/janteloppet-schweiz/",
+    "it": "https://allezhopp.ch/it/eventi/janteloppet-schweiz/",
+    "en": "https://allezhopp.ch/en/events/janteloppet-schweiz/"
+   }
   },
   {
    "id": "ee039419-7918-53b4-9249-002d11ea260a",
@@ -1982,7 +2372,13 @@
    "event_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/natur-verbindet-hecke-pflegen-und-wieselburgen-bauen",
    "evidence_quote": "Mach mit und schaffe mit uns wertvolle Lebensräume für Wiesel.",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/natur-verbindet-hecke-pflegen-und-wieselburgen-bauen",
-   "page_url": "https://allezhopp.ch/evenements/natureinsatz-grindel-hecke-pflegen-und-wieselburgen-bauen-wwf/"
+   "page_url": "https://allezhopp.ch/fr/evenements/natureinsatz-grindel-hecke-pflegen-und-wieselburgen-bauen-wwf/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/natureinsatz-grindel-hecke-pflegen-und-wieselburgen-bauen-wwf/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/natureinsatz-grindel-hecke-pflegen-und-wieselburgen-bauen-wwf/",
+    "it": "https://allezhopp.ch/it/eventi/natureinsatz-grindel-hecke-pflegen-und-wieselburgen-bauen-wwf/",
+    "en": "https://allezhopp.ch/en/events/natureinsatz-grindel-hecke-pflegen-und-wieselburgen-bauen-wwf/"
+   }
   },
   {
    "id": "26c423d9-c3e4-574a-907b-1bdb92badb23",
@@ -2012,7 +2408,13 @@
    "event_url": "https://www.feusolidarite.ch",
    "evidence_quote": "Deviens gardien ou gardienne du Feu !",
    "evidence_url": "https://www.benevol-jobs.ch/fr/annonce/urgent-rejoignez-nous-pour-sauver-44-ans-de-solidarite-sur-le-pont-bessieres",
-   "page_url": "https://allezhopp.ch/evenements/feu-solidarite-bessieres/"
+   "page_url": "https://allezhopp.ch/fr/evenements/feu-solidarite-bessieres/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/feu-solidarite-bessieres/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/feu-solidarite-bessieres/",
+    "it": "https://allezhopp.ch/it/eventi/feu-solidarite-bessieres/",
+    "en": "https://allezhopp.ch/en/events/feu-solidarite-bessieres/"
+   }
   },
   {
    "id": "d326ef3c-563e-56be-b4da-e7615fdf930a",
@@ -2042,7 +2444,13 @@
    "event_url": "https://www.geneve.ch/themes/social/evenements/reveillon-solidarite",
    "evidence_quote": "vous pouvez vous inscrire dès le mois d'octobre de l'année en cours",
    "evidence_url": "https://www.geneve.ch/themes/social/evenements/reveillon-solidarite",
-   "page_url": "https://allezhopp.ch/evenements/reveillon-de-la-solidarite/"
+   "page_url": "https://allezhopp.ch/fr/evenements/reveillon-de-la-solidarite/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/reveillon-de-la-solidarite/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/reveillon-de-la-solidarite/",
+    "it": "https://allezhopp.ch/it/eventi/reveillon-de-la-solidarite/",
+    "en": "https://allezhopp.ch/en/events/reveillon-de-la-solidarite/"
+   }
   },
   {
    "id": "b8e90ba1-c3a8-5588-9dac-7a081cbbc32e",
@@ -2072,7 +2480,13 @@
    "event_url": "https://lcdf27.ch/",
    "evidence_quote": "Dès maintenant, nous recherchons des bénévoles pour contribuer à l’accueil des publics",
    "evidence_url": "https://lcdf27.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/lcdf27-la-chaux-de-fonds-capitale-culturelle-suisse-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/lcdf27-la-chaux-de-fonds-capitale-culturelle-suisse-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/lcdf27-la-chaux-de-fonds-capitale-culturelle-suisse-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/lcdf27-la-chaux-de-fonds-capitale-culturelle-suisse-2027/",
+    "it": "https://allezhopp.ch/it/eventi/lcdf27-la-chaux-de-fonds-capitale-culturelle-suisse-2027/",
+    "en": "https://allezhopp.ch/en/events/lcdf27-la-chaux-de-fonds-capitale-culturelle-suisse-2027/"
+   }
   },
   {
    "id": "e8ca017c-11df-58e1-802b-d1728a8fbee0",
@@ -2102,7 +2516,13 @@
    "event_url": "https://weltcup-adelboden.ch/",
    "evidence_quote": "Gerne setzen wir dich als Volunteer ein",
    "evidence_url": "https://www.swissvolunteers.ch/de/events-2.html",
-   "page_url": "https://allezhopp.ch/evenements/audi-fis-ski-world-cup-adelboden/"
+   "page_url": "https://allezhopp.ch/fr/evenements/audi-fis-ski-world-cup-adelboden/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/audi-fis-ski-world-cup-adelboden/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/audi-fis-ski-world-cup-adelboden/",
+    "it": "https://allezhopp.ch/it/eventi/audi-fis-ski-world-cup-adelboden/",
+    "en": "https://allezhopp.ch/en/events/audi-fis-ski-world-cup-adelboden/"
+   }
   },
   {
    "id": "1a5dfe5b-0db8-536c-b1a7-72f7e1bd6076",
@@ -2132,7 +2552,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/abd5eb83567b783b55c1cf74cde4bc85422c37c6?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/snow-trail-arosa/"
+   "page_url": "https://allezhopp.ch/fr/evenements/snow-trail-arosa/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/snow-trail-arosa/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/snow-trail-arosa/",
+    "it": "https://allezhopp.ch/it/eventi/snow-trail-arosa/",
+    "en": "https://allezhopp.ch/en/events/snow-trail-arosa/"
+   }
   },
   {
    "id": "5cfbf40b-4dc5-5900-a6ed-b2ce88105d68",
@@ -2162,7 +2588,13 @@
    "event_url": "https://www.swissvolunteers.ch/de/events-2.html",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://goms.swissvolunteers.ch/discover-events/link/a8a69e0de48b177bfa474c286d2010ac496b0ffc?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/ibu-cup-goms/"
+   "page_url": "https://allezhopp.ch/fr/evenements/ibu-cup-goms/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/ibu-cup-goms/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/ibu-cup-goms/",
+    "it": "https://allezhopp.ch/it/eventi/ibu-cup-goms/",
+    "en": "https://allezhopp.ch/en/events/ibu-cup-goms/"
+   }
   },
   {
    "id": "a9726c17-04f4-57c0-acc9-186c1e0f9ab0",
@@ -2192,7 +2624,13 @@
    "event_url": "https://www.ladiagonela.ch/",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/2879fc928b60848aa7e067762a0f769da7ecb35d?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/engadin-la-diagonela/"
+   "page_url": "https://allezhopp.ch/fr/evenements/engadin-la-diagonela/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/engadin-la-diagonela/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/engadin-la-diagonela/",
+    "it": "https://allezhopp.ch/it/eventi/engadin-la-diagonela/",
+    "en": "https://allezhopp.ch/en/events/engadin-la-diagonela/"
+   }
   },
   {
    "id": "0d5b4cfc-f71a-561b-ba08-5c0af9390ae7",
@@ -2222,7 +2660,13 @@
    "event_url": "https://www.lauberhorn.ch/",
    "evidence_quote": "Die Anmeldung ist ab dem 1. September 2026 über die Plattform Swiss Volunteers möglich.",
    "evidence_url": "https://www.lauberhorn.ch/volunteers/",
-   "page_url": "https://allezhopp.ch/evenements/internationale-lauberhornrennen-wengen/"
+   "page_url": "https://allezhopp.ch/fr/evenements/internationale-lauberhornrennen-wengen/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/internationale-lauberhornrennen-wengen/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/internationale-lauberhornrennen-wengen/",
+    "it": "https://allezhopp.ch/it/eventi/internationale-lauberhornrennen-wengen/",
+    "en": "https://allezhopp.ch/en/events/internationale-lauberhornrennen-wengen/"
+   }
   },
   {
    "id": "20327219-18ea-5001-bc78-5b5c626fbab5",
@@ -2252,7 +2696,13 @@
    "event_url": "https://runandwalkbern.ch/",
    "evidence_quote": "Wenn du uns unterstützen willst, dann Melde dich jetzt als Helfer an (Mindestalter 16 Jahre).",
    "evidence_url": "https://runandwalkbern.ch/helfer/",
-   "page_url": "https://allezhopp.ch/evenements/run-walk-bern/"
+   "page_url": "https://allezhopp.ch/fr/evenements/run-walk-bern/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/run-walk-bern/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/run-walk-bern/",
+    "it": "https://allezhopp.ch/it/eventi/run-walk-bern/",
+    "en": "https://allezhopp.ch/en/events/run-walk-bern/"
+   }
   },
   {
    "id": "e4e42fc6-40c6-5ea8-ae18-248f30446b49",
@@ -2282,7 +2732,13 @@
    "event_url": "https://www.inferno-muerren.ch/de/",
    "evidence_quote": "ohne Helfer, kein Inferno-Rennen!",
    "evidence_url": "https://www.inferno-muerren.ch/de/ausgabe/helferinfo/anmeldung-helferjobs",
-   "page_url": "https://allezhopp.ch/evenements/internationale-inferno-skirennen-murren/"
+   "page_url": "https://allezhopp.ch/fr/evenements/internationale-inferno-skirennen-murren/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/internationale-inferno-skirennen-murren/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/internationale-inferno-skirennen-murren/",
+    "it": "https://allezhopp.ch/it/eventi/internationale-inferno-skirennen-murren/",
+    "en": "https://allezhopp.ch/en/events/internationale-inferno-skirennen-murren/"
+   }
   },
   {
    "id": "49eda4d6-b50d-5a7f-b0f3-5ced9fc490ae",
@@ -2312,7 +2768,13 @@
    "event_url": "https://www.murtenlichtfestival.ch/",
    "evidence_quote": "Für die nächste Ausgabe anmelden",
    "evidence_url": "https://www.murtenlichtfestival.ch/helfer",
-   "page_url": "https://allezhopp.ch/evenements/murten-licht-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/murten-licht-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/murten-licht-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/murten-licht-festival/",
+    "it": "https://allezhopp.ch/it/eventi/murten-licht-festival/",
+    "en": "https://allezhopp.ch/en/events/murten-licht-festival/"
+   }
   },
   {
    "id": "03418597-5500-513a-a42d-637200b4e265",
@@ -2342,7 +2804,13 @@
    "event_url": "https://blackmovie.ch/",
    "evidence_quote": "On se revoit fin 2026 pour une merveilleuse édition 2027 !",
    "evidence_url": "https://blackmovie.ch/interedition/fr/le_festival/participer.php",
-   "page_url": "https://allezhopp.ch/evenements/black-movie-festival-international-de-films-independants/"
+   "page_url": "https://allezhopp.ch/fr/evenements/black-movie-festival-international-de-films-independants/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/black-movie-festival-international-de-films-independants/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/black-movie-festival-international-de-films-independants/",
+    "it": "https://allezhopp.ch/it/eventi/black-movie-festival-international-de-films-independants/",
+    "en": "https://allezhopp.ch/en/events/black-movie-festival-international-de-films-independants/"
+   }
   },
   {
    "id": "ceee20fe-dc1f-51c4-b0c0-872824a0002e",
@@ -2372,7 +2840,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/08d3ef14b8ac300c4e3abd6b2a7c64b382141ed2?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/kids-cross-st-moritz/"
+   "page_url": "https://allezhopp.ch/fr/evenements/kids-cross-st-moritz/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/kids-cross-st-moritz/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/kids-cross-st-moritz/",
+    "it": "https://allezhopp.ch/it/eventi/kids-cross-st-moritz/",
+    "en": "https://allezhopp.ch/en/events/kids-cross-st-moritz/"
+   }
   },
   {
    "id": "a7e1fd35-40c2-5ea6-8e15-0ee12fc081f9",
@@ -2402,7 +2876,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/9d87c232c3693452bd0c8b98435ca0b542f49f65?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/langlauf-weltcup-engadin/"
+   "page_url": "https://allezhopp.ch/fr/evenements/langlauf-weltcup-engadin/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/langlauf-weltcup-engadin/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/langlauf-weltcup-engadin/",
+    "it": "https://allezhopp.ch/it/eventi/langlauf-weltcup-engadin/",
+    "en": "https://allezhopp.ch/en/events/langlauf-weltcup-engadin/"
+   }
   },
   {
    "id": "c25aa129-fa55-5be8-9161-5ed21ec1882f",
@@ -2432,7 +2912,13 @@
    "event_url": "https://www.festivaldeballons.ch/",
    "evidence_quote": "Set-up: 14, 15, 18, 19, 20, 21 and 22 January 2027",
    "evidence_url": "https://www.festivaldeballons.ch/en/aboutus/volunteers-stands",
-   "page_url": "https://allezhopp.ch/evenements/festival-international-de-ballons/"
+   "page_url": "https://allezhopp.ch/fr/evenements/festival-international-de-ballons/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/festival-international-de-ballons/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/festival-international-de-ballons/",
+    "it": "https://allezhopp.ch/it/eventi/festival-international-de-ballons/",
+    "en": "https://allezhopp.ch/en/events/festival-international-de-ballons/"
+   }
   },
   {
    "id": "2205dafe-9aa9-5f12-a770-ef002c63db95",
@@ -2462,7 +2948,13 @@
    "event_url": null,
    "evidence_quote": "Wir sind mit einem VCA-Stand vor Ort und suchen engagierte Unterstützung!",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/swiss-dance-award-2027",
-   "page_url": "https://allezhopp.ch/evenements/swiss-dance-award-stand-viva-con-agua/"
+   "page_url": "https://allezhopp.ch/fr/evenements/swiss-dance-award-stand-viva-con-agua/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/swiss-dance-award-stand-viva-con-agua/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/swiss-dance-award-stand-viva-con-agua/",
+    "it": "https://allezhopp.ch/it/eventi/swiss-dance-award-stand-viva-con-agua/",
+    "en": "https://allezhopp.ch/en/events/swiss-dance-award-stand-viva-con-agua/"
+   }
   },
   {
    "id": "17af6fcd-ab32-5214-a494-27dcf563d291",
@@ -2492,7 +2984,13 @@
    "event_url": "https://www.euroskating2027.ch",
    "evidence_quote": "Sign up now to be among the first to receive updates",
    "evidence_url": "https://www.euroskating2027.ch/volunteers",
-   "page_url": "https://allezhopp.ch/evenements/championnats-d-europe-de-patinage-artistique-isu-2027-efs27/"
+   "page_url": "https://allezhopp.ch/fr/evenements/championnats-d-europe-de-patinage-artistique-isu-2027-efs27/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/championnats-d-europe-de-patinage-artistique-isu-2027-efs27/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/championnats-d-europe-de-patinage-artistique-isu-2027-efs27/",
+    "it": "https://allezhopp.ch/it/eventi/championnats-d-europe-de-patinage-artistique-isu-2027-efs27/",
+    "en": "https://allezhopp.ch/en/events/championnats-d-europe-de-patinage-artistique-isu-2027-efs27/"
+   }
   },
   {
    "id": "a0053cb7-a571-5178-9a60-3f14933df8dd",
@@ -2522,7 +3020,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/55c54df3412936c4dff0f4c22339bf00a9cee443?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/europe-top16-cup-montreux/"
+   "page_url": "https://allezhopp.ch/fr/evenements/europe-top16-cup-montreux/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/europe-top16-cup-montreux/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/europe-top16-cup-montreux/",
+    "it": "https://allezhopp.ch/it/eventi/europe-top16-cup-montreux/",
+    "en": "https://allezhopp.ch/en/events/europe-top16-cup-montreux/"
+   }
   },
   {
    "id": "e1b0f30f-8f98-5780-9700-26d79d660161",
@@ -2552,7 +3056,13 @@
    "event_url": "https://www.cransmontana2027.ch/",
    "evidence_quote": "nearly 1,500 volunteers will be in action",
    "evidence_url": "https://www.cransmontana2027.ch/en/organisation/volunteers/",
-   "page_url": "https://allezhopp.ch/evenements/championnats-du-monde-fis-de-ski-alpin-crans-montana-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/championnats-du-monde-fis-de-ski-alpin-crans-montana-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/championnats-du-monde-fis-de-ski-alpin-crans-montana-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/championnats-du-monde-fis-de-ski-alpin-crans-montana-2027/",
+    "it": "https://allezhopp.ch/it/eventi/championnats-du-monde-fis-de-ski-alpin-crans-montana-2027/",
+    "en": "https://allezhopp.ch/en/events/championnats-du-monde-fis-de-ski-alpin-crans-montana-2027/"
+   }
   },
   {
    "id": "5632a329-ab64-5acf-a9aa-be16f0bce563",
@@ -2582,7 +3092,13 @@
    "event_url": "https://carnavaldemonthey.com/",
    "evidence_quote": "la ville de Monthey se métamorphose en un théâtre à ciel ouvert",
    "evidence_url": "https://carnavaldemonthey.com/",
-   "page_url": "https://allezhopp.ch/evenements/carnaval-de-monthey/"
+   "page_url": "https://allezhopp.ch/fr/evenements/carnaval-de-monthey/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/carnaval-de-monthey/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/carnaval-de-monthey/",
+    "it": "https://allezhopp.ch/it/eventi/carnaval-de-monthey/",
+    "en": "https://allezhopp.ch/en/events/carnaval-de-monthey/"
+   }
   },
   {
    "id": "c35da820-987b-5684-b825-793bffb35a9f",
@@ -2612,7 +3128,13 @@
    "event_url": "https://www.carnavaldesbolzes.ch/",
    "evidence_quote": "inscriptions définitives pour les bénévoles de l’édition 2027 du Carnaval des Bolzes",
    "evidence_url": "https://www.carnavaldesbolzes.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/carnaval-des-bolzes/"
+   "page_url": "https://allezhopp.ch/fr/evenements/carnaval-des-bolzes/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/carnaval-des-bolzes/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/carnaval-des-bolzes/",
+    "it": "https://allezhopp.ch/it/eventi/carnaval-des-bolzes/",
+    "en": "https://allezhopp.ch/en/events/carnaval-des-bolzes/"
+   }
   },
   {
    "id": "506f69d7-309f-5b4a-aef5-8b25e368a733",
@@ -2642,7 +3164,13 @@
    "event_url": "https://www.brandonspayerne.ch/",
    "evidence_quote": "12 au 15 février 2027",
    "evidence_url": "https://www.brandonspayerne.ch/",
-   "page_url": "https://allezhopp.ch/evenements/brandons-de-payerne/"
+   "page_url": "https://allezhopp.ch/fr/evenements/brandons-de-payerne/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/brandons-de-payerne/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/brandons-de-payerne/",
+    "it": "https://allezhopp.ch/it/eventi/brandons-de-payerne/",
+    "en": "https://allezhopp.ch/en/events/brandons-de-payerne/"
+   }
   },
   {
    "id": "d5b46295-1ea0-556b-bbca-ea0e8646882c",
@@ -2672,7 +3200,13 @@
    "event_url": "https://japan-impact.ch/fr/",
    "evidence_quote": "Deviens staff pour la prochaine édition et participe directement à la réussite du festival !",
    "evidence_url": "https://japan-impact.ch/fr/staff-recrutement/",
-   "page_url": "https://allezhopp.ch/evenements/japan-impact/"
+   "page_url": "https://allezhopp.ch/fr/evenements/japan-impact/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/japan-impact/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/japan-impact/",
+    "it": "https://allezhopp.ch/it/eventi/japan-impact/",
+    "en": "https://allezhopp.ch/en/events/japan-impact/"
+   }
   },
   {
    "id": "190d9fdf-11ed-544d-a066-54cd1a9a6b0a",
@@ -2702,7 +3236,13 @@
    "event_url": "https://www.weltcup-lenzerheide.ch/",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/9503a161b0f41c65337dcd5cd9031fc4b7bad940?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/audi-fis-ski-world-cup-lenzerheide/"
+   "page_url": "https://allezhopp.ch/fr/evenements/audi-fis-ski-world-cup-lenzerheide/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/audi-fis-ski-world-cup-lenzerheide/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/audi-fis-ski-world-cup-lenzerheide/",
+    "it": "https://allezhopp.ch/it/eventi/audi-fis-ski-world-cup-lenzerheide/",
+    "en": "https://allezhopp.ch/en/events/audi-fis-ski-world-cup-lenzerheide/"
+   }
   },
   {
    "id": "7b150e68-4c54-552e-badd-e4345ef8d08e",
@@ -2732,7 +3272,13 @@
    "event_url": "https://motozuerich.ch/",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/48858e17783482698d8d32d74f3f7252f386207f?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/moto-zurich/"
+   "page_url": "https://allezhopp.ch/fr/evenements/moto-zurich/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/moto-zurich/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/moto-zurich/",
+    "it": "https://allezhopp.ch/it/eventi/moto-zurich/",
+    "en": "https://allezhopp.ch/en/events/moto-zurich/"
+   }
   },
   {
    "id": "facbac38-f287-5d2e-9460-823cfac456f9",
@@ -2762,7 +3308,13 @@
    "event_url": "https://nendazfreeride.ch/",
    "evidence_quote": "Envie de vivre de l'intérieur l'aventure Nendaz Freeride ?",
    "evidence_url": "https://nendazfreeride.ch/fr/jobs",
-   "page_url": "https://allezhopp.ch/evenements/nendaz-freeride/"
+   "page_url": "https://allezhopp.ch/fr/evenements/nendaz-freeride/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/nendaz-freeride/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/nendaz-freeride/",
+    "it": "https://allezhopp.ch/it/eventi/nendaz-freeride/",
+    "en": "https://allezhopp.ch/en/events/nendaz-freeride/"
+   }
   },
   {
    "id": "d3a5c902-1cc5-5d17-a842-a8a39e43f9a1",
@@ -2792,7 +3344,13 @@
    "event_url": "https://brandons.ch/",
    "evidence_quote": "nous recherchons des bénévoles pour nos différents bar et le stand information",
    "evidence_url": "https://brandons.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/brandons-de-moudon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/brandons-de-moudon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/brandons-de-moudon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/brandons-de-moudon/",
+    "it": "https://allezhopp.ch/it/eventi/brandons-de-moudon/",
+    "en": "https://allezhopp.ch/en/events/brandons-de-moudon/"
+   }
   },
   {
    "id": "24114db5-c8e0-5bab-ba33-049a53c40e38",
@@ -2822,7 +3380,13 @@
    "event_url": "https://www.goms.ch/gommerlauf",
    "evidence_quote": "Wir brauchen viele fleissige, enthusiastische und begeisterte HelferInnen",
    "evidence_url": "https://www.goms.ch/gommerlauf/helfer",
-   "page_url": "https://allezhopp.ch/evenements/internationaler-gommerlauf/"
+   "page_url": "https://allezhopp.ch/fr/evenements/internationaler-gommerlauf/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/internationaler-gommerlauf/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/internationaler-gommerlauf/",
+    "it": "https://allezhopp.ch/it/eventi/internationaler-gommerlauf/",
+    "en": "https://allezhopp.ch/en/events/internationaler-gommerlauf/"
+   }
   },
   {
    "id": "a814075d-7084-5231-9c47-4605dcaf2407",
@@ -2852,7 +3416,13 @@
    "event_url": "https://rversigen.ch/fruehlingsrennen/",
    "evidence_quote": "Wir suchen noch HelferInnen für die Streckensicherung",
    "evidence_url": "https://rversigen.ch/fruehlingsrennen/",
-   "page_url": "https://allezhopp.ch/evenements/fruhlingsrennen-hindelbank/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fruhlingsrennen-hindelbank/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fruhlingsrennen-hindelbank/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fruhlingsrennen-hindelbank/",
+    "it": "https://allezhopp.ch/it/eventi/fruhlingsrennen-hindelbank/",
+    "en": "https://allezhopp.ch/en/events/fruhlingsrennen-hindelbank/"
+   }
   },
   {
    "id": "162887d2-c7d4-5cb8-90c6-8921b4f93b8d",
@@ -2882,7 +3452,13 @@
    "event_url": "https://www.engadin-skimarathon.ch/",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/4d3f3febc477aa96e5ef93341c518fa0294fa70d?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/engadin-skimarathon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/engadin-skimarathon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/engadin-skimarathon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/engadin-skimarathon/",
+    "it": "https://allezhopp.ch/it/eventi/engadin-skimarathon/",
+    "en": "https://allezhopp.ch/en/events/engadin-skimarathon/"
+   }
   },
   {
    "id": "df462782-7bb4-574e-ae10-3a295ca3b3e4",
@@ -2912,7 +3488,13 @@
    "event_url": "https://www.leshivernales.ch/",
    "evidence_quote": "envoie-nous ton nom et ton prénom, la meilleure photo de ta tête",
    "evidence_url": "https://www.leshivernales.ch/benevoles",
-   "page_url": "https://allezhopp.ch/evenements/les-hivernales/"
+   "page_url": "https://allezhopp.ch/fr/evenements/les-hivernales/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/les-hivernales/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/les-hivernales/",
+    "it": "https://allezhopp.ch/it/eventi/les-hivernales/",
+    "en": "https://allezhopp.ch/en/events/les-hivernales/"
+   }
   },
   {
    "id": "3822039d-bfe9-5ef6-9f54-2293e1a646dc",
@@ -2942,7 +3524,13 @@
    "event_url": "https://fifdh.org/",
    "evidence_quote": "Les inscriptions pour la 25ᵉ édition ouvriront au début de l’année 2027.",
    "evidence_url": "https://fifdh.org/emplois-benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/fifdh-festival-du-film-et-forum-international-sur-les-droits-humains/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fifdh-festival-du-film-et-forum-international-sur-les-droits-humains/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fifdh-festival-du-film-et-forum-international-sur-les-droits-humains/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fifdh-festival-du-film-et-forum-international-sur-les-droits-humains/",
+    "it": "https://allezhopp.ch/it/eventi/fifdh-festival-du-film-et-forum-international-sur-les-droits-humains/",
+    "en": "https://allezhopp.ch/en/events/fifdh-festival-du-film-et-forum-international-sur-les-droits-humains/"
+   }
   },
   {
    "id": "f3c3cceb-457a-55d4-a9dc-47077b76c44b",
@@ -2972,7 +3560,13 @@
    "event_url": null,
    "evidence_quote": "Je m'intéresse à cette activité bénévole",
    "evidence_url": "https://www.benevoles-vs.ch/valais/tournoi-foot-salle-2356.html",
-   "page_url": "https://allezhopp.ch/evenements/tournoi-de-foot-en-salle-du-fc-chermignon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/tournoi-de-foot-en-salle-du-fc-chermignon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/tournoi-de-foot-en-salle-du-fc-chermignon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/tournoi-de-foot-en-salle-du-fc-chermignon/",
+    "it": "https://allezhopp.ch/it/eventi/tournoi-de-foot-en-salle-du-fc-chermignon/",
+    "en": "https://allezhopp.ch/en/events/tournoi-de-foot-en-salle-du-fc-chermignon/"
+   }
   },
   {
    "id": "27e62da2-91cc-5e3a-816b-89923172e6f1",
@@ -3002,7 +3596,13 @@
    "event_url": "https://www.brandonsyverdon.ch/",
    "evidence_quote": "Nous sommes à la recherche de bénévoles !",
    "evidence_url": "https://www.brandonsyverdon.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/brandons-d-yverdon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/brandons-d-yverdon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/brandons-d-yverdon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/brandons-d-yverdon/",
+    "it": "https://allezhopp.ch/it/eventi/brandons-d-yverdon/",
+    "en": "https://allezhopp.ch/en/events/brandons-d-yverdon/"
+   }
   },
   {
    "id": "7a41e21e-d9c0-572f-be62-881ee9670960",
@@ -3032,7 +3632,13 @@
    "event_url": "https://www.fiff.ch/fr/festival",
    "evidence_quote": "41e édition : du vendredi 12 au dimanche 21 mars 2027",
    "evidence_url": "https://www.fiff.ch/fr/festival",
-   "page_url": "https://allezhopp.ch/evenements/fiff-festival-international-de-films-de-fribourg/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fiff-festival-international-de-films-de-fribourg/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fiff-festival-international-de-films-de-fribourg/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fiff-festival-international-de-films-de-fribourg/",
+    "it": "https://allezhopp.ch/it/eventi/fiff-festival-international-de-films-de-fribourg/",
+    "en": "https://allezhopp.ch/en/events/fiff-festival-international-de-films-de-fribourg/"
+   }
   },
   {
    "id": "0da36efc-4a67-58ed-a763-8e6d83c60338",
@@ -3062,7 +3668,13 @@
    "event_url": "https://ludesco.ch/",
    "evidence_quote": "Le lien pour vous inscrire pour l’édition de 2026 est ici",
    "evidence_url": "https://ludesco.ch/le-festival/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/ludesco/"
+   "page_url": "https://allezhopp.ch/fr/evenements/ludesco/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/ludesco/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/ludesco/",
+    "it": "https://allezhopp.ch/it/eventi/ludesco/",
+    "en": "https://allezhopp.ch/en/events/ludesco/"
+   }
   },
   {
    "id": "29160254-8ad6-58e2-bc50-164d4d14dc48",
@@ -3092,7 +3704,13 @@
    "event_url": "https://makerfaire.ch/",
    "evidence_quote": "Maker Faire Solothurn 2027",
    "evidence_url": "https://makerfaire.ch/anmeldung-helfer/",
-   "page_url": "https://allezhopp.ch/evenements/maker-faire-solothurn/"
+   "page_url": "https://allezhopp.ch/fr/evenements/maker-faire-solothurn/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/maker-faire-solothurn/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/maker-faire-solothurn/",
+    "it": "https://allezhopp.ch/it/eventi/maker-faire-solothurn/",
+    "en": "https://allezhopp.ch/en/events/maker-faire-solothurn/"
+   }
   },
   {
    "id": "d68a48b2-d8ae-5a40-976e-5b21640177e9",
@@ -3122,7 +3740,13 @@
    "event_url": "https://run-evasion-rhone.ch/",
    "evidence_quote": "Rejoins la team bénévole de Run Evasion Rhône by Raiffeisen",
    "evidence_url": "https://run-evasion-rhone.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/run-evasion-rhone/"
+   "page_url": "https://allezhopp.ch/fr/evenements/run-evasion-rhone/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/run-evasion-rhone/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/run-evasion-rhone/",
+    "it": "https://allezhopp.ch/it/eventi/run-evasion-rhone/",
+    "en": "https://allezhopp.ch/en/events/run-evasion-rhone/"
+   }
   },
   {
    "id": "0d2a2ac2-7294-5823-bf44-c3f81d5224a2",
@@ -3152,7 +3776,13 @@
    "event_url": "https://www.lausanneaquatique.ch/evenements",
    "evidence_quote": "Swim Cup Next Génération 13/03/2027 et 14/03/2027 Vaudoise Arena",
    "evidence_url": "https://volontairesdusportlausannois.ch/manifestations/",
-   "page_url": "https://allezhopp.ch/evenements/swim-cup-next-generation/"
+   "page_url": "https://allezhopp.ch/fr/evenements/swim-cup-next-generation/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/swim-cup-next-generation/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/swim-cup-next-generation/",
+    "it": "https://allezhopp.ch/it/eventi/swim-cup-next-generation/",
+    "en": "https://allezhopp.ch/en/events/swim-cup-next-generation/"
+   }
   },
   {
    "id": "ed64ea0d-1ef2-5381-9396-08678eda16af",
@@ -3182,7 +3812,13 @@
    "event_url": "https://en.rockthepistes.com/",
    "evidence_quote": "We need you for this year's festival!",
    "evidence_url": "https://en.rockthepistes.com/become-a-volunteer/",
-   "page_url": "https://allezhopp.ch/evenements/rock-the-pistes/"
+   "page_url": "https://allezhopp.ch/fr/evenements/rock-the-pistes/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/rock-the-pistes/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/rock-the-pistes/",
+    "it": "https://allezhopp.ch/it/eventi/rock-the-pistes/",
+    "en": "https://allezhopp.ch/en/events/rock-the-pistes/"
+   }
   },
   {
    "id": "d1f5e9d1-3027-5b39-acd7-e6c805813ba4",
@@ -3212,7 +3848,13 @@
    "event_url": "https://www.voixdefete.com/",
    "evidence_quote": "C'est grâce aux bénévoles que la manifestation peut avoir lieu",
    "evidence_url": "https://www.voixdefete.com/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/voix-de-fete/"
+   "page_url": "https://allezhopp.ch/fr/evenements/voix-de-fete/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/voix-de-fete/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/voix-de-fete/",
+    "it": "https://allezhopp.ch/it/eventi/voix-de-fete/",
+    "en": "https://allezhopp.ch/en/events/voix-de-fete/"
+   }
   },
   {
    "id": "2a6e3aa2-d9f2-538d-b0c5-ef470e335ea9",
@@ -3242,7 +3884,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/4189c198c016376203d6af03931463e525999385?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/schweizer-meisterschaften-ski-alpin-elite-st-moritz/"
+   "page_url": "https://allezhopp.ch/fr/evenements/schweizer-meisterschaften-ski-alpin-elite-st-moritz/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/schweizer-meisterschaften-ski-alpin-elite-st-moritz/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/schweizer-meisterschaften-ski-alpin-elite-st-moritz/",
+    "it": "https://allezhopp.ch/it/eventi/schweizer-meisterschaften-ski-alpin-elite-st-moritz/",
+    "en": "https://allezhopp.ch/en/events/schweizer-meisterschaften-ski-alpin-elite-st-moritz/"
+   }
   },
   {
    "id": "82d2b217-724e-56d5-92aa-04b4a6b0e6dd",
@@ -3272,7 +3920,13 @@
    "event_url": "https://www.festivaldufilmvert.ch/",
    "evidence_quote": "On cherche des bénévoles dans les domaines suivants",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/benevole-au-festival-du-film-vert-de-nyon",
-   "page_url": "https://allezhopp.ch/evenements/festival-du-film-vert-de-nyon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/festival-du-film-vert-de-nyon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/festival-du-film-vert-de-nyon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/festival-du-film-vert-de-nyon/",
+    "it": "https://allezhopp.ch/it/eventi/festival-du-film-vert-de-nyon/",
+    "en": "https://allezhopp.ch/en/events/festival-du-film-vert-de-nyon/"
+   }
   },
   {
    "id": "30c0c332-ca2c-5ae0-a91b-f456e718c083",
@@ -3302,7 +3956,13 @@
    "event_url": "https://www.startsummit.ch/",
    "evidence_quote": "Applications Are Open. Apply Now",
    "evidence_url": "https://volunteer.startglobal.org/",
-   "page_url": "https://allezhopp.ch/evenements/start-summit-x-hack-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/start-summit-x-hack-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/start-summit-x-hack-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/start-summit-x-hack-2027/",
+    "it": "https://allezhopp.ch/it/eventi/start-summit-x-hack-2027/",
+    "en": "https://allezhopp.ch/en/events/start-summit-x-hack-2027/"
+   }
   },
   {
    "id": "3bfb6f67-e0d6-5d37-99f2-cff135682927",
@@ -3332,7 +3992,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/0cad45caaaecdbdba4917dffebd8fe9862ab2fa3?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/corvatsch-park-pipe-finals/"
+   "page_url": "https://allezhopp.ch/fr/evenements/corvatsch-park-pipe-finals/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/corvatsch-park-pipe-finals/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/corvatsch-park-pipe-finals/",
+    "it": "https://allezhopp.ch/it/eventi/corvatsch-park-pipe-finals/",
+    "en": "https://allezhopp.ch/en/events/corvatsch-park-pipe-finals/"
+   }
   },
   {
    "id": "b3efa3ac-a94f-5c34-9a1a-8c78176ebdb4",
@@ -3362,7 +4028,13 @@
    "event_url": "https://www.polymanga.com/",
    "evidence_quote": "on revient à Montreux",
    "evidence_url": "https://www.polymanga.com/news/discours-du-lundi-polymanga-2026-et-annonce-polymanga-2027/",
-   "page_url": "https://allezhopp.ch/evenements/polymanga/"
+   "page_url": "https://allezhopp.ch/fr/evenements/polymanga/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/polymanga/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/polymanga/",
+    "it": "https://allezhopp.ch/it/eventi/polymanga/",
+    "en": "https://allezhopp.ch/en/events/polymanga/"
+   }
   },
   {
    "id": "88fa1ec2-9ee4-511a-a88b-7c57aa3d374f",
@@ -3392,7 +4064,13 @@
    "event_url": "https://www.tischlein.ch/",
    "evidence_quote": "Werde Teil von Grande Festa und hilf uns, Gutes zu tun!",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/ostern-wird-besonders-unterstuetze-grande-festa-einmaliger-einsatz-27-maerz-2027",
-   "page_url": "https://allezhopp.ch/evenements/grande-festa-de-paques-tischlein-deck-dich/"
+   "page_url": "https://allezhopp.ch/fr/evenements/grande-festa-de-paques-tischlein-deck-dich/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/grande-festa-de-paques-tischlein-deck-dich/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/grande-festa-de-paques-tischlein-deck-dich/",
+    "it": "https://allezhopp.ch/it/eventi/grande-festa-de-paques-tischlein-deck-dich/",
+    "en": "https://allezhopp.ch/en/events/grande-festa-de-paques-tischlein-deck-dich/"
+   }
   },
   {
    "id": "0c7a63b5-267f-5f25-bec2-1da505cdc6be",
@@ -3422,7 +4100,13 @@
    "event_url": "https://www.swiss-aquatics.ch/fr/sport-delite/swimming/championnats-nationaux/",
    "evidence_quote": "Championnats Suisses 50m 01/04/2027 au 04/04/2027 Vaudoise Arena",
    "evidence_url": "https://volontairesdusportlausannois.ch/manifestations/",
-   "page_url": "https://allezhopp.ch/evenements/championnats-suisses-de-natation-50-m/"
+   "page_url": "https://allezhopp.ch/fr/evenements/championnats-suisses-de-natation-50-m/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/championnats-suisses-de-natation-50-m/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/championnats-suisses-de-natation-50-m/",
+    "it": "https://allezhopp.ch/it/eventi/championnats-suisses-de-natation-50-m/",
+    "en": "https://allezhopp.ch/en/events/championnats-suisses-de-natation-50-m/"
+   }
   },
   {
    "id": "2dea778c-0b84-5e04-a460-80c4fbc6d314",
@@ -3452,7 +4136,13 @@
    "event_url": "https://carnaurba.ch/",
    "evidence_quote": "Pour participer à la 42ème édition en tant que bénévole, un peu de patience",
    "evidence_url": "https://carnaurba.ch/",
-   "page_url": "https://allezhopp.ch/evenements/carnaurba-carnaval-d-orbe/"
+   "page_url": "https://allezhopp.ch/fr/evenements/carnaurba-carnaval-d-orbe/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/carnaurba-carnaval-d-orbe/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/carnaurba-carnaval-d-orbe/",
+    "it": "https://allezhopp.ch/it/eventi/carnaurba-carnaval-d-orbe/",
+    "en": "https://allezhopp.ch/en/events/carnaurba-carnaval-d-orbe/"
+   }
   },
   {
    "id": "ee0bb992-a303-5277-8704-d588121b7101",
@@ -3482,7 +4172,13 @@
    "event_url": "https://cullyjazz.ch/",
    "evidence_quote": "chaque année à la recherche de nouvelles forces vives",
    "evidence_url": "https://cullyjazz.ch/en/benevoles",
-   "page_url": "https://allezhopp.ch/evenements/cully-jazz-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/cully-jazz-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/cully-jazz-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/cully-jazz-festival/",
+    "it": "https://allezhopp.ch/it/eventi/cully-jazz-festival/",
+    "en": "https://allezhopp.ch/en/events/cully-jazz-festival/"
+   }
   },
   {
    "id": "44d31f70-52e1-5935-a2c5-07a23ef3ba40",
@@ -3512,7 +4208,13 @@
    "event_url": "https://zermatt-unplugged.ch/",
    "evidence_quote": "Volunteer registration is currently closed.",
    "evidence_url": "https://zermatt-unplugged.ch/en/infos/volunteers/",
-   "page_url": "https://allezhopp.ch/evenements/zermatt-unplugged/"
+   "page_url": "https://allezhopp.ch/fr/evenements/zermatt-unplugged/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/zermatt-unplugged/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/zermatt-unplugged/",
+    "it": "https://allezhopp.ch/it/eventi/zermatt-unplugged/",
+    "en": "https://allezhopp.ch/en/events/zermatt-unplugged/"
+   }
   },
   {
    "id": "fb9801a4-bde0-5749-8fae-2647866e2673",
@@ -3542,7 +4244,13 @@
    "event_url": "https://www.visionsdureel.ch/",
    "evidence_quote": "Les inscriptions pour l'édition 2026 sont fermées",
    "evidence_url": "https://www.visionsdureel.ch/info/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/visions-du-reel/"
+   "page_url": "https://allezhopp.ch/fr/evenements/visions-du-reel/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/visions-du-reel/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/visions-du-reel/",
+    "it": "https://allezhopp.ch/it/eventi/visions-du-reel/",
+    "en": "https://allezhopp.ch/en/events/visions-du-reel/"
+   }
   },
   {
    "id": "c8f332e3-093f-5c8a-a682-bc22a8fde11e",
@@ -3572,7 +4280,13 @@
    "event_url": "https://www.zuerichmarathon.ch/",
    "evidence_quote": "Auch für das Austragungswochenende vom 11. April 2027 sowie die Startnummernausgabe",
    "evidence_url": "https://www.zuerichmarathon.ch/helfer",
-   "page_url": "https://allezhopp.ch/evenements/ochsner-sport-zurich-marathon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/ochsner-sport-zurich-marathon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/ochsner-sport-zurich-marathon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/ochsner-sport-zurich-marathon/",
+    "it": "https://allezhopp.ch/it/eventi/ochsner-sport-zurich-marathon/",
+    "en": "https://allezhopp.ch/en/events/ochsner-sport-zurich-marathon/"
+   }
   },
   {
    "id": "5124af58-934b-5eeb-8449-64075a3abb68",
@@ -3602,7 +4316,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/9befac3c1ddf1d5b8908b16543fbb06fb3518955?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/wallisellen-triathlon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/wallisellen-triathlon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/wallisellen-triathlon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/wallisellen-triathlon/",
+    "it": "https://allezhopp.ch/it/eventi/wallisellen-triathlon/",
+    "en": "https://allezhopp.ch/en/events/wallisellen-triathlon/"
+   }
   },
   {
    "id": "8c22a2cc-b237-5462-8c58-4a10dbcd7d37",
@@ -3632,7 +4352,13 @@
    "event_url": "https://course-des-ponts.ch/",
    "evidence_quote": "En 2026, c'est toi qui vas contribuer à réveiller Genève",
    "evidence_url": "https://course-des-ponts.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/course-des-ponts-de-geneve/"
+   "page_url": "https://allezhopp.ch/fr/evenements/course-des-ponts-de-geneve/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/course-des-ponts-de-geneve/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/course-des-ponts-de-geneve/",
+    "it": "https://allezhopp.ch/it/eventi/course-des-ponts-de-geneve/",
+    "en": "https://allezhopp.ch/en/events/course-des-ponts-de-geneve/"
+   }
   },
   {
    "id": "be74d0e5-aae8-5b56-a5ce-9a5b22769f7a",
@@ -3662,7 +4388,13 @@
    "event_url": "https://bcn-tour.ch/",
    "evidence_quote": "Nous recherchons des bénévoles pour assurer la sécurité des coureurs",
    "evidence_url": "https://www.sportplus.ch/famille-sportplus/#benevole",
-   "page_url": "https://allezhopp.ch/evenements/bcn-tour/"
+   "page_url": "https://allezhopp.ch/fr/evenements/bcn-tour/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/bcn-tour/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/bcn-tour/",
+    "it": "https://allezhopp.ch/it/eventi/bcn-tour/",
+    "en": "https://allezhopp.ch/en/events/bcn-tour/"
+   }
   },
   {
    "id": "6c4111b1-f749-506a-b463-44ea2810a7c8",
@@ -3692,7 +4424,13 @@
    "event_url": "https://20km.ch/",
    "evidence_quote": "Les inscriptions sont fermées pour le moment",
    "evidence_url": "https://www.20km.ch/infos-pratiques/volontaires",
-   "page_url": "https://allezhopp.ch/evenements/20km-de-lausanne/"
+   "page_url": "https://allezhopp.ch/fr/evenements/20km-de-lausanne/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/20km-de-lausanne/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/20km-de-lausanne/",
+    "it": "https://allezhopp.ch/it/eventi/20km-de-lausanne/",
+    "en": "https://allezhopp.ch/en/events/20km-de-lausanne/"
+   }
   },
   {
    "id": "59e71f80-7f4e-54a7-8f32-45ddf910a8f8",
@@ -3722,7 +4460,13 @@
    "event_url": "https://my.slowup.ch/national/de.html",
    "evidence_quote": "wie auch aktive Helfende",
    "evidence_url": "https://my.slowup.ch/murtensee/de/idee-organisation/organisation-kontakt.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-murtensee/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-murtensee/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-murtensee/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-murtensee/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-murtensee/",
+    "en": "https://allezhopp.ch/en/events/slowup-murtensee/"
+   }
   },
   {
    "id": "dd3631e3-04e3-5843-b028-a842c994e321",
@@ -3752,7 +4496,13 @@
    "event_url": "https://www.openhouse-basel.org/",
    "evidence_quote": "Volunteers sind am Open House Wochenende bei Gebäuden aus unserem Programm im Einsatz",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/open-house-basel-architektur-fur-alle",
-   "page_url": "https://allezhopp.ch/evenements/open-house-basel/"
+   "page_url": "https://allezhopp.ch/fr/evenements/open-house-basel/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/open-house-basel/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/open-house-basel/",
+    "it": "https://allezhopp.ch/it/eventi/open-house-basel/",
+    "en": "https://allezhopp.ch/en/events/open-house-basel/"
+   }
   },
   {
    "id": "3a33aed6-e53c-588a-9558-9d0b6aec83ee",
@@ -3782,7 +4532,13 @@
    "event_url": "https://www.ejcf.ch/",
    "evidence_quote": "Das Jugendchorfestival bietet bereits jetzt während den Vorbereitungen sowie auch während der Festivalwoche viele verschiedene Möglichkeiten",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/freiwillige-mithilfe-am-ejcf-2027",
-   "page_url": "https://allezhopp.ch/evenements/europaisches-jugendchor-festival-basel-ejcf/"
+   "page_url": "https://allezhopp.ch/fr/evenements/europaisches-jugendchor-festival-basel-ejcf/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/europaisches-jugendchor-festival-basel-ejcf/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/europaisches-jugendchor-festival-basel-ejcf/",
+    "it": "https://allezhopp.ch/it/eventi/europaisches-jugendchor-festival-basel-ejcf/",
+    "en": "https://allezhopp.ch/en/events/europaisches-jugendchor-festival-basel-ejcf/"
+   }
   },
   {
    "id": "e64b4eab-abdf-5db1-a60a-801ed8ea8023",
@@ -3812,7 +4568,13 @@
    "event_url": "https://www.urschweizer-abendtrails.ch/",
    "evidence_quote": "Für eine reibungslose Durchführung der Urschweizer Abendtrails suchen wir Helfer",
    "evidence_url": "https://www.urschweizer-abendtrails.ch/helferwesen",
-   "page_url": "https://allezhopp.ch/evenements/urschweizer-abendtrail-nidwalden/"
+   "page_url": "https://allezhopp.ch/fr/evenements/urschweizer-abendtrail-nidwalden/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/urschweizer-abendtrail-nidwalden/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/urschweizer-abendtrail-nidwalden/",
+    "it": "https://allezhopp.ch/it/eventi/urschweizer-abendtrail-nidwalden/",
+    "en": "https://allezhopp.ch/en/events/urschweizer-abendtrail-nidwalden/"
+   }
   },
   {
    "id": "54d7a424-23b2-5ac9-a24e-bb06978a23ae",
@@ -3842,7 +4604,13 @@
    "event_url": "https://villars-sur-games.ch/",
    "evidence_quote": "Nous recherchons des bénévoles pour nous donner un coup de main avant, pendant et après",
    "evidence_url": "https://villars-sur-games.ch/le-festival-de-jeux/devenir-benevole/",
-   "page_url": "https://allezhopp.ch/evenements/villars-sur-games/"
+   "page_url": "https://allezhopp.ch/fr/evenements/villars-sur-games/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/villars-sur-games/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/villars-sur-games/",
+    "it": "https://allezhopp.ch/it/eventi/villars-sur-games/",
+    "en": "https://allezhopp.ch/en/events/villars-sur-games/"
+   }
   },
   {
    "id": "e843cd5d-a03f-5415-ba4b-d7617628b50c",
@@ -3872,7 +4640,13 @@
    "event_url": "https://www.generaligenevemarathon.com/",
    "evidence_quote": "Les ouvertures des inscriptions bénévoles ouvriront le lundi 14 décembre.",
    "evidence_url": "https://www.generaligenevemarathon.com/volunteers",
-   "page_url": "https://allezhopp.ch/evenements/generali-geneve-marathon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/generali-geneve-marathon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/generali-geneve-marathon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/generali-geneve-marathon/",
+    "it": "https://allezhopp.ch/it/eventi/generali-geneve-marathon/",
+    "en": "https://allezhopp.ch/en/events/generali-geneve-marathon/"
+   }
   },
   {
    "id": "878941b7-6abf-59f2-99f3-bfc234ce7bfc",
@@ -3902,7 +4676,13 @@
    "event_url": "https://my.slowup.ch/national/de.html",
    "evidence_quote": "dank Unterstützung von Partnern und Sponsoren sowie freiwilligen Helfenden",
    "evidence_url": "https://my.slowup.ch/schaffhausen-hegau/de/anreise-teilnahme/wichtige-infos.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-schaffhausen-hegau/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-schaffhausen-hegau/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-schaffhausen-hegau/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-schaffhausen-hegau/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-schaffhausen-hegau/",
+    "en": "https://allezhopp.ch/en/events/slowup-schaffhausen-hegau/"
+   }
   },
   {
    "id": "409f8248-2958-502d-8f71-130ff5548a8c",
@@ -3932,7 +4712,13 @@
    "event_url": "https://www.fccv27.ch/",
    "evidence_quote": "Préinscris-toi dès maintenant comme bénévole de la FCCV27.",
    "evidence_url": "https://www.fccv27.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/fete-du-chant-choral-vaudois-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fete-du-chant-choral-vaudois-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fete-du-chant-choral-vaudois-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fete-du-chant-choral-vaudois-2027/",
+    "it": "https://allezhopp.ch/it/eventi/fete-du-chant-choral-vaudois-2027/",
+    "en": "https://allezhopp.ch/en/events/fete-du-chant-choral-vaudois-2027/"
+   }
   },
   {
    "id": "0bbe370d-e3e4-5947-a918-850dfe47520b",
@@ -3962,7 +4748,13 @@
    "event_url": "https://www.weltklassezuerich.ch/de/aktuelles/termine/",
    "evidence_quote": "Herzlich willkommen auf der Volunteer-Seite von Weltklasse Zürich",
    "evidence_url": "https://www.weltklassezuerich.ch/de/ueber-uns/volunteers/",
-   "page_url": "https://allezhopp.ch/evenements/weltklasse-zurich-zoo-run/"
+   "page_url": "https://allezhopp.ch/fr/evenements/weltklasse-zurich-zoo-run/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/weltklasse-zurich-zoo-run/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/weltklasse-zurich-zoo-run/",
+    "it": "https://allezhopp.ch/it/eventi/weltklasse-zurich-zoo-run/",
+    "en": "https://allezhopp.ch/en/events/weltklasse-zurich-zoo-run/"
+   }
   },
   {
    "id": "71c35245-45a5-5ec5-9fef-4074f4d7d00f",
@@ -3992,7 +4784,13 @@
    "event_url": "https://corbak.ch/",
    "evidence_quote": "Chaque année, Corbak Festival est heureux de pouvoir compter sur l'aide de 300 bénévoles.",
    "evidence_url": "https://corbak.ch/",
-   "page_url": "https://allezhopp.ch/evenements/corbak-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/corbak-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/corbak-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/corbak-festival/",
+    "it": "https://allezhopp.ch/it/eventi/corbak-festival/",
+    "en": "https://allezhopp.ch/en/events/corbak-festival/"
+   }
   },
   {
    "id": "683c4691-2d18-51c8-97f5-703390c424aa",
@@ -4022,7 +4820,13 @@
    "event_url": "https://www.jurace.ch/",
    "evidence_quote": "Devenez Volontaire Jurace Festival 2027 Je m'inscris en tant que bénévole",
    "evidence_url": "https://www.jurace.ch/infos-pratiques/volunteer",
-   "page_url": "https://allezhopp.ch/evenements/jurace-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/jurace-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/jurace-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/jurace-festival/",
+    "it": "https://allezhopp.ch/it/eventi/jurace-festival/",
+    "en": "https://allezhopp.ch/en/events/jurace-festival/"
+   }
   },
   {
    "id": "a2fea5f2-59e1-5785-b8fd-5c63d7904fe0",
@@ -4052,7 +4856,13 @@
    "event_url": "https://www.urschweizer-abendtrails.ch/",
    "evidence_quote": "Für eine reibungslose Durchführung der Urschweizer Abendtrails suchen wir Helfer",
    "evidence_url": "https://www.urschweizer-abendtrails.ch/helferwesen",
-   "page_url": "https://allezhopp.ch/evenements/urschweizer-abendtrail-schwyz/"
+   "page_url": "https://allezhopp.ch/fr/evenements/urschweizer-abendtrail-schwyz/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/urschweizer-abendtrail-schwyz/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/urschweizer-abendtrail-schwyz/",
+    "it": "https://allezhopp.ch/it/eventi/urschweizer-abendtrail-schwyz/",
+    "en": "https://allezhopp.ch/en/events/urschweizer-abendtrail-schwyz/"
+   }
   },
   {
    "id": "055db9b5-6d0a-5f57-9906-261d454c22ed",
@@ -4082,7 +4892,13 @@
    "event_url": "https://gpbern.ch/",
    "evidence_quote": "Die Anmeldung als Volunteer ist ab Mitte Januar 2027 möglich.",
    "evidence_url": "https://gpbern.ch/anspruchsgruppen/volunteers/",
-   "page_url": "https://allezhopp.ch/evenements/grand-prix-von-bern/"
+   "page_url": "https://allezhopp.ch/fr/evenements/grand-prix-von-bern/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/grand-prix-von-bern/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/grand-prix-von-bern/",
+    "it": "https://allezhopp.ch/it/eventi/grand-prix-von-bern/",
+    "en": "https://allezhopp.ch/en/events/grand-prix-von-bern/"
+   }
   },
   {
    "id": "b5870a90-429d-51e4-bdc0-9d67effca437",
@@ -4112,7 +4928,13 @@
    "event_url": "https://www.osf-2027.ch/",
    "evidence_quote": "Dann melde dich gleich als Helfer:in an.",
    "evidence_url": "https://www.osf-2027.ch/",
-   "page_url": "https://allezhopp.ch/evenements/oberaargauisches-schwingfest-langenthal/"
+   "page_url": "https://allezhopp.ch/fr/evenements/oberaargauisches-schwingfest-langenthal/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/oberaargauisches-schwingfest-langenthal/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/oberaargauisches-schwingfest-langenthal/",
+    "it": "https://allezhopp.ch/it/eventi/oberaargauisches-schwingfest-langenthal/",
+    "en": "https://allezhopp.ch/en/events/oberaargauisches-schwingfest-langenthal/"
+   }
   },
   {
    "id": "8aa5b67c-f69c-56d8-8d77-fbb8987efa14",
@@ -4142,7 +4964,13 @@
    "event_url": "https://www.gonetgenevaopen.com/",
    "evidence_quote": "Les inscriptions pour l'édition 2027 ne sont pas encore ouvertes.",
    "evidence_url": "https://www.gonetgenevaopen.com/fr-ch/information/staff",
-   "page_url": "https://allezhopp.ch/evenements/gonet-geneva-open/"
+   "page_url": "https://allezhopp.ch/fr/evenements/gonet-geneva-open/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/gonet-geneva-open/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/gonet-geneva-open/",
+    "it": "https://allezhopp.ch/it/eventi/gonet-geneva-open/",
+    "en": "https://allezhopp.ch/en/events/gonet-geneva-open/"
+   }
   },
   {
    "id": "9cd1798d-28bc-55ef-8ab2-af6245abf9d9",
@@ -4172,7 +5000,13 @@
    "event_url": "https://www.kabarett.ch/",
    "evidence_quote": "Wir freuen uns über freiwillige Helferinnen und Helfer für verschiedene Bereiche",
    "evidence_url": "https://www.kabarett.ch/freiwillige/",
-   "page_url": "https://allezhopp.ch/evenements/oltner-kabarett-tage/"
+   "page_url": "https://allezhopp.ch/fr/evenements/oltner-kabarett-tage/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/oltner-kabarett-tage/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/oltner-kabarett-tage/",
+    "it": "https://allezhopp.ch/it/eventi/oltner-kabarett-tage/",
+    "en": "https://allezhopp.ch/en/events/oltner-kabarett-tage/"
+   }
   },
   {
    "id": "0ac67f66-e25b-56f8-9035-10eaa4edb3a5",
@@ -4202,7 +5036,13 @@
    "event_url": "https://msf2027.ch/",
    "evidence_quote": "werde Helfer/in für das mittelländische schwingfest in Wichtrach vom 20. bis 23. Mai 2027",
    "evidence_url": "https://msf2027.ch/helfer-innen/",
-   "page_url": "https://allezhopp.ch/evenements/mittellandisches-schwingfest-wichtrach/"
+   "page_url": "https://allezhopp.ch/fr/evenements/mittellandisches-schwingfest-wichtrach/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/mittellandisches-schwingfest-wichtrach/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/mittellandisches-schwingfest-wichtrach/",
+    "it": "https://allezhopp.ch/it/eventi/mittellandisches-schwingfest-wichtrach/",
+    "en": "https://allezhopp.ch/en/events/mittellandisches-schwingfest-wichtrach/"
+   }
   },
   {
    "id": "f498725e-a3d6-533a-94c4-c1bb64d64ed4",
@@ -4232,7 +5072,13 @@
    "event_url": "https://www.urschweizer-abendtrails.ch/",
    "evidence_quote": "Für eine reibungslose Durchführung der Urschweizer Abendtrails suchen wir Helfer",
    "evidence_url": "https://www.urschweizer-abendtrails.ch/helferwesen",
-   "page_url": "https://allezhopp.ch/evenements/urschweizer-abendtrail-uri/"
+   "page_url": "https://allezhopp.ch/fr/evenements/urschweizer-abendtrail-uri/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/urschweizer-abendtrail-uri/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/urschweizer-abendtrail-uri/",
+    "it": "https://allezhopp.ch/it/eventi/urschweizer-abendtrail-uri/",
+    "en": "https://allezhopp.ch/en/events/urschweizer-abendtrail-uri/"
+   }
   },
   {
    "id": "72db106e-f9e3-5bb5-915a-9750d7fabd17",
@@ -4262,7 +5108,13 @@
    "event_url": "https://fribourg.ch/fr/fribourg/evenements/juvenalia-2027/",
    "evidence_quote": "remplis dès à présent ce formulaire d'inscription et rejoins la team!",
    "evidence_url": "https://www.juvenalia.ch/benevoles.html",
-   "page_url": "https://allezhopp.ch/evenements/juvenalia/"
+   "page_url": "https://allezhopp.ch/fr/evenements/juvenalia/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/juvenalia/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/juvenalia/",
+    "it": "https://allezhopp.ch/it/eventi/juvenalia/",
+    "en": "https://allezhopp.ch/en/events/juvenalia/"
+   }
   },
   {
    "id": "3e0e124c-c64b-59bb-8386-c6a059c2c99d",
@@ -4292,7 +5144,13 @@
    "event_url": "https://marathonvalais.ch/",
    "evidence_quote": "Rejoignez l'aventure et vivez l'événement de l'intérieur !",
    "evidence_url": "https://marathonvalais.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/marathon-des-terroirs-du-valais/"
+   "page_url": "https://allezhopp.ch/fr/evenements/marathon-des-terroirs-du-valais/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/marathon-des-terroirs-du-valais/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/marathon-des-terroirs-du-valais/",
+    "it": "https://allezhopp.ch/it/eventi/marathon-des-terroirs-du-valais/",
+    "en": "https://allezhopp.ch/en/events/marathon-des-terroirs-du-valais/"
+   }
   },
   {
    "id": "9d0934e4-7e25-58f7-b4be-c8360e9be204",
@@ -4322,7 +5180,13 @@
    "event_url": "https://www.bs.ch/veranstaltungen/dreilaenderlauf",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/0ca5dfa9fb31058b60c171942e02b5aac12f5531?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/dreilanderlauf-basel/"
+   "page_url": "https://allezhopp.ch/fr/evenements/dreilanderlauf-basel/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/dreilanderlauf-basel/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/dreilanderlauf-basel/",
+    "it": "https://allezhopp.ch/it/eventi/dreilanderlauf-basel/",
+    "en": "https://allezhopp.ch/en/events/dreilanderlauf-basel/"
+   }
   },
   {
    "id": "57ca9146-87a0-576f-a5c7-02777f98807e",
@@ -4352,7 +5216,13 @@
    "event_url": "https://bdsierre2027.ch/",
    "evidence_quote": "Remplissez le formulaire pour devenir bénévole",
    "evidence_url": "https://bdsierre2027.ch/index.php/component/content/article/devenez-benevole?catid=2",
-   "page_url": "https://allezhopp.ch/evenements/festival-bd-sierre/"
+   "page_url": "https://allezhopp.ch/fr/evenements/festival-bd-sierre/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/festival-bd-sierre/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/festival-bd-sierre/",
+    "it": "https://allezhopp.ch/it/eventi/festival-bd-sierre/",
+    "en": "https://allezhopp.ch/en/events/festival-bd-sierre/"
+   }
   },
   {
    "id": "aba66881-2d36-51af-a534-9a81121649de",
@@ -4382,7 +5252,13 @@
    "event_url": "https://tpv.ch/",
    "evidence_quote": "(résumé) plus de 100 bénévoles chaque année: logistique, sécurité, accueil",
    "evidence_url": "https://tpv.ch/",
-   "page_url": "https://allezhopp.ch/evenements/tour-du-pays-de-vaud/"
+   "page_url": "https://allezhopp.ch/fr/evenements/tour-du-pays-de-vaud/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/tour-du-pays-de-vaud/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/tour-du-pays-de-vaud/",
+    "it": "https://allezhopp.ch/it/eventi/tour-du-pays-de-vaud/",
+    "en": "https://allezhopp.ch/en/events/tour-du-pays-de-vaud/"
+   }
   },
   {
    "id": "9e1522c5-a735-56b7-ac43-e57ba4184e6c",
@@ -4412,7 +5288,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/50245b84a4dd048a4664049dd7b4210ca38bd0e0?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/race-for-gift/"
+   "page_url": "https://allezhopp.ch/fr/evenements/race-for-gift/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/race-for-gift/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/race-for-gift/",
+    "it": "https://allezhopp.ch/it/eventi/race-for-gift/",
+    "en": "https://allezhopp.ch/en/events/race-for-gift/"
+   }
   },
   {
    "id": "0cee9ac8-e6a0-5a33-92bb-f21b9c8f8f8a",
@@ -4442,7 +5324,13 @@
    "event_url": "https://my.slowup.ch/solothurn-buechibaerg/de.html",
    "evidence_quote": "Wer hilft mit? Mitten drin – melde dich bei uns als Helferin/Helfer",
    "evidence_url": "https://my.slowup.ch/solothurn-buechibaerg/de.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-solothurn-buechibarg/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-solothurn-buechibarg/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-solothurn-buechibarg/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-solothurn-buechibarg/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-solothurn-buechibarg/",
+    "en": "https://allezhopp.ch/en/events/slowup-solothurn-buechibarg/"
+   }
   },
   {
    "id": "8070f6db-6eeb-5d34-b21d-f1e5942d5878",
@@ -4472,7 +5360,13 @@
    "event_url": "https://www.racinesetavenir.ch/",
    "evidence_quote": "recherche des bénévoles passionnés de montagne et de nature pour l'été 2027",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/deviens-acteur-de-la-preservation-du-val-de-bagnes",
-   "page_url": "https://allezhopp.ch/evenements/racines-et-avenir-100-journees-pour-le-val-de-bagnes/"
+   "page_url": "https://allezhopp.ch/fr/evenements/racines-et-avenir-100-journees-pour-le-val-de-bagnes/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/racines-et-avenir-100-journees-pour-le-val-de-bagnes/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/racines-et-avenir-100-journees-pour-le-val-de-bagnes/",
+    "it": "https://allezhopp.ch/it/eventi/racines-et-avenir-100-journees-pour-le-val-de-bagnes/",
+    "en": "https://allezhopp.ch/en/events/racines-et-avenir-100-journees-pour-le-val-de-bagnes/"
+   }
   },
   {
    "id": "46a848bc-1741-5df6-9884-e15d9f653260",
@@ -4502,7 +5396,13 @@
    "event_url": "https://www.swisscanyontrail.com/",
    "evidence_quote": "ENVIE DE VOUS ENGAGER ? CHOISISSEZ VOTRE POSTE",
    "evidence_url": "https://www.swisscanyontrail.com/pages/benevoles",
-   "page_url": "https://allezhopp.ch/evenements/swiss-canyon-trail/"
+   "page_url": "https://allezhopp.ch/fr/evenements/swiss-canyon-trail/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/swiss-canyon-trail/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/swiss-canyon-trail/",
+    "it": "https://allezhopp.ch/it/eventi/swiss-canyon-trail/",
+    "en": "https://allezhopp.ch/en/events/swiss-canyon-trail/"
+   }
   },
   {
    "id": "98527e26-34bb-5d81-952c-9c768c075cdd",
@@ -4532,7 +5432,13 @@
    "event_url": "https://goldenflygeneva.com/",
    "evidence_quote": "Golden Fly Series Geneva 5 juin 2027",
    "evidence_url": "https://goldenflygeneva.com/",
-   "page_url": "https://allezhopp.ch/evenements/golden-fly-series-geneva/"
+   "page_url": "https://allezhopp.ch/fr/evenements/golden-fly-series-geneva/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/golden-fly-series-geneva/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/golden-fly-series-geneva/",
+    "it": "https://allezhopp.ch/it/eventi/golden-fly-series-geneva/",
+    "en": "https://allezhopp.ch/en/events/golden-fly-series-geneva/"
+   }
   },
   {
    "id": "145a4168-fe40-5f55-afe6-6874dc6f9d2c",
@@ -4562,7 +5468,13 @@
    "event_url": "https://omf27.ch/",
    "evidence_quote": "Melde dich als Helfer!",
    "evidence_url": "https://omf27.ch/",
-   "page_url": "https://allezhopp.ch/evenements/oberwalliser-musikfest-turtmann/"
+   "page_url": "https://allezhopp.ch/fr/evenements/oberwalliser-musikfest-turtmann/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/oberwalliser-musikfest-turtmann/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/oberwalliser-musikfest-turtmann/",
+    "it": "https://allezhopp.ch/it/eventi/oberwalliser-musikfest-turtmann/",
+    "en": "https://allezhopp.ch/en/events/oberwalliser-musikfest-turtmann/"
+   }
   },
   {
    "id": "f81ee145-bee3-5ac5-933d-1db1851bed7a",
@@ -4592,7 +5504,13 @@
    "event_url": "https://www.swiss-aquatics.ch/fr/sport-delite/swimming/competition/",
    "evidence_quote": "Kids Ligue / Futura 06/06/2027 & 07/06/2027 Piscine de Mon-Repos",
    "evidence_url": "https://volontairesdusportlausannois.ch/manifestations/",
-   "page_url": "https://allezhopp.ch/evenements/kids-ligue-futura/"
+   "page_url": "https://allezhopp.ch/fr/evenements/kids-ligue-futura/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/kids-ligue-futura/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/kids-ligue-futura/",
+    "it": "https://allezhopp.ch/it/eventi/kids-ligue-futura/",
+    "en": "https://allezhopp.ch/en/events/kids-ligue-futura/"
+   }
   },
   {
    "id": "c2eac9ae-edd6-50c8-b463-03feb543e467",
@@ -4622,7 +5540,13 @@
    "event_url": "https://www.slowup.ch/valais/fr.html",
    "evidence_quote": "Le slowUp Valais a besoin chaque année de 150 bénévoles",
    "evidence_url": "https://slowup.ch/valais/fr/idee-organisation/Nous-aider-.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-valais/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-valais/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-valais/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-valais/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-valais/",
+    "en": "https://allezhopp.ch/en/events/slowup-valais/"
+   }
   },
   {
    "id": "621bb644-6092-5853-b632-38b8e4d0a811",
@@ -4652,7 +5576,13 @@
    "event_url": "https://festineuch.ch/",
    "evidence_quote": "F&B, bénévoles, santé & médical, technique",
    "evidence_url": "https://festineuch.ch/le-festival/",
-   "page_url": "https://allezhopp.ch/evenements/festi-neuch/"
+   "page_url": "https://allezhopp.ch/fr/evenements/festi-neuch/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/festi-neuch/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/festi-neuch/",
+    "it": "https://allezhopp.ch/it/eventi/festi-neuch/",
+    "en": "https://allezhopp.ch/en/events/festi-neuch/"
+   }
   },
   {
    "id": "7cb87d59-9519-5aec-a157-f4f2c2f44187",
@@ -4682,7 +5612,13 @@
    "event_url": "https://greenfieldfestival.ch/",
    "evidence_quote": "Anmeldungen für 2027 sind ab sofort möglich!",
    "evidence_url": "https://greenfieldfestival.ch/volunteers",
-   "page_url": "https://allezhopp.ch/evenements/greenfield-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/greenfield-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/greenfield-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/greenfield-festival/",
+    "it": "https://allezhopp.ch/it/eventi/greenfield-festival/",
+    "en": "https://allezhopp.ch/en/events/greenfield-festival/"
+   }
   },
   {
    "id": "9717a2bf-9cf9-585f-947f-229c1e3b701f",
@@ -4712,7 +5648,13 @@
    "event_url": "https://100km.ch/",
    "evidence_quote": "Dann melde dich mit dem untenstehenden Formular als Helfer*in an",
    "evidence_url": "https://100km.ch/wir-suchen-dich/",
-   "page_url": "https://allezhopp.ch/evenements/bieler-lauftage-100-km-de-bienne/"
+   "page_url": "https://allezhopp.ch/fr/evenements/bieler-lauftage-100-km-de-bienne/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/bieler-lauftage-100-km-de-bienne/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/bieler-lauftage-100-km-de-bienne/",
+    "it": "https://allezhopp.ch/it/eventi/bieler-lauftage-100-km-de-bienne/",
+    "en": "https://allezhopp.ch/en/events/bieler-lauftage-100-km-de-bienne/"
+   }
   },
   {
    "id": "359ecce7-0ffb-5d6d-b392-958cc6af1faf",
@@ -4742,7 +5684,13 @@
    "event_url": "https://www.turnfest27.ch/",
    "evidence_quote": "Helferinnen und Helfer gesucht!",
    "evidence_url": "https://www.turnfest27.ch/post/helferinnen-und-helfer-gesucht",
-   "page_url": "https://allezhopp.ch/evenements/turnfest-seerugge-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/turnfest-seerugge-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/turnfest-seerugge-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/turnfest-seerugge-2027/",
+    "it": "https://allezhopp.ch/it/eventi/turnfest-seerugge-2027/",
+    "en": "https://allezhopp.ch/en/events/turnfest-seerugge-2027/"
+   }
   },
   {
    "id": "03239b93-06cb-58af-944e-e82b8736af8f",
@@ -4772,7 +5720,13 @@
    "event_url": "https://zurichpridefestival.ch/",
    "evidence_quote": "Die Zurich Pride ist nur dank der Hilfe von Menschen wie Dir möglich",
    "evidence_url": "https://zurichpridefestival.ch/volunteer/",
-   "page_url": "https://allezhopp.ch/evenements/zurich-pride-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/zurich-pride-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/zurich-pride-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/zurich-pride-festival/",
+    "it": "https://allezhopp.ch/it/eventi/zurich-pride-festival/",
+    "en": "https://allezhopp.ch/en/events/zurich-pride-festival/"
+   }
   },
   {
    "id": "3db949e6-fe57-5bfe-ab72-04f84c8f3124",
@@ -4802,7 +5756,13 @@
    "event_url": "https://caribana.ch/",
    "evidence_quote": "Caribana est régulièrement à la recherche de nouveaux bénévoles",
    "evidence_url": "https://caribana.ch/fr/devenir-benevole-au-caribana-festival",
-   "page_url": "https://allezhopp.ch/evenements/caribana-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/caribana-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/caribana-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/caribana-festival/",
+    "it": "https://allezhopp.ch/it/eventi/caribana-festival/",
+    "en": "https://allezhopp.ch/en/events/caribana-festival/"
+   }
   },
   {
    "id": "bdcba4ab-56d8-5785-ac6f-4de1fd924f11",
@@ -4832,7 +5792,13 @@
    "event_url": "https://foodculturedays.com/",
    "evidence_quote": "Que tu sois libre 1, 2, 3 jours ou pendant toute la durée du festival",
    "evidence_url": "https://foodculturedays.com/fr/benevoles",
-   "page_url": "https://allezhopp.ch/evenements/foodculture-days/"
+   "page_url": "https://allezhopp.ch/fr/evenements/foodculture-days/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/foodculture-days/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/foodculture-days/",
+    "it": "https://allezhopp.ch/it/eventi/foodculture-days/",
+    "en": "https://allezhopp.ch/en/events/foodculture-days/"
+   }
   },
   {
    "id": "96c23e0e-2bad-5ee5-bcd8-ff24abf663e9",
@@ -4862,7 +5828,13 @@
    "event_url": "https://www.lavauxclassic.ch/",
    "evidence_quote": "Inscrivez-vous à travers le formulaire ci-dessous et partagez cette aventure avec nous !",
    "evidence_url": "https://www.lavauxclassic.ch/soutiens/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/lavaux-classic/"
+   "page_url": "https://allezhopp.ch/fr/evenements/lavaux-classic/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/lavaux-classic/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/lavaux-classic/",
+    "it": "https://allezhopp.ch/it/eventi/lavaux-classic/",
+    "en": "https://allezhopp.ch/en/events/lavaux-classic/"
+   }
   },
   {
    "id": "11f8ab3e-c48a-5193-bc95-c94df0b3d8c1",
@@ -4892,7 +5864,13 @@
    "event_url": "https://www.sierreblues.ch/",
    "evidence_quote": "Rejoins notre CREW en tant bénévole",
    "evidence_url": "https://www.sierreblues.ch/fr/benevoles",
-   "page_url": "https://allezhopp.ch/evenements/sierre-blues-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/sierre-blues-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/sierre-blues-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/sierre-blues-festival/",
+    "it": "https://allezhopp.ch/it/eventi/sierre-blues-festival/",
+    "en": "https://allezhopp.ch/en/events/sierre-blues-festival/"
+   }
   },
   {
    "id": "e9afd6b4-293d-5113-8a7c-4d06cf74b4dd",
@@ -4922,7 +5900,13 @@
    "event_url": "https://www.triathlon-laneuveville.ch/fr",
    "evidence_quote": "accueillir les 2 à 300 sportives qui participeront à nos différentes épreuves",
    "evidence_url": "https://www.triathlon-laneuveville.ch/fr/benevoles",
-   "page_url": "https://allezhopp.ch/evenements/triathlon-et-bike-run-la-neuveville/"
+   "page_url": "https://allezhopp.ch/fr/evenements/triathlon-et-bike-run-la-neuveville/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/triathlon-et-bike-run-la-neuveville/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/triathlon-et-bike-run-la-neuveville/",
+    "it": "https://allezhopp.ch/it/eventi/triathlon-et-bike-run-la-neuveville/",
+    "en": "https://allezhopp.ch/en/events/triathlon-et-bike-run-la-neuveville/"
+   }
   },
   {
    "id": "f2374ae2-cb1e-5ec3-9de4-32a255e15aee",
@@ -4952,7 +5936,13 @@
    "event_url": "https://my.slowup.ch/national/de.html",
    "evidence_quote": "wie auch aktive Helfende",
    "evidence_url": "https://my.slowup.ch/hochrhein/de/idee-organisation/organisation-kontakt.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-hochrhein/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-hochrhein/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-hochrhein/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-hochrhein/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-hochrhein/",
+    "en": "https://allezhopp.ch/en/events/slowup-hochrhein/"
+   }
   },
   {
    "id": "550f298a-6602-5f7c-93de-53f4af6dcf56",
@@ -4982,7 +5972,13 @@
    "event_url": "https://stf2027.ch/",
    "evidence_quote": "Viele Helfer und Helferinnen unterstützen diesen Anlass mit freiwilligen Einsätzen.",
    "evidence_url": "https://stf2027.ch/",
-   "page_url": "https://allezhopp.ch/evenements/seelandisches-turnfest-biel-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/seelandisches-turnfest-biel-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/seelandisches-turnfest-biel-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/seelandisches-turnfest-biel-2027/",
+    "it": "https://allezhopp.ch/it/eventi/seelandisches-turnfest-biel-2027/",
+    "en": "https://allezhopp.ch/en/events/seelandisches-turnfest-biel-2027/"
+   }
   },
   {
    "id": "ed290bf8-221a-52ae-846a-a0c671d7c7bf",
@@ -5012,7 +6008,13 @@
    "event_url": "https://marathondes2vignobles.ch/",
    "evidence_quote": "On le sait déjà, on aura besoin de toi! Un grand merci!",
    "evidence_url": "https://marathondes2vignobles.ch/devenir-benevole",
-   "page_url": "https://allezhopp.ch/evenements/marathon-des-2-vignobles/"
+   "page_url": "https://allezhopp.ch/fr/evenements/marathon-des-2-vignobles/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/marathon-des-2-vignobles/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/marathon-des-2-vignobles/",
+    "it": "https://allezhopp.ch/it/eventi/marathon-des-2-vignobles/",
+    "en": "https://allezhopp.ch/en/events/marathon-des-2-vignobles/"
+   }
   },
   {
    "id": "f1ee4b33-fe6f-51e0-8e71-74f386e1dac1",
@@ -5042,7 +6044,13 @@
    "event_url": "https://www.slowup.ch/jura/fr.html",
    "evidence_quote": "Nous cherchons de bénévoles pour la sécurité",
    "evidence_url": "https://www.slowup.ch/jura/fr.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-jura/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-jura/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-jura/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-jura/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-jura/",
+    "en": "https://allezhopp.ch/en/events/slowup-jura/"
+   }
   },
   {
    "id": "37bfdb6d-eec4-5893-9525-7d9305751f49",
@@ -5072,7 +6080,13 @@
    "event_url": "https://www.beachgstaad.ch/en",
    "evidence_quote": "Registration for volunteer roles will be available through Swiss Volunteers from February 2027",
    "evidence_url": "https://www.beachgstaad.ch/en/tournament/volunteers",
-   "page_url": "https://allezhopp.ch/evenements/beach-gstaad-cev-eurobeachvolley-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/beach-gstaad-cev-eurobeachvolley-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/beach-gstaad-cev-eurobeachvolley-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/beach-gstaad-cev-eurobeachvolley-2027/",
+    "it": "https://allezhopp.ch/it/eventi/beach-gstaad-cev-eurobeachvolley-2027/",
+    "en": "https://allezhopp.ch/en/events/beach-gstaad-cev-eurobeachvolley-2027/"
+   }
   },
   {
    "id": "54d8a7b5-40c4-5b4e-9f09-a886d34ea2bf",
@@ -5102,7 +6116,13 @@
    "event_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/kinderaugen-zum-strahlen-bringen-begleitung-fur-den-ferienpass-2027",
    "evidence_quote": "Begleite Kinder und Jugendliche auf spannende Ausflüge",
    "evidence_url": "https://www.benevol-jobs.ch/en/volunteer-opportunity/kinderaugen-zum-strahlen-bringen-begleitung-fur-den-ferienpass-2027",
-   "page_url": "https://allezhopp.ch/evenements/ferienpass-2027-x-island-begleitung/"
+   "page_url": "https://allezhopp.ch/fr/evenements/ferienpass-2027-x-island-begleitung/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/ferienpass-2027-x-island-begleitung/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/ferienpass-2027-x-island-begleitung/",
+    "it": "https://allezhopp.ch/it/eventi/ferienpass-2027-x-island-begleitung/",
+    "en": "https://allezhopp.ch/en/events/ferienpass-2027-x-island-begleitung/"
+   }
   },
   {
    "id": "497933ca-d28d-5fc2-9d44-25bf386f63b2",
@@ -5132,7 +6152,13 @@
    "event_url": "https://www.wallis2027.ch/",
    "evidence_quote": "Freiwillige Helferinnen und Helfer werden das Fest unvergesslich machen.",
    "evidence_url": "https://www.wallis2027.ch/",
-   "page_url": "https://allezhopp.ch/evenements/fete-federale-des-tambours-et-fifres-etpf-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fete-federale-des-tambours-et-fifres-etpf-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fete-federale-des-tambours-et-fifres-etpf-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fete-federale-des-tambours-et-fifres-etpf-2027/",
+    "it": "https://allezhopp.ch/it/eventi/fete-federale-des-tambours-et-fifres-etpf-2027/",
+    "en": "https://allezhopp.ch/en/events/fete-federale-des-tambours-et-fifres-etpf-2027/"
+   }
   },
   {
    "id": "83dde74b-d4a9-50d9-9f22-ada556f89c3f",
@@ -5162,7 +6188,13 @@
    "event_url": "https://www.openairsg.ch/",
    "evidence_quote": "Die Crewanmeldung für 2027 beginnt Anfang nächsten Jahres.",
    "evidence_url": "https://www.openairsg.ch/crew/",
-   "page_url": "https://allezhopp.ch/evenements/openair-st-gallen/"
+   "page_url": "https://allezhopp.ch/fr/evenements/openair-st-gallen/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/openair-st-gallen/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/openair-st-gallen/",
+    "it": "https://allezhopp.ch/it/eventi/openair-st-gallen/",
+    "en": "https://allezhopp.ch/en/events/openair-st-gallen/"
+   }
   },
   {
    "id": "31a01767-e225-552c-83ab-2e3f0083ec14",
@@ -5192,7 +6224,13 @@
    "event_url": "https://www.zermattmarathon.ch/",
    "evidence_quote": "Wir suchen motivierte EDEL-Helfer:innen*, die Lust haben, uns bei unserer Veranstaltung zu unterstützen.",
    "evidence_url": "https://www.zermattmarathon.ch/de/allgemein/fuer-helferinnen",
-   "page_url": "https://allezhopp.ch/evenements/gornergrat-zermatt-marathon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/gornergrat-zermatt-marathon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/gornergrat-zermatt-marathon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/gornergrat-zermatt-marathon/",
+    "it": "https://allezhopp.ch/it/eventi/gornergrat-zermatt-marathon/",
+    "en": "https://allezhopp.ch/en/events/gornergrat-zermatt-marathon/"
+   }
   },
   {
    "id": "1c3ce8b6-8635-5901-9682-7e7dc9350198",
@@ -5222,7 +6260,13 @@
    "event_url": "https://www.montreuxjazzfestival.com/",
    "evidence_quote": "the opening of registrations will be communicated via our Facebook group",
    "evidence_url": "https://www.montreuxjazzfestival.com/en/festival/become-a-staff/",
-   "page_url": "https://allezhopp.ch/evenements/montreux-jazz-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/montreux-jazz-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/montreux-jazz-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/montreux-jazz-festival/",
+    "it": "https://allezhopp.ch/it/eventi/montreux-jazz-festival/",
+    "en": "https://allezhopp.ch/en/events/montreux-jazz-festival/"
+   }
   },
   {
    "id": "c9cc1543-84a0-52a8-ac22-a94a23b47c25",
@@ -5252,7 +6296,13 @@
    "event_url": "https://www.genevetriathlon.ch/",
    "evidence_quote": "Le Triathlon de Genève 2026 n'aurait tout simplement pas été le même sans vous.",
    "evidence_url": "https://www.genevetriathlon.ch/volunteers",
-   "page_url": "https://allezhopp.ch/evenements/geneve-triathlon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/geneve-triathlon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/geneve-triathlon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/geneve-triathlon/",
+    "it": "https://allezhopp.ch/it/eventi/geneve-triathlon/",
+    "en": "https://allezhopp.ch/en/events/geneve-triathlon/"
+   }
   },
   {
    "id": "c05675a6-db31-5713-8920-7c188d7ca379",
@@ -5282,7 +6332,13 @@
    "event_url": "https://www.genevapride.ch/",
    "evidence_quote": "D'ici peu nous remettrons en ligne le nouveau formulaire d'inscription",
    "evidence_url": "https://www.genevapride.ch/participer",
-   "page_url": "https://allezhopp.ch/evenements/geneva-pride/"
+   "page_url": "https://allezhopp.ch/fr/evenements/geneva-pride/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/geneva-pride/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/geneva-pride/",
+    "it": "https://allezhopp.ch/it/eventi/geneva-pride/",
+    "en": "https://allezhopp.ch/en/events/geneva-pride/"
+   }
   },
   {
    "id": "b9ac2004-0f77-5bb1-9a3a-7790f007d1b9",
@@ -5312,7 +6368,13 @@
    "event_url": "https://festivalcite.ch/fr/",
    "evidence_quote": "Tu souhaites rejoindre l'aventure ? Rendez-vous l'année prochaine !",
    "evidence_url": "https://festivalcite.ch/fr/staff/",
-   "page_url": "https://allezhopp.ch/evenements/festival-de-la-cite/"
+   "page_url": "https://allezhopp.ch/fr/evenements/festival-de-la-cite/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/festival-de-la-cite/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/festival-de-la-cite/",
+    "it": "https://allezhopp.ch/it/eventi/festival-de-la-cite/",
+    "en": "https://allezhopp.ch/en/events/festival-de-la-cite/"
+   }
   },
   {
    "id": "c6f3be82-0e82-5887-985d-20197011190f",
@@ -5342,7 +6404,13 @@
    "event_url": "https://pleinleswatts.ch/",
    "evidence_quote": "seront ouvertes au cours du mois de février 2027",
    "evidence_url": "https://pleinleswatts.ch/inscriptions/",
-   "page_url": "https://allezhopp.ch/evenements/plein-les-watts-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/plein-les-watts-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/plein-les-watts-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/plein-les-watts-festival/",
+    "it": "https://allezhopp.ch/it/eventi/plein-les-watts-festival/",
+    "en": "https://allezhopp.ch/en/events/plein-les-watts-festival/"
+   }
   },
   {
    "id": "8fc9f4c1-cdc1-5f7a-8497-4128885486a6",
@@ -5372,7 +6440,13 @@
    "event_url": "https://verbier.utmb.world/",
    "evidence_quote": "Fill in the form below to tell us your disponibilities",
    "evidence_url": "https://verbier.utmb.world/get-involved/join-adventure/become-a-volunteer",
-   "page_url": "https://allezhopp.ch/evenements/trail-verbier-st-bernard-by-utmb/"
+   "page_url": "https://allezhopp.ch/fr/evenements/trail-verbier-st-bernard-by-utmb/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/trail-verbier-st-bernard-by-utmb/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/trail-verbier-st-bernard-by-utmb/",
+    "it": "https://allezhopp.ch/it/eventi/trail-verbier-st-bernard-by-utmb/",
+    "en": "https://allezhopp.ch/en/events/trail-verbier-st-bernard-by-utmb/"
+   }
   },
   {
    "id": "ed20f205-75d5-5ee7-850f-45bda0cc504f",
@@ -5402,7 +6476,13 @@
    "event_url": "https://www.medievales.ch/",
    "evidence_quote": "Rendez-vous les 9, 10 et 11 juillet 2027 pour fêter le 30ème anniversaire!",
    "evidence_url": "https://www.medievales.ch/",
-   "page_url": "https://allezhopp.ch/evenements/les-medievales-de-st-ursanne/"
+   "page_url": "https://allezhopp.ch/fr/evenements/les-medievales-de-st-ursanne/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/les-medievales-de-st-ursanne/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/les-medievales-de-st-ursanne/",
+    "it": "https://allezhopp.ch/it/eventi/les-medievales-de-st-ursanne/",
+    "en": "https://allezhopp.ch/en/events/les-medievales-de-st-ursanne/"
+   }
   },
   {
    "id": "d883eb9f-64b7-560a-8f50-8fe41a0f0d17",
@@ -5432,7 +6512,13 @@
    "event_url": "https://swissopengstaad.ch/",
    "evidence_quote": "Caisse Secteur complet Nombre max de bénévoles : 10 Officials Secteur complet",
    "evidence_url": "https://swissopengstaad.ch/benevoles-2027/",
-   "page_url": "https://allezhopp.ch/evenements/swiss-open-gstaad/"
+   "page_url": "https://allezhopp.ch/fr/evenements/swiss-open-gstaad/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/swiss-open-gstaad/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/swiss-open-gstaad/",
+    "it": "https://allezhopp.ch/it/eventi/swiss-open-gstaad/",
+    "en": "https://allezhopp.ch/en/events/swiss-open-gstaad/"
+   }
   },
   {
    "id": "48225e70-5742-5c0e-8a78-1d2375689396",
@@ -5462,7 +6548,13 @@
    "event_url": "https://www.lesgeorges.ch/",
    "evidence_quote": "LA 13e EDITION DES GEORGES SE DÉROULERA DU 12 AU 17 JUILLET 2027",
    "evidence_url": "https://www.lesgeorges.ch/",
-   "page_url": "https://allezhopp.ch/evenements/les-georges/"
+   "page_url": "https://allezhopp.ch/fr/evenements/les-georges/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/les-georges/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/les-georges/",
+    "it": "https://allezhopp.ch/it/eventi/les-georges/",
+    "en": "https://allezhopp.ch/en/events/les-georges/"
+   }
   },
   {
    "id": "2323d37e-0730-57f4-b43d-c7fde41c5a2b",
@@ -5492,7 +6584,13 @@
    "event_url": "https://www.podring.ch/",
    "evidence_quote": "Ein besonders Merci gilt allen Helfer•innen und Benevols, ohne die die Kulturwoche nicht stattfinden könnte",
    "evidence_url": "https://www.podring.ch/merci/",
-   "page_url": "https://allezhopp.ch/evenements/pod-ring/"
+   "page_url": "https://allezhopp.ch/fr/evenements/pod-ring/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/pod-ring/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/pod-ring/",
+    "it": "https://allezhopp.ch/it/eventi/pod-ring/",
+    "en": "https://allezhopp.ch/en/events/pod-ring/"
+   }
   },
   {
    "id": "5b5411ae-8760-5d77-9461-7362d66e410f",
@@ -5522,7 +6620,13 @@
    "event_url": "https://eiger.utmb.world/",
    "evidence_quote": "We're happy to welcome volunteers from the age of 13 - 70.",
    "evidence_url": "https://eiger.utmb.world/get-involved/join-the-adventure/become-a-volunteer",
-   "page_url": "https://allezhopp.ch/evenements/eiger-ultra-trail-by-utmb/"
+   "page_url": "https://allezhopp.ch/fr/evenements/eiger-ultra-trail-by-utmb/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/eiger-ultra-trail-by-utmb/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/eiger-ultra-trail-by-utmb/",
+    "it": "https://allezhopp.ch/it/eventi/eiger-ultra-trail-by-utmb/",
+    "en": "https://allezhopp.ch/en/events/eiger-ultra-trail-by-utmb/"
+   }
   },
   {
    "id": "da0f9605-2924-5f52-9e7a-035e03a7789b",
@@ -5552,7 +6656,13 @@
    "event_url": "https://sionsouslesetoiles.ch/",
    "evidence_quote": "La programmation sera dévoilée à l'automne",
    "evidence_url": "https://sionsouslesetoiles.ch/programmation/",
-   "page_url": "https://allezhopp.ch/evenements/sion-sous-les-etoiles/"
+   "page_url": "https://allezhopp.ch/fr/evenements/sion-sous-les-etoiles/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/sion-sous-les-etoiles/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/sion-sous-les-etoiles/",
+    "it": "https://allezhopp.ch/it/eventi/sion-sous-les-etoiles/",
+    "en": "https://allezhopp.ch/en/events/sion-sous-les-etoiles/"
+   }
   },
   {
    "id": "91ead4ea-85db-5029-8383-48c1776bbcaf",
@@ -5582,7 +6692,13 @@
    "event_url": "https://verbierfestival.com/",
    "evidence_quote": "Registrations for the next edition will open at the end of January 2027.",
    "evidence_url": "https://verbierfestival.com/en/volunteers/",
-   "page_url": "https://allezhopp.ch/evenements/verbier-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/verbier-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/verbier-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/verbier-festival/",
+    "it": "https://allezhopp.ch/it/eventi/verbier-festival/",
+    "en": "https://allezhopp.ch/en/events/verbier-festival/"
+   }
   },
   {
    "id": "1814aa15-eb66-5061-a85a-b7f49f30c725",
@@ -5612,7 +6728,13 @@
    "event_url": "https://yeah.paleo.ch/",
    "evidence_quote": "a VERY big family of 5'500 volunteers",
    "evidence_url": "https://yeah.paleo.ch/en/benevoles",
-   "page_url": "https://allezhopp.ch/evenements/paleo-festival-nyon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/paleo-festival-nyon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/paleo-festival-nyon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/paleo-festival-nyon/",
+    "it": "https://allezhopp.ch/it/eventi/paleo-festival-nyon/",
+    "en": "https://allezhopp.ch/en/events/paleo-festival-nyon/"
+   }
   },
   {
    "id": "80529493-b2df-52f4-8d89-24441f243369",
@@ -5642,7 +6764,13 @@
    "event_url": "https://eichholzfestival.ch/",
    "evidence_quote": "Dann melde dich jetzt als Helfer:in fürs EichholzFestival.",
    "evidence_url": "https://eichholzfestival.ch/de/crew",
-   "page_url": "https://allezhopp.ch/evenements/eichholzfestival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/eichholzfestival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/eichholzfestival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/eichholzfestival/",
+    "it": "https://allezhopp.ch/it/eventi/eichholzfestival/",
+    "en": "https://allezhopp.ch/en/events/eichholzfestival/"
+   }
   },
   {
    "id": "f8ef4784-28d4-544a-94b9-a2889fe96814",
@@ -5672,7 +6800,13 @@
    "event_url": "https://lestoilesdemilan.ch/",
    "evidence_quote": "Chaque année, le festival prend vie grâce à une équipe de bénévoles passionné·e·s.",
    "evidence_url": "https://lestoilesdemilan.ch/association/",
-   "page_url": "https://allezhopp.ch/evenements/les-toiles-de-milan/"
+   "page_url": "https://allezhopp.ch/fr/evenements/les-toiles-de-milan/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/les-toiles-de-milan/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/les-toiles-de-milan/",
+    "it": "https://allezhopp.ch/it/eventi/les-toiles-de-milan/",
+    "en": "https://allezhopp.ch/en/events/les-toiles-de-milan/"
+   }
   },
   {
    "id": "a7715d35-2193-5f7c-bb5c-5536b3028839",
@@ -5702,7 +6836,13 @@
    "event_url": "https://www.fifalp.ch/",
    "evidence_quote": "Rejoins l'équipe des bénévoles pour l'édition 2027",
    "evidence_url": "https://www.fifalp.ch/fr/le-festival/les-benevoles",
-   "page_url": "https://allezhopp.ch/evenements/fifalp-festival-international-du-film-alpin-des-diablerets/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fifalp-festival-international-du-film-alpin-des-diablerets/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fifalp-festival-international-du-film-alpin-des-diablerets/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fifalp-festival-international-du-film-alpin-des-diablerets/",
+    "it": "https://allezhopp.ch/it/eventi/fifalp-festival-international-du-film-alpin-des-diablerets/",
+    "en": "https://allezhopp.ch/en/events/fifalp-festival-international-du-film-alpin-des-diablerets/"
+   }
   },
   {
    "id": "df76e8ee-66a1-5aea-a66c-415e2016120d",
@@ -5732,7 +6872,13 @@
    "event_url": "https://my.slowup.ch/national/de.html",
    "evidence_quote": "Le slowUp La Broye a besoin chaque année de plus de 200 bénévoles",
    "evidence_url": "https://my.slowup.ch/broye/fr/idee-organisation/benevoles.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-la-broye/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-la-broye/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-la-broye/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-la-broye/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-la-broye/",
+    "en": "https://allezhopp.ch/en/events/slowup-la-broye/"
+   }
   },
   {
    "id": "b1d43e2a-711c-58e2-b9f7-d66db21ff103",
@@ -5762,7 +6908,13 @@
    "event_url": "https://www.lakelive.ch/",
    "evidence_quote": "Sans toutes ces personnes formidables, le festival ne pourrait pas avoir lieu.",
    "evidence_url": "https://www.lakelive.ch/fr/crew/",
-   "page_url": "https://allezhopp.ch/evenements/lakelive-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/lakelive-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/lakelive-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/lakelive-festival/",
+    "it": "https://allezhopp.ch/it/eventi/lakelive-festival/",
+    "en": "https://allezhopp.ch/en/events/lakelive-festival/"
+   }
   },
   {
    "id": "d1c251d4-29d3-58cb-ad0f-da69f4b2f770",
@@ -5792,7 +6944,13 @@
    "event_url": "https://starsintown.ch/",
    "evidence_quote": "ohne die Unterstützung von zahlreichen Helfer*innen und Mitwirkenden nicht möglich",
    "evidence_url": "https://starsintown.ch/team/",
-   "page_url": "https://allezhopp.ch/evenements/stars-in-town/"
+   "page_url": "https://allezhopp.ch/fr/evenements/stars-in-town/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/stars-in-town/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/stars-in-town/",
+    "it": "https://allezhopp.ch/it/eventi/stars-in-town/",
+    "en": "https://allezhopp.ch/en/events/stars-in-town/"
+   }
   },
   {
    "id": "07bdb551-bf86-5a15-8508-ab7cf4fc95fe",
@@ -5822,7 +6980,13 @@
    "event_url": "https://www.sierre-zinal.com/",
    "evidence_quote": "plus de 720 bénévoles",
    "evidence_url": "https://www.sierre-zinal.com/fr/devenir-benevole-149.html",
-   "page_url": "https://allezhopp.ch/evenements/sierre-zinal/"
+   "page_url": "https://allezhopp.ch/fr/evenements/sierre-zinal/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/sierre-zinal/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/sierre-zinal/",
+    "it": "https://allezhopp.ch/it/eventi/sierre-zinal/",
+    "en": "https://allezhopp.ch/en/events/sierre-zinal/"
+   }
   },
   {
    "id": "ce6a0a68-80eb-5aa6-bbbd-6f4d3d248133",
@@ -5852,7 +7016,13 @@
    "event_url": "https://www.trinyon.ch/",
    "evidence_quote": "Je m'inscris comme bénévole",
    "evidence_url": "https://www.trinyon.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/triathlon-de-nyon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/triathlon-de-nyon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/triathlon-de-nyon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/triathlon-de-nyon/",
+    "it": "https://allezhopp.ch/it/eventi/triathlon-de-nyon/",
+    "en": "https://allezhopp.ch/en/events/triathlon-de-nyon/"
+   }
   },
   {
    "id": "65f36c0e-a396-5c4d-baf2-d79957fe2ff3",
@@ -5882,7 +7052,13 @@
    "event_url": "https://my.slowup.ch/national/de.html",
    "evidence_quote": "Hilf selber mit!",
    "evidence_url": "https://my.slowup.ch/brugg-regio/de/idee-organisation/unterstuetzen.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-brugg-regio/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-brugg-regio/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-brugg-regio/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-brugg-regio/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-brugg-regio/",
+    "en": "https://allezhopp.ch/en/events/slowup-brugg-regio/"
+   }
   },
   {
    "id": "d659c433-ed99-5a07-bf8a-afb94ff12480",
@@ -5912,7 +7088,13 @@
    "event_url": "https://musikfestwochen.ch/",
    "evidence_quote": "Jährlich bis zu 1’200 Helfer:innen machen die Musikfestwochen überhaupt möglich.",
    "evidence_url": "https://musikfestwochen.ch/infos/mithelfen/",
-   "page_url": "https://allezhopp.ch/evenements/winterthurer-musikfestwochen/"
+   "page_url": "https://allezhopp.ch/fr/evenements/winterthurer-musikfestwochen/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/winterthurer-musikfestwochen/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/winterthurer-musikfestwochen/",
+    "it": "https://allezhopp.ch/it/eventi/winterthurer-musikfestwochen/",
+    "en": "https://allezhopp.ch/en/events/winterthurer-musikfestwochen/"
+   }
   },
   {
    "id": "de3338a8-9471-5c1e-bf1d-543e85316485",
@@ -5942,7 +7124,13 @@
    "event_url": "https://www.alpentoene.ch/",
    "evidence_quote": "Melde dich jetzt für mindestens einen Tag an und werde Teil des Festivals!",
    "evidence_url": "https://www.alpentoene.ch/helfer-innen",
-   "page_url": "https://allezhopp.ch/evenements/alpentone-internationales-musikfestival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/alpentone-internationales-musikfestival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/alpentone-internationales-musikfestival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/alpentone-internationales-musikfestival/",
+    "it": "https://allezhopp.ch/it/eventi/alpentone-internationales-musikfestival/",
+    "en": "https://allezhopp.ch/en/events/alpentone-internationales-musikfestival/"
+   }
   },
   {
    "id": "839a9e51-1baa-5fdc-8122-ea12daa1ce60",
@@ -5972,7 +7160,13 @@
    "event_url": "https://buskersbern.ch/",
    "evidence_quote": "Wir nehmen keine Anmeldungen mehr entgegen.",
    "evidence_url": "https://buskersbern.ch/de/mitmachen/helfer-innen/anmeldung-freiwillige-helferinnen",
-   "page_url": "https://allezhopp.ch/evenements/buskers-bern/"
+   "page_url": "https://allezhopp.ch/fr/evenements/buskers-bern/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/buskers-bern/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/buskers-bern/",
+    "it": "https://allezhopp.ch/it/eventi/buskers-bern/",
+    "en": "https://allezhopp.ch/en/events/buskers-bern/"
+   }
   },
   {
    "id": "3fa6e959-3d70-5a0c-9884-359c952df53b",
@@ -6002,7 +7196,13 @@
    "event_url": "https://www.verbierbikefestival.com/",
    "evidence_quote": "Nous sommes ravis de vous accueillir en tant que bénévole",
    "evidence_url": "https://www.verbierbikefestival.com/volontaire-a-la-vebf/",
-   "page_url": "https://allezhopp.ch/evenements/verbier-bike-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/verbier-bike-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/verbier-bike-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/verbier-bike-festival/",
+    "it": "https://allezhopp.ch/it/eventi/verbier-bike-festival/",
+    "en": "https://allezhopp.ch/en/events/verbier-bike-festival/"
+   }
   },
   {
    "id": "0eb71f7f-5b74-5e81-980d-96083f65afb6",
@@ -6032,7 +7232,13 @@
    "event_url": "https://valaistriathlon.ch/",
    "evidence_quote": "Inscrivez-vous dès maintenant !",
    "evidence_url": "https://valaistriathlon.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/valais-triathlon-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/valais-triathlon-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/valais-triathlon-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/valais-triathlon-festival/",
+    "it": "https://allezhopp.ch/it/eventi/valais-triathlon-festival/",
+    "en": "https://allezhopp.ch/en/events/valais-triathlon-festival/"
+   }
   },
   {
    "id": "e703db78-5834-5d16-b985-fabef2149e3b",
@@ -6062,7 +7268,13 @@
    "event_url": "https://lucerne2027.com/en/",
    "evidence_quote": "sign up for our newsletter now to receive the early-bird registration link",
    "evidence_url": "https://lucerne2027.com/en/organization/volunteers/",
-   "page_url": "https://allezhopp.ch/evenements/world-rowing-championships-2027-lucerne/"
+   "page_url": "https://allezhopp.ch/fr/evenements/world-rowing-championships-2027-lucerne/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/world-rowing-championships-2027-lucerne/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/world-rowing-championships-2027-lucerne/",
+    "it": "https://allezhopp.ch/it/eventi/world-rowing-championships-2027-lucerne/",
+    "en": "https://allezhopp.ch/en/events/world-rowing-championships-2027-lucerne/"
+   }
   },
   {
    "id": "d3884b23-dad0-5fd9-9287-17b71abb0033",
@@ -6092,7 +7304,13 @@
    "event_url": "https://www.openairgampel.ch/",
    "evidence_quote": "We are looking for 150 volunteers who would like to join our Zero Waste Team.",
    "evidence_url": "https://www.openairgampel.ch/en/sustainability",
-   "page_url": "https://allezhopp.ch/evenements/openair-gampel-zero-waste-team/"
+   "page_url": "https://allezhopp.ch/fr/evenements/openair-gampel-zero-waste-team/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/openair-gampel-zero-waste-team/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/openair-gampel-zero-waste-team/",
+    "it": "https://allezhopp.ch/it/eventi/openair-gampel-zero-waste-team/",
+    "en": "https://allezhopp.ch/en/events/openair-gampel-zero-waste-team/"
+   }
   },
   {
    "id": "62ff1f4f-fddb-5253-b16d-e7852087d682",
@@ -6122,7 +7340,13 @@
    "event_url": "https://venogefestival.ch/",
    "evidence_quote": "Annonce ton intérêt, nous te recontacterons avant la prochaine édition",
    "evidence_url": "https://venogefestival.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/venoge-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/venoge-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/venoge-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/venoge-festival/",
+    "it": "https://allezhopp.ch/it/eventi/venoge-festival/",
+    "en": "https://allezhopp.ch/en/events/venoge-festival/"
+   }
   },
   {
    "id": "1a42f3ef-c2a2-569b-a60f-639074caf42f",
@@ -6152,7 +7376,13 @@
    "event_url": "https://filaa.org/",
    "evidence_quote": "Pour la saison 2026-2027, on cherche des personnes motivées",
    "evidence_url": "https://filaa.org/rejoindre/",
-   "page_url": "https://allezhopp.ch/evenements/filaa-festival-international-du-livre-et-des-arts-africains/"
+   "page_url": "https://allezhopp.ch/fr/evenements/filaa-festival-international-du-livre-et-des-arts-africains/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/filaa-festival-international-du-livre-et-des-arts-africains/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/filaa-festival-international-du-livre-et-des-arts-africains/",
+    "it": "https://allezhopp.ch/it/eventi/filaa-festival-international-du-livre-et-des-arts-africains/",
+    "en": "https://allezhopp.ch/en/events/filaa-festival-international-du-livre-et-des-arts-africains/"
+   }
   },
   {
    "id": "086451f1-1c0c-5195-aaf1-195ed9eae3c7",
@@ -6182,7 +7412,13 @@
    "event_url": "https://www.ehf2027.ch/",
    "evidence_quote": "Dieser Anmeldelink ist nicht gültig.",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events",
-   "page_url": "https://allezhopp.ch/evenements/eidgenossisches-hornusserfest-2027/"
+   "page_url": "https://allezhopp.ch/fr/evenements/eidgenossisches-hornusserfest-2027/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/eidgenossisches-hornusserfest-2027/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/eidgenossisches-hornusserfest-2027/",
+    "it": "https://allezhopp.ch/it/eventi/eidgenossisches-hornusserfest-2027/",
+    "en": "https://allezhopp.ch/en/events/eidgenossisches-hornusserfest-2027/"
+   }
   },
   {
    "id": "062b495f-8eef-5d6f-a132-89fc45a35760",
@@ -6212,7 +7448,13 @@
    "event_url": "https://www.course-du-mandement.ch/",
    "evidence_quote": "Devenez bénévoles pour la Course du Mandement",
    "evidence_url": "https://www.course-du-mandement.ch/les-benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/course-du-mandement/"
+   "page_url": "https://allezhopp.ch/fr/evenements/course-du-mandement/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/course-du-mandement/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/course-du-mandement/",
+    "it": "https://allezhopp.ch/it/eventi/course-du-mandement/",
+    "en": "https://allezhopp.ch/en/events/course-du-mandement/"
+   }
   },
   {
    "id": "e76c6dc8-9137-5ecb-b693-85ad4be2b8ba",
@@ -6242,7 +7484,13 @@
    "event_url": "https://grand-raid-bcvs.ch/",
    "evidence_quote": "Ecris-nous un mail, on prendra ensuite contact avec toi!",
    "evidence_url": "https://grand-raid-bcvs.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/grand-raid-bcvs/"
+   "page_url": "https://allezhopp.ch/fr/evenements/grand-raid-bcvs/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/grand-raid-bcvs/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/grand-raid-bcvs/",
+    "it": "https://allezhopp.ch/it/eventi/grand-raid-bcvs/",
+    "en": "https://allezhopp.ch/en/events/grand-raid-bcvs/"
+   }
   },
   {
    "id": "9828d588-2caf-5d69-a8dd-9d1bd9c700fd",
@@ -6272,7 +7520,13 @@
    "event_url": "https://www.runthrough.co.uk/event/runthrough-trails-engelberg-august-2027",
    "evidence_quote": "Melde dich einfach auf der grossartigen Swiss Volunteers Plattform an",
    "evidence_url": "https://www.luzern.com/de/event/engelberg-trailrun-wo-dein-abenteuer-beginnt-by-runthrough",
-   "page_url": "https://allezhopp.ch/evenements/runthrough-trails-engelberg-engelberg-trail-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/runthrough-trails-engelberg-engelberg-trail-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/runthrough-trails-engelberg-engelberg-trail-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/runthrough-trails-engelberg-engelberg-trail-festival/",
+    "it": "https://allezhopp.ch/it/eventi/runthrough-trails-engelberg-engelberg-trail-festival/",
+    "en": "https://allezhopp.ch/en/events/runthrough-trails-engelberg-engelberg-trail-festival/"
+   }
   },
   {
    "id": "41dd56e6-5bbd-5efe-8313-a15c3a914fab",
@@ -6302,7 +7556,13 @@
    "event_url": "https://www.lamontheysanne.ch/",
    "evidence_quote": "Les inscriptions bénévoles ne sont pas encore ouvertes pour la prochaine édition.",
    "evidence_url": "https://benevoles.lamontheysanne.ch/",
-   "page_url": "https://allezhopp.ch/evenements/la-montheysanne/"
+   "page_url": "https://allezhopp.ch/fr/evenements/la-montheysanne/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/la-montheysanne/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/la-montheysanne/",
+    "it": "https://allezhopp.ch/it/eventi/la-montheysanne/",
+    "en": "https://allezhopp.ch/en/events/la-montheysanne/"
+   }
   },
   {
    "id": "502cf76d-4c1b-59c8-9de8-07614b5a795b",
@@ -6332,7 +7592,13 @@
    "event_url": "https://herisson-sous-gazon.ch/",
    "evidence_quote": "Rejoignez notre équipe dynamique de bénévoles pour une ambiance inoubliable en coulisses",
    "evidence_url": "https://herisson-sous-gazon.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/herisson-sous-gazon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/herisson-sous-gazon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/herisson-sous-gazon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/herisson-sous-gazon/",
+    "it": "https://allezhopp.ch/it/eventi/herisson-sous-gazon/",
+    "en": "https://allezhopp.ch/en/events/herisson-sous-gazon/"
+   }
   },
   {
    "id": "80f13753-1ad9-5267-b091-4ca28f84e290",
@@ -6362,7 +7628,13 @@
    "event_url": null,
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/ceac79821c5ae1f70cdc1c3cb11d8bf6cb331908?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/uster-triathlon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/uster-triathlon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/uster-triathlon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/uster-triathlon/",
+    "it": "https://allezhopp.ch/it/eventi/uster-triathlon/",
+    "en": "https://allezhopp.ch/en/events/uster-triathlon/"
+   }
   },
   {
    "id": "2a8697d7-0efc-5792-8c3a-0559a62ea896",
@@ -6392,7 +7664,13 @@
    "event_url": "https://www.weissensteinlauf.ch",
    "evidence_quote": "Wir suchen freiwillige Helfer für den Weissensteinlauf.",
    "evidence_url": "https://www.weissensteinlauf.ch",
-   "page_url": "https://allezhopp.ch/evenements/weissensteinlauf/"
+   "page_url": "https://allezhopp.ch/fr/evenements/weissensteinlauf/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/weissensteinlauf/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/weissensteinlauf/",
+    "it": "https://allezhopp.ch/it/eventi/weissensteinlauf/",
+    "en": "https://allezhopp.ch/en/events/weissensteinlauf/"
+   }
   },
   {
    "id": "beeb0718-8bcb-5440-bd97-1ebf287f17ae",
@@ -6422,7 +7700,13 @@
    "event_url": null,
    "evidence_quote": "UND Generationentandem organisiert jährlich das Generationenfestival in Thun.",
    "evidence_url": "https://www.benevol-jobs.ch/de/einsatz/freiwilligenarbeit-am-generationenfestival",
-   "page_url": "https://allezhopp.ch/evenements/generationenfestival-thun/"
+   "page_url": "https://allezhopp.ch/fr/evenements/generationenfestival-thun/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/generationenfestival-thun/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/generationenfestival-thun/",
+    "it": "https://allezhopp.ch/it/eventi/generationenfestival-thun/",
+    "en": "https://allezhopp.ch/en/events/generationenfestival-thun/"
+   }
   },
   {
    "id": "23296f85-342c-5d10-b799-002fa0d8f2f1",
@@ -6452,7 +7736,13 @@
    "event_url": "https://sion-violon-musique.ch/sion-festival/",
    "evidence_quote": "Rejoignez les bénévoles !",
    "evidence_url": "https://sion-violon-musique.ch/benevoles-fondation-fr/",
-   "page_url": "https://allezhopp.ch/evenements/sion-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/sion-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/sion-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/sion-festival/",
+    "it": "https://allezhopp.ch/it/eventi/sion-festival/",
+    "en": "https://allezhopp.ch/en/events/sion-festival/"
+   }
   },
   {
    "id": "59536405-773b-5cd8-a75f-d01614d86e73",
@@ -6482,7 +7772,13 @@
    "event_url": "https://www.omegaeuropeanmasters.com/",
    "evidence_quote": "the form for the 2027 edition which will be available online in April 2027",
    "evidence_url": "https://www.omegaeuropeanmasters.com/info/staff",
-   "page_url": "https://allezhopp.ch/evenements/omega-european-masters/"
+   "page_url": "https://allezhopp.ch/fr/evenements/omega-european-masters/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/omega-european-masters/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/omega-european-masters/",
+    "it": "https://allezhopp.ch/it/eventi/omega-european-masters/",
+    "en": "https://allezhopp.ch/en/events/omega-european-masters/"
+   }
   },
   {
    "id": "ad48b662-aceb-56b2-9318-4fdc01e76024",
@@ -6512,7 +7808,13 @@
    "event_url": "https://geneva-urban-trail.ch/",
    "evidence_quote": "Samedi 04 septembre 2027",
    "evidence_url": "https://geneva-urban-trail.ch/",
-   "page_url": "https://allezhopp.ch/evenements/geneva-urban-trail/"
+   "page_url": "https://allezhopp.ch/fr/evenements/geneva-urban-trail/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/geneva-urban-trail/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/geneva-urban-trail/",
+    "it": "https://allezhopp.ch/it/eventi/geneva-urban-trail/",
+    "en": "https://allezhopp.ch/en/events/geneva-urban-trail/"
+   }
   },
   {
    "id": "031d6f26-b9f5-5f20-836d-1240f7b038eb",
@@ -6542,7 +7844,13 @@
    "event_url": "https://my.slowup.ch/national/de.html",
    "evidence_quote": "Hilf selber mit!",
    "evidence_url": "https://my.slowup.ch/albula/de/idee-organisation/unterstuetzen.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-mountain-albula/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-mountain-albula/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-mountain-albula/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-mountain-albula/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-mountain-albula/",
+    "en": "https://allezhopp.ch/en/events/slowup-mountain-albula/"
+   }
   },
   {
    "id": "397e0715-68b3-52ff-9707-05e91c4560db",
@@ -6572,7 +7880,13 @@
    "event_url": "https://wildstrubel.utmb.world/",
    "evidence_quote": "In 2026, a new edition of Wildstrubel by UTMB® will take place",
    "evidence_url": "https://wildstrubel.utmb.world/get-involved/join-adventure/become-a-volunteer",
-   "page_url": "https://allezhopp.ch/evenements/wildstrubel-by-utmb/"
+   "page_url": "https://allezhopp.ch/fr/evenements/wildstrubel-by-utmb/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/wildstrubel-by-utmb/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/wildstrubel-by-utmb/",
+    "it": "https://allezhopp.ch/it/eventi/wildstrubel-by-utmb/",
+    "en": "https://allezhopp.ch/en/events/wildstrubel-by-utmb/"
+   }
   },
   {
    "id": "6c7c4341-d375-57aa-8055-d980343b644d",
@@ -6602,7 +7916,13 @@
    "event_url": "https://www.jungfrau-marathon.ch/",
    "evidence_quote": "In der nachfolgenden Dokumentation findet ihr alle Infos zu den \"hälfer\"-Einsätzen.",
    "evidence_url": "https://www.jungfrau-marathon.ch/de/haelfer.html",
-   "page_url": "https://allezhopp.ch/evenements/jungfrau-marathon/"
+   "page_url": "https://allezhopp.ch/fr/evenements/jungfrau-marathon/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/jungfrau-marathon/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/jungfrau-marathon/",
+    "it": "https://allezhopp.ch/it/eventi/jungfrau-marathon/",
+    "en": "https://allezhopp.ch/en/events/jungfrau-marathon/"
+   }
   },
   {
    "id": "54a00c87-aae4-5b45-8694-b1fa9f8bbd27",
@@ -6632,7 +7952,13 @@
    "event_url": "https://avecvous.rts.ch/dossiers/schubertiade-rts-espace-2",
    "evidence_quote": "Les préinscriptions sont ouvertes",
    "evidence_url": "https://avecvous.rts.ch/dossiers/schubertiade-rts-espace-2/article/devenez-benevole",
-   "page_url": "https://allezhopp.ch/evenements/schubertiade-rts-espace-2/"
+   "page_url": "https://allezhopp.ch/fr/evenements/schubertiade-rts-espace-2/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/schubertiade-rts-espace-2/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/schubertiade-rts-espace-2/",
+    "it": "https://allezhopp.ch/it/eventi/schubertiade-rts-espace-2/",
+    "en": "https://allezhopp.ch/en/events/schubertiade-rts-espace-2/"
+   }
   },
   {
    "id": "004d42f0-1986-5838-a1ce-506715b1798c",
@@ -6662,7 +7988,13 @@
    "event_url": "https://www.poulpefestival.ch/",
    "evidence_quote": "Rejoins la Poulpy Family !",
    "evidence_url": "https://poulpefestival.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/le-poulpe-festival/"
+   "page_url": "https://allezhopp.ch/fr/evenements/le-poulpe-festival/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/le-poulpe-festival/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/le-poulpe-festival/",
+    "it": "https://allezhopp.ch/it/eventi/le-poulpe-festival/",
+    "en": "https://allezhopp.ch/en/events/le-poulpe-festival/"
+   }
   },
   {
    "id": "3395f4d8-81c3-5624-ae75-7c2419c64a08",
@@ -6692,7 +8024,13 @@
    "event_url": "https://my.slowup.ch/national/de.html",
    "evidence_quote": "300 freiwillige Helferinnen und Helfer benötigt der slowUp Basel-Dreiland jedes Jahr",
    "evidence_url": "https://my.slowup.ch/basel-dreiland/de/idee-organisation/unterstuetzen.html",
-   "page_url": "https://allezhopp.ch/evenements/slowup-basel-dreiland/"
+   "page_url": "https://allezhopp.ch/fr/evenements/slowup-basel-dreiland/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/slowup-basel-dreiland/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/slowup-basel-dreiland/",
+    "it": "https://allezhopp.ch/it/eventi/slowup-basel-dreiland/",
+    "en": "https://allezhopp.ch/en/events/slowup-basel-dreiland/"
+   }
   },
   {
    "id": "9191cf06-bf54-57b2-92e7-73b4f1445104",
@@ -6722,7 +8060,13 @@
    "event_url": "https://fete-des-vendanges.ch/",
    "evidence_quote": "De nombreux bénévoles, membres de commissions, sponsors et partenaires permettent à la manifestation de vivre",
    "evidence_url": "https://fete-des-vendanges.ch/foire-aux-questions/",
-   "page_url": "https://allezhopp.ch/evenements/fete-des-vendanges-de-neuchatel/"
+   "page_url": "https://allezhopp.ch/fr/evenements/fete-des-vendanges-de-neuchatel/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/fete-des-vendanges-de-neuchatel/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/fete-des-vendanges-de-neuchatel/",
+    "it": "https://allezhopp.ch/it/eventi/fete-des-vendanges-de-neuchatel/",
+    "en": "https://allezhopp.ch/en/events/fete-des-vendanges-de-neuchatel/"
+   }
   },
   {
    "id": "f861a7b4-e779-576e-90e1-ec863c02ff73",
@@ -6752,7 +8096,13 @@
    "event_url": "https://agenda.unifr.ch/e/fr/20491/",
    "evidence_quote": "Le 25 septembre 2027, l'Université de Fribourg ouvrira ses portes au grand public",
    "evidence_url": "https://agenda.unifr.ch/e/fr/20491/",
-   "page_url": "https://allezhopp.ch/evenements/explora-festival-culture-science-et-societe/"
+   "page_url": "https://allezhopp.ch/fr/evenements/explora-festival-culture-science-et-societe/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/explora-festival-culture-science-et-societe/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/explora-festival-culture-science-et-societe/",
+    "it": "https://allezhopp.ch/it/eventi/explora-festival-culture-science-et-societe/",
+    "en": "https://allezhopp.ch/en/events/explora-festival-culture-science-et-societe/"
+   }
   },
   {
    "id": "e76a0284-f901-5275-8bea-6eecbd609c87",
@@ -6782,7 +8132,13 @@
    "event_url": "https://utjb.ch/",
    "evidence_quote": "Vis l'UTJB de l'intérieur : deviens bénévole",
    "evidence_url": "https://utjb.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/trail-du-jura-bernois-utjb/"
+   "page_url": "https://allezhopp.ch/fr/evenements/trail-du-jura-bernois-utjb/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/trail-du-jura-bernois-utjb/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/trail-du-jura-bernois-utjb/",
+    "it": "https://allezhopp.ch/it/eventi/trail-du-jura-bernois-utjb/",
+    "en": "https://allezhopp.ch/en/events/trail-du-jura-bernois-utjb/"
+   }
   },
   {
    "id": "b60724a4-264a-5869-8609-63e6387d4e8b",
@@ -6812,7 +8168,13 @@
    "event_url": "https://genevafungifest.ch/",
    "evidence_quote": "Pour construire la première édition du Geneva Fungi Fest, nous recherchons des personnes curieuses",
    "evidence_url": "https://genevafungifest.ch/benevoles/",
-   "page_url": "https://allezhopp.ch/evenements/geneva-fungi-fest/"
+   "page_url": "https://allezhopp.ch/fr/evenements/geneva-fungi-fest/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/geneva-fungi-fest/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/geneva-fungi-fest/",
+    "it": "https://allezhopp.ch/it/eventi/geneva-fungi-fest/",
+    "en": "https://allezhopp.ch/en/events/geneva-fungi-fest/"
+   }
   },
   {
    "id": "09f84548-fc27-5e71-bd68-46d3ec9f2187",
@@ -6842,7 +8204,13 @@
    "event_url": "https://www.morat-fribourg.ch/",
    "evidence_quote": "Werden Sie Teil unseres Freiwilligenteams",
    "evidence_url": "https://www.morat-fribourg.ch/freiwillige/?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/morat-fribourg/"
+   "page_url": "https://allezhopp.ch/fr/evenements/morat-fribourg/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/morat-fribourg/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/morat-fribourg/",
+    "it": "https://allezhopp.ch/it/eventi/morat-fribourg/",
+    "en": "https://allezhopp.ch/en/events/morat-fribourg/"
+   }
   },
   {
    "id": "eaa32ca9-69f0-5c08-a33a-b9c21d1b21e3",
@@ -6872,7 +8240,13 @@
    "event_url": "https://stein2028.ch/",
    "evidence_quote": "Anmeldung offen",
    "evidence_url": "https://go.swissvolunteers.ch/discover-events/link/2d6e34adbc054bc4b51ba614bc778051af35d4fa?lang=de",
-   "page_url": "https://allezhopp.ch/evenements/aargauer-kantonalturnfest/"
+   "page_url": "https://allezhopp.ch/fr/evenements/aargauer-kantonalturnfest/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/aargauer-kantonalturnfest/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/aargauer-kantonalturnfest/",
+    "it": "https://allezhopp.ch/it/eventi/aargauer-kantonalturnfest/",
+    "en": "https://allezhopp.ch/en/events/aargauer-kantonalturnfest/"
+   }
   },
   {
    "id": "bc548e71-e32b-552d-bc1a-37f273df771c",
@@ -6902,7 +8276,13 @@
    "event_url": "https://bksf2027.ch/",
    "evidence_quote": "In Kürze findest du hier den Link zum Anmeldeformular",
    "evidence_url": "https://bksf2027.ch/helfer/",
-   "page_url": "https://allezhopp.ch/evenements/bernisch-kantonales-schwingfest-thun/"
+   "page_url": "https://allezhopp.ch/fr/evenements/bernisch-kantonales-schwingfest-thun/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/bernisch-kantonales-schwingfest-thun/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/bernisch-kantonales-schwingfest-thun/",
+    "it": "https://allezhopp.ch/it/eventi/bernisch-kantonales-schwingfest-thun/",
+    "en": "https://allezhopp.ch/en/events/bernisch-kantonales-schwingfest-thun/"
+   }
   },
   {
    "id": "543eed73-3e59-5bee-b054-193f3fc7b934",
@@ -6932,7 +8312,13 @@
    "event_url": "https://www.chantdugros.ch/",
    "evidence_quote": "LES INSCRIPTIONS BENEVOLES OUVRIRONT AU PRINTEMPS",
    "evidence_url": "https://www.chantdugros.ch/",
-   "page_url": "https://allezhopp.ch/evenements/chant-du-gros/"
+   "page_url": "https://allezhopp.ch/fr/evenements/chant-du-gros/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/chant-du-gros/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/chant-du-gros/",
+    "it": "https://allezhopp.ch/it/eventi/chant-du-gros/",
+    "en": "https://allezhopp.ch/en/events/chant-du-gros/"
+   }
   },
   {
    "id": "eb01875e-8718-583c-a2c3-686365b5db0a",
@@ -6962,7 +8348,13 @@
    "event_url": "https://www.emsf2027.ch/",
    "evidence_quote": "Gerne nehmen wir deine Anmeldung ab Anfang Januar 2027 entgegen",
    "evidence_url": "https://emsf2027.ch/helfer/",
-   "page_url": "https://allezhopp.ch/evenements/emmentalisches-schwingfest-rothenbach-i-e/"
+   "page_url": "https://allezhopp.ch/fr/evenements/emmentalisches-schwingfest-rothenbach-i-e/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/emmentalisches-schwingfest-rothenbach-i-e/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/emmentalisches-schwingfest-rothenbach-i-e/",
+    "it": "https://allezhopp.ch/it/eventi/emmentalisches-schwingfest-rothenbach-i-e/",
+    "en": "https://allezhopp.ch/en/events/emmentalisches-schwingfest-rothenbach-i-e/"
+   }
   },
   {
    "id": "6d96c101-7b60-5e27-9376-e7584560851a",
@@ -6992,7 +8384,13 @@
    "event_url": "https://panathlon-mne.clubdesk.com/",
    "evidence_quote": "Nous sommes à la recherche de sponsors et personnes bénévoles pour l'édition de 2027",
    "evidence_url": "https://panathlon-mne.clubdesk.com/",
-   "page_url": "https://allezhopp.ch/evenements/panathlon-family-games-la-chaux-de-fonds/"
+   "page_url": "https://allezhopp.ch/fr/evenements/panathlon-family-games-la-chaux-de-fonds/",
+   "page_urls": {
+    "fr": "https://allezhopp.ch/fr/evenements/panathlon-family-games-la-chaux-de-fonds/",
+    "de": "https://allezhopp.ch/de/veranstaltungen/panathlon-family-games-la-chaux-de-fonds/",
+    "it": "https://allezhopp.ch/it/eventi/panathlon-family-games-la-chaux-de-fonds/",
+    "en": "https://allezhopp.ch/en/events/panathlon-family-games-la-chaux-de-fonds/"
+   }
   }
  ]
 }

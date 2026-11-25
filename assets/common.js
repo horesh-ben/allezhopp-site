@@ -8,6 +8,12 @@
    Never send e-mail addresses or other personal data here.
 ---------------------------------------------------------------- */
 const LANGS = ["fr", "de", "it", "en"];
+/* Pages under /fr/, /de/, /it/, /en/ have one fixed language (their <html lang>) and list their other versions in
+   <link rel="alternate" hreflang>; the language menu then opens the other version. Pages outside (alerts, 404)
+   switch language in place. Addresses per language: assets/paths.js (load it before this file). */
+const PAGE_LANG = document.querySelector('link[rel="alternate"][hreflang="de"]') && LANGS.includes(document.documentElement.lang)
+  ? document.documentElement.lang : null;
+const pageHref = p => (PAGE_LANG && typeof localPath === "function" ? localPath(p, PAGE_LANG) : p);
 const BROWSER_LANG = (navigator.language || "").slice(0, 2).toLowerCase() || "unknown";
 function track(name, props) {
   try { if (window.umami && typeof window.umami.track === "function") window.umami.track(name, props || {}); } catch (e) {}
@@ -57,9 +63,9 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
   if (!nav) {
     nav = document.createElement("nav");
     nav.className = "nav"; nav.id = "site-nav"; nav.dataset.i18nAria = "navLabel"; nav.setAttribute("aria-label", "Navigation");
-    nav.innerHTML = '<a href="/" data-nav="home" data-i18n="navEvents">Événements</a>'
-      + '<a href="/a-propos/" data-nav="about" data-i18n="abLink">À propos</a>'
-      + '<a href="/proposer/" data-nav="organizers" data-i18n="navOrg">Organisateurs</a>';
+    nav.innerHTML = `<a href="${pageHref("/")}" data-nav="home" data-i18n="navEvents">Événements</a>`
+      + `<a href="${pageHref("/a-propos/")}" data-nav="about" data-i18n="abLink">À propos</a>`
+      + `<a href="${pageHref("/proposer/")}" data-nav="organizers" data-i18n="navOrg">Organisateurs</a>`;
     top.querySelector(".brand").after(nav);
   }
   let btn = top.querySelector(".nav-toggle");
@@ -72,8 +78,8 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
   }
   /* Current section: event pages belong to "Events", the suggestion page to "Organizers". */
   const path = location.pathname;
-  const here = path === "/" || path === "/index.html" || path.startsWith("/evenements/") ? "home"
-    : path.startsWith("/a-propos") ? "about" : path.startsWith("/proposer") ? "organizers" : "";
+  const sec = typeof pathSection === "function" ? pathSection(path) : null;
+  const here = sec === "home" || sec === "events" ? "home" : sec === "about" ? "about" : sec === "suggest" ? "organizers" : "";
   nav.querySelectorAll("a").forEach(a => {
     const on = a.dataset.nav === here;
     a.classList.toggle("is-current", on);
@@ -88,6 +94,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
 
 /* ---------- Language ---------- */
 let lang = "fr";
+function saveLang(l) { try { localStorage.setItem("allezhopp-lang", l); } catch (e) {} }
 function setLang(l) {
   lang = l;
   const t = T[l];
@@ -97,6 +104,8 @@ function setLang(l) {
   document.querySelectorAll("[data-contact]").forEach(el => {
     el.innerHTML = CONTACT_EMAIL ? t.contactEmail.replace(/\{email\}/g, esc(CONTACT_EMAIL)) : t.contactForm;
   });
+  if (PAGE_LANG) document.querySelectorAll("[data-i18n-html] a[href^='/'], [data-contact] a[href^='/']")
+    .forEach(a => a.setAttribute("href", pageHref(a.getAttribute("href"))));
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { const v = t[el.dataset.i18nPh]; if (typeof v === "string") el.placeholder = v; });
   document.querySelectorAll("[data-i18n-aria]").forEach(el => { const v = t[el.dataset.i18nAria]; if (typeof v === "string") el.setAttribute("aria-label", v); });
   document.querySelectorAll(".nav-toggle[data-i18n-label]").forEach(el => { const v = t[el.dataset.i18nLabel]; if (typeof v === "string") el.setAttribute("aria-label", v); });
@@ -106,15 +115,19 @@ function setLang(l) {
   $("#theme-switch").setAttribute("aria-label", t.themeGroup);
   $("#lang-select").value = l;
   if (typeof window.onLangChange === "function") window.onLangChange(t);
-  try { localStorage.setItem("allezhopp-lang", l); } catch (e) {}
+  if (!PAGE_LANG) saveLang(l);
 }
 $("#lang-select").addEventListener("change", e => {
-  const from = lang;
-  setLang(e.target.value);
-  track("Language", { language: lang, source: "switch", previous: from, browser_language: BROWSER_LANG });
+  const from = lang, to = e.target.value;
+  track("Language", { language: to, source: "switch", previous: from, browser_language: BROWSER_LANG });
+  saveLang(to);
+  const alt = PAGE_LANG && document.querySelector(`link[rel="alternate"][hreflang="${to}"]`);
+  if (alt) { location.href = new URL(alt.href).pathname + location.search + location.hash; return; }
+  setLang(to);
 });
 /* Picks the saved language, else the browser's, else French. Returns how it was chosen. */
 function initLang() {
+  if (PAGE_LANG) { setLang(PAGE_LANG); return { language: PAGE_LANG, source: "page" }; }
   let l = null, source = "default";
   try { l = localStorage.getItem("allezhopp-lang"); } catch (e) {}
   if (LANGS.includes(l)) source = "saved";
